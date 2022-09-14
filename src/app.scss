@@ -1,5 +1,38 @@
+@import '~bootstrap/scss/bootstrap';
+@import './scss/colors.scss';
+@import './scss/variables.scss';
+
+body {
+  // background-color: $secondaryBgColor;
+  margin: 0;
+  height: 100%;
+  font-size: 1.1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .app-body {
-  h1 {
-    color: blueviolet;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+
+  div[class^='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.yals-ordered-list-expanded {
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.yals-ordered-list {
+  li {
+    margin-bottom: 0.5rem;
   }
 }

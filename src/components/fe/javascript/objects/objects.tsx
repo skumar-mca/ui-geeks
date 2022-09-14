@@ -1,0 +1,24 @@
+import React from 'react';
+import useDOMTitle from '../../../../custom-hooks/use-dom-title';
+import Container from '../../../shared/container/container';
+import Heading from '../../../shared/heading/heading';
+import Para from '../../../shared/para/para';
+import JSAccessingObjects from './accessing-objects';
+import JSObjectsIntro from './objects-intro';
+
+const JSObjects = () => {
+  useDOMTitle('YALS: JavaScript | Objects');
+
+  return (
+    <Container>
+      <Heading>Objects</Heading>
+
+      <Para>
+        <JSObjectsIntro />
+        <JSAccessingObjects />
+      </Para>
+    </Container>
+  );
+};
+
+export default JSObjects;

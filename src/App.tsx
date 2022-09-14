@@ -1,11 +1,15 @@
-import React from "react";
-import "./app.scss";
+import React from 'react';
+import { HashRouter } from 'react-router-dom';
+import './app.scss';
+import AppRouter from './routes/routes';
 
 const App = () => {
   return (
-    <div className="app-body">
-      <h1>Yet Another Learning Source</h1>
-    </div>
+    <HashRouter>
+      <div className='app-body'>
+        <AppRouter />
+      </div>
+    </HashRouter>
   );
 };
 

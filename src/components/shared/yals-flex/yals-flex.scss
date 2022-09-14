@@ -1,0 +1,7 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-flex {
+  display: flex;
+  width: 100%;
+}

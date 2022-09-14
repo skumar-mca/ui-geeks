@@ -1,0 +1,20 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-heading {
+  margin-bottom: 1.5rem;
+}
+
+h1.#{$appPrefix}-heading {
+  color: $h1Color;
+}
+
+h2.#{$appPrefix}-heading {
+  color: $h2Color;
+  margin-top: 3rem;
+}
+
+h3.#{$appPrefix}-heading {
+  margin-top: 3rem;
+  font-weight: bold;
+}

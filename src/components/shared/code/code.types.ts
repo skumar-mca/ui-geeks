@@ -9,7 +9,8 @@ export const CodeLanguageTypes = {
 
 export const CodeThemeTypes = {
   Dracula: 'dracula',
-  AnOldHope: 'anOldHope'
+  AnOldHope: 'anOldHope',
+  Github: 'github'
 };
 
 export type CodeLanguageType = ValueOf<typeof CodeLanguageTypes>;

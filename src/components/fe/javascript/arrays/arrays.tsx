@@ -8,7 +8,7 @@ import JSArrayMethods from './array-methods';
 import JSArraysIntro from './arrays-intro';
 
 const JSArrays = () => {
-  useDOMTitle('YALS: JavaScript | Objects');
+  useDOMTitle('YALS: JavaScript | Arrays');
 
   return (
     <Container>

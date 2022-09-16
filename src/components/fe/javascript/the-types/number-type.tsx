@@ -46,8 +46,8 @@ Math.pow(2,3);  // 8
       </Para>
 
       <Para>
-        <Word bold>parseInt()</Word>: This function is used to convert string
-        value to integer.
+        <Heading as='h6'>parseInt()</Heading>This function is used to convert
+        string value to integer.
         <NewLine />
         <Word italic>Syntax</Word>: parseInt("String representation of Number",
         base)
@@ -82,8 +82,8 @@ parseInt("123",10)      // 123`}</Code>
 parseInt(“0x10”, 16)        // Will always give 16`}</Code>
         </Para>
         <Para>
-          <Word bold>parseFloat()</Word>: This function is used to convert
-          string to floating point number. It always uses base 10.
+          <Heading as='h6'>parseFloat()</Heading>This function is used to
+          convert string to floating point number. It always uses base 10.
           <NewLine />
           <Word italic>Syntax</Word>: parseFloat("String representation of
           Number")

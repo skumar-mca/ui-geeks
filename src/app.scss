@@ -3,10 +3,9 @@
 @import './scss/variables.scss';
 
 body {
-  // background-color: $secondaryBgColor;
   margin: 0;
   height: 100%;
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -35,4 +34,47 @@ body {
   li {
     margin-bottom: 0.5rem;
   }
+}
+
+.yals-left-section {
+  position: sticky;
+  top: 0;
+  height: 96vh;
+  padding-top: 35px;
+}
+
+.yals-content-section {
+  background-color: $bodyBgColor;
+  padding: 0px 10px 0px 10px;
+  padding-top: 35px;
+}
+
+.yals-right-section {
+  position: sticky;
+  top: 0;
+  height: 96vh;
+  padding-top: 35px;
+}
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primaryBgColor;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $lightGrayAlt;
 }

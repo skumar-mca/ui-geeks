@@ -10,21 +10,25 @@ const YALSFlex = (props: IYALSFlexProps) => {
     flexDirection,
     justifyContent,
     alignItems,
-    width = '100%'
+    width,
+    className,
+    bgColor
   } = props;
 
   const flexClasses = classNames({
     [`${AppPrefix}-flex`]: true,
     [`flex-direction`]: flexDirection,
     [`justify-content`]: justifyContent,
-    [`align-items`]: alignItems
+    [`align-items`]: alignItems,
+    [`${className}`]: className
   });
 
   const flexStyle: CSSProperties = {
     flexDirection: flexDirection as 'row',
     justifyContent: justifyContent,
     alignItems: alignItems,
-    width: width
+    width: width,
+    backgroundColor: bgColor
   };
 
   return (

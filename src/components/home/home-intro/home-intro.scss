@@ -1,0 +1,39 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-home-intro {
+  height: 400px;
+  background-color: #282a35;
+  text-align: center;
+
+  .intro-section {
+    z-index: 1;
+    height: 100%;
+    text-align: center;
+    .yals-name {
+      font-size: 3em;
+      font-style: italic;
+      color: white;
+    }
+
+    .yals-tagline {
+      color: white;
+      font-style: italic;
+      font-size: 1.2em;
+    }
+
+    .yals-search {
+      text-align: center;
+      margin-top: 3em;
+      .yals-search-input {
+        max-width: 250px;
+
+        .input-group-text {
+          width: 70px;
+          padding-left: 25px;
+          background-color: $purple;
+        }
+      }
+    }
+  }
+}

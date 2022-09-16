@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { CSSProperties } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
+import { populateId } from '../../../util/util';
 import './heading.scss';
 
 const Heading = (props: any) => {
@@ -12,11 +13,14 @@ const Heading = (props: any) => {
     textAlign: textAlign
   };
 
+  const id = populateId(children);
+
   return React.createElement(
     as,
     {
       className: headingClasses,
       style,
+      id,
       tabIndex: 1
     },
     [...children]

@@ -1,113 +1,117 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import Col from 'react-bootstrap/esm/Col';
+import Row from 'react-bootstrap/esm/Row';
 import { Outlet } from 'react-router-dom';
 import NavigationMenu from '../../shared/navigation-menu/navigation-menu';
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
+import NextPrevButtons from '../../shared/next-prev-btn/next-prev-btn';
+import ScrollTopButton from '../../shared/scroll-top-btn/scroll-top-btn';
 import './javascript-home.scss';
+import { JSLINK } from './js-link-tree';
 
+const routePrefix = '/fe/javascript/';
 const menuItems: Array<IMenuItem> = [
   {
-    url: 'introduction',
+    url: `${routePrefix}introduction`,
     label: 'Introduction'
   },
   {
-    url: 'history',
+    url: `${routePrefix}history`,
+
     label: 'History'
   },
   {
-    url: 'include-code',
+    url: `${routePrefix}include-code`,
     label: 'Including Scripts'
   },
   {
-    url: 'console',
+    url: `${routePrefix}console`,
     label: 'Console'
   },
   {
-    url: 'data-types',
+    url: `${routePrefix}data-types`,
     label: 'Data types'
   },
   {
-    url: 'grammer',
+    url: `${routePrefix}grammer`,
+
     label: 'Grammer and Types'
   },
   {
-    url: 'operators',
+    url: `${routePrefix}operators`,
     label: 'Operators'
   },
   {
-    url: 'control-structures',
+    url: `${routePrefix}control-structures`,
     label: 'Control Structures'
   },
   {
-    url: 'objects',
+    url: `${routePrefix}objects`,
     label: 'Objects'
   },
   {
-    url: 'arrays',
+    url: `${routePrefix}arrays`,
     label: 'Arrays'
   },
   {
-    url: 'functions',
+    url: `${routePrefix}functions`,
     label: 'Functions'
   },
   {
-    url: 'closures',
+    url: `${routePrefix}closures`,
     label: 'Closures'
   },
   {
-    url: 'arrow-functions',
+    url: `${routePrefix}arrow-functions`,
     label: 'Arrow Functions'
   },
   {
-    url: 'modules',
+    url: `${routePrefix}modules`,
     label: 'Modules'
   },
   {
-    url: 'script-loading-strategies',
-    label: 'Script Loading'
-  },
-  {
-    url: 'this-keyword',
+    url: `${routePrefix}this-keyword`,
     label: 'this Keyword'
   },
   {
-    url: 'class-keyword',
+    url: `${routePrefix}class-keyword`,
     label: 'Class'
   },
   {
-    url: 'prototype-chain',
+    url: `${routePrefix}prototype-chain`,
     label: 'Prototype Chain'
   },
   {
-    url: 'strict-mode',
+    url: `${routePrefix}strict-mode`,
     label: 'Strict Mode'
   },
   {
-    url: 'hoisting',
+    url: `${routePrefix}hoisting`,
     label: 'Hoisting'
   },
   {
-    url: 'exception-handling',
+    url: `${routePrefix}exception-handling`,
     label: 'Exception Handling'
   },
   {
-    url: 'iterators-and-generators',
-    label: 'Tterators and Generators'
+    url: `${routePrefix}iterators-and-generators`,
+    label: 'Iterators and Generators'
   }
 ];
 
 const JSHome = () => {
   return (
-    <>
-      <Row>
-        <Col lg={9} md={7} sm={12}>
-          <Outlet />
-        </Col>
-        <Col lg={3} md={5} sm={12}>
-          <NavigationMenu menuList={menuItems} />
-        </Col>
-      </Row>
-    </>
+    <Row>
+      <Col lg={2} md={3} sm={4} className='yals-left-section'>
+        <NavigationMenu menuList={menuItems} />
+      </Col>
+
+      <Col lg={10} md={9} sm={8} className='yals-content-section'>
+        <Outlet />
+        <NextPrevButtons allItems={JSLINK} />
+        <ScrollTopButton />
+      </Col>
+    </Row>
   );
 };
 

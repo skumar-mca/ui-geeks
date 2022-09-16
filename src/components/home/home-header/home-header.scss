@@ -1,0 +1,33 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-home-header {
+  background-color: $secondaryBgColor;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 3px 8px -2px $boxShadow;
+
+  .ul-main-menu {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    li {
+      list-style: none;
+      display: inline-block;
+
+      margin-right: 2px;
+
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 5px 20px 5px 20px;
+
+        &:hover {
+          background-color: $brightGreen;
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-prev-next-btn {
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  border: 1px solid $brightGreen;
+  border-radius: 10px;
+
+  .next-button {
+    .yals-text-bold {
+      margin-right: 15px;
+    }
+  }
+
+  .prev-button {
+    text-align: left;
+  }
+  .route-link {
+    font-size: 0.7rem;
+  }
+}

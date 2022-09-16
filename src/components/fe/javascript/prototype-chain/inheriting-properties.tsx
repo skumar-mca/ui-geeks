@@ -101,7 +101,7 @@ const JSInheritingProperties = () => {
       <Para>
         <BI>__proto__</BI>: It is one of the ways to
         <B>set the prototype of an object</B>. There are other ways to set the
-        prototype are:
+        prototype:
         <OrderedList unOrdered items={protoList} />
       </Para>
 

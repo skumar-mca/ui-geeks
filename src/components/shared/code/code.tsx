@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import { anOldHope, CopyBlock, dracula } from 'react-code-blocks';
+import { anOldHope, CopyBlock, dracula, github } from 'react-code-blocks';
 import { AppPrefix } from '../../../util/app-constants';
 import './code.scss';
 import { ICodeProps } from './code.types';
@@ -23,8 +23,11 @@ const Code = (props: ICodeProps) => {
         return dracula;
       case 'anOldHope':
         return anOldHope;
+      case 'github':
+        return github;
+
       default:
-        return dracula;
+        return anOldHope;
     }
   };
 

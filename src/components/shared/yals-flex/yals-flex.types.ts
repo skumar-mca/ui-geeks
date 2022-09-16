@@ -36,4 +36,6 @@ export interface IYALSFlexProps {
   justifyContent?: FlexJustifyContentType;
   alignItems?: FlexAlignItemsType;
   width?: string;
+  className?: string;
+  bgColor?: string;
 }

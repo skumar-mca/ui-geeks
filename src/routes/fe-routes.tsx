@@ -16,7 +16,6 @@ import JSModules from '../components/fe/javascript/modules/modules';
 import JSObjects from '../components/fe/javascript/objects/objects';
 import JSOperators from '../components/fe/javascript/operators/operators';
 import JSPrototypeChain from '../components/fe/javascript/prototype-chain/prototype-chain';
-import JSScriptLoading from '../components/fe/javascript/script-loading/script-loading';
 import JSStrictMode from '../components/fe/javascript/strict-mode/strict-mode';
 import JSTypes from '../components/fe/javascript/the-types/the-types';
 import JSThis from '../components/fe/javascript/this/this';
@@ -35,7 +34,7 @@ const JSHistory = lazy(
 
 const FERouter = (
   <>
-    <Route path='/fe' element={<JSIntroduction />} />
+    <Route path='/fe' element={<FEHome />} />
     <Route path='fe/javascript' element={<JSHome />}>
       <Route path='introduction' element={<JSIntroduction />} />
       <Route path='history' element={<JSHistory />} />
@@ -51,7 +50,6 @@ const FERouter = (
       <Route path='closures' element={<JSFunctionClosures />} />
       <Route path='arrow-functions' element={<JSArrowFunctions />} />
       <Route path='modules' element={<JSModules />} />
-      <Route path='script-loading-strategies' element={<JSScriptLoading />} />
       <Route path='this-keyword' element={<JSThis />} />
       <Route path='class-keyword' element={<JSClass />} />
       <Route path='prototype-chain' element={<JSPrototypeChain />} />

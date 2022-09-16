@@ -8,16 +8,24 @@
   border: 1px solid $brightGreen;
   border-radius: 10px;
 
-  .next-button {
-    .yals-text-bold {
-      margin-right: 15px;
+  .route-link {
+    font-size: 0.7rem;
+  }
+
+  .next-btn-wrapper {
+    text-align: right;
+    .next-button {
+      text-align: right;
+      .yals-text-bold {
+        margin-right: 15px;
+      }
     }
   }
 
-  .prev-button {
+  .prev-btn-wrapper {
     text-align: left;
-  }
-  .route-link {
-    font-size: 0.7rem;
+    .prev-button {
+      text-align: left;
+    }
   }
 }

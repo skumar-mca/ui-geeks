@@ -1,5 +1,7 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
+import Col from 'react-bootstrap/esm/Col';
+import Row from 'react-bootstrap/esm/Row';
 import { useNavigate } from 'react-router-dom';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix } from '../../../util/app-constants';
@@ -11,8 +13,6 @@ import {
   YALSButtonSizeTypes,
   YALSButtonVariantTypes
 } from '../yals-button/yals-button.types';
-import YALSFlex from '../yals-flex/yals-flex';
-import { FlexJustifyContentTypes } from '../yals-flex/yals-flex.types';
 import './next-prev-btn.scss';
 import { INextPrevBtnProp } from './next-prev-btn.types';
 
@@ -56,40 +56,44 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
 
   return (
     <div className={prevNextBtnClasses}>
-      <YALSFlex justifyContent={FlexJustifyContentTypes.SpaceBetween}>
-        {prevIndex > -1 && (
-          <YALSButton
-            onClick={onHandleClick.bind(this, prevIndex)}
-            outline={false}
-            size={YALSButtonSizeTypes.Large}
-            variant={YALSButtonVariantTypes.Dark}
-          >
-            <div className='prev-button'>
-              <ChevronLeft fillColor='white' width={22} height={20} />
-              <B>Prev</B>
-              <NewLine />
-            </div>
+      <Row>
+        <Col className='prev-btn-wrapper' lg={6} md={6} sm={12}>
+          {prevIndex > -1 && (
+            <YALSButton
+              onClick={onHandleClick.bind(this, prevIndex)}
+              outline={false}
+              size={YALSButtonSizeTypes.Large}
+              variant={YALSButtonVariantTypes.Dark}
+            >
+              <div className='prev-button'>
+                <ChevronLeft fillColor='white' width={22} height={20} />
+                <B>Prev</B>
+                <NewLine />
+              </div>
 
-            <span className='route-link'>{allItems[prevIndex].label}</span>
-          </YALSButton>
-        )}
+              <span className='route-link'>{allItems[prevIndex].label}</span>
+            </YALSButton>
+          )}
+        </Col>
 
-        {nextIndex > -1 && (
-          <YALSButton
-            onClick={onHandleClick.bind(this, nextIndex)}
-            outline={false}
-            size={YALSButtonSizeTypes.Large}
-            variant={YALSButtonVariantTypes.Dark}
-          >
-            <div className='next-button'>
-              <B>Next</B>
-              <ChevronRight fillColor='white' width={22} height={20} />
-              <NewLine />
-            </div>
-            <span className='route-link'>{allItems[nextIndex].label}</span>
-          </YALSButton>
-        )}
-      </YALSFlex>
+        <Col className='next-btn-wrapper' lg={6} md={6} sm={12}>
+          {nextIndex > -1 && (
+            <YALSButton
+              onClick={onHandleClick.bind(this, nextIndex)}
+              outline={false}
+              size={YALSButtonSizeTypes.Large}
+              variant={YALSButtonVariantTypes.Dark}
+            >
+              <div className='next-button'>
+                <B>Next</B>
+                <ChevronRight fillColor='white' width={22} height={20} />
+                <NewLine />
+              </div>
+              <span className='route-link'>{allItems[nextIndex].label}</span>
+            </YALSButton>
+          )}
+        </Col>
+      </Row>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, memo } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import { populateId } from '../../../util/util';
 import './heading.scss';
@@ -27,4 +27,4 @@ const Heading = (props: any) => {
   );
 };
 
-export default Heading;
+export default memo(Heading);

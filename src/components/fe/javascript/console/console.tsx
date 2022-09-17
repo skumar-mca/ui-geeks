@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import { IOrderedListItemType, TextAlignTypes } from '../../../../types/common';
+import { ImagePaths } from '../../../../util/app-constants';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
@@ -82,7 +83,7 @@ const JSConsole = () => {
 
       <Para textAlign={TextAlignTypes.Center}>
         <YALSImage
-          imagePath='/images/console-hello-js.png'
+          imagePath={ImagePaths.Console_Hello}
           imageTitle='JavaScript Console'
           alt='JavaScript Console'
         />
@@ -116,4 +117,4 @@ const JSConsole = () => {
   );
 };
 
-export default JSConsole;
+export default memo(JSConsole);

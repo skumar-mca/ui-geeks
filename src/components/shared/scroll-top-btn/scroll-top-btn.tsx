@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import useScrollPosition from '../../../custom-hooks/use-scroll-position';
 import { AppPrefix } from '../../../util/app-constants';
 import ArrowUpIcon from '../../icons/arrow-up-icon';
@@ -44,4 +44,4 @@ const ScrollTopButton = () => {
   );
 };
 
-export default ScrollTopButton;
+export default memo(ScrollTopButton);

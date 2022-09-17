@@ -11,8 +11,8 @@ const devServer: DevServerConfiguration = {
 
 const config: Configuration = {
   entry: './src/index.tsx',
-  //mode: "production",
-  mode: 'development',
+  mode: 'production',
+  //mode: 'development',
   module: {
     rules: [
       {
@@ -61,7 +61,7 @@ const config: Configuration = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'dist/bundle.js'
   },
   performance: {
     hints: false,

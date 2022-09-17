@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { memo, Suspense, useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import { Outlet } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import { DeviceType } from '../../../util/app-constants';
 import ListIcon from '../../icons/list-icon';
+import ContentLoader from '../../shared/content-loader/content-loader';
 import NavigationMenu from '../../shared/navigation-menu/navigation-menu';
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
 import NextPrevButtons from '../../shared/next-prev-btn/next-prev-btn';
@@ -166,7 +167,10 @@ const JSHome = () => {
           </>
         )}
 
-        <Outlet />
+        <Suspense fallback={<ContentLoader />}>
+          <Outlet />
+        </Suspense>
+
         <NextPrevButtons allItems={JSLINK} />
         <ScrollTopButton />
       </Col>
@@ -174,4 +178,4 @@ const JSHome = () => {
   );
 };
 
-export default JSHome;
+export default memo(JSHome);

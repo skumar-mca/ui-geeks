@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import HomeIntro from './home-intro/home-intro';
 import LanguageComponent from './language-component/language-component';
 
@@ -52,4 +52,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

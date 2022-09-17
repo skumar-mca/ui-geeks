@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { Breadcrumb } from 'react-bootstrap';
 import { AppPrefix } from '../../../util/app-constants';
 import './yals-breadcrumb.scss';
@@ -24,4 +24,4 @@ const YALSBreadcrumb = (props: IYALSBreadcrumbProps) => {
   );
 };
 
-export default YALSBreadcrumb;
+export default memo(YALSBreadcrumb);

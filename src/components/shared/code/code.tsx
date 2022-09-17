@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { anOldHope, CopyBlock, dracula, github } from 'react-code-blocks';
 import { AppPrefix } from '../../../util/app-constants';
 import './code.scss';
@@ -46,4 +46,4 @@ const Code = (props: ICodeProps) => {
   );
 };
 
-export default Code;
+export default memo(Code);

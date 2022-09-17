@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
@@ -35,4 +35,4 @@ const JSFunctions = () => {
   );
 };
 
-export default JSFunctions;
+export default memo(JSFunctions);

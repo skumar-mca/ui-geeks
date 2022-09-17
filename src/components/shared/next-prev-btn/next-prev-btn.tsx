@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import { useNavigate } from 'react-router-dom';
@@ -102,4 +102,4 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
   );
 };
 
-export default NextPrevButtons;
+export default memo(NextPrevButtons);

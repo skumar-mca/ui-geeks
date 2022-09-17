@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix } from '../../../util/app-constants';
@@ -37,4 +37,4 @@ const NavigationMenu = (props: INavigationMenuProps) => {
   );
 };
 
-export default NavigationMenu;
+export default memo(NavigationMenu);

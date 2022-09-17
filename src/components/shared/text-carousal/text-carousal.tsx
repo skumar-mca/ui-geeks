@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import './text-carousal.scss';
 import { ITextCarousalProps } from './text-carousal.types';
@@ -45,4 +45,4 @@ const TextCarousal = (props: ITextCarousalProps) => {
   );
 };
 
-export default TextCarousal;
+export default memo(TextCarousal);

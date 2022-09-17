@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import { IOrderedListItemType } from '../../../../types/common';
 import Container from '../../../shared/container/container';
@@ -122,4 +122,4 @@ const JSTypes = () => {
   );
 };
 
-export default JSTypes;
+export default memo(JSTypes);

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { Button } from 'react-bootstrap';
 import { AppPrefix } from '../../../util/app-constants';
 import './yals-button.scss';
@@ -44,4 +44,4 @@ const YALSButton = (props: YALSButtonProps) => {
   );
 };
 
-export default YALSButton;
+export default memo(YALSButton);

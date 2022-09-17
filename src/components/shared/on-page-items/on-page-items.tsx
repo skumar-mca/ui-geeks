@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix } from '../../../util/app-constants';
 import { getOnPageItems, populateId } from '../../../util/util';
@@ -82,4 +82,4 @@ const OnPageItems = (props: any) => {
   return <div className={textCarousalClasses}>{getItems()}</div>;
 };
 
-export default OnPageItems;
+export default memo(OnPageItems);

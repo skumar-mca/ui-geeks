@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 const Space = () => {
   return <> </>;
 };
 
-export default Space;
+export default memo(Space);

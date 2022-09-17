@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import Heading from '../heading/heading';
 import Para from '../para/para';
@@ -40,4 +40,4 @@ const TimeLine = (props: ITimeLineProps) => {
   );
 };
 
-export default TimeLine;
+export default memo(TimeLine);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ImagePaths } from '../../../../util/app-constants';
 import Code from '../../../shared/code/code';
 import Para from '../../../shared/para/para';
 import { B, BI, IU, NewLine, OrderedList } from '../../../shared/util/util';
@@ -89,7 +90,7 @@ const JSScriptLoadingIntro = () => {
       <Para textAlign='center'>
         <YALSImage
           width='95%'
-          imagePath='images/default-script-loading-strategy.png'
+          imagePath={ImagePaths.Script_Loading}
           alt='default script loading strategy'
         />
       </Para>

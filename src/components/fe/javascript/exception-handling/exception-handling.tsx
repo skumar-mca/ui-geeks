@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import Code from '../../../shared/code/code';
 import Container from '../../../shared/container/container';
@@ -152,4 +152,4 @@ finally {
   );
 };
 
-export default JSExceptionHandling;
+export default memo(JSExceptionHandling);

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import Modal from 'react-bootstrap/esm/Modal';
 import { AppPrefix } from '../../../util/app-constants';
 import './yals-modal.scss';
@@ -29,4 +29,4 @@ const YALSModal = (props: IYALSModalProps) => {
   );
 };
 
-export default YALSModal;
+export default memo(YALSModal);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ImagePaths } from '../../../../util/app-constants';
 import Code from '../../../shared/code/code';
 import { CodeLanguageTypes } from '../../../shared/code/code.types';
 import Heading from '../../../shared/heading/heading';
@@ -31,7 +32,7 @@ const JSAsyncScriptLoading = () => {
       <Para textAlign='center'>
         <YALSImage
           width='95%'
-          imagePath='images/script-loading-strategy-with-async.png'
+          imagePath={ImagePaths.Asyn_Script_Loading}
           alt='async script loading strategy'
         />
       </Para>

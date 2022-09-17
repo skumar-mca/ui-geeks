@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import { TextAlignTypes } from '../../../../types/common';
 import Container from '../../../shared/container/container';
@@ -107,4 +107,4 @@ const JSInclude = () => {
   );
 };
 
-export default JSInclude;
+export default memo(JSInclude);

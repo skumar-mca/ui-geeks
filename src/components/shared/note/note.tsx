@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import Alert from 'react-bootstrap/esm/Alert';
 import { AppPrefix } from '../../../util/app-constants';
 import './note.scss';
@@ -21,4 +21,4 @@ const Note = (props: any) => {
   );
 };
 
-export default Note;
+export default memo(Note);

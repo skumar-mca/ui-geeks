@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import Space from '../space/space';
 import './word.scss';
@@ -24,4 +24,4 @@ const Word = (props: IWordProps) => {
   );
 };
 
-export default Word;
+export default memo(Word);

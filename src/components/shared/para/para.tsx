@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, memo } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import './para.scss';
 import { IParaProps } from './para.types';
@@ -20,4 +20,4 @@ const Para = (props: IParaProps) => {
   );
 };
 
-export default Para;
+export default memo(Para);

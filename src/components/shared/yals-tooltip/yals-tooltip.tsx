@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import OverlayTrigger from 'react-bootstrap/esm/OverlayTrigger';
 import Tooltip from 'react-bootstrap/esm/Tooltip';
 import { AppPrefix } from '../../../util/app-constants';
@@ -29,4 +29,4 @@ const YALSTooltip = (props: IYALSTooltipProps) => {
   );
 };
 
-export default YALSTooltip;
+export default memo(YALSTooltip);

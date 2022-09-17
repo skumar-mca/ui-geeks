@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import './yals-image.scss';
 import { IYALSImageProps } from './yals-image.types';
@@ -17,4 +17,4 @@ const YALSImage = (props: IYALSImageProps) => {
   );
 };
 
-export default YALSImage;
+export default memo(YALSImage);

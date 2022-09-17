@@ -1,4 +1,5 @@
 import React from 'react';
+import { ImagePaths } from '../../../../util/app-constants';
 import Code from '../../../shared/code/code';
 import { CodeLanguageTypes } from '../../../shared/code/code.types';
 import Heading from '../../../shared/heading/heading';
@@ -28,7 +29,7 @@ const JSDeferScriptLoading = () => {
       <Para textAlign='center'>
         <YALSImage
           width='95%'
-          imagePath='images/script-loading-strategy-with-defer.png'
+          imagePath={ImagePaths.Defer_Script_Loading}
           alt='defer script loading strategy'
         />
       </Para>

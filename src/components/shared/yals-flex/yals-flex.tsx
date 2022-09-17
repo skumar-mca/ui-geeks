@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, memo } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import './yals-flex.scss';
 import { IYALSFlexProps } from './yals-flex.types';
@@ -38,4 +38,4 @@ const YALSFlex = (props: IYALSFlexProps) => {
   );
 };
 
-export default YALSFlex;
+export default memo(YALSFlex);

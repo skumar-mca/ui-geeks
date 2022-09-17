@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
@@ -30,4 +30,4 @@ const JSControlStructures = () => {
   );
 };
 
-export default JSControlStructures;
+export default memo(JSControlStructures);

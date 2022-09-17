@@ -455,10 +455,11 @@ export const JSLINK = [
             label: 'Default Export'
           },
           {
-            label: 'Re-exporting/Aggregation'
+            label: 'Re-exporting'
           },
           {
-            label: 'Wild-card (*) export statement'
+            label: 'Wild-card (*) export statement',
+            shortLabel: 'Rename Named export'
           }
         ]
       },

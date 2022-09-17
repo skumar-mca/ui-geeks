@@ -1,0 +1,6 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-modal {
+  text-decoration: dashed underline $primaryBgColor;
+}

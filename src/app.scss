@@ -47,6 +47,25 @@ body {
   background-color: $bodyBgColor;
   padding: 0px 10px 0px 10px;
   padding-top: 35px;
+
+  .mobile-menu-wrapper {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 50px;
+    right: 30px;
+    background-color: $lightGray;
+    z-index: 99999;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $primaryColor;
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
 }
 
 .yals-right-section {
@@ -58,6 +77,18 @@ body {
 
 .row {
   --bs-gutter-x: 0;
+}
+
+.device-type-mobile {
+  .yals-breadcrumb {
+    padding-left: 0px;
+  }
+  .yals-container {
+    padding: 0px;
+  }
+  .yals-left-section {
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar {

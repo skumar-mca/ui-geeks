@@ -31,5 +31,6 @@ export interface YALSButtonProps {
   size?: YALSButtonSizeType;
   href?: string;
   title?: string;
+  block?: boolean;
   onClick: (evt?: any) => void;
 }

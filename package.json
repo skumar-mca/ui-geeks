@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack --mode production",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/skumar-mca/yals/issues"
   },
-  "homepage": "https://github.com/skumar-mca/yals#readme",
+  "homepage": "https://skumar-mca.github.io/yals",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -62,6 +63,7 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.10.1"
+    "webpack-dev-server": "^4.10.1",
+    "gh-pages": "~3.1.0"
   }
 }

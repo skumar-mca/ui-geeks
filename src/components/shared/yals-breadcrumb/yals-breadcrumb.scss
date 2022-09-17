@@ -1,0 +1,9 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-breadcrumb {
+  padding-left: 1rem;
+  .breadcrumb-item.active {
+    font-weight: bold;
+  }
+}

@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import { Outlet } from 'react-router-dom';
+import useDeviceType from '../../../custom-hooks/use-device-type';
+import { DeviceType } from '../../../util/app-constants';
+import ListIcon from '../../icons/list-icon';
 import NavigationMenu from '../../shared/navigation-menu/navigation-menu';
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
 import NextPrevButtons from '../../shared/next-prev-btn/next-prev-btn';
 import ScrollTopButton from '../../shared/scroll-top-btn/scroll-top-btn';
+import YALSBreadcrumb from '../../shared/yals-breadcrumb/yals-breadcrumb';
+import YALSButton from '../../shared/yals-button/yals-button';
+import { YALSButtonVariantTypes } from '../../shared/yals-button/yals-button.types';
+import YALSFlex from '../../shared/yals-flex/yals-flex';
+import {
+  FlexAlignItemsTypes,
+  FlexJustifyContentTypes
+} from '../../shared/yals-flex/yals-flex.types';
+import YALSModal from '../../shared/yals-modal/yals-modal';
 import './javascript-home.scss';
+import { JSBreadcrumbLink } from './js-breadcrumb-links';
 import { JSLINK } from './js-link-tree';
 
 const routePrefix = '/fe/javascript/';
@@ -100,13 +113,59 @@ const menuItems: Array<IMenuItem> = [
 ];
 
 const JSHome = () => {
+  const deviceType = useDeviceType();
+
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu((prev: boolean) => !prev);
+  };
+
   return (
     <Row>
-      <Col lg={2} md={3} sm={4} className='yals-left-section'>
-        <NavigationMenu menuList={menuItems} />
-      </Col>
+      {deviceType != DeviceType.Mobile && (
+        <Col lg={2} md={3} sm={4} className='yals-left-section'>
+          <NavigationMenu menuList={menuItems} />
+        </Col>
+      )}
 
-      <Col lg={10} md={9} sm={8} className='yals-content-section'>
+      <Col
+        lg={deviceType === DeviceType.Mobile ? 12 : 10}
+        md={deviceType === DeviceType.Mobile ? 12 : 9}
+        sm={deviceType === DeviceType.Mobile ? 12 : 8}
+        className='yals-content-section'
+      >
+        <YALSBreadcrumb items={JSBreadcrumbLink} />
+
+        {deviceType === DeviceType.Mobile && (
+          <>
+            {!showMenu && (
+              <YALSFlex
+                className='mobile-menu-wrapper'
+                justifyContent={FlexJustifyContentTypes.Center}
+                alignItems={FlexAlignItemsTypes.Center}
+              >
+                <YALSButton
+                  onClick={toggleMenu}
+                  variant={YALSButtonVariantTypes.Clear}
+                >
+                  <ListIcon height={25} width={25} />
+                </YALSButton>
+              </YALSFlex>
+            )}
+
+            {showMenu && (
+              <YALSModal
+                modalHeader='Navigation'
+                show={showMenu}
+                onHide={toggleMenu}
+                fullScreen={true}
+                modalContent={<NavigationMenu menuList={menuItems} />}
+              />
+            )}
+          </>
+        )}
+
         <Outlet />
         <NextPrevButtons allItems={JSLINK} />
         <ScrollTopButton />

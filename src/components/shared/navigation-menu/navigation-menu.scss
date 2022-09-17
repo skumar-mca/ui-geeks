@@ -27,6 +27,7 @@
         &.selected {
           border-left: 2px solid $brightGreen;
           background-color: $lightGray;
+          font-weight: bold;
         }
 
         &:hover {
@@ -35,5 +36,17 @@
         }
       }
     }
+  }
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background: white;
   }
 }

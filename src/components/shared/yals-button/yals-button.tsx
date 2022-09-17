@@ -14,6 +14,7 @@ const YALSButton = (props: YALSButtonProps) => {
     size = YALSButtonSizeTypes.Small,
     href,
     title,
+    block,
     onClick
   } = props;
 
@@ -22,18 +23,24 @@ const YALSButton = (props: YALSButtonProps) => {
     [`${className}`]: className
   });
 
+  const btnWrapperClasses = classNames({
+    ['d-grid gap-2']: block
+  });
+
   return (
-    <Button
-      href={href}
-      size={size as 'sm'}
-      className={buttonClasses}
-      variant={`${outline ? 'outline-' : ''}${variant}`}
-      onClick={onClick}
-      title={title}
-      tabIndex={1}
-    >
-      {children}
-    </Button>
+    <span className={btnWrapperClasses}>
+      <Button
+        href={href}
+        size={size as 'sm'}
+        className={buttonClasses}
+        variant={`${outline ? 'outline-' : ''}${variant}`}
+        onClick={onClick}
+        title={title}
+        tabIndex={1}
+      >
+        {children}
+      </Button>
+    </span>
   );
 };
 

@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import { useNavigate } from 'react-router-dom';
+import useDeviceType from '../../../custom-hooks/use-device-type';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
-import { AppPrefix } from '../../../util/app-constants';
+import { AppPrefix, DeviceType } from '../../../util/app-constants';
 import ChevronLeft from '../../icons/chevron-left';
 import ChevronRight from '../../icons/chevron-right';
 import { B, NewLine } from '../util/util';
@@ -20,6 +21,7 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
   const { allItems } = props;
   const navigate = useNavigate();
   const currentPath = useCurrentPath();
+  const deviceType = useDeviceType();
 
   const prevNextBtnClasses = classNames({
     [`${AppPrefix}-prev-next-btn`]: true
@@ -64,6 +66,7 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
               outline={false}
               size={YALSButtonSizeTypes.Large}
               variant={YALSButtonVariantTypes.Dark}
+              block={deviceType === DeviceType.Mobile}
             >
               <div className='prev-button'>
                 <ChevronLeft fillColor='white' width={22} height={20} />
@@ -83,6 +86,7 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
               outline={false}
               size={YALSButtonSizeTypes.Large}
               variant={YALSButtonVariantTypes.Dark}
+              block={deviceType === DeviceType.Mobile}
             >
               <div className='next-button'>
                 <B>Next</B>

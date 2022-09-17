@@ -12,8 +12,19 @@
     font-size: 0.7rem;
   }
 
+  .prev-btn-wrapper {
+    .yals-btn {
+      text-align: left;
+    }
+    padding-right: 5px;
+    margin-bottom: 5px;
+  }
+
   .next-btn-wrapper {
     text-align: right;
+    .yals-btn {
+      text-align: right;
+    }
     .next-button {
       text-align: right;
       .yals-text-bold {

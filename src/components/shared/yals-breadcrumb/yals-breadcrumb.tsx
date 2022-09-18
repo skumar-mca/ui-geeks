@@ -16,7 +16,9 @@ const YALSBreadcrumb = (props: IYALSBreadcrumbProps) => {
     <Breadcrumb className={breadcrumbClasses}>
       {items.slice(0, items.length - 1).map((itm: any) => {
         return (
-          <Breadcrumb.Item href={`#${itm.link}`}>{itm.label}</Breadcrumb.Item>
+          <Breadcrumb.Item key={itm.label} href={`#${itm.link}`}>
+            {itm.label}
+          </Breadcrumb.Item>
         );
       })}
       <Breadcrumb.Item active>{items[items.length - 1].label}</Breadcrumb.Item>

@@ -9,7 +9,7 @@ import './navigation-menu.scss';
 import { IMenuItem, INavigationMenuProps } from './navigation-menu.types';
 
 const NavigationMenu = (props: INavigationMenuProps) => {
-  const { menuList, menuTitle } = props;
+  const { menuList, menuTitle, onMenuClick } = props;
   const menuClasses = classNames({ [`${AppPrefix}-menu-wrapper`]: true });
   const currentPath = useCurrentPath();
   const isSelectedRoute = (url: string) => currentPath === url;
@@ -24,10 +24,13 @@ const NavigationMenu = (props: INavigationMenuProps) => {
               <Link
                 to={itm.url}
                 className={isSelectedRoute(itm.url) ? 'selected' : ''}
+                onClick={onMenuClick && onMenuClick.bind(this, itm)}
               >
                 {itm.label}
 
-                {isSelectedRoute(itm.url) && <OnPageItems allItems={JSLINK} />}
+                {isSelectedRoute(itm.url) && (
+                  <OnPageItems allItems={JSLINK} onMenuClick={onMenuClick} />
+                )}
               </Link>
             </li>
           );

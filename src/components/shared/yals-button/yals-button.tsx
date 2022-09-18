@@ -15,7 +15,9 @@ const YALSButton = (props: YALSButtonProps) => {
     href,
     title,
     block,
-    onClick
+    active,
+    onClick,
+    onMouseMove
   } = props;
 
   const buttonClasses = classNames({
@@ -37,6 +39,8 @@ const YALSButton = (props: YALSButtonProps) => {
         onClick={onClick}
         title={title}
         tabIndex={1}
+        active={active}
+        onMouseMove={onMouseMove && onMouseMove}
       >
         {children}
       </Button>

@@ -7,7 +7,8 @@ const BaseIcon = (props: IBaseIconsProps) => {
     height = 16,
     fillColor = 'rgb(70, 70, 94)',
     viewBox = '0 0 16 16',
-    d
+    d,
+    d2
   } = props;
   return (
     <svg
@@ -18,6 +19,7 @@ const BaseIcon = (props: IBaseIconsProps) => {
       viewBox={viewBox}
     >
       <path d={d} />
+      {d2 && <path d={d2} />}
     </svg>
   );
 };

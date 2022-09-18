@@ -14,3 +14,31 @@ $h1Color: #ff5e0e;
 $h2Color: #008575;
 $brightGreen: #33cc7b;
 $boxShadow: #888888;
+
+$redThemeBg: linear-gradient(
+  90deg,
+  rgba(238, 95, 95, 1) 0%,
+  rgba(235, 104, 104, 1) 49%,
+  rgba(228, 51, 51, 1) 100%
+);
+
+$yellowThemeBg: linear-gradient(
+  90deg,
+  rgba(239, 250, 133, 1) 0%,
+  rgba(212, 210, 29, 1) 50%,
+  rgba(139, 157, 0, 1) 100%
+);
+
+$grayThemeBg: linear-gradient(
+  90deg,
+  rgba(238, 95, 95, 1) 0%,
+  rgba(235, 104, 104, 1) 49%,
+  rgba(228, 51, 51, 1) 100%
+);
+
+$lightGreenThemeBg: linear-gradient(
+  90deg,
+  rgba(51, 204, 123, 1) 0%,
+  rgba(53, 195, 124, 1) 32%,
+  rgba(103, 106, 228, 1) 100%
+);

@@ -6,7 +6,7 @@ import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
-import { OrderedList } from '../../../shared/util/util';
+import { B, OrderedList } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
 import JSBigIntType from './big-int-type';
 import JSBooleanType from './boolean-type';
@@ -67,10 +67,14 @@ const JSTypes = () => {
       </Heading>
 
       <Para>
-        Primarily there are 7 types in JavaScript Number, BigInt, String,
+        Primarily there are <B>7</B> types in JavaScript:
         <OrderedList
           unOrdered
-          items={[{ label: 'Boolean, Function, Object, Symbol' }]}
+          items={[
+            {
+              label: 'Number, BigInt, String, Boolean, Function, Object, Symbol'
+            }
+          ]}
         />
       </Para>
 

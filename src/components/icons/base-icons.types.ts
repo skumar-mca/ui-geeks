@@ -7,4 +7,5 @@ export interface IconsProps {
 
 export interface IBaseIconsProps extends IconsProps {
   d: string;
+  d2?: string;
 }

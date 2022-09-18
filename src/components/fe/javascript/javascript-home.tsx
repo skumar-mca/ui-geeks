@@ -122,6 +122,10 @@ const JSHome = () => {
     setShowMenu((prev: boolean) => !prev);
   };
 
+  const hideMenu = () => {
+    setShowMenu(() => false);
+  };
+
   return (
     <Row>
       {deviceType != DeviceType.Mobile && (
@@ -134,7 +138,6 @@ const JSHome = () => {
         lg={deviceType === DeviceType.Mobile ? 12 : 10}
         md={deviceType === DeviceType.Mobile ? 12 : 9}
         sm={deviceType === DeviceType.Mobile ? 12 : 8}
-        className='yals-content-section'
       >
         <YALSBreadcrumb items={JSBreadcrumbLink} />
 
@@ -161,7 +164,9 @@ const JSHome = () => {
                 show={showMenu}
                 onHide={toggleMenu}
                 fullScreen={true}
-                modalContent={<NavigationMenu menuList={menuItems} />}
+                modalContent={
+                  <NavigationMenu menuList={menuItems} onMenuClick={hideMenu} />
+                }
               />
             )}
           </>

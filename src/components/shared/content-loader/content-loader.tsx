@@ -13,8 +13,8 @@ const ContentLoader = () => {
   return (
     <div className={`${contentLoaderClasses} page-content`}>
       <div className='placeholder-content'>
-        {numArr.map(() => {
-          return <div className='placeholder-content_item'></div>;
+        {numArr.map((itm) => {
+          return <div key={itm} className='placeholder-content_item'></div>;
         })}
       </div>
     </div>

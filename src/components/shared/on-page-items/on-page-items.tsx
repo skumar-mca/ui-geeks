@@ -8,7 +8,7 @@ import { YALSButtonVariantTypes } from '../yals-button/yals-button.types';
 import './on-page-items.scss';
 
 const OnPageItems = (props: any) => {
-  const { allItems } = props;
+  const { allItems, onMenuClick } = props;
   const currentPath = useCurrentPath();
 
   const textCarousalClasses = classNames({
@@ -34,6 +34,8 @@ const OnPageItems = (props: any) => {
       var scrollDiv = elm.offsetTop - 50;
       window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
     }
+
+    onMenuClick && onMenuClick(itm);
   };
 
   const getItems = () => {

@@ -30,4 +30,66 @@
       }
     }
   }
+
+  .yals-search {
+    text-align: center;
+    width: 100px;
+    margin-right: 5px;
+    .search-result-wrapper {
+      width: 250px;
+      max-height: 40vh;
+      overflow: auto;
+      background-color: $primaryColor;
+      text-align: left;
+      margin: auto;
+      border-radius: 4px;
+      margin-top: 1px;
+      position: absolute;
+      right: 5px;
+
+      .yals-btn.active {
+        background-color: $brightGreen;
+        border: 1px solid $brightGreen;
+      }
+
+      .yals-btn {
+        border-bottom: 1px solid white;
+        margin-bottom: 1px;
+        border-radius: 0;
+        padding: 2px 5px 2px 5px;
+
+        &:hover {
+          background-color: $brightGreen;
+        }
+      }
+      h5 {
+        font-size: 0.8em;
+        text-align: left;
+        margin-bottom: 1px;
+      }
+      .matching-term {
+        font-size: 0.8em;
+        text-align: left;
+        font-style: italic;
+      }
+    }
+
+    .yals-search-input {
+      margin: auto;
+      max-width: 250px;
+
+      .form-control {
+        height: 24px;
+        padding: 2px 2px 2px 5px;
+        font-size: 0.8rem;
+      }
+
+      .input-group-text {
+        width: 35px;
+        padding-left: 8px;
+        background-color: #6e45e2;
+        height: 24px;
+      }
+    }
+  }
 }

@@ -6,4 +6,5 @@ export interface IMenuItem {
 export interface INavigationMenuProps {
   menuList: Array<IMenuItem>;
   menuTitle?: string;
+  onMenuClick?: (menuItem?: IMenuItem) => void;
 }

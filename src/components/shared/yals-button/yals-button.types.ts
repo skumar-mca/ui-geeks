@@ -32,5 +32,7 @@ export interface YALSButtonProps {
   href?: string;
   title?: string;
   block?: boolean;
+  active?: boolean;
   onClick: (evt?: any) => void;
+  onMouseMove?: (evt?: any) => void;
 }

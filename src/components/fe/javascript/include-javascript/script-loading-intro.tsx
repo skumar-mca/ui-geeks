@@ -2,6 +2,7 @@ import React from 'react';
 import { ImagePaths } from '../../../../util/app-constants';
 import Code from '../../../shared/code/code';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B, BI, IU, NewLine, OrderedList } from '../../../shared/util/util';
 import YALSImage from '../../../shared/yals-image/yals-image';
 
@@ -64,7 +65,9 @@ const JSScriptLoadingIntro = () => {
 
       <Para>
         <B>Solution to the problem:</B>
-        <IU>For Inline Scripts:</IU>
+        <NewLine />
+        <NewLine />
+        <IU>For Inline Scripts:</IU> <Space />
         The <B>DOMContentLoaded</B> event can be used to wait until all HTML
         elements are loaded.
       </Para>
@@ -77,6 +80,7 @@ const JSScriptLoadingIntro = () => {
 
       <Para>
         <IU>For External Scripts:</IU>
+        <Space />
         Before exploring the solutions, lets understand how external script
         affects the loading of the web page. Assuming our webpage just has HTML
         and external script files (not considering css, font, etc).

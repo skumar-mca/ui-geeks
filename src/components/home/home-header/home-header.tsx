@@ -32,7 +32,6 @@ const HomeHeader = () => {
     }
 
     let result: Array<any> = [];
-
     const jsData = JSLINK;
 
     const searchTerm = (value || '').toLowerCase();
@@ -40,11 +39,13 @@ const HomeHeader = () => {
       itm.tags &&
         itm.tags.forEach((tag: any) => {
           if (tag.indexOf(searchTerm) > -1) {
-            const existingResItem = result.find(
+            const existingResItemIndex = result.findIndex(
               (itm1: any) => itm.link === itm1.link
             );
-            if (!existingResItem) {
-              result.push({ ...itm, matchingElement: tag });
+            if (existingResItemIndex === -1) {
+              result.push({ ...itm, matchingElement: [tag] });
+            } else {
+              result[existingResItemIndex].matchingElement.push(tag);
             }
           }
         });
@@ -129,7 +130,9 @@ const HomeHeader = () => {
                   active={itm.link === searchResult[selectedItemIndex].link}
                 >
                   <h5>{itm.label}</h5>
-                  <div className='matching-term'>{itm.matchingElement}</div>
+                  <div className='matching-term'>
+                    {itm.matchingElement.join(', ')}
+                  </div>
                 </YalsButton>
               );
             })}

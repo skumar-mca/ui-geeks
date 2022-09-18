@@ -13,11 +13,15 @@
   }
 
   .prev-btn-wrapper {
+    text-align: left;
+
+    .prev-button {
+      text-align: left;
+    }
+
     .yals-btn {
       text-align: left;
     }
-    padding-right: 5px;
-    margin-bottom: 5px;
   }
 
   .next-btn-wrapper {
@@ -32,11 +36,11 @@
       }
     }
   }
+}
 
+.device-type-mobile {
   .prev-btn-wrapper {
-    text-align: left;
-    .prev-button {
-      text-align: left;
-    }
+    padding-right: 5px;
+    margin-bottom: 5px;
   }
 }

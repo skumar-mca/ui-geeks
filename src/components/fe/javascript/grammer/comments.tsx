@@ -1,6 +1,5 @@
 import React from 'react';
 import Code from '../../../shared/code/code';
-import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
@@ -9,7 +8,7 @@ import Word from '../../../shared/word/word';
 
 const JSComments = () => {
   return (
-    <Container>
+    <>
       <Heading as='h2'>Comments</Heading>
 
       <Para>
@@ -56,7 +55,7 @@ elaborated comment.
         syntax, and is a special comment used to specify the path to a
         particular JavaScript engine that should execute the script.
       </Note>
-    </Container>
+    </>
   );
 };
 

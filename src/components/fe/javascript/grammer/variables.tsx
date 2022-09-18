@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import { BI, OrderedList } from '../../../shared/util/util';
@@ -15,7 +14,7 @@ import JSVariableNamingRules from './variables-naming-rules';
 
 const JSVariables = () => {
   return (
-    <Container>
+    <>
       <Heading as='h2'>Variables</Heading>
 
       <Para>
@@ -55,7 +54,7 @@ const JSVariables = () => {
       <JSTypeConversion />
 
       <JSLiterals />
-    </Container>
+    </>
   );
 };
 

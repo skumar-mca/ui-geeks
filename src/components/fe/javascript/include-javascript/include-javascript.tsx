@@ -76,9 +76,8 @@ const JSInclude = () => {
         <Indent>
           console.log("I will not be executed, will be ignored.");
         </Indent>
-        <Para>
-          <ScriptTag closing />
-        </Para>
+        <NewLine />
+        <ScriptTag closing />
       </Note>
 
       <Heading as='h2'>Script Loading Strategies</Heading>

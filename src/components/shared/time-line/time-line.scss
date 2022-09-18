@@ -12,7 +12,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 15px 0;
-
+  font-size: 0.8rem !important;
   &::after {
     content: '';
     position: absolute;
@@ -25,7 +25,7 @@
   }
 
   .container {
-    padding: 15px 30px;
+    padding: 10px 30px;
     position: relative;
     background: inherit;
     width: 50%;
@@ -96,9 +96,9 @@
   .container .milestone {
     position: absolute;
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 9px 0;
+    width: 40px;
+    height: 40px;
+    padding: 8px 0px;
     top: calc(50% - 20px);
     background: #5765c7;
     border: 2px solid #5765c7;
@@ -107,7 +107,7 @@
     font-size: 18px;
     color: #ffffff;
     z-index: 1;
-    font-weight: bold;
+    font-size: 0.8rem;
   }
 
   .container.left .milestone {
@@ -119,20 +119,21 @@
   }
 
   .container .content {
-    padding: 15px 90px 15px 15px;
+    padding: 10px 90px 10px 15px;
     background: $lightGray;
     position: relative;
     border-radius: 0 15px 15px 0;
   }
 
   .container.right .content {
-    padding: 15px 15px 15px 90px;
+    padding: 10px 15px 10px 90px;
     border-radius: 15px 0 0 15px;
   }
 
   .container .content h2 {
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     font-size: 18px;
+    font-size: 1rem;
     font-weight: normal;
     font-weight: bold;
   }

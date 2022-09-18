@@ -156,6 +156,7 @@
 
     .container.right {
       left: 0%;
+      margin-left: 0;
     }
 
     .container.left::after,
@@ -165,7 +166,7 @@
 
     .container.left::before,
     .container.right::before {
-      left: 100px;
+      left: 98px;
       border-color: transparent #006e51 transparent transparent;
     }
 
@@ -186,5 +187,11 @@
       padding: 30px 30px 30px 90px;
       border-radius: 500px 0 0 500px;
     }
+  }
+}
+
+.device-type-mobile {
+  .yals-time-line {
+    margin-left: 10px;
   }
 }

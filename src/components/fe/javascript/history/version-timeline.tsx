@@ -58,7 +58,7 @@ const JSVersionTimeLine = () => {
     {
       date: 'June, 2017',
       mileStone: 'ES8',
-      title: 'Object.values, Object.entries, Object.getOwnPropertyDescriptors',
+      title: 'Object.values, Object.entries, getOwnPropertyDescriptors',
       description:
         'async/await constructions which use generators and promises.'
     },

@@ -28,7 +28,7 @@ const JSTDZ = () => {
         <IU>Example 1:</IU>
         <Code>
           {`{
-// TDZ starts at the beginning of the scope
+  // TDZ starts at the beginning of the scope
   console.log(varVariable);   // undefined
   console.log(typeof varVariable);  // undefined
   console.log(letVariable);   // ReferenceError
@@ -36,7 +36,7 @@ const JSTDZ = () => {
 
   var varVariable = 10;
   let letVariable = 20;
-// TDZ ends at the end of the scope
+  // TDZ ends at the end of the scope
 }
 `}
         </Code>
@@ -45,7 +45,7 @@ const JSTDZ = () => {
       <Para>
         The term <B>"temporal"</B> is used because the zone depends on the order
         of <I>execution (time)</I>, rather than the order in which the code is
-        <I>written (position)</I>.
+        <Space /> <I>written (position)</I>.
       </Para>
     </>
   );

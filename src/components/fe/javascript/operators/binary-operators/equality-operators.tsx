@@ -2,6 +2,7 @@ import React from 'react';
 import Code from '../../../../shared/code/code';
 import Heading from '../../../../shared/heading/heading';
 import Para from '../../../../shared/para/para';
+import Space from '../../../../shared/space/space';
 import { B, BI, I, NewLine } from '../../../../shared/util/util';
 
 const JSBinaryEqualityOperators = () => {
@@ -50,9 +51,9 @@ const JSBinaryEqualityOperators = () => {
       <Para>
         <Heading as='h5'>Strict Equality "===" Operator</Heading>
         Strict equality operator, checks for equality of operands,
-        <B>without</B> converting <I>(Type Coercion)</I> the values before
-        comparison. This considers operands of different types to be different.
-        Returns
+        <B>without</B> <Space /> converting <I>(Type Coercion)</I> the values
+        before comparison. This considers operands of different types to be
+        different. Returns
         <B>boolean</B> value.
         <Code>
           {`"1" === 1    // false
@@ -63,10 +64,10 @@ const JSBinaryEqualityOperators = () => {
 
       <Para>
         <Heading as='h5'>Strict InEquality "!==" Operator</Heading>
-        Strict inequality operator, checks for inequality of operands,{' '}
-        <B>without</B>
-        converting <I>(Type Coercion)</I> the values before comparison. This
-        considers operands of different types to be different. Returns
+        Strict inequality operator, checks for inequality of operands,
+        <B>without</B> <Space /> converting <I>(Type Coercion)</I> the values
+        before comparison. This considers operands of different types to be
+        different. Returns
         <B>boolean</B> value.
         <Code>
           {`"1" !== 1   // true

@@ -17,7 +17,7 @@ const newTargetList = [
     label: (
       <>
         When called <B>with new</B>, it returns reference to the
-        <I>constructor</I> or <I>function</I>.
+        <Space /> <I>constructor</I> or <I>function</I>.
       </>
     )
   },
@@ -57,14 +57,14 @@ const JSNewTarget = () => {
       <Para>
         <IU>Example:</IU>
         <Code>{`function User(firstName, lastName) {
-    if(!new.target) {
-        throw "User() must be called with new operator";
-    }
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.showName = function() {
-        console.log(this.firstName + "-" + this.lastName);
-    }
+  if(!new.target) {
+    throw "User() must be called with new operator";
+  }
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.showName = function() {
+    console.log(this.firstName + "-" + this.lastName);
+  }
 }`}</Code>
 
         <Para>

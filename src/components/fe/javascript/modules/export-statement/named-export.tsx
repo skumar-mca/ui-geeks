@@ -3,7 +3,7 @@ import Code from '../../../../shared/code/code';
 import Heading from '../../../../shared/heading/heading';
 import Note from '../../../../shared/note/note';
 import Para from '../../../../shared/para/para';
-import { B, BI, I, NewLine } from '../../../../shared/util/util';
+import { B, BI, I } from '../../../../shared/util/util';
 
 const JSModulesNamedExport = () => {
   return (
@@ -28,7 +28,6 @@ export function myFunc() { console.log("hello");
         declaration that exports nothing.
       </Note>
 
-      <NewLine />
       <Heading as='h4'>
         Named export can be renamed while exporting from the module
       </Heading>

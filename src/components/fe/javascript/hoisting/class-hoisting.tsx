@@ -23,10 +23,10 @@ const JSClassHoisting = () => {
           {`const user = new User("John");  // ReferenceError
 
 class User{
-    constructor(name) { this.name = name; }
-    showDetail() { 
-        console.log(\`Username: \${this.name}\`); 
-    }
+  constructor(name) { this.name = name; }
+  showDetail() { 
+    console.log(\`Username: \${this.name}\`); 
+  }
 }
 `}
         </Code>

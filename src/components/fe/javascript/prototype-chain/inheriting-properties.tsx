@@ -107,7 +107,7 @@ const JSInheritingProperties = () => {
 
       <Para>
         <IU>Example 1:</IU>
-        <Code>{`console.log(obj.name)   // "JavaScript"`}</Code>
+        <Code>{`console.log(obj.name) // "JavaScript"`}</Code>
       </Para>
 
       <Para>
@@ -115,7 +115,7 @@ const JSInheritingProperties = () => {
         <Code>{`console.log(obj.version)  // 6`}</Code>
         <Para>
           The reason for <B>"6"</B> being printed as <B>"obj.version"</B> is the
-          <BI>recursive search</BI> in the <BI>obj</BI> and the
+          <BI>recursive search</BI> in the <BI>obj</BI> and the <Space />
           <I>prototype chain</I>.
           <OrderedList items={protoSearch} />
         </Para>
@@ -124,7 +124,7 @@ const JSInheritingProperties = () => {
       <Para>
         <IU>Example 3:</IU>
         <Para>Now, let's try to access a non-existing property.</Para>
-        <Code>{`console.log(obj.year);	// undefined`}</Code>
+        <Code>{`console.log(obj.year);  // undefined`}</Code>
         <Para>
           The reason for <BI>undefined</BI>, can be traced with the below steps:
           <OrderedList items={traceList} />
@@ -138,8 +138,8 @@ const JSInheritingProperties = () => {
           <I>__proto__</I>.
         </Para>
         <Code>{`const parent = {
-    label: "Parent Label",
-    show() { console.log(this.label); }
+  label: "Parent Label",
+  show() { console.log(this.label); }
 }
 
 const child = { __proto__: parent };`}</Code>

@@ -3,7 +3,7 @@ import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
-import { BI, I, IU, NewLine } from '../../../shared/util/util';
+import { BI, I, IU } from '../../../shared/util/util';
 
 const JSClassStaticMembers = () => {
   return (
@@ -21,18 +21,18 @@ const JSClassStaticMembers = () => {
       </Para>
 
       <Code>{`class User {
-    // "MINIMUM_AGE" is a static property
-    static MINIMUM_AGE = 18;
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
+  // "MINIMUM_AGE" is a static property
+  static MINIMUM_AGE = 18;
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
 
-    getUserDetail() { return this.name + " - " + this.age; }
-    // "getValidUsers()" is a static method 
-    static getValidUsers(userList) {
-        return userList.filter(usr => usr.age > this.MINIMUM_AGE);
-    }
+  getUserDetail() { return this.name + " - " + this.age; }
+  // "getValidUsers()" is a static method 
+  static getValidUsers(userList) {
+    return userList.filter(usr => usr.age > this.MINIMUM_AGE);
+  }
 }
 `}</Code>
 
@@ -40,11 +40,10 @@ const JSClassStaticMembers = () => {
         <IU>Example 1:</IU>
         <Code>
           {`const usr = new User("John", 25);
-usr.getUserDetail();	// "John - 25"`}
+usr.getUserDetail();  // "John - 25"`}
         </Code>
       </Para>
 
-      <NewLine />
       <Para>
         <IU>Example 2:</IU>
         <Para>
@@ -61,7 +60,6 @@ console.log(validUsers) // [{ name : "John", age : 25}]
         </Code>
       </Para>
 
-      <NewLine />
       <Para>
         <IU>Example 3:</IU>
         <Para>
@@ -70,7 +68,7 @@ console.log(validUsers) // [{ name : "John", age : 25}]
         </Para>
         <Code>
           {`const usr = new User("John", 25);
-console.log(usr2.MINIMUM_AGE);	// undefined
+console.log(usr2.MINIMUM_AGE);  // undefined
 `}
         </Code>
       </Para>

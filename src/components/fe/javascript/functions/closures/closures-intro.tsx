@@ -11,7 +11,7 @@ const JSFunctionClosuresIntro = () => {
       <Para>
         A <B>closure</B> is the <BI>combination</BI> of a
         <BI>function bundled together</BI> (enclosed) with the references to its
-        <B>surrounding state</B> (the <B>lexical</B>
+        <B>surrounding state</B> (the <B>lexical</B> <Space />
         <I>environment variables</I>). In other words, a closure gives us access
         to an out function's scope from an inner function,
         <BI>when the parent function has returned</BI>. In JavaScript closures
@@ -40,7 +40,7 @@ const JSFunctionClosuresIntro = () => {
 
       <Code>
         {`function makeAdder(x) {
-    return function(y) { return x + y; }
+  return function(y) { return x + y; }
 }
 `}
       </Code>

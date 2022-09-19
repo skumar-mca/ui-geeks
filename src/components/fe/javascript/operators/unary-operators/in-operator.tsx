@@ -9,8 +9,8 @@ const JSUnaryInOperator = () => {
     <>
       <Heading as='h3'>in Operator</Heading>
       <Para>
-        The in operator returns <BI>true</BI>, if given property is in the
-        specified object.
+        The <I>in</I> operator returns <BI>true</BI>, if given property is in
+        the specified object.
       </Para>
       <I>Syntax:</I>
       <NewLine />
@@ -20,9 +20,9 @@ const JSUnaryInOperator = () => {
       </Para>
 
       <Code>
-        {`const obj = { name: “JavaScript”, version: 6 }
-console.log(name in obj)	// true
-console.log(arr in obj)	// false`}
+        {`const obj = { name: "JavaScript", version: 6 }
+console.log(name in obj)  // true
+console.log(arr in obj) // false`}
       </Code>
 
       <Para>
@@ -32,9 +32,9 @@ console.log(arr in obj)	// false`}
 
       <Code>
         {`const arr = ["A", "B", "C"]
-console.log(0 in arr)		// true
-console.log(5 in arr)		// false
-console.log("B" in arr)	       // false`}
+console.log(0 in arr)   // true
+console.log(5 in arr)   // false
+console.log("B" in arr)   // false`}
       </Code>
     </>
   );

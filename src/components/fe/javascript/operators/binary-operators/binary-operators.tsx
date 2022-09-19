@@ -62,10 +62,10 @@ const JSBinaryOperators = () => {
         These are normal mathematical operators, which we have learned in
         school.
         <Code>
-          {`10 + 50	// 60
-5 * 4	       // 20
-20 % 6    // 2 (Modulus operator, returns the remainder)
-2 ** 3      // 8 (Exponential operator)`}
+          {`10 + 50   // 60
+5 * 4   // 20
+20 % 6  // 2 (Modulus operator, returns the remainder)
+2 ** 3  // 8 (Exponential operator)`}
         </Code>
       </Para>
 

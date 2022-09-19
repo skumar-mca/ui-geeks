@@ -2,7 +2,8 @@ import React from 'react';
 import Code from '../../../../../shared/code/code';
 import Heading from '../../../../../shared/heading/heading';
 import Para from '../../../../../shared/para/para';
-import { B, I, NewLine } from '../../../../../shared/util/util';
+import Space from '../../../../../shared/space/space';
+import { B, I } from '../../../../../shared/util/util';
 
 const JSSwitchCase = () => {
   return (
@@ -19,17 +20,16 @@ const JSSwitchCase = () => {
 let dayName = "";
 switch(day) {
     case 1: dayName = "Monday";  break;
-    case 2: dayName = "Tuesday;  break;
-    case 3: dayName = "Wednesday;  break;
-    case 4: dayName = "Thursday;  break;
-    case 5: dayName = "Friday;  break;
-    case 6: dayName = "Saturday;  break;
-    case 7:	dayName = "Sunday";  break;
-    default: dayName = "Invalid Day;
+    case 2: dayName = "Tuesday";  break;
+    case 3: dayName = "Wednesday";  break;
+    case 4: dayName = "Thursday";  break;
+    case 5: dayName = "Friday";  break;
+    case 6: dayName = "Saturday";  break;
+    case 7: dayName = "Sunday";  break;
+    default: dayName = "Invalid Day";
 }
 `}
       </Code>
-      <NewLine />
       <Para>
         <B>case</B> statements are matched with the given value (day). Switch
         stops matching on the first match.
@@ -42,7 +42,7 @@ switch(day) {
         first match, so all following cases will be considered a match.
       </Para>
       <Para>
-        <B>default</B>
+        <B>default</B> <Space />
         statement is used to define the default case, which will be executed, if
         none of the cases match with the given value. The <I>default</I> case is
         optional.

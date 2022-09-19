@@ -78,7 +78,7 @@ mistypedvar = 10;
           Strict mode makes <I>assignment</I> to <BI>non-writable</BI>
           <Space /> <I>global variables</I> throw an <Space />
           <I>exception</I>.
-          <Code>{`let undefined = 10;  // throws TypeError`}</Code>
+          <Code>{`let undefined = 10; // throws TypeError`}</Code>
         </Para>
       </Para>
 
@@ -87,7 +87,7 @@ mistypedvar = 10;
         <Para>
           In strict mode, attempting to <I>delete</I> <I>undeletable</I>
           <Space /> properties throws errors.
-          <Code>{`delete Math.PI;  // throws TypeError`}</Code>
+          <Code>{`delete Math.PI; // throws TypeError`}</Code>
         </Para>
       </Para>
 
@@ -104,7 +104,7 @@ mistypedvar = 10;
         <Para>
           Strict mode in <I>ES6</I> <BI>forbids setting properties</BI> on
           <Space /> <I>primitive</I> values.
-          <Code>{`(10).text = "Ten";    // TypeError`}</Code>
+          <Code>{`(10).text = "Ten";  // TypeError`}</Code>
         </Para>
       </Para>
 
@@ -147,9 +147,9 @@ mistypedvar = 10;
           <BI>arguments[0]</BI> is also changed on changing <BI>"arg"</BI>.`
         </Para>
         <Code>
-          {`function normalFunc(arg){
-    arg = 10;
-    return [arg, arguments[0]];
+          {`function normalFunc(arg) {
+  arg = 10;
+  return [arg, arguments[0]];
 }
 
 const res = normalFunc(15);
@@ -165,9 +165,9 @@ console.log(res[1]);  // 10
 
         <Code>
           {`function strictFunc(arg) {
-    "use strict";
-    arg = 10;
-    return [arg, arguments[0]];
+  "use strict";
+  arg = 10;
+  return [arg, arguments[0]];
 }
 
 const res = normalFunc(15);

@@ -49,7 +49,7 @@ new GoodDerived();
         </Para>
         <Code>
           {`class AlsoGoodDerived extends Base { 
-    constructor() { return { a : 5 }; }
+  constructor() { return { a : 5 }; }
 }
 new AlsoGoodDerived();
 `}

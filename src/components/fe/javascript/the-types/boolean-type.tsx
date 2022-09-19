@@ -29,8 +29,9 @@ Boolean(23) // true`}
         <Para>
           Boolean operations like <Word bold>&&</Word> (Logical AND),
           <Space />
-          <Word bold>||</Word>(Logical OR), <Word bold>!</Word> (Logical NOT)
-          are supported.
+          <Word bold>||</Word>
+          <Space /> (Logical OR), <Word bold>!</Word> (Logical NOT) are
+          supported.
         </Para>
         <Code>
           {`Boolean(1) && Boolean(false)    // false

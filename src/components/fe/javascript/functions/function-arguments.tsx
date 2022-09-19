@@ -3,6 +3,7 @@ import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
 
 const JSFunctionArgumentKeyword = () => {
@@ -14,17 +15,16 @@ const JSFunctionArgumentKeyword = () => {
         The <BI>"arguments"</BI> is an Array-like object accessible inside a
         function, that contains the values of the parameters passed to the
         functions. This can be considered as a <I>special object</I> containing
-        all
-        <I>parameters</I> passed to the function at the time of
-        <I>calling/invocation</I>.
+        all <Space /> <I>parameters</I> passed to the function at the time of
+        <Space /> <I>calling/invocation</I>.
       </Para>
 
       <Code>
         {`function add() {
-    let sum = 0;
-    for(const itm of arguments) { sum += itm; }
+  let sum = 0;
+  for(const itm of arguments) { sum += itm; }
     return sum;
-  }
+ }
 
 const result = add(1, 2, 5, 10)	// 18`}
       </Code>

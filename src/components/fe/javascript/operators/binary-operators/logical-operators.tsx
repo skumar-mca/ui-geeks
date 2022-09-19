@@ -90,9 +90,8 @@ const JSBinaryLogicalOperators = () => {
       <Para>
         <Heading as='h3'>Binary Logical Operators</Heading>
         Logical operators are typically used with <BI>boolean values</BI>
-        and return a boolean value. However, if they are used with
-        <I>non-boolean</I>
-        <Space />
+        <Space /> and return a boolean value. However, if they are used with
+        <Space /> <I>non-boolean</I> <Space />
         values, they may return <B>non-boolean values</B>.
       </Para>
 
@@ -102,7 +101,7 @@ const JSBinaryLogicalOperators = () => {
       </Para>
       <Para>
         When used with <B>boolean values</B>, returns true if both
-        <I>operands</I> are <BI>true</BI>, otherwise returns
+        <Space /> <I>operands</I> are <BI>true</BI>, otherwise returns
         <BI>false</BI>.
       </Para>
 
@@ -117,10 +116,10 @@ true && true      // true`}</Code>
         {`"JS" && "Program"   // "Program"
 // Because first operand "JS" cannot be converted to false
 
-false && "Program"      // false
+false && "Program"    // false
 // Because first operand is false
 
-"Program" && false      // false
+"Program" && false    // false
 // Because first operand "Program" can't be converted to false, 
 // hence the second operand is returned. `}
       </Code>
@@ -130,7 +129,6 @@ false && "Program"      // false
         .
       </Note>
 
-      <NewLine />
       <Heading as='h4'>Logical OR (||) operator</Heading>
       <Para>
         <I>operand1</I> <BI>||</BI> <I>operand2</I>
@@ -140,9 +138,8 @@ false && "Program"      // false
         When used with <B>boolean values</B>, returns <B>true</B>, if any
         operand is <I>true</I>, otherwise returns <B>false</B>.
       </Para>
-      <Code>{`True || false     // true`}</Code>
+      <Code>{`true || false     // true`}</Code>
 
-      <NewLine />
       <Para>
         When used with <B>non-boolean values</B>, returns <BI>operand1</BI>, if
         it can be converted to <BI>true</BI>, otherwise returns
@@ -150,17 +147,17 @@ false && "Program"      // false
       </Para>
 
       <Code>
-        {`"JS" || "Program"   	// "JS"
+        {`"JS" || "Program"   // "JS"
         
 false || "Program"    // "Program"
 // Because operand1 can't be converted to true, therefore, returned operand2`}
       </Code>
 
-      <NewLine />
       <Heading as='h3'>Short-circuit evaluation</Heading>
       <Para>
         Because logical operators are evaluated from left to right, they are
-        tested for possible "short-circuit" evaluation using below rules:
+        tested for possible <BI>"short-circuit"</BI> evaluation using below
+        rules:
       </Para>
 
       <OrderedList

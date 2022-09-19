@@ -2,6 +2,7 @@ import React from 'react';
 import Code from '../../../../shared/code/code';
 import Heading from '../../../../shared/heading/heading';
 import Para from '../../../../shared/para/para';
+import Space from '../../../../shared/space/space';
 import { B, BI, I, NewLine, OrderedList } from '../../../../shared/util/util';
 
 const example1PublicMember = [
@@ -73,7 +74,7 @@ const JSFunctionClosureUseCases = () => {
     // public members, returned from here
     return {
         increment() { changeBy(1); },
-        decrement() {	changeBy(-1); },
+        decrement() { changeBy(-1); },
         value() { return privateCtr; }
   }
 }
@@ -94,7 +95,7 @@ counter.value();    // 1`}
 
       <Para>
         The private members can't be accessed from outside the{' '}
-        <I>makeCounter()</I>
+        <I>makeCounter()</I> <Space />
         function. Instead, public members should be used to access the private
         members.
       </Para>

@@ -30,7 +30,7 @@ export default function greet() { console.log("Hello!"); };`}
       <Code>
         {`// "./main-program.js"
 import greet from "./exported-module.js";
-greet();	// "Hello!"`}
+greet();  // "Hello!"`}
       </Code>
 
       <Note>

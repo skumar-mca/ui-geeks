@@ -20,7 +20,7 @@ const JSModulesNamespaceImport = () => {
       </Para>
       <Code>
         {`import * as myModule from "./exportedModule.js";
-myModule.greet();	// "Hello!"
+myModule.greet(); // "Hello!"
 `}
       </Code>
       <Para>
@@ -54,8 +54,8 @@ myModule.greet();	// "Hello!"
 
       <Note>
         JavaScript do not have <B>wild-card import</B>, like, import * from
-        “exported-module.js”, similar to wild-card export export * from
-        “module.js”. The reason is the high possibility of name conflicts.
+        "exported-module.js", similar to wild-card export like export * from
+        "module.js". The reason is the high possibility of name conflicts.
       </Note>
     </>
   );

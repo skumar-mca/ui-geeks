@@ -2,6 +2,7 @@ import React from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B, I, NewLine } from '../../../shared/util/util';
 
 const JSTernaryOperator = () => {
@@ -16,9 +17,9 @@ const JSTernaryOperator = () => {
       operand1 ? operand2 : operand3
       <Para>
         <B>Better written as:</B>
-        condition ? operand1 : operand2
+        <Space /> condition ? operand1 : operand2
         <NewLine />
-        If the condition is <I>true</I>, <B>operand1</B> is returned , otherwise{' '}
+        If the condition is <I>true</I>, <B>operand1</B> is returned, otherwise{' '}
         <B>operand2</B> is returned.
       </Para>
       <Code>

@@ -11,8 +11,8 @@ const strictChanges = [
     label: (
       <>
         Changes some silently ignored <I>errors</I> to be thrown, i.e,
-        <I>errors</I> which are ignored in <I>non-strict mode</I> will throw
-        errors in <I>strict mode</I>.
+        <Space /> <I>errors</I> which are ignored in <I>non-strict mode</I> will
+        throw errors in <I>strict mode</I>.
       </>
     )
   },
@@ -54,9 +54,8 @@ const JSStrictModeIntro = () => {
       <Para>
         <BI>Strict mode</BI> may be applied to <B>entire scripts</B> or to
         <B>individual functions</B>. It doesn't apply to <I>block statements</I>
-        enclosed in {`{ }`}, attempting to apply <I>strict mode</I> to <Space />
-        <I>block statements</I> <Space />
-        will do nothing.
+        <Space /> enclosed in {`{ }`}, attempting to apply <I>strict mode</I> to
+        <Space /> <I>block statements</I> <Space /> will do nothing.
       </Para>
 
       <Para>

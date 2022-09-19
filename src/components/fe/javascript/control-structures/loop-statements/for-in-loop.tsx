@@ -16,7 +16,7 @@ const JSForInLoop = () => {
       <Code>
         {`const obj = { "a" : 10, "b" : 20, "c" : 30 };
 for(const itm in obj) {
-	console.log(\`\${itm} : \${obj[itm]}\`);
+  console.log(\`\${itm} : \${obj[itm]}\`);
 }
 
 // Output:

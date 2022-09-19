@@ -18,9 +18,9 @@ const JSClassConstructor = () => {
       </Para>
 
       <Code>{`class User {
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
 }
 `}</Code>

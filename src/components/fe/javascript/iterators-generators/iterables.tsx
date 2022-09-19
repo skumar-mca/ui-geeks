@@ -40,8 +40,8 @@ const JSIterables = () => {
         </Para>
         <Code>
           {`function* makeIterator() {
-    yield 1;
-    yield 2;
+  yield 1;
+  yield 2;
 }
 const it = makeIterator();
 
@@ -71,21 +71,20 @@ for(const itm of it) { console.log(itm); }
         </Code>
       </Para>
 
-      <NewLine />
       <Para>
         <IU>Example 2:</IU>
         <NewLine />
         Implementing an <I>iterable</I> which can iterate <B>many times</B>.
         <Code>
           {`function* makeIterator() {
-    yield 1;
-    yield 2;
+  yield 1;
+  yield 2;
 }
 
 const it = makeIterator();
 it[Symbol.iterator] = function*() {
-    yield 1;
-    yield 2;
+  yield 1;
+  yield 2;
 }
 
 for(const itm of it) { 	console.log(itm); }
@@ -105,7 +104,6 @@ for(const itm of it) { 	console.log(itm); }
         </Para>
       </Para>
 
-      <NewLine />
       <Para>
         <B>next()</B>: The <I>next()</I> method also accepts a parameter value,
         which can be used to modify the internal state of the generator. A value
@@ -118,18 +116,18 @@ for(const itm of it) { 	console.log(itm); }
         <IU>Exmaple:</IU>
         <Code>
           {`function* fibonacci() {
-    let current = 0;
-    let next = 1;
-    while(true) {
-        const reset = yield current;
-        // Value passed to next() will be read here by yield current.
+  let current = 0;
+  let next = 1;
+  while(true) {
+    const reset = yield current;
+    // Value passed to next() will be read here by yield current.
 
-        [current, next] = [next, next + current];
-        if(reset) {
-            current = 0;
-            next = 1;
-        }
-    }	
+    [current, next] = [next, next + current];
+    if(reset) {
+      current = 0;
+      next = 1;
+    }
+  }	
 }
 
 const sequence = fibonacci();
@@ -145,7 +143,6 @@ console.log(sequence.next().value);  // 1
         </Code>
       </Para>
 
-      <NewLine />
       <Para>
         <B>return()</B> : Generators have a <BI>return(value)</BI>
         <Space /> method that returns the given value and finishes the generator
@@ -154,18 +151,20 @@ console.log(sequence.next().value);  // 1
         <Space /> expression is wrapped in a <I>try…finally</I> block, the
         control flow doesn't exit the <I>function body</I>, but proceeds to the
         <I>finally</I> block instead.
+      </Para>
+      <Para>
         <IU>Example:</IU>
         <NewLine />
         <Code>
           {`function* generatorFunc() {
-    yield 1;
-    yield 2;
+  yield 1;
+  yield 2;
 }
 
 const g = generatorFunc();
-g.next();	// { value: 1, dne: false }
+g.next(); // { value: 1, dne: false }
 
-g.return("return value");	// { value: "return value", done: true }
+g.return("return value"); // { value: "return value", done: true }
 // Finishes the generator and returns the value passed to return() method.
 `}
         </Code>
@@ -179,7 +178,7 @@ g.return("return value");	// { value: "return value", done: true }
         </Para>
         <Para>
           Because generator was terminated by <BI>g.return("return value")</BI>
-          statement. Now, if we call <I>next()</I> methods, we'll get{' '}
+          <Space /> statement. Now, if we call <I>next()</I> methods, we'll get{' '}
           <I>value</I> as <BI>undefined</BI>.
         </Para>
         <Code>{`g.next();	

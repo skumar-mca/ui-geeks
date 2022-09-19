@@ -58,7 +58,7 @@ const JSScriptLoadingIntro = () => {
       </Para>
 
       <Para>
-        <B>Problem Statement:</B>
+        <B>Problem Statement:</B> <Space />
         If we use JavaScript to manipulate elements on the page, code will not
         work, if JavaScript is executed before the HTML is loaded.
       </Para>

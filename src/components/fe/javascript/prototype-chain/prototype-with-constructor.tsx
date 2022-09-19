@@ -115,7 +115,7 @@ users.map((usr) => usr.showDetails());
       </Note>
 
       <Para>
-        Due to historical reasons, some <I>built-in</I> constructors
+        Due to historical reasons, some <I>built-in</I> constructors <Space />
         <I>prototype</I> properties are <I>instances</I> themselves.
       </Para>
 

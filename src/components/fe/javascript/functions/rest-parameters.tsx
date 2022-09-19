@@ -13,11 +13,11 @@ const JSFunctionRestArgument = () => {
 
       <Para>
         Using <BI>arguments</BI> <I>object</I> is pretty useful, but it does
-        seem a little
-        <I>verbose</I>, because by looking at the function{' '}
-        <I>declaration/expression</I>, we can't predict whether the function
-        expects any <I>argument</I> or not. To make functions more readable, we
-        can replace <BI>arguments</BI> with <B>"rest parameters"</B>.
+        seem a little <Space /> <I>verbose</I>, because by looking at the
+        function <I>declaration/expression</I>, we can't predict whether the
+        function expects any <I>argument</I> or not. To make functions more
+        readable, we can replace <BI>arguments</BI> with{' '}
+        <B>"rest parameters"</B>.
       </Para>
 
       <Para>
@@ -30,12 +30,12 @@ const JSFunctionRestArgument = () => {
       </Para>
       <Code>
         {`function add(...args) {
-    let sum = 0;
-    for(const itm of args) { sum += itm; }
+  let sum = 0;
+  for(const itm of args) { sum += itm; }
     return sum;
 }
 
-const result = add(1, 2, 5, 10);	// 18`}
+const result = add(1, 2, 5, 10);  // 18`}
       </Code>
 
       <Note>

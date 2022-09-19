@@ -18,13 +18,13 @@ const JSInnerFunctions = () => {
 
       <Code>
         {`function parentFunc() {
-   const a = 1;
-   function innerFunc() {
+    const a = 1;
+    function innerFunc() {
       const b = 4;
       return a + b;
       // variable "a" can be accessed here
     }
-    return innerFunc();
+  return innerFunc();
 }`}
       </Code>
 

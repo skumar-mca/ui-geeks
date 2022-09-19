@@ -28,7 +28,8 @@ const JSModulesWildCardExport = () => {
 
       <Para>
         If there are two or more wild-card export statements that implicitly
-        <I>re-exports</I> the same name, <B>neither one is re-exported</B>.
+        <Space /> <I>re-exports</I> the same name,
+        <B>neither one is re-exported</B>.
       </Para>
 
       <Code>
@@ -48,7 +49,7 @@ export * from "./module-2.js";
       <Code>
         {`// "main-program.js"
 import * as md from "./module-aggregator.js";
-console.log(md.a);	// undefined
+console.log(md.a);  // undefined
 `}
       </Code>
       <Para>

@@ -11,14 +11,14 @@ const JSUnaryPlusOperator = () => {
       <Heading as='h3'>Unary operator "+"</Heading>
       This operator can also be used to convert strings to numbers.
       <Code>
-        {`+ "42"		// 42
-+ "010"		// 10
-+ "0x10"		// 16`}
+        {`+ "42"  // 42
++ "010" // 10
++ "0x10"  // 16`}
       </Code>
       <Para>
         The + operator can also be used for <B>string concatenation</B>.
       </Para>
-      <Code>{`"Hello" + " JavaScript"	// "Hello JavaScript"`}</Code>
+      <Code>{`"Hello" + " JavaScript" // "Hello JavaScript"`}</Code>
       <Note>
         If we add a string to a number (or other value), everything is converted
         into string first.

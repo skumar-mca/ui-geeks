@@ -3,7 +3,6 @@ import useDOMTitle from '../../../../../custom-hooks/use-dom-title';
 import Container from '../../../../shared/container/container';
 import Heading from '../../../../shared/heading/heading';
 import Para from '../../../../shared/para/para';
-import { NewLine } from '../../../../shared/util/util';
 import JSArrowFunctionsParsingOrder from './af-parsing-order';
 import JSArrowFunctionsArgumentBinding from './argument-binding';
 import JSArrowFunctionsLineBreaks from './arrow-function-line-breaks';
@@ -20,14 +19,10 @@ const JSArrowFunctions = () => {
       <Para>
         <JSArrowFunctionsIntro />
         <JSArrowFunctionsLimitations />
-        <NewLine />
         <JSArrowFunctionsAsClassField />
         <JSArrowFunctionsArgumentBinding />
-        <NewLine />
         <JSArrowFunctionsReturningObject />
-        <NewLine />
         <JSArrowFunctionsLineBreaks />
-        <NewLine />
         <JSArrowFunctionsParsingOrder />
       </Para>
     </Container>

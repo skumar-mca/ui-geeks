@@ -23,7 +23,9 @@ const JSPrototypeChain = () => {
         <Space /> <I>prototype</I> object has a <I>prototype</I> of its own, and
         so on until an object is reached with <BI>null</BI> as its
         <I>prototype</I>. By definition, <BI>null</BI> has no <I>prototype</I>
-        and acts as the final link in the <BI>prototype chain</BI>. <Space />
+        <Space /> and acts as the final link in the <BI>
+          prototype chain
+        </BI>. <Space />
         <I>Classes</I> also use the same <I>inheritance</I> mechanism under the
         hood.
       </Para>

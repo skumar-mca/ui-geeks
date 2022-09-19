@@ -14,7 +14,6 @@ const JSUnaryOperatorsIntro = () => {
       <Para>
         <BI>operator</BI> <I>operand</I>
         <NewLine />
-        <NewLine />
         <Para>
           This form is called <B>prefix</B> unary operator.
         </Para>
@@ -24,10 +23,8 @@ const JSUnaryOperatorsIntro = () => {
 ++x;    // 11`}
       </Code>
       <NewLine />
-      <NewLine />
       <Para>
         <I>operand</I> <BI>operator</BI>
-        <NewLine />
         <NewLine />
         <Para>
           This form is called <B>postfix</B> unary operator.

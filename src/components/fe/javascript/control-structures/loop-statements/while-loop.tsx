@@ -14,12 +14,11 @@ const JSWhileLoop = () => {
         termination expression is met on the first iteration.
       </Para>
       <Code>
-        {`let num = 1;		// Initialization expression
-while (num <= 5) {	 // Termination expression
-	console.log(num);
-	num++; 	// Update expression
+        {`let num = 1;  // Initialization expression
+while (num <= 5) {  // Termination expression
+  console.log(num);
+  num++;  // Update expression
 }
-
 // The above code will print numbers from 1 to 5.
 `}
       </Code>

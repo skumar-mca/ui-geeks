@@ -2,7 +2,223 @@ import React from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B, BI, IU, NewLine } from '../../../shared/util/util';
+import YALSBadge from '../../../shared/yals-badge/yals-badge';
+import { YALSButtonVariantTypes } from '../../../shared/yals-button/yals-button.types';
+import YALSTable from '../../../shared/yals-table/yals.table';
+
+const operatorTHList = [
+  {
+    column: 'operatorType',
+    label: 'Operator type'
+  },
+  {
+    column: 'operator',
+    label: 'Individual operators'
+  }
+];
+
+const operatorTDList = [
+  {
+    operatorType: 'member',
+    operator: (
+      <>
+        {['.', '[]'].map((itm: string) => (
+          <>
+            <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
+            <Space />
+          </>
+        ))}
+      </>
+    )
+  },
+
+  {
+    operatorType: 'call/create instance',
+    operator: (
+      <>
+        {['( )', 'new'].map((itm: string) => (
+          <>
+            <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
+            <Space />
+          </>
+        ))}
+      </>
+    )
+  },
+  {
+    operatorType: 'negation/increment',
+    operator: (
+      <>
+        {['!', '~', '-', '+', '++', '--', 'typeof', 'void', 'delete'].map(
+          (itm: string) => (
+            <>
+              <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
+              <Space />
+            </>
+          )
+        )}
+      </>
+    )
+  },
+  {
+    operatorType: 'multiply/divide',
+    operator: (
+      <>
+        {['*', '/', '%'].map((itm: string) => (
+          <>
+            <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
+            <Space />
+          </>
+        ))}
+      </>
+    )
+  },
+  {
+    operatorType: 'addition/subtraction',
+    operator: (
+      <>
+        {['+', '-'].map((itm: string) => (
+          <>
+            <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
+            <Space />
+          </>
+        ))}
+      </>
+    )
+  },
+  {
+    operatorType: 'bitwise shift',
+    operator: (
+      <>
+        {['<<', '>>', '>>>>'].map((itm: string) => (
+          <>
+            <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
+            <Space />
+          </>
+        ))}
+      </>
+    )
+  },
+  {
+    operatorType: 'relational',
+    operator: (
+      <>
+        {['<', '<=', '>', '>=', 'in', 'instanceof'].map((itm: string) => (
+          <>
+            <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
+            <Space />
+          </>
+        ))}
+      </>
+    )
+  },
+  {
+    operatorType: 'equality',
+    operator: (
+      <>
+        {['==', '!=', '===', '!=='].map((itm: string) => (
+          <>
+            <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
+            <Space />
+          </>
+        ))}
+      </>
+    )
+  },
+  {
+    operatorType: 'bitwise-and',
+    operator: (
+      <>
+        <YALSBadge content={'&'} bg={YALSButtonVariantTypes.Secondary} />
+        <Space />
+      </>
+    )
+  },
+  {
+    operatorType: 'bitwise-xor',
+    operator: (
+      <>
+        <YALSBadge content={'^'} bg={YALSButtonVariantTypes.Secondary} />
+        <Space />
+      </>
+    )
+  },
+  {
+    operatorType: 'bitwise-or',
+    operator: (
+      <>
+        <YALSBadge content={'|'} bg={YALSButtonVariantTypes.Secondary} />
+        <Space />
+      </>
+    )
+  },
+  {
+    operatorType: 'logical-and',
+    operator: (
+      <>
+        <YALSBadge content={'&&'} bg={YALSButtonVariantTypes.Secondary} />
+        <Space />
+      </>
+    )
+  },
+  {
+    operatorType: 'logical-or',
+    operator: (
+      <>
+        <YALSBadge content={'||'} bg={YALSButtonVariantTypes.Secondary} />
+        <Space />
+      </>
+    )
+  },
+  {
+    operatorType: 'conditional',
+    operator: (
+      <>
+        <YALSBadge content={'? :'} bg={YALSButtonVariantTypes.Secondary} />
+        <Space />
+      </>
+    )
+  },
+  {
+    operatorType: 'assignment',
+    operator: (
+      <>
+        {[
+          '=',
+          '+=',
+          '-=',
+          '*=',
+          '/=',
+          '%=',
+          '<<=',
+          '>>>=',
+          '&=',
+          '^=',
+          '|=',
+          '&&=',
+          '||=',
+          '??='
+        ].map((itm: string) => (
+          <>
+            <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
+            <Space />
+          </>
+        ))}
+      </>
+    )
+  },
+  {
+    operatorType: 'comma',
+    operator: (
+      <>
+        <YALSBadge content={','} bg={YALSButtonVariantTypes.Secondary} />
+        <Space />
+      </>
+    )
+  }
+];
 
 const JSOperatorPrecedence = () => {
   return (
@@ -10,13 +226,20 @@ const JSOperatorPrecedence = () => {
       <Heading as='h3'>Operator Precedence</Heading>
       <Para>
         Some operators are applied before others, when calculating the result,
-        this is called operator precedence. The operator precedence in
+        this is called <BI>operator precedence</BI>. The operator precedence in
         JavaScript is the same as was taught in math. The calculation is always
         evaluated from <BI>left to right</BI>.
       </Para>
 
       <Para>
-        <B>Evaluate below expression:</B>
+        <B>Operator Precedence Table</B>
+        <NewLine />
+        <NewLine />
+        <YALSTable thList={operatorTHList} tdList={operatorTDList}></YALSTable>
+      </Para>
+
+      <Para>
+        <IU>Evaluate below expression:</IU>
         <NewLine />
         50 + 10 / 8 + 2
         <NewLine />

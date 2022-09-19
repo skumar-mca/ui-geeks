@@ -33,13 +33,13 @@ const JSUnaryTypeOfOperator = () => {
 
       <Code>
         {`const show = () => { console.log("Hello"); }
-typeof show		// "function"
+typeof show   // "function"
 
 const name= "JavaScript";
-typeof name		// "string"
+typeof name   // "string"
 
 const arr = [1, 5];
-typeof(arr)		// "object"`}
+typeof(arr)   // "object"`}
       </Code>
     </>
   );

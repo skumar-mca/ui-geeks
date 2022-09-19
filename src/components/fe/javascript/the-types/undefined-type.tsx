@@ -28,7 +28,7 @@ console.log(t)  // undefined`}
         <Word bold>false</Word> in boolean content.
         <Code>
           {`undefined + 10	// NaN
-undefined && true	// false
+undefined && true   // false
 `}
         </Code>
       </Para>

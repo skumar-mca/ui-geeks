@@ -1,7 +1,7 @@
 import React from 'react';
 import Heading from '../../../../../shared/heading/heading';
 import Para from '../../../../../shared/para/para';
-import { I, NewLine } from '../../../../../shared/util/util';
+import { I } from '../../../../../shared/util/util';
 import JSApply from './apply-binding';
 import JSBind from './bind-binding';
 import JSCall from './call-binding';
@@ -18,13 +18,9 @@ const JSValueOfThisInFunctionContext = () => {
 
       <Para>
         <JSThisNotSetByFunction />
-        <NewLine />
         <JSThisSetByFunction />
-        <NewLine />
         <JSCall />
-        <NewLine />
         <JSApply />
-        <NewLine />
         <JSBind />
       </Para>
     </>

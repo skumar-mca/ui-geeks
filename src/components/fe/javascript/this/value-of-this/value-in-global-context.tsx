@@ -18,7 +18,7 @@ const JSValueOfThisInGlobalContext = () => {
         object.
       </Para>
 
-      <Code>{`console.log(this ==== window);    // true`}</Code>
+      <Code>{`console.log(this ==== window);  // true`}</Code>
 
       <Para>
         The variables defined without the <BI>var</BI>, <BI>let</BI> or

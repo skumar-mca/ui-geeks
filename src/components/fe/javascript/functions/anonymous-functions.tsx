@@ -26,8 +26,10 @@ const JSAnonymousFunctions = () => {
         <I>Writing the same add() function with the use of rest parameters.</I>
       </Para>
       <Code>
-        {`const sayHello = function() {  console.log("hello"); }
-sayHello();	// "hello"`}
+        {`const sayHello = function() {
+  console.log("hello");
+}
+sayHello(); // "hello"`}
       </Code>
 
       <Code>

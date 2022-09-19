@@ -3,6 +3,7 @@ import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B } from '../../../shared/util/util';
 import JSBinaryOperators from './binary-operators/binary-operators';
 import JSOperatorPrecedence from './operator-precedence';
@@ -18,8 +19,7 @@ const JSOperators = () => {
       <Para>
         JavaScript has a rich set of operators, which can be used to perform
         operations on given values. JavaScript has both <B>binary</B> and
-        <B>unary</B>
-        operators, and one special ternary operator.
+        <B>unary</B> <Space /> operators, and one special ternary operator.
       </Para>
 
       <JSBinaryOperators />

@@ -3,7 +3,8 @@ import Code from '../../../../shared/code/code';
 import Heading from '../../../../shared/heading/heading';
 import Note from '../../../../shared/note/note';
 import Para from '../../../../shared/para/para';
-import { B, BI, I, NewLine } from '../../../../shared/util/util';
+import Space from '../../../../shared/space/space';
+import { B, BI, I } from '../../../../shared/util/util';
 
 const JSUnaryDeleteOperator = () => {
   return (
@@ -17,8 +18,8 @@ const JSUnaryDeleteOperator = () => {
 
       <Code>
         {`const obj = { name: "JavaScript", version: 6 };
-delete obj.version;		//	true
-console.log(obj.version);	// undefined`}
+delete obj.version;   // true
+console.log(obj.version);   // undefined`}
       </Code>
 
       <Para>
@@ -27,19 +28,18 @@ console.log(obj.version);	// undefined`}
         <Code>{`delete Math.PI    // false`}</Code>
       </Para>
 
-      <NewLine />
       <Heading as='h4'>Deleting array elements</Heading>
       <Para>
         The <I>delete</I> operator should not be used for deleting array
         elements. It is possible to delete any array elements, although it is
         regarded as <B>bad practice</B>, because it does not actually delete the
         element (it just sets the element as <I>undefined</I>) and therefore,
-        <I>length</I> property is not re-calculated.
+        <Space /> <I>length</I> property is not re-calculated.
       </Para>
 
       <Code>{`const arr = [1, 5, 10, 20, 40]
-delete arr[2]           // true
-console.log(arr)	 // [1, 5, undefined, 20, 40]`}</Code>
+delete arr[2]   // true
+console.log(arr)    // [1, 5, undefined, 20, 40]`}</Code>
 
       <Note>
         To manipulate arrays, array methods like <B>splice()</B> should be used.

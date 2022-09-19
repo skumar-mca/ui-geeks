@@ -61,7 +61,7 @@ let a = 0x1123;
         <Heading as='h3'>Array Literals</Heading>
         <Para>
           An array literal is a list of zero or more expressions enclosed in
-          square brackets (<B>[]</B>).
+          square brackets <B>[]</B>.
         </Para>
         <Para>
           <Code>{`const arr = [1, 2, 10, 20];`}</Code>
@@ -74,7 +74,7 @@ let a = 0x1123;
         </Para>
         <Para>
           If we put a trailing comma at the end of the list, then the comma is
-          <B>ignored</B>.<Code>{`const arr = [1, 2, 10,];		// [1, 2, 10]`}</Code>
+          <B>ignored</B>.<Code>{`const arr = [1, 2, 10,]; // [1, 2, 10]`}</Code>
         </Para>
       </Para>
 
@@ -88,13 +88,13 @@ let a = 0x1123;
 
         <Para>
           Property names that are <B>valid identifiers</B>, can be accessed with
-          <B>dot notation</B>.<Code>{`console.log(obj.a);	  // 10`}</Code>
+          <B>dot notation</B>.<Code>{`console.log(obj.a);   // 10`}</Code>
         </Para>
 
         <Para>
           Property names that are <B>not valid identifiers</B>, can be accessed
           with <B>bracket notation []</B>.
-          <Code>{`console.log(obj["invalid-key"]);	// 20`}</Code>
+          <Code>{`console.log(obj["invalid-key"]);    // 20`}</Code>
         </Para>
       </Para>
 
@@ -102,7 +102,7 @@ let a = 0x1123;
         <Heading as='h3'>RegExp Literals</Heading>
         <Para>
           A regex literal is a pattern enclosed between backward slashes (
-          <B>//</B>).
+          <BI>//</BI>).
         </Para>
         <Code>{`const re = /ab+c/;`}</Code>
       </Para>

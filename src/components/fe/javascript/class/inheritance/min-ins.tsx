@@ -22,24 +22,26 @@ const JSClassInheritanceMixIns = () => {
 
         <Code>
           {`class BaseClass { 
-    constructor(numArr) { this.numArr = numArr; }
+  constructor(numArr) {
+    this.numArr = numArr;
+  }
 }
 `}
         </Code>
 
         <Code>
           {`const sumMixin = (Base) =>  class extends Base {
-    constructor(numArr) { super(numArr); }
-    sum() { return this.numArr.reduce((a, b) => a + b); }
+  constructor(numArr) { super(numArr); }
+  sum() { return this.numArr.reduce((a, b) => a + b); }
 };`}
         </Code>
 
         <Code>
           {`const averageMixin = (Base) =>  class extends Base {
-    constructor(numArr) { super(numArr); }
-    average() { 
-      return this.numArr.reduce((a, b) => a + b) / this.numArr.length; 
-    }
+  constructor(numArr) { super(numArr); }
+  average() { 
+    return this.numArr.reduce((a, b) => a + b) / this.numArr.length; 
+  }
 };
 `}
         </Code>

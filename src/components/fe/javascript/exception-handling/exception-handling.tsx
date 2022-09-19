@@ -84,13 +84,13 @@ const JSExceptionHandling = () => {
         </Para>
 
         <Code>{`try {
-    throw "Error thrown";
+  throw "Error thrown";
 }
 catch(e) {
-    console.log(e); // "Error thrown"
+  console.log(e); // "Error thrown"
 }
 finally {
-    console.log("Finally block executed");
+  console.log("Finally block executed");
 }
 `}</Code>
 
@@ -110,15 +110,15 @@ finally {
           ignored, because <BI>finally</BI> block also returns a value.
         </Para>
         <Code>{`try {
-    throw "Error thrown";
+  throw "Error thrown";
 }
 catch(e) {
-    console.log(e); // "Error thrown"
-    return false; // Return value will be ignored
+  console.log(e); // "Error thrown"
+  return false; // Return value will be ignored
 }
 finally {
-    console.log("Finally block executed");
-    return true;
+  console.log("Finally block executed");
+  return true;
 }
 `}</Code>
       </Para>
@@ -136,14 +136,14 @@ finally {
 
         <Code>
           {`try {
-    throw new Error("Error thrown");
+  throw new Error("Error thrown");
 }
 catch(e) {
-    console.log(e);
-    // { name: "Error", message: "Error thrown"}
+  console.log(e);
+  // { name: "Error", message: "Error thrown"}
 }
 finally {
-    console.log("Finally block executed");
+  console.log("Finally block executed");
 }
 `}
         </Code>

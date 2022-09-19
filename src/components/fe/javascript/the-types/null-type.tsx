@@ -21,8 +21,8 @@ const JSNullType = () => {
         The null value behaves as <Word bold>0 (Zero)</Word> in numeric context
         and as <Word bold>false</Word> in boolean context.
         <Code>
-          {`null * 10		// 0
-null && true	// false`}
+          {`null * 10    // 0
+null && true    // false`}
         </Code>
       </Para>
     </>

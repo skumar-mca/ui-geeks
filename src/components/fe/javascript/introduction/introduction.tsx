@@ -27,8 +27,8 @@ const JSIntroduction = () => {
       <Heading as='h2'>Interpreted or Just-in-time Compiled</Heading>
       <Para>
         There has always been a confusion related to the execution behavior of
-        JavaScript. The debate is always between Interpreted and Compiled. To
-        know the answer, let's understand both terminologies.
+        JavaScript. The debate is between Interpreted and Compiled. To know the
+        answer, let's understand both terminologies.
       </Para>
 
       <Para>
@@ -55,9 +55,9 @@ const JSIntroduction = () => {
 
       <Para>
         <B>Just-in-time Compilation: </B> Modern JavaScript interpreters use a
-        technique called just-in-time compilation to improve performance. In
-        this technique, JavaScript source code gets compiled into binary format,
-        so that it can run quickly.
+        technique called <I>just-in-time compilation</I> to improve performance.
+        In this technique, JavaScript source code gets compiled into binary
+        format, so that it can run quickly.
       </Para>
 
       <Para>
@@ -68,7 +68,7 @@ const JSIntroduction = () => {
       </Para>
 
       <Para>
-        The answer is that JavaScript is an
+        The answer is, JavaScript is an
         <B>interpreted language</B>, because although modern interpreters use
         JIT, still all this compilation is handled at run time, rather than
         ahead of time.
@@ -104,8 +104,9 @@ const JSIntroduction = () => {
       <Para>
         JavaScript has a single thread, which is used to execute the code.
         Because of this single thread, JavaScript is synchronous in nature.
-        Although it has concepts like Call Stack, Memory Heap, Event-loop, which
-        helps it perform asynchronous tasks.
+        Although modern browsers has concepts like <I>Call Stack</I>,{' '}
+        <I>Memory Heap</I>, <I>Event-loop</I>, which helps it perform
+        asynchronous tasks.
       </Para>
 
       <Heading as='h2'>Dynamic Language</Heading>
@@ -136,8 +137,8 @@ const JSIntroduction = () => {
       <Para>
         Because JavaScript statements can be written to describe the steps to
         get the desired result, therefore, it is known to be imperative in
-        nature. For example, a for-loop can be written to iterate and print each
-        item of an array.
+        nature. For example, a <I>for-loop</I> can be written to iterate and
+        print each item of an array.
       </Para>
 
       <Heading as='h2'>Declarative</Heading>
@@ -152,9 +153,9 @@ const JSIntroduction = () => {
 
       <Para>
         Because JavaScript implements functional programming style, therefore,
-        it is known to be declarative in nature. For example, the sort() method
-        of Array can be called to sort all the items of the array, we do not
-        need to write down the steps to sort the array.
+        it is known to be declarative in nature. For example, the <I>sort()</I>
+        <Space /> method of Array can be called to sort all the items of the
+        array, we do not need to write down the steps to sort the array.
       </Para>
     </Container>
   );

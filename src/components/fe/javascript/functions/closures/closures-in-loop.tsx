@@ -28,7 +28,7 @@ const JSClosuresInLoop = () => {
 
       <Code>
         {`function getElement(id) { return document.getElementById(id); }
-function showHelp(help) { getElement(“help”).textContent = help; } 
+function showHelp(help) { getElement("help").textContent = help; } 
 
 var helpText = [
   { id: "email", help : "Your email address" },
@@ -56,7 +56,7 @@ setupHelp();
         on, the help text of your <B>"age"</B> is displayed. The reason for this
         is that the functions assigned to <I>onfocus</I> are <BI>closures</BI>,
         they consist of the function definition and the captured lexical
-        environment from the <I>setupHelp()</I>
+        environment from the <I>setupHelp()</I> <Space />
         function's scope. <BI>Three closures</BI> have been created by the loop,
         but each of them share the same lexical environment, which has a
         variable with changing values (<I>"item"</I>).
@@ -88,7 +88,7 @@ setupHelp();
 
         <Code>
           {`function makeHelpCallback(help) {
-    return function() { showHelp(help); }
+  return function() { showHelp(help); }
 }
 `}
         </Code>
@@ -102,10 +102,10 @@ setupHelp();
         <Code>
           {`// Rewriting setupHelp to include the solution
 function setupHelp() {
-    for(var i = 0; i< helpText.length; i++) {
-        var item  = helpText[i];
-        getElement(item.id).onfocus = makeHelpCallback(item.help);
-    }
+  for(var i = 0; i < helpText.length; i++) {
+    var item  = helpText[i];
+    getElement(item.id).onfocus = makeHelpCallback(item.help);
+  }
 }
 `}
         </Code>
@@ -115,20 +115,20 @@ function setupHelp() {
         <IU>Solution 2:</IU>
         <Para>
           By using <I>anonymous closures</I> with the help of <B>IIFE</B>
-          (Immediately Invoked Function Expression).
+          <Space /> (Immediately Invoked Function Expression).
         </Para>
 
         <Code>
           {`// Rewriting setupHelp to include the solution
 function setupHelp() {
-    for(var i = 0; i< helpText.length; i++) {
-        (function() {
-            var item  = helpText[i];
-            getElement(item.id).onfocus = function() {
-                  showHelp(item.help);
-            }
-        })();
-    }
+  for(var i = 0; i < helpText.length; i++) {
+    (function() {
+      var item  = helpText[i];
+      getElement(item.id).onfocus = function() {
+        showHelp(item.help);
+      }
+    })();
+  }
 }
 `}
         </Code>
@@ -149,12 +149,12 @@ function setupHelp() {
         <Code>
           {`// Rewriting setupHelp to include the solution
 function setupHelp(){
-    for(let i = 0; i< helpText.length; i++) {
-        let item  = helpText[i];
-        getElement(item.id).onfocus = () => {
-              showHelp(item.help);
-        }
+  for(let i = 0; i< helpText.length; i++) {
+    let item  = helpText[i];
+    getElement(item.id).onfocus = () => {
+      showHelp(item.help);
     }
+  }
 }
 `}
         </Code>

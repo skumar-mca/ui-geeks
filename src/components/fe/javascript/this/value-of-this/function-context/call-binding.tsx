@@ -38,12 +38,15 @@ const JSCall = () => {
         call(<BI>thisArg</BI>, arg1, arg2, …, argN)
         <NewLine />
         <BI>this</BI> will be replaced with <BI>thisArg</BI> and following
-        <I>arguments</I> will be assigned to function <I>arguments</I>.
+        <Space /> <I>arguments</I> will be assigned to function <I>arguments</I>
+        .
       </Para>
 
       <Para>
         <Code>
-          {`function sum(num1, num2) { return this.a + this.b + num1 + num2; }
+          {`function sum(num1, num2) {
+  return this.a + this.b + num1 + num2;
+}
 var a = 100;
 var b = 200;
 // Both variables are declared in the global object.
@@ -60,7 +63,9 @@ console.log(res)  // 307
 
       <Para>
         <Code>
-          {`function sum(num1, num2) { return this.a + this.b + num1 + num2; }
+          {`function sum(num1, num2) {
+  return this.a + this.b + num1 + num2;
+}
 const obj = {  a: 10, b: 20 };
 const res = sum.call(obj, 5, 25);
 console.log(res)  // 60
@@ -79,7 +84,9 @@ console.log(res)  // 60
         {`const obj = { 
    a: 10,
    b: 20,
-   sum(num1, num2) { return this.a + this.b + num1 + num2); }
+   sum(num1, num2) {
+    return this.a + this.b + num1 + num2);
+  }
 };
 
 const anotherObj = { a: 100, b: 200 };

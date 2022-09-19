@@ -2,6 +2,7 @@ import React from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B, I, NewLine } from '../../../shared/util/util';
 
 const JSArraySliceMethod = () => {
@@ -10,7 +11,7 @@ const JSArraySliceMethod = () => {
       <Heading as='h4'>slice()</Heading>
       <Para>
         Returns a sub-array of the array. <I>slice()</I> method returns a
-        <I>shallow copy</I>
+        <Space /> <I>shallow copy</I> <Space />
         of the portion of an array into a new array, selected from
         <B>"start"</B> index to <B>"end"</B> index ("end" index not included).
         The array will not be modified.
@@ -31,7 +32,7 @@ const JSArraySliceMethod = () => {
       </Para>
       <Code>
         {`let arr = ["cat", "dog", "lion", "fox", "tiger"];
-arr.slice(2)	// ["lion", "fox", "tiger"]
+arr.slice(2)  // ["lion", "fox", "tiger"]
 // Extracting all elements from index 2 to end of the array.
 `}
       </Code>
@@ -42,7 +43,7 @@ arr.slice(2)	// ["lion", "fox", "tiger"]
       </Para>
       <Code>
         {`let arr = ["cat", "dog", "lion", "fox", "tiger", "elephant"];
-        arr.slice(-1);	// ["elephant"]
+arr.slice(-1);  // ["elephant"]
 // Extracting one element from the end of the array,
 // i.e., extracting the last item of the array.`}
       </Code>
@@ -52,7 +53,7 @@ arr.slice(2)	// ["lion", "fox", "tiger"]
       </Para>
       <Code>
         {`let arr = ["cat", "dog", "lion", "fox", "tiger", "elephant"];
-arr.slice();  	// ["cat", "dog", "lion", "fox", "tiger", "elephant"]`}
+arr.slice();  // ["cat", "dog", "lion", "fox", "tiger", "elephant"]`}
       </Code>
 
       <Para>
@@ -61,18 +62,18 @@ arr.slice();  	// ["cat", "dog", "lion", "fox", "tiger", "elephant"]`}
       </Para>
       <Code>
         {`let arr = ["cat", "dog", "lion", "fox", "tiger", "elephant"];
-arr.slice(10);  	// [ ]`}
+arr.slice(10);  // [ ]`}
       </Code>
 
       <NewLine />
       <Para>
         <B>end:</B> Index of the first element to exclude from the returned
         array. <I>slice()</I> extracts up to but not including the <B>"end"</B>
-        index.
+        <Space /> index.
       </Para>
       <Code>
         {`let arr = ["cat", "dog", "lion", "fox", "tiger"];
-arr.slice(1, 4)		// ["dog", "lion", "fox"]
+arr.slice(1, 4) // ["dog", "lion", "fox"]
 // Extracts elements from index 1 up to index 3 (end index - 1).`}
       </Code>
 
@@ -82,7 +83,7 @@ arr.slice(1, 4)		// ["dog", "lion", "fox"]
       </Para>
       <Code>
         {`let arr = ["cat", "dog", "lion", "fox", "tiger"];
-arr.slice(1, -2)		// ["dog", "lion"]
+arr.slice(1, -2)  // ["dog", "lion"]
 // Extracting from start index 1 to excluding the last 2 elements from the end.`}
       </Code>
 
@@ -92,7 +93,7 @@ arr.slice(1, -2)		// ["dog", "lion"]
       </Para>
       <Code>
         {`let arr = ["cat", "dog", "lion", "fox", "tiger"];
-arr.slice(2)	// ["lion", "fox", "tiger"]
+arr.slice(2)  // ["lion", "fox", "tiger"]
 // Extracting from start index 2 to end of the array.`}
       </Code>
 
@@ -103,7 +104,7 @@ arr.slice(2)	// ["lion", "fox", "tiger"]
       </Para>
       <Code>
         {`let arr = ["cat", "dog", "lion", "fox", "tiger"];
-arr.slice(2, 10)	// ["lion", "fox", "tiger"]
+arr.slice(2, 10)  // ["lion", "fox", "tiger"]
 `}
       </Code>
     </>

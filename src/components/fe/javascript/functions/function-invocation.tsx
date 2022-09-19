@@ -23,8 +23,8 @@ const JSFunctionsInvocation = () => {
       </Para>
 
       <Code>
-        {`const result =  add(2,5)
-console.log(result)	// 7
+        {`const result = add(2,5)
+console.log(result) // 7
 `}
       </Code>
 

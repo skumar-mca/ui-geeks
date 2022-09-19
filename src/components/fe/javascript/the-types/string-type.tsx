@@ -18,15 +18,15 @@ const JSStringType = () => {
 
       <Para>
         <Word bold>Properties and Methods of String:</Word>
-        <Code>{`"hello".length			// 5
-"hello".charAt(1)		// 'e'
-"hello, world".replace("world", "Javascript")	// "hello, JavaScript"
-"hello".toUpperCase()	// "HELLO"
+        <Code>{`"hello".length    // 5
+"hello".charAt(1)   // 'e'
+"hello, world".replace("world", "Javascript") // "hello, JavaScript"
+"hello".toUpperCase() // "HELLO"
 
-"hello".substr(1, 2)		// "el"
+"hello".substr(1, 2)    // "el"
 // Returns 2 characters, starting at index 1
 
-"hello".substring(1, 3)	// "el"
+"hello".substring(1, 3)   // "el"
 // Returns characters between given indexes
 `}</Code>
       </Para>

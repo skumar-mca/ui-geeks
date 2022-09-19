@@ -3,6 +3,7 @@ import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B, BI, I, NewLine, OrderedList } from '../../../shared/util/util';
 
 const JSAccessingObjects = () => {
@@ -41,7 +42,7 @@ const JSAccessingObjects = () => {
         </Para>
 
         <Code>{`const obj = { name: "JavaScript", version: 6 };
-const version = obj.version;		// 6`}</Code>
+const version = obj.version;    // 6`}</Code>
       </Para>
 
       <Para>
@@ -49,7 +50,7 @@ const version = obj.version;		// 6`}</Code>
         <Para>
           The advantage of <B>"bracket notation"</B> is that <B>key</B> values
           can be calculated at run time, since <I>keys</I> are provided as
-          <I>strings</I>. Another advantage is that
+          <Space /> <I>strings</I>. Another advantage is that
           <BI>reserved keywords</BI> can be used as property <I>keys</I>.
         </Para>
 

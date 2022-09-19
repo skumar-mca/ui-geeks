@@ -13,11 +13,11 @@ const JSDoWhileLoop = () => {
         surety that the body of loop will execute <B>at least once</B>.
       </Para>
       <Code>
-        {`let num = 1;		// Initialization expression
+        {`let num = 1;  // Initialization expression
 do  {
-	console.log(num);
-	num++; 	// Update expression
-} while (num <= 5); 	// Termination expression`}
+  console.log(num);
+  num++;  // Update expression
+} while (num <= 5); // Termination expression`}
       </Code>
     </>
   );

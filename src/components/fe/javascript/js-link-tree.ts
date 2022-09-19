@@ -226,7 +226,8 @@ export const JSLINK = [
       'in operator',
       'instanceod operator',
       'ternary operator',
-      'operator precedence'
+      'operator precedence',
+      'short-circuit'
     ],
     children: [
       {

@@ -50,13 +50,13 @@ const JSClosureScopeChain = () => {
       <Code>
         {`const globalVal = 10; // Global Scope
 function sum(a) {
+  // outer scope
+  return function(b) {
     // outer scope
-    return function(b) {
-        // outer scope
-        return function(c){
-          // local scope
-          return a + b + c + globalVal;
-      }
+    return function(c){
+      // local scope
+      return a + b + c + globalVal;
+    }
   }
 }
 
@@ -94,9 +94,9 @@ export const setX = (val) => { x = val; };
 
       <Code>
         {`import { getX, setX } from "./my-module.js";
-console.log(getX())	// 5
+console.log(getX()) // 5
 setX(6);
-console.log(getX())	// 6`}
+console.log(getX()) // 6`}
       </Code>
 
       <Para>

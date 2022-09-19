@@ -11,8 +11,8 @@ const JSClassInheritanceIntro = () => {
       <Para>
         The <BI>extends</BI> <I>keyword</I> is used to create a <I>class</I> as
         a child of another <I>class</I>, this mechanism is called
-        <B>inheritance</B>. If there's a<I>constructor</I> present in the
-        subclass, it needs to first call <I>super()</I>
+        <B>inheritance</B>. If there's a<Space /> <I>constructor</I> present in
+        the subclass, it needs to first call <I>super()</I>
         <Space /> before using <BI>this</BI>.
       </Para>
 
@@ -22,21 +22,21 @@ const JSClassInheritanceIntro = () => {
           This is the <I>class</I> which will be used as a base for creating
           child
           <I>classes</I>. The basic role of <BI>base class</BI> is to contain
-          <I>common functionalities</I>, which can be used by
+          <Space /> <I>common functionalities</I>, which can be used by
           <BI>multiple child classes</BI>.
         </Para>
 
         <Code>
           {`class Vehicle {
-   constructor(vehicleType, make, wheels) {
-       this.vehicleType = vehicleType;
-       this.make = make;
-       this.wheels = wheels;
-   }
+  constructor(vehicleType, make, wheels) {
+    this.vehicleType = vehicleType;
+    this.make = make;
+    this.wheels = wheels;
+  }
 
-   showVehicleInfo() { 	
-       console.log(\`\${this.make} \${this.vehicleType} have \${this.wheels} wheels\`);
-   }
+  showVehicleInfo() { 	
+    console.log(\`\${this.make} \${this.vehicleType} have \${this.wheels} wheels\`);
+  }
 }
 `}
         </Code>
@@ -69,9 +69,9 @@ const JSClassInheritanceIntro = () => {
           </Para>
 
           <Code>{`class Bike extends Vehicle {
-    constructor(make) {
-       super("Bike, make, 2);
-    }
+  constructor(make) {
+    super("Bike, make, 2);
+  }
 }
 
 const bike = new Bike("Honda");
@@ -88,9 +88,9 @@ bike.showVehicleInfo()  // "Honda Bike have 2 wheels"`}</Code>
 
           <Code>
             {`class Car extends Vehicle {
-    constructor(make) {
-        super("Car", make, 4);
-    }
+  constructor(make) {
+    super("Car", make, 4);
+  }
 }
 
 const car = new Car("Maruti");

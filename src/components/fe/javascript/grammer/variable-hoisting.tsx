@@ -25,8 +25,8 @@ var x=10;
 // Example 2:
 var a = 100;
 (function() {
-	console.log(a);   // undefined
-	var a = 50;
+  console.log(a);   // undefined
+  var a = 50;
 })();
 `}
       </Code>
@@ -40,7 +40,7 @@ var a = 100;
       </Para>
 
       <Code>
-        {`console.log(x);		// ReferenceError
+        {`console.log(x); // ReferenceError
 let x = 10;
 `}
       </Code>

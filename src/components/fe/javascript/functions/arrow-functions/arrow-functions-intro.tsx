@@ -47,18 +47,22 @@ const JSArrowFunctionsIntro = () => {
       </Para>
 
       <Code>
-        {`const sum = (num1, num2) => { return num1 + num2; }
-sum(2, 5)   // 7
+        {`const sum = (num1, num2) => { 
+  return num1 + num2;
+}
+sum(2, 5) // 7
 `}
       </Code>
 
-      <NewLine />
       <Para>
         Below examples show how <BI>this</BI> refers to the lexical{' '}
         <BI>context's this</BI>.
         <Code>
           {`var a = 100;
-const obj = { a:10, show: () => { console.log(this.a); }  };
+const obj = { 
+  a:10, 
+  show: () => { console.log(this.a); }
+};
 obj.show()  // 100
 `}
         </Code>
@@ -69,13 +73,15 @@ obj.show()  // 100
         </Para>
       </Para>
 
-      <NewLine />
       <Para>
         But, if we use a traditional function, <BI>this</BI> will refer to the
         given object <B>"obj"</B>.
         <Code>
           {`var a = 100;
-const obj = { a:10, show: function()  { console.log(this.a); }  };
+const obj = {
+  a:10,
+  show: function()  { console.log(this.a); }
+};
 obj.show()  // 10
 `}
         </Code>

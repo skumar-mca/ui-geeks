@@ -6,7 +6,7 @@ import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
-import { NewLine, OrderedList } from '../../../shared/util/util';
+import { BI, I, NewLine, OrderedList } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
 import YALSImage from '../../../shared/yals-image/yals-image';
 
@@ -92,26 +92,14 @@ const JSConsole = () => {
       <Para>
         The above statement will give two lines of output. The first line will
         print
-        <Word italic bold>
-          "Hello from JavaScript"
-        </Word>
-        (as the output of the statement). The second line will print{' '}
-        <Word italic bold>
-          undefined
-        </Word>
+        <BI>"Hello from JavaScript"</BI> (as the output of the statement). The
+        second line will print <Space /> <BI>undefined</BI> <Space />
         (as the result of evaluating the expression).
       </Para>
       <Para>
         In JavaScript, every expression has a result. But few expressions like
-        <Word italic>console.log( )</Word> returns nothing and in JavaScript{' '}
-        <Word italic bold>
-          "nothing"
-        </Word>
-        is represented as
-        <Word italic bold>
-          undefined
-        </Word>
-        .
+        <Space /> <I>console.log( )</I> returns nothing and in JavaScript
+        <Space /> <BI>"nothing"</BI> is represented as <BI>undefined</BI>.
       </Para>
     </Container>
   );

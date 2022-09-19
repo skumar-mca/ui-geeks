@@ -19,14 +19,12 @@ const JSStringLiterals = () => {
         {`// Examples:
 const str = "JavaScript Literal";
 
-console.log("JavaScript".length);	// 10
+console.log("JavaScript".length); // 10
 // length is a property of the String object,
 // which can be called on string literal.
 `}
       </Code>
 
-      <NewLine />
-      <NewLine />
       <Heading as='h4'>Template Literals</Heading>
       <Para>
         These are string values enclosed by the <BI>back-tick (`)</BI>
@@ -44,16 +42,14 @@ string\`;
 
 
 // Example 2:
-const name  = ”John”;
+const name  = "John";
 const str = \`My name is: \${name}.\`;
 
 // \${} construct is used to add dynamic/variable value to the string literal.
-console.log(str);	// "My name is: John."
+console.log(str); // "My name is: John."
 `}
       </Code>
 
-      <NewLine />
-      <NewLine />
       <Heading as='h4'>Tagged Templates</Heading>
       <Para>
         These are a compact syntax for specifying a template literal along with
@@ -64,26 +60,24 @@ console.log(str);	// "My name is: John."
 
       <Code>
         {`const formatArgument = (arg) => {
-	if(Array.isArray(arg)) {
-		return arg.map((itm) => \`# \${itm}\`).join('\\n');
-	}
+  if(Array.isArray(arg)) {
+    return arg.map((itm) => \`# \${itm}\`)
+              .join('\\n');
+  }
 
-	if(typeof arg === "object") {
-		return JSON.stringify(arg);
-	}
-
-	return arg;
+  if(typeof arg === "object") {
+    return JSON.stringify(arg);
+  }
+  return arg;
 }
 
 const printStr = (segments, ...args) => {
-	let msg = segments[0];
-	segments.slice(1).forEach((segment, index) => {
-		msg += formatArgument(args[index]) + segment;
-	});
-  
-	console.log(msg);
-}
-        `}
+  let msg = segments[0];
+  segments.slice(1).forEach((segment, index) => {
+    msg += formatArgument(args[index]) + segment;
+  });
+  console.log(msg);
+}`}
       </Code>
 
       <Para>
@@ -109,7 +103,7 @@ I am learning:
 # JS
 # ReactJs
 # Angular
-And my progress is: { “js” : 90, “react”: 60, “angular”: 20 }
+And my progress is: { "js" : 90, "react": 60, "angular": 20 }
         `}
       </Code>
 

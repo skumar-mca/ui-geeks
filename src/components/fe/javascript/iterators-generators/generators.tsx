@@ -31,14 +31,14 @@ const JSGenerators = () => {
         <NewLine />
         <Code>
           {`function* makeRangeIterator(start = 0, end = Infinity, step =1) {
-    let iterationCount = 0;
-    for(let i = start, i < end; i++) {
-        iterationCount++;
-        yield i;
-        // yield i returns current value of the sequence
-    }
-    return iterationCount;
-    // iterationCount is returned on completion of execution
+  let iterationCount = 0;
+  for(let i = start, i < end; i++) {
+    iterationCount++;
+    yield i;
+    // yield i returns current value of the sequence
+  }
+  return iterationCount;
+  // iterationCount is returned on completion of execution
 }`}
         </Code>
 
@@ -46,9 +46,9 @@ const JSGenerators = () => {
           {`const it = makeRangeIterator(1, 10, 2);
 let result = it.next();
 while(!result.done) {
-    console.log(result.value);	// 1  3  5  7  9
-    result = it.next();
-    // it.next() executes the generator function for next sequence
+  console.log(result.value);	// 1  3  5  7  9
+  result = it.next();
+  // it.next() executes the generator function for next sequence
 }
 
 console.log("Iterated over sequence of size: ", result.value);	// 5`}

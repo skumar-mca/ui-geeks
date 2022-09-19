@@ -3,6 +3,7 @@ import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { BI, I } from '../../../shared/util/util';
 import JSGenerators from './generators';
 import JSIterables from './iterables';
@@ -17,8 +18,8 @@ const JSIteratorsGenerators = () => {
 
       <Para>
         <BI>Iterators</BI> and <BI>generators</BI> bring the concept of
-        <I>iteration</I> directly into core language and provide a mechanism for
-        customizing the behavior of <I>for…of</I> loop.
+        <Space /> <I>iteration</I> directly into core language and provide a
+        mechanism for customizing the behavior of <I>for…of</I> loop.
       </Para>
 
       <Para>

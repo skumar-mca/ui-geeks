@@ -7,14 +7,14 @@ const JSClassDeclaration = () => {
     <>
       <Heading as='h2'>Class Declaration</Heading>
       <Code>{`class User {
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
-    showName(){
-	      console.log(this.firstName + “-” + this.lastName);
-    }
+  showName(){
+    console.log(this.firstName + "-" + this.lastName);
+  }
 }
 `}</Code>
     </>

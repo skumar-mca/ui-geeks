@@ -23,8 +23,8 @@ const JSValueOfThisClassContextIntro = () => {
       <Code>
         {`class User {
     constructor() {
-        const proto =  Object.getPrototypeOf(this);
-        console.log(Object.getOwnPropertyNames(proto));
+      const proto =  Object.getPrototypeOf(this);
+      console.log(Object.getOwnPropertyNames(proto));
     }
 
     firstName() { console.log("firstName instance method"); }
@@ -46,7 +46,7 @@ const JSValueOfThisClassContextIntro = () => {
         <Space /> <I>object</I> (excluding the <I>prototype</I> properties).
       </Para>
 
-      <Code>{`new User();	// ["constructor", "firstName", "lastName"]`}</Code>
+      <Code>{`new User(); // ["constructor", "firstName", "lastName"]`}</Code>
 
       <Para>
         In above example, <BI>address()</BI> is not returned in array, because

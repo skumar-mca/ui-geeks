@@ -31,7 +31,8 @@ const JSBind = () => {
         bind(<BI>thisArg</BI>, arg1, arg2, …, argN)
         <NewLine />
         <BI>this</BI> will be replaced with <BI>thisArg</BI> and following
-        <I>arguments</I> will be assigned to function <I>arguments</I>.
+        <Space /> <I>arguments</I> will be assigned to function <I>arguments</I>
+        .
       </Para>
 
       <Para>
@@ -89,7 +90,9 @@ console.log(multiplyByThree(10));	// 30`}</Code>
         <NewLine />
         Below example, demonstrates that binding can't be reassigned.
         <Code>
-          {`function sum(num1, num2) { return this.a + this.b + num1 + num2; }
+          {`function sum(num1, num2) {
+  return this.a + this.b + num1 + num2;
+}
 const obj = { a: 10, b : 20 };
 const newSumFn = sum.bind(obj, 5, 15);
 const res = newSumFn();
@@ -112,7 +115,9 @@ console.log(res1) // 50
       <Para>
         <IU>Example 4:</IU>
         <NewLine />
-        <Code>{`function sum(num1, num2) { return this.a + this.b + num1 + num2; }
+        <Code>{`function sum(num1, num2) {
+  return this.a + this.b + num1 + num2;
+}
 const obj = { a: 10, b : 20 };
 const newSumFn = sum.bind(obj, 5, 15);
 const res = newSumFn();

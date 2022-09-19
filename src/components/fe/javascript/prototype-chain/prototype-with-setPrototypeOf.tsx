@@ -30,7 +30,7 @@ const cons = [
     label: (
       <>
         Might cause some JavaScript Engines to <BI>recompile</BI> the code for
-        <I>de-optimization</I>.
+        <Space /> <I>de-optimization</I>.
       </>
     )
   }
@@ -42,7 +42,7 @@ const JSPrototypeWithSetPrototypeOf = () => {
       <Heading as='h2'>Object.setPrototypeOf()</Heading>
       <Para>
         This method can be used to set the <I>[[Prototype]]</I> of the
-        <I>constructor.prototype</I>.
+        <Space /> <I>constructor.prototype</I>.
       </Para>
 
       <Para>

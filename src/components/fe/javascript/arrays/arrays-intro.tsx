@@ -2,14 +2,16 @@ import React from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
-import { B, BI, I, NewLine, OrderedList } from '../../../shared/util/util';
+import Space from '../../../shared/space/space';
+import { B, BI, I, OrderedList } from '../../../shared/util/util';
 
 const JSArraysIntro = () => {
   return (
     <>
       <Para>
         Arrays in JavaScript are actually a special type of object. Similar to
-        Object, Arrays are also a way to group similar/meaningful data together.
+        <Space /> <I>Object</I>, <I>Arrays</I> are also a way to group
+        similar/meaningful data together.
       </Para>
 
       <Para>
@@ -28,7 +30,7 @@ const JSArraysIntro = () => {
               label: 'Using Array constructor method'
             },
             {
-              label: 'Using array literal syntax'
+              label: 'Using Array literal syntax'
             }
           ]}
         />
@@ -40,7 +42,7 @@ const JSArraysIntro = () => {
         <Code>{`const arr = new Array("JavaScript", 6);
 // ["JavaScript", 6]`}</Code>
       </Para>
-      <NewLine />
+
       <Para>
         <Heading as='h4'>Using array literal syntax</Heading>
         <Code>{`const arr = ["JavaScript", 6];

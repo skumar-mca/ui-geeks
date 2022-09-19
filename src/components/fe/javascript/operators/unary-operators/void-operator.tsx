@@ -33,7 +33,7 @@ const JSUnaryVoidOperator = () => {
 
       <Code>
         {`const res = void 3 + 5
-console.log(res)	// undefined`}
+console.log(res)    // undefined`}
       </Code>
     </>
   );

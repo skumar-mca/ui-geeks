@@ -4,7 +4,7 @@ import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
-import { NewLine } from '../../../shared/util/util';
+import { B, BI, I, NewLine } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
 
 const JSNumberType = () => {
@@ -29,13 +29,13 @@ console.log(0.1+0.2);
         The standard arithmetic operations are supported like addition,
         subtraction, modulus (remainder), etc.
         <NewLine />
-        <Code>{`console.log(10 + 50);    // 60
-console.log(2 * 5);     // 10
-console.log(50 % 4);     // 2
+        <Code>{`console.log(10 + 50); // 60
+console.log(2 * 5);   // 10
+console.log(50 % 4);  // 2
 `}</Code>
         <NewLine />
-        There is also a built-in object “Math” for performing mathematical
-        operations like Math.sin, Math.pow(), etc.
+        There is also a built-in object <BI>Math</BI> for performing
+        mathematical operations like Math.sin, Math.pow(), etc.
         <NewLine />
         <Code>{`Math.sin(3.5);  // -0.35078322768961984
 Math.PI;    // 3.141592653589793
@@ -46,16 +46,12 @@ Math.pow(2,3);  // 8
       </Para>
 
       <Para>
-        <Heading as='h6'>parseInt()</Heading>This function is used to convert
-        string value to integer.
+        <Heading as='h6'>parseInt()</Heading>
+        This function is used to convert string value to integer.
         <NewLine />
-        <Word italic>Syntax</Word>: parseInt("String representation of Number",
-        base)
+        <I>Syntax</I>: parseInt("String representation of Number", base)
         <NewLine />
-        <Word bold italic>
-          base
-        </Word>
-        : It is optional, default value is 10.
+        <BI>base</BI>: It is optional, default value is 10.
         <Code>{`parseInt("123")         // 123
 parseInt("123",10)      // 123`}</Code>
         <Para>
@@ -73,41 +69,38 @@ parseInt("123",10)      // 123`}</Code>
           <Word bold>Hexa-decimal</Word> values are still treated the same.
           Strings beginning with "0x" or "0X" are treated as Hexa-decimal
           numbers (<Word italic>radix 16</Word>).
-          <Code>{`parseInt(“0x10”) // 16 (Hexa-decimal value of 0x10)`}</Code>
+          <Code>{`parseInt("0x10") // 16 (Hexa-decimal value of 0x10)`}</Code>
         </Para>
         <Para>
-          Therefore, it's always safer to pass ‘base’ while working on Octal and
-          Hexa-decimal values.
-          <Code>{`parseInt(“010”, 8)        // Will always give 8
-parseInt(“0x10”, 16)        // Will always give 16`}</Code>
+          Therefore, it's always safer to pass <BI>'base'</BI> while working on
+          Octal and Hexa-decimal values.
+          <Code>{`parseInt("010", 8)    // Will always give 8
+parseInt("0x10", 16)  // Will always give 16`}</Code>
         </Para>
         <Para>
-          <Heading as='h6'>parseFloat()</Heading>This function is used to
-          convert string to floating point number. It always uses base 10.
+          <Heading as='h6'>parseFloat()</Heading>
+          This function is used to convert string to floating point number. It
+          always uses base 10.
           <NewLine />
           <Word italic>Syntax</Word>: parseFloat("String representation of
           Number")
-          <Code>{`parseFloat(“1.23”) // 1.23`}</Code>
+          <Code>{`parseFloat("1.23") // 1.23`}</Code>
         </Para>
       </Para>
 
       <Para>
-        <Word bold>Unary operator "+"</Word> can also be used to convert strings
-        to numbers.
-        <Code>{`+ "42"	// 42
-+ "010"	// 10
-+ "0x10"	// 16
+        <B>Unary operator "+"</B> can also be used to convert strings to
+        numbers.
+        <Code>{`+ "42"  // 42
++ "010"  // 10
++ "0x10"  // 16
 `}</Code>
       </Para>
 
       <Para>
-        A special value called{' '}
-        <Word bold italic>
-          NaN
-        </Word>
-        <Space />
-        ("Not a Number") is returned if the string is non-numeric.
-        <Code>{`parseInt("hello");      // NaN`}</Code>
+        A special value called <Space /> <BI>NaN</BI>
+        <Space /> ("Not a Number") is returned if the string is non-numeric.
+        <Code>{`parseInt("hello");  // NaN`}</Code>
       </Para>
 
       <Note>
@@ -118,9 +111,9 @@ parseInt(“0x10”, 16)        // Will always give 16`}</Code>
 
       <Para>
         <Word bold>Number.isNaN()</Word> function can be used to check if a
-        given value is NaN.
-        <Code>{`Number.isNaN("hello")   // false
-Number.isNaN(NaN)   // true
+        given value is <I>NaN</I>.
+        <Code>{`Number.isNaN("hello") // false
+Number.isNaN(NaN) // true
 `}</Code>
       </Para>
 
@@ -128,7 +121,7 @@ Number.isNaN(NaN)   // true
         <Word bold>Do NOT</Word> use the global <Word italic>isNaN( )</Word>
         <Space />
         function for checking NaN values, since it has unintuitive behavior.
-        <Code>{`isNaN("hello)   // true 
+        <Code>{`isNaN("hello")   // true 
 isNaN(undefined)    // true
 isNaN([1])  // false
 isNaN("1")  // false

@@ -14,13 +14,13 @@ const JSClassExpression = () => {
       <IU>Example of named class expression:</IU>
 
       <Code>{`const User = class User {
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-    showName(){
-         console.log(this.firstName + “-” + this.lastName);
-    }
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  showName(){
+    console.log(this.firstName + “-” + this.lastName);
+  }
 }
 `}</Code>
 
@@ -28,19 +28,18 @@ const JSClassExpression = () => {
         <IU>Example of unnamed class expression:</IU>
         <Code>
           {`const User = class {
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-    showName(){
-        console.log(this.firstName + “-” + this.lastName);
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  showName(){
+    console.log(this.firstName + "-" + this.lastName);
   }
 }
 `}
         </Code>
       </Para>
 
-      <NewLine />
       <Para>
         Class definition is <BI>not hoisted</BI>, which means <I>class</I> must
         be defined before they are constructed with the <BI>new</BI> operator.

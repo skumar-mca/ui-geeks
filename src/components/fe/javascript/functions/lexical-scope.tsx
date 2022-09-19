@@ -2,6 +2,7 @@ import React from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B, BI, I, NewLine, OrderedList } from '../../../shared/util/util';
 
 const scopeTypeList = [
@@ -56,7 +57,7 @@ const JSFunctionLexicalScope = () => {
 
       <Para>
         In ES6, JavaScript introduced the<BI>let</BI> and <BI>const</BI>
-        keywords, which allows to create block-scoped variables.
+        <Space /> keywords, which allows to create block-scoped variables.
       </Para>
 
       <Code>

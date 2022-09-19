@@ -10,21 +10,18 @@ const JSUnaryInstanceOfOperator = () => {
     <>
       <Heading as='h3'>instanceof Operator</Heading>
       <Para>
-        The instanceof operator returns <B>true</B>, if the given object is of
-        the given object type.
+        The <I>instanceof</I> operator returns <B>true</B>, if the given object
+        is of the given object type.
       </Para>
       <I>Syntax:</I>
       <NewLine />
       <Para>
-        objectName
-        <Space />
-        <B>instanceOf</B> <Space />
-        objectType
+        objectName <Space /> <B>instanceOf</B> <Space /> objectType
       </Para>
 
       <Code>
         {`const day = new Date()
-console.log(day instanceof Date)  	// true`}
+console.log(day instanceof Date)    // true`}
       </Code>
     </>
   );

@@ -4,7 +4,7 @@ import Heading from '../../../../shared/heading/heading';
 import Note from '../../../../shared/note/note';
 import Para from '../../../../shared/para/para';
 import Space from '../../../../shared/space/space';
-import { B, BI, I, NewLine } from '../../../../shared/util/util';
+import { B, BI, I } from '../../../../shared/util/util';
 
 const JSArrowFunctionsAsClassField = () => {
   return (
@@ -22,12 +22,12 @@ const JSArrowFunctionsAsClassField = () => {
 
       <Code>
         {`class User {
-    name = "JavaScript";
-    showName = ()=> { console.log(this.name); }
+  name = "JavaScript";
+  showName = ()=> { console.log(this.name); }
 }
 
 const user = new User();
-user.showName() // "JavaScript"
+user.showName() //  "JavaScript"
 `}
       </Code>
 
@@ -41,12 +41,12 @@ user.showName() // "JavaScript"
       </Para>
       <Code>
         {`class User {
-    name = "JavaScript";
-    showName = ()=> { console.log(this.name); }
+  name = "JavaScript";
+  showName = ()=> { console.log(this.name); }
 }
 
 const user = new User();
-const { showName } = user; // Breaking clas context here
+const { showName } = user;  // Breaking clas context here
 showName()  // "JavaScript"`}
       </Code>
 
@@ -62,7 +62,6 @@ showName()  // "JavaScript"`}
         class, which <B>never changes</B>, arrow functions are often said to be
         <B>"auto-bound methods"</B>.
       </Para>
-      <NewLine />
 
       <Heading as='h4'>
         Arrow function not to be used with call, apply and bind

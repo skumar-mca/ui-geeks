@@ -39,13 +39,15 @@ const JSApply = () => {
         apply(<BI>thisArg</BI>, [arg1, arg2, …, argN])
         <NewLine />
         <BI>this</BI> will be replaced with <BI>thisArg</BI> and the following
-        <BI>array of arguments</BI> will be assigned to function
+        <BI>array of arguments</BI> will be assigned to function <Space />
         <I>arguments</I>.
       </Para>
 
       <Para>
         <Code>
-          {`function sum(num1, num2) { return this.a + this.b + num1 + num2; }
+          {`function sum(num1, num2) {
+  return this.a + this.b + num1 + num2;
+}
 const obj = {  a: 10, b: 20 };
 const res = sum.apply(obj, [5, 25]);
 console.log(res)  // 60

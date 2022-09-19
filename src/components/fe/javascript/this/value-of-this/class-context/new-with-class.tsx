@@ -3,13 +3,7 @@ import Code from '../../../../../shared/code/code';
 import Heading from '../../../../../shared/heading/heading';
 import Para from '../../../../../shared/para/para';
 import Space from '../../../../../shared/space/space';
-import {
-  B,
-  BI,
-  I,
-  NewLine,
-  OrderedList
-} from '../../../../../shared/util/util';
+import { B, BI, I, OrderedList } from '../../../../../shared/util/util';
 
 const behaviorList = [
   {
@@ -64,14 +58,12 @@ const JSNewWithClass = () => {
       </Para>
       <OrderedList expanded items={behaviorList} />
 
-      <NewLine />
       <Para>
         But after ES6, language is stricter about which are <I>constructors</I>
         <Space /> and which are <I>functions</I>. For example:
       </Para>
       <OrderedList expanded items={ES6BehaviorList} />
 
-      <NewLine />
       <Para>
         <Heading as='h4'>Using "new" with Classes</Heading>
         <Para>
@@ -82,18 +74,18 @@ const JSNewWithClass = () => {
 
         <Code>
           {`class User {
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
-    showName(){
-    console.log(this.firstName + "-" + this.lastName);
+  showName(){
+  console.log(this.firstName + "-" + this.lastName);
   }
 }
 
 const user = new User("JavaScript", "Language");
-user.showName();	// "JavaScript-Language"`}
+user.showName();  // "JavaScript-Language"`}
         </Code>
       </Para>
     </>

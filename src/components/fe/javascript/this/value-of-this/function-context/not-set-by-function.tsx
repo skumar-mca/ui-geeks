@@ -18,7 +18,7 @@ const JSThisNotSetByFunction = () => {
       </Para>
 
       <Code>{`function getThis() { return this; }
-getThis() === window;   // true
+getThis() === window; // true
 `}</Code>
 
       <NewLine />
@@ -34,7 +34,7 @@ getThis() === window;   // true
   return this; 
 }
 
-getThisInStrictMode() === undefined;	// true`}
+getThisInStrictMode() === undefined;  // true`}
       </Code>
     </>
   );

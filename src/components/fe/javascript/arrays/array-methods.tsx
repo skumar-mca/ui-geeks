@@ -2,7 +2,7 @@ import React from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
-import { B, I, NewLine } from '../../../shared/util/util';
+import { B, I } from '../../../shared/util/util';
 import JSArraySliceMethod from './array-slice-method';
 import JSArraySpliceMethod from './array-splice-method';
 
@@ -23,7 +23,6 @@ arr.toString()   // "cat, dog"
 `}</Code>
 
       <Para>
-        <NewLine />
         <Heading as='h4'>concat()</Heading>
         <Para>Return a new array with the given items added on to it.</Para>
 
@@ -33,7 +32,6 @@ arr.concat("fox", "tiger")
       </Para>
 
       <Para>
-        <NewLine />
         <Heading as='h4'>join(separator)</Heading>
         <Para>
           Converts the array to a string, with values delimited by the given{' '}
@@ -45,7 +43,6 @@ arr.join("#")    // "cat#dog#fox"`}</Code>
       </Para>
 
       <Para>
-        <NewLine />
         <Heading as='h4'>pop()</Heading>
         <Para>Removes and returns the last item.</Para>
 
@@ -57,7 +54,6 @@ console.log(arr)	// ["cat", "dog"]
       </Para>
 
       <Para>
-        <NewLine />
         <Heading as='h4'>push()</Heading>
         <Para>Appends items to the end of the array.</Para>
 
@@ -68,7 +64,6 @@ console.log(arr)  // ["cat", "dog", "lion", "elephant"]
       </Para>
 
       <Para>
-        <NewLine />
         <Heading as='h4'>unshift()</Heading>
         <Para>Prepends items to the start of the array.</Para>
 
@@ -79,29 +74,25 @@ console.log(arr)  // ["rat", "cat", "dog"]
       </Para>
 
       <Para>
-        <NewLine />
         <Heading as='h4'>shift()</Heading>
         <Para>Removes and returns the first item of the array.</Para>
 
         <Code>{`let arr = ["cat", "dog", "lion"]
 const firstElement = arr.shift()
-console.log(firstElement)	// "cat"
+console.log(firstElement) // "cat"
 console.log(arr); // ["dog", "lion"]
 `}</Code>
       </Para>
 
       <Para>
-        <NewLine />
         <JSArraySliceMethod />
       </Para>
 
       <Para>
-        <NewLine />
         <JSArraySpliceMethod />
       </Para>
 
       <Para>
-        <NewLine />
         <Heading as='h4'>sort()</Heading>
         <Para>
           Sorts the given array. This takes an <I>optional</I> comparison
@@ -114,7 +105,6 @@ arr.sort(); //  ["cat", "dog", "fox", "lion", "tiger"]
       </Para>
 
       <Para>
-        <NewLine />
         <Heading as='h4'>reverse()</Heading>
         <Para>Reverses the order of items of the array.</Para>
 

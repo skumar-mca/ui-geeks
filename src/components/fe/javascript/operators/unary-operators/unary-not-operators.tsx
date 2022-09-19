@@ -19,11 +19,10 @@ const JSUnaryNotOperator = () => {
       <Code>
         {`!true	// false
 !false	// true
-!"JS"		// false`}
+!"JS" // false`}
       </Code>
       In short, it <B>inverses</B> the <I>truthy/falsy</I> value, i.e., inverses
-      <I>true</I> to
-      <I>false</I> and vise-versa.
+      <Space /> <I>true</I> to <Space /> <I>false</I> and vise-versa.
     </Para>
   );
 };

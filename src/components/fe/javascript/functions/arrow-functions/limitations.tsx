@@ -121,14 +121,18 @@ const JSArrowFunctionsLimitations = () => {
         Let's see how we can decompose traditional functions to arrow functions.
         <Code>
           {`// Traditional function
-function isEven(num) { return num % 2 === 0; }
+function isEven(num) {
+  return num % 2 === 0;
+}
 `}
         </Code>
       </Para>
 
       <Para>
         Equivalent arrow function of above traditional function.
-        <Code>{`const isEven = (num) => { return num % 2 === 0 };`}</Code>
+        <Code>{`const isEven = (num) => {
+  return num % 2 === 0
+};`}</Code>
         Above compact alternative is known as
         <B>arrow function with block body</B>.
       </Para>
@@ -143,7 +147,6 @@ function isEven(num) { return num % 2 === 0; }
         <OrderedList unOrdered expanded items={conciseBodyList} />
       </Para>
 
-      <NewLine />
       <Para>
         Parentheses around arguments <B>cannot</B> be removed for below cases:
         <OrderedList unOrdered expanded items={paranthesesRules} />

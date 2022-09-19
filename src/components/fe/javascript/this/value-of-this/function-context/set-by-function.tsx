@@ -11,7 +11,7 @@ const JSThisSetByFunction = () => {
         <Heading as='h4'>When "this" is set by the function call</Heading>
         <Para>
           The <B>call()</B>, <B>apply()</B> and <B>bind()</B> methods can be
-          used to set the value of “this” for the called function.
+          used to set the value of <BI>"this"</BI> for the called function.
         </Para>
 
         <Code>
@@ -63,7 +63,7 @@ console.log(nameValue);	// "Name from obj"
 
         <Code>
           {`function getThis() { 
-    console.log(Object.prototype.toString.call(this));
+  console.log(Object.prototype.toString.call(this));
 }
 getThis.call(10); // [Object Number]`}
         </Code>
@@ -74,9 +74,9 @@ getThis.call(10); // [Object Number]`}
 
         <Code>
           {`function getThis() { 
-      console.log(Object.prototype.toString.call(this));
+  console.log(Object.prototype.toString.call(this));
 }
-getThis.call(undefined);	// [Object global]`}
+getThis.call(undefined);  // [Object global]`}
         </Code>
         <Para>
           In above code, the <BI>undefined</BI> is converted to the

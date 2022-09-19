@@ -106,7 +106,6 @@ const JSNewOperator = () => {
       </Para>
 
       <Para>
-        <NewLine />
         <Heading as='h4'>Using "new" with Functions</Heading>
         <Para>
           When a <I>function</I> is called with the <BI>new</BI> operator, the
@@ -120,11 +119,11 @@ const JSNewOperator = () => {
       <Para>
         <IU>Example 1:</IU>
         <Code>{`function User(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.showName = function() {
-        console.log(this.firstName + "-" + this.lastName);
-    }
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.showName = function() {
+    console.log(this.firstName + "-" + this.lastName);
+  }
 }
 
 const user = new User("JavaScript", "Language");
@@ -137,20 +136,19 @@ user.showName();  // "JavaScript-Language"`}</Code>
         </Para>
       </Para>
 
-      <NewLine />
       <Para>
         <IU>Example 2:</IU>
         <Code>{`function User(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.showName = function() {
-        console.log(this.firstName + "-" + this.lastName);
-    }
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.showName = function() {
+    console.log(this.firstName + "-" + this.lastName);
+  }
   return {a: 5};
 }
 
 const user = new User("JavaScript", "Language");
-console.log(user); // {a: 5}
+console.log(user);  // {a: 5}
 user.showName();  // "Error usr.showName is not a function"
 `}</Code>
 
@@ -168,10 +166,8 @@ user.showName();  // "Error usr.showName is not a function"
         </Para>
       </Para>
 
-      <NewLine />
       <JSNewTarget />
 
-      <NewLine />
       <JSNewWithClass />
     </>
   );

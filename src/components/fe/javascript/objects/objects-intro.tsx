@@ -2,7 +2,7 @@ import React from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
-import { B, BI, I, NewLine, OrderedList } from '../../../shared/util/util';
+import { B, BI, I, OrderedList } from '../../../shared/util/util';
 
 const JSObjectsIntro = () => {
   return (
@@ -35,7 +35,6 @@ const JSObjectsIntro = () => {
         <Code>{`const obj = new Object({ name: "JavaScript", version: 6 });`}</Code>
       </Para>
 
-      <NewLine />
       <Para>
         <Heading as='h4'>Using object literal syntax</Heading>
         <Code>{`const obj = { name: "JavaScript", version: 6 };`}</Code>

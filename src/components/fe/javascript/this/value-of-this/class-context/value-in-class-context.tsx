@@ -1,7 +1,6 @@
 import React from 'react';
 import Heading from '../../../../../shared/heading/heading';
 import Para from '../../../../../shared/para/para';
-import { NewLine } from '../../../../../shared/util/util';
 import JSValueOfThisClassContextIntro from './class-context-intro';
 import JSValueOfThisDerivedClassContext from './derived-class-context';
 import JSNewOperator from './new-operator';
@@ -14,7 +13,6 @@ const JSValueOfThisInClassContext = () => {
         <JSValueOfThisClassContextIntro />
         <JSValueOfThisDerivedClassContext />
         <JSNewOperator />
-        <NewLine />
         <JSThisInEventListener />
       </Para>
     </>

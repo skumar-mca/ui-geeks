@@ -6,7 +6,7 @@ import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
-import { B, OrderedList } from '../../../shared/util/util';
+import { B, BI, OrderedList } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
 import JSBigIntType from './big-int-type';
 import JSBooleanType from './boolean-type';
@@ -87,25 +87,19 @@ const JSTypes = () => {
       </Para>
 
       <Para>
-        Also
-        <Word italic bold>
-          functions
-        </Word>
-        <Space />
-        are just special type of
-        <Word italic bold>
-          object
-        </Word>
-        <Space />
-        (because functions are treated as first-class functions). On Summarizing
-        all, the type diagram will look something like:
+        Also <BI>functions</BI> <Space /> are just special type of
+        <BI>object</BI> <Space /> (because functions are treated as first-class
+        functions). On Summarizing all, the type diagram will look something
+        like:
       </Para>
 
       <Para>
         <OrderedList items={dataTypes} unOrdered />
       </Para>
 
-      <Note>There are some built-in Error types as well.</Note>
+      <Note>
+        There are some built-in <B>Error</B> types as well.
+      </Note>
 
       <Para>Let's learn each type in detail.</Para>
 

@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import { DeviceType } from '../../../util/app-constants';
 import ListIcon from '../../icons/list-icon';
+import Container from '../../shared/container/container';
 import ContentLoader from '../../shared/content-loader/content-loader';
 import NavigationMenu from '../../shared/navigation-menu/navigation-menu';
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
@@ -175,8 +176,9 @@ const JSHome = () => {
         <Suspense fallback={<ContentLoader />}>
           <Outlet />
         </Suspense>
-
-        <NextPrevButtons allItems={JSLINK} />
+        <Container>
+          <NextPrevButtons allItems={JSLINK} />
+        </Container>
         <ScrollTopButton />
       </Col>
     </Row>

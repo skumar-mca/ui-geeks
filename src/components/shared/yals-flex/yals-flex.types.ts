@@ -38,4 +38,5 @@ export interface IYALSFlexProps {
   width?: string;
   className?: string;
   bgColor?: string;
+  height?: string;
 }

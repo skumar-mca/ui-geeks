@@ -3,6 +3,7 @@
 
 .#{$appPrefix}-image {
   display: inline-block;
+  text-align: center;
   img {
     box-shadow: 5px 5px 10px 5px #c0c0c0;
     border-radius: 4px;
@@ -16,5 +17,6 @@
     font-weight: bold;
     font-style: italic;
     color: $h2Color;
+    text-align: center;
   }
 }

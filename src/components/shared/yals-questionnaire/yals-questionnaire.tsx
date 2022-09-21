@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { memo, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import ChevronLeft from '../../icons/chevron-left';
 import ChevronRight from '../../icons/chevron-right';
@@ -143,6 +143,16 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
       </div>
     );
   };
+
+  useEffect(() => {
+    return () => {
+      questions.map((ques: any) => {
+        ques.options.map((opt: any) => {
+          opt.isChecked = null;
+        });
+      });
+    };
+  }, []);
 
   return (
     <div className={questionnaireClasses}>

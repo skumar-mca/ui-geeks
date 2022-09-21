@@ -9,6 +9,8 @@ import Space from '../../../shared/space/space';
 import { BI, I, NewLine, OrderedList } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
 import YALSImage from '../../../shared/yals-image/yals-image';
+import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import { ConsoleQuestions } from '../questionnaires/console-questionnaire';
 
 const JSConsole = () => {
   useDOMTitle('YALS: JavaScript | Console');
@@ -100,6 +102,10 @@ const JSConsole = () => {
         In JavaScript, every expression has a result. But few expressions like
         <Space /> <I>console.log( )</I> returns nothing and in JavaScript
         <Space /> <BI>"nothing"</BI> is represented as <BI>undefined</BI>.
+      </Para>
+
+      <Para>
+        <YALSQuestionaire questions={ConsoleQuestions} />
       </Para>
     </Container>
   );

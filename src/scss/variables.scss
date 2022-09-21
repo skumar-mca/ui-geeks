@@ -1,3 +1,5 @@
 @import './colors.scss';
 
 $appPrefix: 'yals';
+$errorBorder: 1px solid $error;
+$successBorder: 1px solid $success;

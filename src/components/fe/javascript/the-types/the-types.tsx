@@ -8,6 +8,8 @@ import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, OrderedList } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
+import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import { TheTypesQuestions } from '../questionnaires/types-questionnaire';
 import JSBigIntType from './big-int-type';
 import JSBooleanType from './boolean-type';
 import JSNullType from './null-type';
@@ -116,6 +118,10 @@ const JSTypes = () => {
       <JSUndefinedType />
 
       <JSBooleanType />
+
+      <Para>
+        <YALSQuestionaire questions={TheTypesQuestions} />
+      </Para>
     </Container>
   );
 };

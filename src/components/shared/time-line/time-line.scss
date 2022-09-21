@@ -141,6 +141,7 @@
   .container .content p {
     margin: 0;
     line-height: 22px;
+    word-break: break-word;
   }
 
   @media (max-width: 767.98px) {

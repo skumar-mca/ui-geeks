@@ -1,5 +1,9 @@
 export const AppPrefix = 'yals';
 
+export const EMPTY_LINE = `_____________`;
+export const NONE_OF_ABOVE = `None of the above`;
+export const ALL_OF_ABOVE = `All of the above`;
+
 export const DeviceType = {
   Mobile: 'mobile',
   Tablet: 'tablet',

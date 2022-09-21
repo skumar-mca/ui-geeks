@@ -5,6 +5,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B } from '../../../shared/util/util';
+import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import { OperatorQuestions } from '../questionnaires/operator-questionnaire';
 import JSBinaryOperators from './binary-operators/binary-operators';
 import JSOperatorPrecedence from './operator-precedence';
 import JSTernaryOperator from './ternary-operator';
@@ -26,6 +28,10 @@ const JSOperators = () => {
       <JSUnaryOperators />
       <JSTernaryOperator />
       <JSOperatorPrecedence />
+
+      <Para>
+        <YALSQuestionaire questions={OperatorQuestions} />
+      </Para>
     </Container>
   );
 };

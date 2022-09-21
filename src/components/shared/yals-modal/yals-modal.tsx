@@ -9,7 +9,7 @@ const YALSModal = (props: IYALSModalProps) => {
   const { show, fullScreen, modalHeader, modalContent, onHide } = props;
 
   const modalClasses = classNames({
-    [`${AppPrefix}-tooltip`]: true
+    [`${AppPrefix}-modal`]: true
   });
 
   const isFullScreen = fullScreen ? true : 'false';

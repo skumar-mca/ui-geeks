@@ -8,6 +8,8 @@ import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, Indent, NewLine, ScriptTag } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
+import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import { IncludeScriptQuestions } from '../questionnaires/include-script-questionnaire';
 import JSAsyncScriptLoading from './async-loading';
 import JSDeferScriptLoading from './defer-loading';
 import JSScriptLoadingIntro from './script-loading-intro';
@@ -102,6 +104,10 @@ const JSInclude = () => {
         been loaded. On larger sites with lots of JavaScript files, this can
         cause a <B>major performance issue</B>.
       </Note>
+
+      <Para>
+        <YALSQuestionaire questions={IncludeScriptQuestions} />
+      </Para>
     </Container>
   );
 };

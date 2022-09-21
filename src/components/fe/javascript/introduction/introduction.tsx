@@ -5,6 +5,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import { IntroductionQuestions } from '../questionnaires/introduction-questionnaire';
 
 const JSIntroduction = () => {
   useDOMTitle('YALS: JavaScript | Introduction');
@@ -156,6 +158,10 @@ const JSIntroduction = () => {
         it is known to be declarative in nature. For example, the <I>sort()</I>
         <Space /> method of Array can be called to sort all the items of the
         array, we do not need to write down the steps to sort the array.
+      </Para>
+
+      <Para>
+        <YALSQuestionaire questions={IntroductionQuestions} />
       </Para>
     </Container>
   );

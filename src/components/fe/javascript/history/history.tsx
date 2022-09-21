@@ -5,6 +5,8 @@ import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Word from '../../../shared/word/word';
+import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import { HistoryQuestions } from '../questionnaires/history-questionnaire';
 import JSVersionTimeLine from './version-timeline';
 
 const JSHistory = () => {
@@ -56,6 +58,10 @@ const JSHistory = () => {
         Both JAVA & JavaScript are registered trademarks of Oracle in the U.S.
         and other countries.
       </Note>
+
+      <Para>
+        <YALSQuestionaire questions={HistoryQuestions} />
+      </Para>
     </Container>
   );
 };

@@ -2,6 +2,7 @@
 @import '../../../../scss/colors.scss';
 
 .#{$appPrefix}-js-landing {
+  z-index: 99999;
   min-height: 96vh;
   h1 {
     color: $h2Color;
@@ -17,20 +18,47 @@
     margin-bottom: 30px;
   }
 
-  .content-table {
-    .item-child {
+  .landing-content {
+    margin-top: -95px;
+  }
+
+  .js-word-count {
+    width: 100%;
+    z-index: 0;
+  }
+
+  .topic-list {
+    flex-wrap: wrap;
+    margin: 2px;
+    flex-basis: content;
+    flex: 1 1 160px;
+
+    .insight {
+      background: $secondaryBgColor;
       padding: 10px;
+      border-radius: 4px;
+      margin-right: 25px;
+      margin-bottom: 20px;
+      margin: 10px;
 
-      .yals-badge {
-        margin-right: 10px;
-        margin-bottom: 5px;
-        background-color: #80858f !important;
-        font-weight: normal;
+      flex-grow: inherit;
+
+      &:hover {
+        box-shadow: 3px 4px 7px 0px #adadad;
       }
-    }
+      .insight-key {
+        font-size: 1.1em;
+        color: $boxShadow;
+        font-style: italic;
+        text-align: left;
+      }
 
-    .yals-btn {
-      font-weight: bold;
+      .insight-value {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $purple;
+        margin-bottom: 10px;
+      }
     }
   }
 }

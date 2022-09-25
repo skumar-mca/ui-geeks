@@ -12,6 +12,7 @@ import JSGrammer from '../components/fe/javascript/grammer/grammer';
 import JSHoisting from '../components/fe/javascript/hoisting/hoisting';
 import JSInclude from '../components/fe/javascript/include-javascript/include-javascript';
 import JSIteratorsGenerators from '../components/fe/javascript/iterators-generators/iterators-generators';
+import JSLandingPage from '../components/fe/javascript/landing-page/javascript-landing-page';
 import JSModules from '../components/fe/javascript/modules/modules';
 import JSObjects from '../components/fe/javascript/objects/objects';
 import JSOperators from '../components/fe/javascript/operators/operators';
@@ -35,6 +36,7 @@ const JSHistory = lazy(
 const FERouter = (
   <>
     <Route path='/fe' element={<FEHome />} />
+    <Route path='fe/javascript-home' element={<JSLandingPage />} />
     <Route path='fe/javascript' element={<JSHome />}>
       <Route path='introduction' element={<JSIntroduction />} />
       <Route path='history' element={<JSHistory />} />

@@ -52,7 +52,7 @@ export const JSLINK = [
     tags: ['history']
   },
   {
-    label: 'How to include JavaScript code in webpage',
+    label: 'Include JavaScript code',
     link: '/fe/javascript/include-code',
     tags: ['scripts', 'async', 'defer'],
     children: [

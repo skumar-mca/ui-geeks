@@ -102,7 +102,7 @@ const HomeHeader = () => {
             </Link>
           </li>
           <li>
-            <Link to='/fe/javascript/introduction'>JavaScript</Link>
+            <Link to='/fe/javascript-home'>JavaScript</Link>
           </li>
         </ul>
 

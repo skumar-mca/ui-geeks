@@ -25,7 +25,7 @@ const Home = () => {
           { content: 'JavaScript follows Declarative and Imperative style.' }
         ]}
         imagePath='images/js-icon.png'
-        homePagePath='/fe/javascript/introduction'
+        homePagePath='/fe/javascript-home'
         theme='yellow'
       />
 

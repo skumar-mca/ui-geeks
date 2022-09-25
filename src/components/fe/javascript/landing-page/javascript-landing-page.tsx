@@ -1,18 +1,14 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
-import Table from 'react-bootstrap/esm/Table';
 import { useNavigate } from 'react-router-dom';
 import useDeviceType from '../../../../custom-hooks/use-device-type';
-import {
-  AppPrefix,
-  DeviceType,
-  ImagePaths
-} from '../../../../util/app-constants';
+import { TextAlignTypes } from '../../../../types/common';
+import { AppPrefix, DeviceType } from '../../../../util/app-constants';
 import { buildChildren } from '../../../../util/util';
+import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, NewLine } from '../../../shared/util/util';
-import YALSBadge from '../../../shared/yals-badge/yals-badge';
 import YalsButton from '../../../shared/yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../../../shared/yals-button/yals-button.types';
 import YalsFlex from '../../../shared/yals-flex/yals-flex';
@@ -20,7 +16,6 @@ import {
   FlexAlignItemsTypes,
   FlexJustifyContentTypes
 } from '../../../shared/yals-flex/yals-flex.types';
-import YalsImage from '../../../shared/yals-image/yals-image';
 import { JSLINK } from '../js-link-tree';
 import './javascript-landing.scss';
 
@@ -30,17 +25,22 @@ const JSLandingPage = () => {
   const homeLandingClass = classNames({ [`${AppPrefix}-js-landing`]: true });
 
   const [menuList, setMenuList] = useState<Array<any>>([]);
+  const [topicsCount, setTopicsCount] = useState(0);
   const buildMenuList = () => {
     const menuArr: Array<any> = [];
+    let topicCount = 0;
     JSLINK.map((itm: any) => {
+      const childList = itm.children ? buildChildren(itm.children, 0, []) : [];
+      topicCount += childList.length;
       menuArr.push({
         label: itm.label,
         link: itm.link,
-        childList: itm.children ? buildChildren(itm.children, 0, []) : []
+        childList: childList
       });
     });
 
     setMenuList(() => menuArr);
+    setTopicsCount(() => topicCount);
   };
 
   const navigate = useNavigate();
@@ -57,93 +57,80 @@ const JSLandingPage = () => {
   }, []);
 
   return (
-    <div className={homeLandingClass}>
-      <YalsFlex
-        justifyContent={FlexJustifyContentTypes.Center}
-        alignItems={FlexAlignItemsTypes.Center}
-      >
-        <img src={imagePath} alt={imagePath} className='language-icon' />
-      </YalsFlex>
-      <YalsFlex
-        justifyContent={FlexJustifyContentTypes.Center}
-        alignItems={FlexAlignItemsTypes.Center}
-      >
-        <h1>JavaScript</h1>
-      </YalsFlex>
-      <NewLine />
-      <NewLine />
-      <Para>
-        JavaScript (JS) is a light-weight,
-        <B>interpreted</B> <Space /> or <B>just-in-time compiled</B> programming
-        language with <Space /> <B>first-class functions</B>. It is
-        <B>prototype-based</B>,<B> multi-paradigm</B>,<B>single threaded</B>,
-        <B> dynamic language</B>, supporting <Space /> <B>object-oriented</B>,
-        <B> imperative</B> and <Space /> <B>declarative</B> styles.
-      </Para>
-
-      <Para>
-        <YalsButton
-          variant={YALSButtonVariantTypes.Primary}
-          onClick={redirectToIntroduction}
-          block={deviceType === DeviceType.Mobile}
-        >
-          Explore Now
-        </YalsButton>
-      </Para>
-
-      <div className='content-section'>
-        <YalsFlex justifyContent={FlexJustifyContentTypes.Center}>
-          <YalsImage
-            width='100%'
-            imagePath={ImagePaths.JS_WORD_CLOUD}
-            alt='JavaScript Word Cloud'
+    <>
+      <div className={homeLandingClass}>
+        <div className='js-word-count'>
+          <img
+            src='https://live.staticflickr.com/65535/52383011714_14b54b9e25_b.jpg'
+            width={'100%'}
+            height='250px'
           />
-        </YalsFlex>
-      </div>
+        </div>
 
-      <Para>
-        <Table
-          striped={true}
-          bordered={true}
-          hover={true}
-          size={'sm'}
-          className='content-table'
-        >
-          <thead>
-            <tr>
-              <th>Course Content</th>
-            </tr>
-          </thead>
-          <tbody>
-            {menuList.map((itm: any) => {
-              return (
-                <tr key={itm.link}>
-                  <td>
+        <div className='landing-content'>
+          <YalsFlex
+            justifyContent={FlexJustifyContentTypes.Center}
+            alignItems={FlexAlignItemsTypes.Center}
+          >
+            <img src={imagePath} alt={imagePath} className='language-icon' />
+          </YalsFlex>
+          <YalsFlex
+            justifyContent={FlexJustifyContentTypes.Center}
+            alignItems={FlexAlignItemsTypes.Center}
+          >
+            <h1>JavaScript</h1>
+          </YalsFlex>
+          <NewLine />
+          <NewLine />
+          <Para>
+            JavaScript (JS) is a light-weight,
+            <B>interpreted</B> <Space /> or <B>just-in-time compiled</B>{' '}
+            programming language with <Space /> <B>first-class functions</B>. It
+            is
+            <B>prototype-based</B>,<B> multi-paradigm</B>,<B>single threaded</B>
+            ,<B> dynamic language</B>, supporting <Space />{' '}
+            <B>object-oriented</B>,<B> imperative</B> and <Space />{' '}
+            <B>declarative</B> styles.
+          </Para>
+
+          <Para marginBottom='6rem' textAlign={TextAlignTypes.Center}>
+            <YalsButton
+              variant={YALSButtonVariantTypes.Primary}
+              onClick={redirectToIntroduction}
+              block={deviceType === DeviceType.Mobile}
+            >
+              Explore Now
+            </YalsButton>
+          </Para>
+
+          <Para>
+            <Heading as='h1'>Course Content</Heading>
+          </Para>
+          <Para>
+            <YalsFlex
+              justifyContent={FlexJustifyContentTypes.SpaceAround}
+              className='topic-list'
+            >
+              {menuList.map((menu: any) => {
+                return (
+                  <div className='insight'>
                     <YalsButton
-                      variant={YALSButtonVariantTypes.Link}
-                      onClick={redirectToTopic.bind(this, itm)}
+                      onClick={redirectToTopic.bind(this, menu)}
+                      variant={YALSButtonVariantTypes.Clear}
                     >
-                      {itm.label}
+                      <div className='insight-value'>{menu.label}</div>
+                      <div className='insight-key'>
+                        {menu.childList.length + 1} Concepts
+                      </div>
                     </YalsButton>
-                    <div className='item-child'>
-                      {itm.childList.map((child: any) => {
-                        return (
-                          <YALSBadge
-                            key={child.label}
-                            bg={YALSButtonVariantTypes.Success}
-                            content={child.label}
-                          />
-                        );
-                      })}
-                    </div>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </Table>
-      </Para>
-    </div>
+                  </div>
+                );
+              })}
+            </YalsFlex>
+          </Para>
+        </div>
+      </div>
+    </>
   );
 };
 

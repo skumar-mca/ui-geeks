@@ -26,14 +26,14 @@ const YALSTable = (props: IYAPSTableProps) => {
         <thead>
           <tr>
             {thList.map((th: YALSTHType) => {
-              return <th>{th.label}</th>;
+              return <th key={th.column}>{th.label}</th>;
             })}
           </tr>
         </thead>
         <tbody>
-          {tdList.map((td: YALSTDType) => {
+          {tdList.map((td: YALSTDType, index: number) => {
             return (
-              <tr>
+              <tr key={`row-${index}`}>
                 {thList.map((th: any) => {
                   return <td>{td[th.column]}</td>;
                 })}

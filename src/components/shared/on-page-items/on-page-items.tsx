@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, { memo, useEffect, useState } from 'react';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix } from '../../../util/app-constants';
-import { getOnPageItems, populateId } from '../../../util/util';
+import { buildChildren, getOnPageItems, populateId } from '../../../util/util';
 import YALSButton from '../yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../yals-button/yals-button.types';
 import './on-page-items.scss';
@@ -41,7 +41,9 @@ const OnPageItems = (props: any) => {
   const getItems = () => {
     const { children: menuChildrens } = currentItem;
     if (menuChildrens) {
-      const childList = renderChildren(menuChildrens, 0, []);
+      //const childList = renderChildren(menuChildrens, 0, []);
+      const childList = buildChildren(menuChildrens, 0, []);
+
       return (
         <ul>
           {childList.map((itm) => {

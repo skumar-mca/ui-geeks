@@ -116,6 +116,8 @@ console.log(undefined + 5);`}</Code>
             {`5`}
             <NewLine />
             {`NaN`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 1
@@ -128,6 +130,8 @@ console.log(undefined + 5);`}</Code>
             {`undefined`}
             <NewLine />
             {`undefined`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 2
@@ -140,6 +144,8 @@ console.log(undefined + 5);`}</Code>
             {`5`}
             <NewLine />
             {`null`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 3
@@ -152,6 +158,8 @@ console.log(undefined + 5);`}</Code>
             {`5`}
             <NewLine />
             {`5`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 4
@@ -181,6 +189,8 @@ console.log(+ '12.25abc');
             {`12.25`}
             <NewLine />
             {`NaN`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 1
@@ -193,6 +203,8 @@ console.log(+ '12.25abc');
             {`12.25`}
             <NewLine />
             {`NaN`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 2
@@ -206,6 +218,8 @@ console.log(+ '12.25abc');
             {`12`}
             <NewLine />
             {`12`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 3
@@ -219,6 +233,8 @@ console.log(+ '12.25abc');
             {`12.25`}
             <NewLine />
             {`12.25`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 4
@@ -314,7 +330,7 @@ console.log(+ '12.25abc');
     id: 10,
     question: (
       <>
-        The <I>undefined</I> behaves as {EMPTY_LINE} in numeric context and{' '}
+        The <I>undefined</I> behaves as {EMPTY_LINE} in numeric context and
         {EMPTY_LINE} in boolean context.
       </>
     ),

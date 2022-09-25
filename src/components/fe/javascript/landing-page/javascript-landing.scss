@@ -1,0 +1,36 @@
+@import '../../../../scss/variables.scss';
+@import '../../../../scss/colors.scss';
+
+.#{$appPrefix}-js-landing {
+  min-height: 96vh;
+  h1 {
+    color: $h2Color;
+  }
+  .language-icon {
+    height: 150px;
+    width: 150px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+
+  .content-section {
+    margin-bottom: 30px;
+  }
+
+  .content-table {
+    .item-child {
+      padding: 10px;
+
+      .yals-badge {
+        margin-right: 10px;
+        margin-bottom: 5px;
+        background-color: #80858f !important;
+        font-weight: normal;
+      }
+    }
+
+    .yals-btn {
+      font-weight: bold;
+    }
+  }
+}

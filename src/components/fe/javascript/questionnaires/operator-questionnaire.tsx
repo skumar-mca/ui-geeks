@@ -58,7 +58,7 @@ export const OperatorQuestions = [
     ],
     type: YALSCheckRadioTypes.Checkbox,
     name: 'oper_2',
-    answer: 2
+    answer: [2]
   },
   {
     id: 3,
@@ -80,6 +80,8 @@ console.log('1' !== 1);
             {`true`}
             <NewLine />
             {`true`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 1
@@ -92,6 +94,8 @@ console.log('1' !== 1);
             {`false`}
             <NewLine />
             {`true`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 2
@@ -104,6 +108,8 @@ console.log('1' !== 1);
             {`false`}
             <NewLine />
             {`true`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 3
@@ -116,6 +122,8 @@ console.log('1' !== 1);
             {`true`}
             <NewLine />
             {`true`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 4
@@ -148,6 +156,8 @@ console.log(false || 'Program');
             {`true`}
             <NewLine />
             {`false`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 1
@@ -162,6 +172,8 @@ console.log(false || 'Program');
             {`'JS'`}
             <NewLine />
             {`'Program'`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 2
@@ -176,6 +188,8 @@ console.log(false || 'Program');
             {`true`}
             <NewLine />
             {`false`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 3
@@ -190,6 +204,8 @@ console.log(false || 'Program');
             {`'JS'`}
             <NewLine />
             {`false`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 4
@@ -232,6 +248,8 @@ console.log(3 + 4 + '5');`}</Code>
             {`12`}
             <NewLine />
             {`12`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 1
@@ -242,6 +260,8 @@ console.log(3 + 4 + '5');`}</Code>
             {`345`}
             <NewLine />
             {`345`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 2
@@ -253,6 +273,8 @@ console.log(3 + 4 + '5');`}</Code>
             {`345`}
             <NewLine />
             {`75`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 3
@@ -264,6 +286,8 @@ console.log(3 + 4 + '5');`}</Code>
             {`12`}
             <NewLine />
             {`345`}
+            <NewLine />
+            <NewLine />
           </>
         ),
         id: 4
@@ -427,7 +451,7 @@ console.log(obj.a + ', ' + obj['invalid-key']);
     answer: 1
   },
   {
-    id: 11,
+    id: 12,
     question: (
       <>
         What would be the output of given code:
@@ -453,7 +477,7 @@ console.log(obj.a + ', ' + obj['invalid-key']);
       }
     ],
     type: YALSCheckRadioTypes.Radio,
-    name: 'oper_11',
+    name: 'oper_12',
     answer: 3
   }
 ];

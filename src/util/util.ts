@@ -11,3 +11,23 @@ export const populateId = (str: string) => {
   }
   return str.toString().replace(/[^a-zA-Z]/g, '');
 };
+
+export const buildChildren = (
+  childList: Array<any>,
+  iteration: number,
+  childLIList: Array<any>
+) => {
+  childList.map((itm: any) => {
+    childLIList.push({
+      iteration,
+      label: itm.label,
+      altLabel: itm.altLabel,
+      shortLabel: itm.shortLabel
+    });
+    if (itm.children) {
+      buildChildren(itm.children, iteration + 1, childLIList);
+    }
+  });
+
+  return childLIList;
+};

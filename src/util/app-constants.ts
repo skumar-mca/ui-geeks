@@ -20,5 +20,6 @@ export const ImagePaths = {
     'https://live.staticflickr.com/65535/52364579648_776173c291_b.jpg',
   Defer_Script_Loading:
     'https://live.staticflickr.com/65535/52364579558_8a4611e2bb_b.jpg',
-  Asyn_Script_Loading: `https://live.staticflickr.com/65535/52363415682_f03614832b_b.jpg`
+  Asyn_Script_Loading: `https://live.staticflickr.com/65535/52363415682_f03614832b_b.jpg`,
+  JS_WORD_CLOUD: `https://live.staticflickr.com/65535/52383011714_14b54b9e25_b.jpg`
 };

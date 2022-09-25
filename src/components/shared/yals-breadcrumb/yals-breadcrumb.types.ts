@@ -6,4 +6,5 @@ export interface ILinkType {
 }
 export interface IYALSBreadcrumbProps {
   items: Array<ILinkType>;
+  currentMenuItem?: any;
 }

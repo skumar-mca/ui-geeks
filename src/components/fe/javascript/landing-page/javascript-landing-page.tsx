@@ -119,9 +119,11 @@ const JSLandingPage = () => {
                       variant={YALSButtonVariantTypes.Clear}
                     >
                       <div className='insight-value'>{menu.label}</div>
-                      <div className='insight-key'>
-                        {menu.childList.length + 1} Concepts
-                      </div>
+                      {menu.childList.length > 0 && (
+                        <div className='insight-key'>
+                          {menu.childList.length + 1} Topics
+                        </div>
+                      )}
                     </YalsButton>
                   </div>
                 );

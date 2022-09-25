@@ -9,6 +9,6 @@ export const JSBreadcrumbLink = [
   },
   {
     label: 'JavaScript',
-    link: '/fe/javascript'
+    link: '/fe/javascript-home'
   }
 ];

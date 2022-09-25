@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import { Outlet } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
+import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { DeviceType } from '../../../util/app-constants';
 import ListIcon from '../../icons/list-icon';
 import Container from '../../shared/container/container';
@@ -127,6 +128,13 @@ const JSHome = () => {
     setShowMenu(() => false);
   };
 
+  const currentPath = useCurrentPath();
+
+  const getCurrentRouteMenu = () => {
+    const crntItem = JSLINK.find((itm: any) => itm.link === currentPath);
+    return crntItem || {};
+  };
+
   return (
     <Row>
       {deviceType != DeviceType.Mobile && (
@@ -140,7 +148,10 @@ const JSHome = () => {
         md={deviceType === DeviceType.Mobile ? 12 : 9}
         sm={deviceType === DeviceType.Mobile ? 12 : 8}
       >
-        <YALSBreadcrumb items={JSBreadcrumbLink} />
+        <YALSBreadcrumb
+          items={JSBreadcrumbLink}
+          currentMenuItem={getCurrentRouteMenu()}
+        />
 
         {deviceType === DeviceType.Mobile && (
           <>

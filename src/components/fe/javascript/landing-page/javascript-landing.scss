@@ -43,9 +43,15 @@
 
       flex-grow: inherit;
 
+      .yals-btn {
+        &:active {
+          border: none;
+        }
+      }
       &:hover {
         box-shadow: 3px 4px 7px 0px #adadad;
       }
+
       .insight-key {
         font-size: 1.1em;
         color: $boxShadow;

@@ -104,6 +104,9 @@ const HomeHeader = () => {
           <li>
             <Link to='/fe/javascript-home'>JavaScript</Link>
           </li>
+          <li>
+            <Link to='/fe/react-home'>React</Link>
+          </li>
         </ul>
 
         <div className='yals-search' onKeyUp={onHandleKeyUp}>

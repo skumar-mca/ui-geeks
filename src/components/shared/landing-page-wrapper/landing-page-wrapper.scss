@@ -1,7 +1,7 @@
-@import '../../../../scss/variables.scss';
-@import '../../../../scss/colors.scss';
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
 
-.#{$appPrefix}-js-landing {
+.#{$appPrefix}-landing {
   z-index: 99999;
   min-height: 96vh;
   h1 {

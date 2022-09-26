@@ -86,7 +86,7 @@ const Home = () => {
           tag='Build reusable interfaces'
           contentList={ReactContentList}
           imagePath='images/react-icon.png'
-          homePagePath='/fe/javascript/introduction'
+          homePagePath='/fe/react-home'
           theme='lightGreen'
         />
 

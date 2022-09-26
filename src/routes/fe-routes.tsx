@@ -20,6 +20,9 @@ import JSPrototypeChain from '../components/fe/javascript/prototype-chain/protot
 import JSStrictMode from '../components/fe/javascript/strict-mode/strict-mode';
 import JSTypes from '../components/fe/javascript/the-types/the-types';
 import JSThis from '../components/fe/javascript/this/this';
+import ReactIntroduction from '../components/fe/react/introduction/introduction';
+import ReactLandingPage from '../components/fe/react/landing-page/react-landing-page';
+import ReactHome from '../components/fe/react/react-home';
 
 const JSIntroduction = lazy(
   () => import('../components/fe/javascript/introduction/introduction')
@@ -62,6 +65,11 @@ const FERouter = (
         path='iterators-and-generators'
         element={<JSIteratorsGenerators />}
       />
+    </Route>
+
+    <Route path='fe/react-home' element={<ReactLandingPage />} />
+    <Route path='fe/react' element={<ReactHome />}>
+      <Route path='introduction' element={<ReactIntroduction />} />
     </Route>
   </>
 );

@@ -19,7 +19,7 @@
     }
 
     .yals-sub-name {
-      font-size: 2.5em;
+      font-size: 2.2em;
       font-style: italic;
       color: $purple;
     }
@@ -30,6 +30,23 @@
       font-size: 1.1em;
       text-align: right;
       margin-top: 50px;
+    }
+  }
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-home-intro {
+    .yals-name {
+      font-size: 3.5rem;
+    }
+
+    .yals-sub-name {
+      font-size: 2rem;
+    }
+
+    .yals-tagline {
+      font-size: 1.1em;
+      text-align: center;
     }
   }
 }

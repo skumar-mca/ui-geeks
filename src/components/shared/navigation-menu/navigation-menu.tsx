@@ -3,13 +3,12 @@ import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix } from '../../../util/app-constants';
-import { JSLINK } from '../../fe/javascript/js-link-tree';
 import OnPageItems from '../on-page-items/on-page-items';
 import './navigation-menu.scss';
 import { IMenuItem, INavigationMenuProps } from './navigation-menu.types';
 
 const NavigationMenu = (props: INavigationMenuProps) => {
-  const { menuList, menuTitle, onMenuClick } = props;
+  const { menuList, menuTitle, menuLinks, onMenuClick } = props;
   const menuClasses = classNames({ [`${AppPrefix}-menu-wrapper`]: true });
   const currentPath = useCurrentPath();
   const isSelectedRoute = (url: string) => currentPath === url;
@@ -29,7 +28,7 @@ const NavigationMenu = (props: INavigationMenuProps) => {
                 {itm.label}
 
                 {isSelectedRoute(itm.url) && (
-                  <OnPageItems allItems={JSLINK} onMenuClick={onMenuClick} />
+                  <OnPageItems allItems={menuLinks} onMenuClick={onMenuClick} />
                 )}
               </Link>
             </li>

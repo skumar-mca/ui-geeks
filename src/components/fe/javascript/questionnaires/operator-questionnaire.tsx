@@ -266,7 +266,6 @@ console.log(3 + 4 + '5');`}</Code>
         ),
         id: 2
       },
-      ,
       {
         label: (
           <>
@@ -279,7 +278,6 @@ console.log(3 + 4 + '5');`}</Code>
         ),
         id: 3
       },
-      ,
       {
         label: (
           <>

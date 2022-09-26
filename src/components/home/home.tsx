@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { memo } from 'react';
-import { AppPrefix, ImagePaths } from '../../util/app-constants';
+import { AppPrefix } from '../../util/app-constants';
+import { ImagePaths } from '../../util/image-path-constants';
 import HomeIntro from './home-intro/home-intro';
 import './home.scss';
 import LanguageComponent from './language-component/language-component';

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ImagePaths } from '../../../../util/app-constants';
+import { ImagePaths } from '../../../../util/image-path-constants';
+
 import Code from '../../../shared/code/code';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';

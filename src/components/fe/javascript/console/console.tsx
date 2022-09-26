@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import { IOrderedListItemType, TextAlignTypes } from '../../../../types/common';
-import { ImagePaths } from '../../../../util/app-constants';
+import { ImagePaths } from '../../../../util/image-path-constants';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';

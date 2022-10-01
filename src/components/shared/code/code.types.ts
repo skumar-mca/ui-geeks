@@ -4,7 +4,8 @@ export const CodeLanguageTypes = {
   JavaScript: 'javascript',
   TypeScript: 'typescript',
   HTML: 'html',
-  CSS: 'css'
+  CSS: 'css',
+  JSX: 'jsx'
 };
 
 export const CodeThemeTypes = {

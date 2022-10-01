@@ -8,5 +8,15 @@ export const REACT_LINK = [
         label: 'Components'
       }
     ]
+  },
+  {
+    label: 'JSX',
+    link: '/fe/react/jsx',
+    tags: ['jsx'],
+    children: [
+      {
+        label: 'Why JSX'
+      }
+    ]
   }
 ];

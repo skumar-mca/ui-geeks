@@ -3,6 +3,7 @@ import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
+import ReactCRA from './cra';
 import ReactDefinition from './definition';
 import ReactHelloWorld from './hello-world';
 
@@ -15,6 +16,7 @@ const ReactIntroduction = () => {
 
       <Para>
         <ReactDefinition />
+        <ReactCRA />
         <ReactHelloWorld />
       </Para>
     </Container>

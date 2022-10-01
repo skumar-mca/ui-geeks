@@ -4,5 +4,9 @@ export const ReactMenuItems: Array<IMenuItem> = [
   {
     url: `${routePrefix}introduction`,
     label: 'Introduction'
+  },
+  {
+    url: `${routePrefix}jsx`,
+    label: 'JSX'
   }
 ];

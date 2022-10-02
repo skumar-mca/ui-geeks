@@ -19,11 +19,27 @@ h2.#{$appPrefix}-heading {
 h3.#{$appPrefix}-heading {
   margin-top: 2rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  color: $h3Color;
 }
 
 h4.#{$appPrefix}-heading {
   margin-top: 2rem;
   font-weight: bold;
+  font-size: 1.2rem;
+  color: $h4Color;
+}
+
+h5.#{$appPrefix}-heading {
+  margin-top: 2rem;
+  font-weight: bold;
   font-size: 1rem;
+  color: $h5Color;
+}
+
+h6.#{$appPrefix}-heading {
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: $h6Color;
 }

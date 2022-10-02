@@ -4,6 +4,7 @@ import { CodeLanguageTypes } from '../../../shared/code/code.types';
 import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B, I, IU } from '../../../shared/util/util';
 
 const ReactControlledComponents = () => {
@@ -12,7 +13,8 @@ const ReactControlledComponents = () => {
       <Heading as='h2'>Controlled Components</Heading>
       <Para>
         In HTML, form elements such as <I>{`<input>, <select>, <textarea>`}</I>
-        typically maintain their own state and update it based on user input.
+        <Space /> typically maintain their own state and update it based on user
+        input.
       </Para>
 
       <Para>

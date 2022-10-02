@@ -42,8 +42,8 @@ const ReactStateAddToClass = () => {
         <B>{`onClick={this.incrementCounter}`}</B>
         <NewLine />
         This adds the <BI>"click"</BI> event to the button here. The method
-        <I>"this.incrementCounter()"</I> will be called once the user clicks the
-        button.
+        <Space /> <I>"this.incrementCounter()"</I> will be called once the user
+        clicks the button.
       </Para>
 
       <Para>

@@ -25,16 +25,16 @@ const ReactClassShouldComponentUpdate = () => {
 
       <Para>
         The default behavior is to re-render on every change in <I>state</I> or
-        <I>props</I>. We can use this method to let React know if the output is
-        not affected by the current change in state or props. React prefers to
-        rely on default behavior in the majority of the cases.
+        <Space /> <I>props</I>. We can use this method to let React know if the
+        output is not affected by the current change in state or props. React
+        prefers to rely on default behavior in the majority of the cases.
       </Para>
 
       <Para>
         It is invoked <B>before rendering</B> when <B>new</B> <I>props</I> or
-        <I>state</I> are being received. Defaults to true. This method is not
-        called for the <I>initial render</I> or when <I>forceUpdate()</I> is
-        used.
+        <Space /> <I>state</I> are being received. Defaults to true. This method
+        is not called for the <I>initial render</I> or when <I>forceUpdate()</I>
+        <Space /> is used.
       </Para>
 
       <Note>

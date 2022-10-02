@@ -27,9 +27,10 @@ const renderItems: Array<IOrderedListItemType> = [
         <B>Array and fragments</B>
         <NewLine />
         Let us <B>return multiple elements</B> from the render. By default
-        <I>render()</I> method should return only <B>one element</B>, but
-        <Space /> <BI>fragments</BI> can be used to <B>combine/wrap</B> multiple
-        elements that can be returned from the <I>render()</I> method.
+        <Space /> <I>render()</I> method should return only <B>one element</B>,
+        but <Space /> <BI>fragments</BI> can be used to <B>combine/wrap</B>
+        <Space /> multiple elements that can be returned from the <Space />
+        <I>render()</I> method.
       </>
     )
   },
@@ -70,8 +71,8 @@ const ReactClassRenderMethod = () => {
       <Heading as='h4'>render()</Heading>
       <Para>
         The render() method is the only <B>required</B> method in a <I>class</I>
-        component. When called, it should examine <BI>this.props</BI> and
-        <BI>this.state</BI> and return one of the following types:
+        <Space /> component. When called, it should examine <BI>this.props</BI>
+        <Space /> and <BI>this.state</BI> and return one of the following types:
       </Para>
 
       <OrderedList unOrdered expanded items={renderItems} />

@@ -13,10 +13,10 @@ const ReactUseEffectHook = () => {
       <Heading as='h3'>useEffect()</Heading>
       <Para>
         The <BI>useEffect</BI> hook is used to perform <I>side effects</I> in
-        <I>function components</I>. Side effects can be calling APIs, setting up
-        the subscription, setting timers, etc. By using this hook, we tell React
-        that our component needs to do something after render. React will
-        remember the function and call it later after performing the DOM
+        <Space /> <I>function components</I>. Side effects can be calling APIs,
+        setting up the subscription, setting timers, etc. By using this hook, we
+        tell React that our component needs to do something after render. React
+        will remember the function and call it later after performing the DOM
         updates. React guarantees the DOM has been updated by the time it runs
         the effects.
       </Para>
@@ -90,7 +90,7 @@ const ReactUseEffectHook = () => {
       <Para>
         Let's learn how <BI>useEffect()</BI> can be used as <Space />
         <I>componentDidMount()</I>, <I>componentDidUpdate()</I> and
-        <I>componentWillUnmount()</I>.
+        <Space /> <I>componentWillUnmount()</I>.
       </Para>
 
       <Heading as='h5'>As componentDidMount()</Heading>
@@ -163,8 +163,8 @@ const ReactUseEffectHook = () => {
       <Para>
         <I>useEffect()</I> optionally returns a <BI>function</BI>, which is
         called before running the <I>useEffect()</I> again. Returning this
-        <I>function</I> along with <B>empty dependency []</B> will be equivalent
-        to <B>componentWillUnmount()</B>.
+        <Space /> <I>function</I> along with <B>empty dependency []</B> will be
+        equivalent to <B>componentWillUnmount()</B>.
       </Para>
 
       <Para>

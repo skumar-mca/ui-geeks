@@ -30,8 +30,9 @@ const ReactClassConstructor = () => {
         The constructor for a React component is called before it is mounted.
         When implementing the constructor, we should call <BI>super(props)</BI>
         <Space /> before any other statement. Otherwise, <BI>"this.props"</BI>
-        will be <BI>undefined</BI> in the <I>constructor</I>. Avoid introducing
-        any <I>side-effects</I> or <I>subscriptions</I> in the constructor.
+        <Space /> will be <BI>undefined</BI> in the <I>constructor</I>. Avoid
+        introducing any <I>side-effects</I> or <I>subscriptions</I> in the
+        constructor.
       </Para>
 
       <Para>
@@ -42,7 +43,7 @@ const ReactClassConstructor = () => {
       <Para>
         The <I>constructor</I> is the only place where we should assign
         <BI>this.state</BI> directly. In all other places, we should use
-        <I>this.setState()</I>.
+        <Space /> <I>this.setState()</I>.
       </Para>
 
       <Note>

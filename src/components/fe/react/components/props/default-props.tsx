@@ -36,6 +36,8 @@ const ReactDefaultProps = () => {
 
       <Para>
         The <I>defaultProps</I> do not work for <BI>null</BI> values.
+      </Para>
+      <Para>
         <IU>Example:</IU>
         <Code language={CodeLanguageTypes.JSX}>
           {`const element = <Welcome userName={null} />;`}

@@ -13,7 +13,7 @@ const ReactClassComponents = () => {
       <Heading as='h2'>Class Component</Heading>
       <Para>
         We can also use <BI>ES6 class</BI> to define a component. The defined
-        <I>class</I> should <B>extend</B> <BI>React.Component</BI>.
+        <Space /> <I>class</I> should <B>extend</B> <BI>React.Component</BI>.
       </Para>
 
       <Code language={CodeLanguageTypes.JSX}>

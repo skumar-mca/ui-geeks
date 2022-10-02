@@ -26,10 +26,6 @@ export const ReactMenuItems: Array<IMenuItem> = [
     label: 'Lists'
   },
   {
-    url: `${routePrefix}context`,
-    label: 'Context'
-  },
-  {
     url: `${routePrefix}error-boundary`,
     label: 'Error Boundary'
   },
@@ -40,5 +36,13 @@ export const ReactMenuItems: Array<IMenuItem> = [
   {
     url: `${routePrefix}hooks`,
     label: 'Hooks'
+  },
+  {
+    url: `${routePrefix}context`,
+    label: 'Context'
+  },
+  {
+    url: `${routePrefix}render-props`,
+    label: 'Render Props'
   }
 ];

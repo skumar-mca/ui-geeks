@@ -58,5 +58,10 @@ export const REACT_LINK = [
     label: 'Hooks',
     link: '/fe/react/hooks',
     tags: ['hooks']
+  },
+  {
+    label: 'Render Props',
+    link: '/fe/react/render-props',
+    tags: ['render props']
   }
 ];

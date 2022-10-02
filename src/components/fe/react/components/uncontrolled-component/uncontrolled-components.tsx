@@ -44,8 +44,8 @@ const ReactUnControlledComponents = () => {
       </Para>
 
       <Para>
-        <IU>Example 1: </IU>
-        Using ref in <B>class components.</B>
+        <IU>Example 1:</IU>
+        <Space /> Using ref in <B>class components.</B>
       </Para>
       <Para>
         Below code focuses the <I>{`<input />`}</I> element on mount.
@@ -71,7 +71,7 @@ const ReactUnControlledComponents = () => {
 
       <Para>
         <IU>Example 2:</IU>
-        Using ref in <B>function components.</B>
+        <Space /> Using ref in <B>function components.</B>
       </Para>
 
       <Para>

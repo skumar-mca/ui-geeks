@@ -8,6 +8,7 @@ import Para from '../../../shared/para/para';
 import { BI } from '../../../shared/util/util';
 import ReactJSXWithChildren from './children-with-jsx';
 import ReactJSXPreventsXSS from './jsx-xss';
+import ReactJSXRenderingElements from './rendering-elements';
 import ReactWhyJSX from './why-jsx';
 
 const ReactJSX = () => {
@@ -29,6 +30,7 @@ const ReactJSX = () => {
         <ReactWhyJSX />
         <ReactJSXWithChildren />
         <ReactJSXPreventsXSS />
+        <ReactJSXRenderingElements />
       </Para>
     </Container>
   );

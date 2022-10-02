@@ -26,7 +26,7 @@ const ReactWhyJSX = () => {
       <Heading as='h2'>Embedding Expressions in JSX</Heading>
       <Para>
         Any valid JavaScript expression can be embedded inside the curly braces
-        ({}) in JSX.
+        ({`{}`}) in JSX.
       </Para>
 
       <Para>
@@ -36,7 +36,6 @@ const ReactWhyJSX = () => {
           {`function greetUser(userName) {
   return \`Hello, \${userName}\`;
 }
-
 const element = <h1>{greetUser("John")}</h1>
 `}
         </Code>
@@ -70,11 +69,7 @@ const element = <a href={url}>YALS</a>`}
       <Para>
         Since JSX is closer to JavaScript than HTML, React DOM uses <Space />
         <B>camelCase</B> property naming convention instead of HTML attribute
-        names.
-      </Para>
-
-      <Para>
-        For example, <BI>class</BI> becomes <BI>className</BI> in JSX and
+        names. For example, <BI>class</BI> becomes <BI>className</BI> in JSX and
         <BI>onclick</BI> becomes <BI>onClick</BI>.
       </Para>
     </>

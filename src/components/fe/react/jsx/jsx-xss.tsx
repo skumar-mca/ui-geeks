@@ -28,9 +28,14 @@ const ReactJSXPreventsXSS = () => {
       <Para>For example, below two examples are same:</Para>
 
       <Code language={CodeLanguageTypes.JSX}>
-        {`const element = <h1 className="greet">Hello from React!</h1>;
-const element = React.createElement("h1", { className: "greet" },"Hello from React!");
-`}
+        {`const element = <h1 className="greet">Hello from React!</h1>;`}
+      </Code>
+
+      <Code language={CodeLanguageTypes.JSX}>
+        {`const element = React.createElement("h1", 
+  { className: "greet" },
+  "Hello from React!"
+);`}
       </Code>
 
       <Heading as='h2'>Props Default to "True"</Heading>

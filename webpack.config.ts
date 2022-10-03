@@ -12,7 +12,7 @@ const devServer: DevServerConfiguration = {
 const config: Configuration = {
   entry: './src/index.tsx',
   mode: 'production',
-  //mode: 'development',
+  // mode: 'development',
   module: {
     rules: [
       {

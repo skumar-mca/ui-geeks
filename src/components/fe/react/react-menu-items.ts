@@ -14,24 +14,32 @@ export const ReactMenuItems: Array<IMenuItem> = [
     label: 'Components'
   },
   {
-    url: `${routePrefix}component-lifecycle`,
-    label: 'Component Lifecycle'
+    url: `${routePrefix}class-component`,
+    label: 'Class Component'
   },
   {
-    url: `${routePrefix}forms`,
-    label: 'Forms'
+    url: `${routePrefix}function-component`,
+    label: 'Function Component'
+  },
+  {
+    url: `${routePrefix}controlled-component`,
+    label: 'Controlled Component'
+  },
+  {
+    url: `${routePrefix}uncontrolled-component`,
+    label: 'Uncontrolled Component'
+  },
+  {
+    url: `${routePrefix}fragments`,
+    label: 'Fragments'
   },
   {
     url: `${routePrefix}lists`,
     label: 'Lists'
   },
   {
-    url: `${routePrefix}error-boundary`,
-    label: 'Error Boundary'
-  },
-  {
-    url: `${routePrefix}fragments`,
-    label: 'Fragments'
+    url: `${routePrefix}forms`,
+    label: 'Forms'
   },
   {
     url: `${routePrefix}hooks`,
@@ -44,5 +52,9 @@ export const ReactMenuItems: Array<IMenuItem> = [
   {
     url: `${routePrefix}render-props`,
     label: 'Render Props'
+  },
+  {
+    url: `${routePrefix}error-boundary`,
+    label: 'Error Boundary'
   }
 ];

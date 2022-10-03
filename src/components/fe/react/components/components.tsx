@@ -5,7 +5,9 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, OrderedList } from '../../../shared/util/util';
-import ReactClassComponents from './class-components';
+import ReactClassComponentIntro from '../class-components/class-component-intro';
+import ReactLifeCyclePhases from '../lifecycle/react-phases';
+
 import ReactFunctionComponents from './function-components';
 import ReactProps from './props/props';
 import ReactState from './state/state';
@@ -35,9 +37,11 @@ const ReactComponents = () => {
 
       <Para>
         <ReactFunctionComponents />
-        <ReactClassComponents />
+        <Heading as='h2'>Class Component</Heading>
+        <ReactClassComponentIntro />
         <ReactProps />
         <ReactState />
+        <ReactLifeCyclePhases />
       </Para>
     </Container>
   );

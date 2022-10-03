@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { memo, useState } from 'react';
-import { AppPrefix } from '../../../util/app-constants';
+import useDeviceType from '../../../custom-hooks/use-device-type';
+import { AppPrefix, DeviceType } from '../../../util/app-constants';
 import YalsFlex from '../yals-flex/yals-flex';
 import {
   FlexAlignItemsTypes,
@@ -11,7 +12,16 @@ import './yals-image.scss';
 import { IYALSImageProps } from './yals-image.types';
 
 const YALSImage = (props: IYALSImageProps) => {
-  const { imagePath, imageTitle, alt, height = 'auto', width = 'auto' } = props;
+  const {
+    imagePath,
+    imageTitle,
+    alt,
+    height = 'auto',
+    width = 'auto',
+    imageAlign = FlexJustifyContentTypes.Center
+  } = props;
+
+  const deviceType = useDeviceType();
 
   const [showInModal, setShowInModal] = useState(false);
 
@@ -29,12 +39,14 @@ const YALSImage = (props: IYALSImageProps) => {
     setShowInModal((prev) => true);
   };
 
-  const ImageContent = () => {
+  const ImageContent = (imageProps: any) => {
+    const { imageHeight, imageWidth } = imageProps;
+
     return (
       <div className={imageClasses} onClick={showImageInFullScreen}>
         <img
-          height={height}
-          width={width}
+          height={imageHeight || height}
+          width={imageWidth || width}
           src={imagePath}
           alt={alt}
           style={{ cursor: showInModal ? 'auto' : 'pointer' }}
@@ -45,7 +57,19 @@ const YALSImage = (props: IYALSImageProps) => {
   };
 
   if (!showInModal) {
-    return <ImageContent />;
+    return (
+      <YalsFlex
+        justifyContent={
+          deviceType === DeviceType.Mobile
+            ? FlexJustifyContentTypes.Center
+            : imageAlign
+        }
+        alignItems={FlexAlignItemsTypes.Center}
+        height='100%'
+      >
+        <ImageContent />
+      </YalsFlex>
+    );
   }
 
   return (
@@ -59,8 +83,9 @@ const YALSImage = (props: IYALSImageProps) => {
           justifyContent={FlexJustifyContentTypes.Center}
           alignItems={FlexAlignItemsTypes.Center}
           height='100%'
+          width='100%'
         >
-          <ImageContent />
+          <ImageContent imageHeight='100%' imageWidth='100%' />
         </YalsFlex>
       }
     />

@@ -7,7 +7,7 @@ import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, I, IU } from '../../../shared/util/util';
 
-const ReactControlledComponents = () => {
+const ReactControlledComponent = () => {
   return (
     <>
       <Heading as='h2'>Controlled Components</Heading>
@@ -82,4 +82,4 @@ const ReactControlledComponents = () => {
   );
 };
 
-export default ReactControlledComponents;
+export default ReactControlledComponent;

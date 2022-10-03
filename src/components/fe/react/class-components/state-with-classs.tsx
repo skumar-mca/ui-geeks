@@ -1,10 +1,10 @@
 import React from 'react';
-import Code from '../../../../shared/code/code';
-import { CodeLanguageTypes } from '../../../../shared/code/code.types';
-import Heading from '../../../../shared/heading/heading';
-import Para from '../../../../shared/para/para';
-import Space from '../../../../shared/space/space';
-import { B, BI, I, IU, NewLine } from '../../../../shared/util/util';
+import Code from '../../../shared/code/code';
+import { CodeLanguageTypes } from '../../../shared/code/code.types';
+import Heading from '../../../shared/heading/heading';
+import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
+import { B, BI, I, IU, NewLine } from '../../../shared/util/util';
 
 const ReactStateAddToClass = () => {
   return (

@@ -12,10 +12,14 @@ const Code = (props: ICodeProps) => {
     theme,
     showLineNumbers = false,
     codeBlock = false,
-    highlight
+    highlight,
+    copyBtn = true
   } = props;
 
-  const codeClasses = classNames({ [`${AppPrefix}-code`]: true });
+  const codeClasses = classNames({
+    [`${AppPrefix}-code`]: true,
+    [`${AppPrefix}-code-no-copy-btn`]: !copyBtn
+  });
 
   const getTheme = () => {
     switch (theme) {

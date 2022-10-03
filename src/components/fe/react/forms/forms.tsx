@@ -3,8 +3,11 @@ import useDOMTitle from '../../../../custom-hooks/use-dom-title';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
-import ReactControlledComponents from '../components/controlled-components';
-import ReactUnControlledComponents from '../components/uncontrolled-component/uncontrolled-components';
+import ReactFormDefaultValue from '../components/uncontrolled-component/default-value';
+
+import ReactControlledComponents from '../controlled-component/controlled-components';
+import ReactUnControlledComponent from '../uncontrolled-component/uncontrolled-component';
+
 import ReactFormHandlingEvents from './handling-events';
 
 const ReactForms = () => {
@@ -20,7 +23,10 @@ const ReactForms = () => {
 
       <Para>
         <ReactControlledComponents />
-        <ReactUnControlledComponents />
+        <ReactUnControlledComponent />
+
+        <ReactFormDefaultValue />
+
         <ReactFormHandlingEvents />
       </Para>
     </Container>

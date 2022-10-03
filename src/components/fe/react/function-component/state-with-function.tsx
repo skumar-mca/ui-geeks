@@ -1,16 +1,16 @@
 import React from 'react';
-import Code from '../../../../shared/code/code';
-import { CodeLanguageTypes } from '../../../../shared/code/code.types';
-import Heading from '../../../../shared/heading/heading';
-import Note from '../../../../shared/note/note';
-import Para from '../../../../shared/para/para';
-import Space from '../../../../shared/space/space';
-import { B, BI, I, IU } from '../../../../shared/util/util';
+import Code from '../../../shared/code/code';
+import { CodeLanguageTypes } from '../../../shared/code/code.types';
+import Heading from '../../../shared/heading/heading';
+import Note from '../../../shared/note/note';
+import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
+import { B, BI, I, IU } from '../../../shared/util/util';
 
 const ReactStateAddToFunction = () => {
   return (
     <>
-      <Heading as='h3'>Adding State To Function Component</Heading>
+      <Heading as='h3'>Adding State</Heading>
       <Para>
         With the introduction of <BI>Hooks</BI>, <I>function components</I> can
         also have <I>state</I>. The <BI>useState</BI> is the <I>hook</I> used to

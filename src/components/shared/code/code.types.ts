@@ -24,4 +24,5 @@ export interface ICodeProps {
   theme?: CodeThemeType;
   codeBlock?: boolean;
   highlight?: string;
+  copyBtn?: boolean;
 }

@@ -70,9 +70,11 @@ const classLifeCycleMethodList: Array<IOrderedListItemType> = [
 const ReactClassComponentLifeCycle = () => {
   return (
     <>
-      <Heading as='h2'>Class Component Lifecycle Methods</Heading>
+      <Heading as='h2'>Lifecycle Methods</Heading>
       <Para>
-        Lifecycle methods can be grouped by the phases. Methods marked in
+        Each component has several <B>"lifecycle methods"</B> that we can
+        override to run code at particular times in the process. Lifecycle
+        methods can be grouped by the phases. Methods marked in
         <Space /> <B>bold</B> are commonly used methods.
       </Para>
 

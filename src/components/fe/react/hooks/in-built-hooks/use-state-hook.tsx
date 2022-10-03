@@ -10,7 +10,7 @@ import { B, BI, I, IU, NewLine } from '../../../../shared/util/util';
 const ReactUseStateHook = () => {
   return (
     <>
-      <Heading as='h3'>useState</Heading>
+      <Heading as='h3'>useState()</Heading>
       <Para>
         This Hooks is used to add <B>state</B> to a function component.It
         returns a <B>pair</B> - an array with two items. The first item

@@ -3,17 +3,17 @@ export const JSLINK = [
     label: 'Introduction',
     link: '/fe/javascript/introduction',
     tags: [
-      'interpreted',
-      'compiled',
-      'functions',
-      'prototype',
-      'multi paradigm',
-      'single threaded',
-      'dynamic language',
-      'object oriented',
-      'oops',
-      'imperative',
-      'declarative'
+      'Interpreted',
+      'Compiled',
+      'Functions',
+      'Prototype',
+      'Multi Paradigm',
+      'Single Threaded',
+      'Dynamic Language',
+      'Object Oriented',
+      'OOPS',
+      'Imperative',
+      'Declarative'
     ],
     children: [
       {
@@ -49,12 +49,12 @@ export const JSLINK = [
   {
     label: 'History of JavaScript',
     link: '/fe/javascript/history',
-    tags: ['history']
+    tags: ['History']
   },
   {
     label: 'Include JavaScript code',
     link: '/fe/javascript/include-code',
-    tags: ['scripts', 'async', 'defer'],
+    tags: ['Scripts', 'Async', 'Defer'],
     children: [
       {
         label: 'async'
@@ -67,17 +67,17 @@ export const JSLINK = [
   {
     label: 'JavaScript Console',
     link: '/fe/javascript/console',
-    tags: ['console']
+    tags: ['Console']
   },
   {
     label: 'Building block of JavaScript: the types',
     link: '/fe/javascript/data-types',
     tags: [
-      'types',
-      'datatypes',
+      'Types',
+      'Datatypes',
       'number',
       'string',
-      'bigint',
+      'BigInt',
       'null',
       'undefined',
       'boolean'
@@ -118,19 +118,19 @@ export const JSLINK = [
     label: 'Grammar and types',
     link: '/fe/javascript/grammer',
     tags: [
-      'grammer',
-      'comments',
-      'single line comment',
-      'multi line comment',
-      'variables',
+      'Grammer',
+      'Comments',
+      'Single Line Comment',
+      'Multi Line Comment',
+      'Variables',
       'let',
       'const',
       'var',
-      'naming rules',
-      'type conversion',
-      'literals',
-      'temporal dead zone',
-      'tdz'
+      'Naming Rules',
+      'Type Conversion',
+      'Literals',
+      'Temporal Dead Zone',
+      'TDZ'
     ],
     children: [
       {
@@ -211,23 +211,23 @@ export const JSLINK = [
     label: 'Operators',
     link: '/fe/javascript/operators',
     tags: [
-      'operators',
-      'binary operators',
-      'arithmetic opertors',
-      'relational opertors',
-      'equality opertors',
-      'strict equality',
-      'strict inequality',
-      'assignment operators',
-      'logical operators',
-      'delete operator',
-      'typeof operator',
-      'void operator',
-      'in operator',
-      'instanceod operator',
-      'ternary operator',
-      'operator precedence',
-      'short-circuit'
+      'Operators',
+      'Binary Operators',
+      'Arithmetic Opertors',
+      'Relational Opertors',
+      'Equality Opertors',
+      'Strict Equality',
+      'Strict Inequality',
+      'Assignment Operators',
+      'Logical Operators',
+      'Delete Operator',
+      'typeof Operator',
+      'void Operator',
+      'in Operator',
+      'instanceof Operator',
+      'Ternary Operator',
+      'Operator Precedence',
+      'Short-circuit'
     ],
     children: [
       {
@@ -314,19 +314,19 @@ export const JSLINK = [
     label: 'Control Structures',
     link: '/fe/javascript/control-structures',
     tags: [
-      'conditional statements',
+      'Conditional Statements',
       'if else',
       'if-else',
       'switch case',
       'loop',
-      'iterations',
-      'for loop',
-      'while loop',
-      'do while loop',
-      'for of loop',
-      'for...of loop',
-      'for in loop',
-      'for...in loop'
+      'Iterations',
+      'for Loop',
+      'while Loop',
+      'do while Loop',
+      'for of Loop',
+      'for...of Loop',
+      'for in Loop',
+      'for...in Loop'
     ],
     children: [
       {
@@ -368,10 +368,10 @@ export const JSLINK = [
     link: '/fe/javascript/objects',
     tags: [
       'object',
-      'creating objects',
-      'accessing objects',
-      'dot notation',
-      'bracket notation',
+      'Creating Objects',
+      'Accessing Objects',
+      'Dot Notation',
+      'Bracket Notation',
       '[]'
     ],
     children: [
@@ -392,19 +392,20 @@ export const JSLINK = [
     label: 'Arrays',
     link: '/fe/javascript/arrays',
     tags: [
-      'array',
-      'accessing array elements',
-      'array methods, tostring',
-      'concat',
-      'join',
-      'pop',
-      'push',
-      'unshift',
-      'shift',
-      'slice',
-      'splice',
-      'sort',
-      'reverse'
+      'Array',
+      'Accessing Array Elements',
+      'Array Methods',
+      'tostring()',
+      'concat()',
+      'join()',
+      'pop()',
+      'push()',
+      'unshift()',
+      'shift()',
+      'slice()',
+      'splice()',
+      'sort()',
+      'reverse()'
     ],
     children: [
       {
@@ -454,15 +455,15 @@ export const JSLINK = [
     label: 'Functions',
     link: '/fe/javascript/functions',
     tags: [
-      'functions',
-      'function declaration',
-      'function expression',
-      'invocation',
-      'arguments',
-      'rest parameters',
-      'anonymous functions',
-      'iife',
-      'inner functions'
+      'Functions',
+      'Function Declaration',
+      'Function Expression',
+      'Invocation',
+      'Arguments',
+      'Rest Parameters',
+      'Anonymous Functions',
+      'IIFE',
+      'Inner Functions'
     ],
     children: [
       {
@@ -499,11 +500,11 @@ export const JSLINK = [
     label: 'Closures',
     link: '/fe/javascript/closures',
     tags: [
-      'closures',
-      'lexical scope',
-      'private member',
-      'scope chain',
-      'closure problems'
+      'Closures',
+      'Lexical Scope',
+      'Private Member',
+      'Scope Chain',
+      'Closure Problems'
     ],
     children: [
       {
@@ -527,7 +528,7 @@ export const JSLINK = [
   {
     label: 'Arrow functions',
     link: '/fe/javascript/arrow-functions',
-    tags: ['arrow functions', 'class fields'],
+    tags: ['Arrow Functions', 'Class Fields'],
     children: [
       {
         label: 'Limitations of Arrow function'
@@ -557,17 +558,17 @@ export const JSLINK = [
     label: 'JavaScript Modules',
     link: '/fe/javascript/modules',
     tags: [
-      'modules',
-      'javascript modules',
+      'Modules',
+      'JavaScript Modules',
       'export',
-      'named export',
-      'default export',
-      're-exporting',
+      'Named Export',
+      'Default Export',
+      'Re-exporting',
       'import',
-      'named import',
-      'default import',
-      'namespace import',
-      'side effect namespace'
+      'Named Import',
+      'Default Import',
+      'Namespace Import',
+      'Side Effect Namespace'
     ],
     children: [
       {
@@ -617,21 +618,18 @@ export const JSLINK = [
     link: '/fe/javascript/this-keyword',
     tags: [
       'this',
-      'value of this',
-      'apply',
-      'bind',
-      'call',
+      'Value of this',
       'apply()',
       'bind()',
       'call()',
-      'this in class',
-      'this in function',
-      'this in global',
-      'derived class',
-      'new opertor',
+      'this in Class',
+      'this in Function',
+      'this in Global',
+      'derived Class',
+      'new Opertor',
       'new.target',
       'new()',
-      'this in event'
+      'this in Event'
     ],
     children: [
       {
@@ -702,18 +700,17 @@ export const JSLINK = [
     label: 'Class',
     link: '/fe/javascript/class-keyword',
     tags: [
-      'class',
-      'class declaration',
-      'class expression',
-      'constructor',
+      'Class',
+      'Class Declaration',
+      'Class Expression',
       'constructor()',
-      'this in class',
-      'private fields',
+      'this in Class',
+      'private Fields',
       'protoytype',
       'static',
-      'base class',
-      'derived class',
-      'mix ins'
+      'Base Class',
+      'Derived Class',
+      'MIX INS'
     ],
     children: [
       {
@@ -755,7 +752,7 @@ export const JSLINK = [
     label: 'Inheritance and the Prototype chain',
     link: '/fe/javascript/prototype-chain',
     tags: [
-      'inheritance',
+      'Inheritance',
       'prototype',
       '__proto__',
       'setPrototypeOf',
@@ -785,7 +782,7 @@ export const JSLINK = [
   {
     label: 'Strict mode',
     link: '/fe/javascript/strict-mode',
-    tags: ['strict mode'],
+    tags: ['Strict mode'],
     children: [
       {
         label: 'Invoking strict mode',
@@ -801,10 +798,10 @@ export const JSLINK = [
     label: 'Hoisting',
     link: '/fe/javascript/hoisting',
     tags: [
-      'hoisting',
-      'function hoisting',
-      'variable hoisting',
-      'class hoisting'
+      'Hoisting',
+      'Function Hoisting',
+      'Variable Hoisting',
+      'Class Hoisting'
     ],
     children: [
       {
@@ -821,15 +818,7 @@ export const JSLINK = [
   {
     label: 'Exception Handling',
     link: '/fe/javascript/exception-handling',
-    tags: [
-      'exception handling',
-      'throw',
-      'try',
-      'catch',
-      'finally',
-      'error',
-      'error()'
-    ],
+    tags: ['Exception Handling', 'throw', 'try', 'catch', 'finally', 'error()'],
     children: [
       {
         label: 'throw'
@@ -851,7 +840,7 @@ export const JSLINK = [
   {
     label: 'Iterators and Generators',
     link: '/fe/javascript/iterators-and-generators',
-    tags: ['iterators', 'generators', 'iterables', 'iterators and generators'],
+    tags: ['Iterators', 'Generators', 'Iterables', 'Iterators and Generators'],
     children: [
       {
         label: 'Iterators'

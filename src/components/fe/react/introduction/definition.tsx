@@ -8,11 +8,10 @@ const ReactDefinition = () => {
   return (
     <>
       <Para>
-        React is a JavaScript library for building <BI>user interfaces</BI>.
-        React helps to build encapsulated components that manage their own
-        <Space /> <I>state</I>, then compose them to make complex UIs. React is
-        a declarative, efficient, and flexible JavaScript library for building
-        user interfaces. React is used to build <Space />
+        React is a declarative, efficient, and flexible JavaScript library for
+        building <BI>user interfaces</BI>. React helps to build encapsulated
+        components that manage their own <Space /> <I>state</I>, then compose
+        them to make complex UIs. React is used to build <Space />
         <BI>Single Page Application (SPA)</BI>.
       </Para>
 

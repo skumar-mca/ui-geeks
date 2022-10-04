@@ -34,6 +34,8 @@ export const ImagePaths = {
     NPM_TREND_MOBILE:
       'https://live.staticflickr.com/65535/52402176304_1af3747bbb.jpg',
     KEY_FEATURES:
-      'https://live.staticflickr.com/65535/52401413342_c4cd881f2c_z.jpg'
+      'https://live.staticflickr.com/65535/52401413342_c4cd881f2c_z.jpg',
+    WORD_CLOUD:
+      'https://live.staticflickr.com/65535/52403185702_1f4fbdbddd_c.jpg'
   }
 };

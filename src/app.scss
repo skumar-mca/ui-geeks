@@ -111,3 +111,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: $lightGrayAlt;
 }
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: $purple;
+}

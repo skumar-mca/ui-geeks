@@ -1,4 +1,5 @@
 import React from 'react';
+import { ImagePaths } from '../../../../util/image-path-constants';
 import LandingPageWrapper from '../../../shared/landing-page-wrapper/landing-page-wrapper';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
@@ -11,7 +12,7 @@ const JSLandingPage = () => {
       linksMenu={JSLINK}
       imagePath='images/js-icon.png'
       title='JavaScript'
-      wordCloudUrl='https://live.staticflickr.com/65535/52383011714_14b54b9e25_b.jpg'
+      wordCloudUrl={ImagePaths.JS.JS_WORD_CLOUD}
     >
       <Para>
         JavaScript (JS) is a light-weight,

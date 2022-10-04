@@ -1,4 +1,5 @@
 import React from 'react';
+import { AppPrefix } from '../../../../util/app-constants';
 import Heading from '../../../shared/heading/heading';
 import Space from '../../../shared/space/space';
 import TimeLine from '../../../shared/time-line/time-line';
@@ -112,6 +113,7 @@ const ReactTimeline = () => {
       <YalsFlex
         justifyContent={FlexJustifyContentTypes.Center}
         alignItems={FlexAlignItemsTypes.Center}
+        className={`${AppPrefix}-time-line-wrapper`}
       >
         <TimeLine heading='' timeLineList={historyTimeline} />
       </YalsFlex>

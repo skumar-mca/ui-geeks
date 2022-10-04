@@ -2,19 +2,14 @@ import React from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
-import Space from '../../../shared/space/space';
-import { BI, I, IU } from '../../../shared/util/util';
+import { BI, IU } from '../../../shared/util/util';
+import ReactDefaultProps from './default-props';
 
 const ReactClassComponentProperties = () => {
   return (
     <>
-      <Heading as='h3'>Class Properties</Heading>
-      <Heading as='h4'>defaultProps</Heading>
-      <Para>
-        It can be defined as a property on the component class itself, to set
-        the <I>default props</I> for the <I>class</I>. This is used for
-        <Space /> <BI>undefined</BI> props, but not for <BI>null</BI> props.
-      </Para>
+      <Heading as='h4'>Class Properties</Heading>
+      <ReactDefaultProps />
 
       <Heading as='h4'>displayName</Heading>
       <Para>

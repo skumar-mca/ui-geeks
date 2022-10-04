@@ -7,7 +7,6 @@ import ReactClassErrorHandlingMethods from './class-comp-lifecycle/error-handlin
 import ReactClassComponentIntro from './class-component-intro';
 import ReactClassComponentProperties from './class-properties';
 import ReactClassPropsIntro from './class-props';
-import ReactDefaultProps from './default-props';
 
 const ReactClassComponents = () => {
   useDOMTitle('YALS: React | Class Component');
@@ -17,7 +16,7 @@ const ReactClassComponents = () => {
       <Heading>Class Component</Heading>
       <ReactClassComponentIntro />
       <ReactClassPropsIntro />
-      <ReactDefaultProps />
+
       <ReactClassComponentProperties />
       <ReactClassComponentLifeCycle />
       <ReactClassErrorHandlingMethods />

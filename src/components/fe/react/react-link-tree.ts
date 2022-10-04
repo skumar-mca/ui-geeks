@@ -2,7 +2,18 @@ export const REACT_LINK = [
   {
     label: 'Introduction',
     link: '/fe/react/introduction',
-    tags: ['declarative'],
+    tags: [
+      'Declarative',
+      'Single Page Application',
+      'Key Features',
+      'Virtual DOM',
+      'Shadow DOM',
+      'React Fiber',
+      'Milestones',
+      'Create React App',
+      'CRA',
+      'Why React'
+    ],
     children: [
       {
         label: 'Single Page Application'
@@ -38,7 +49,14 @@ export const REACT_LINK = [
   {
     label: 'JSX',
     link: '/fe/react/jsx',
-    tags: ['jsx'],
+    tags: [
+      'JSX',
+      'Expressions in JSX',
+      'Attributes with JSX',
+      'Children with JSX',
+      'Injection Attacks',
+      'Rendering Elements'
+    ],
     children: [
       {
         label: 'Why JSX'
@@ -75,7 +93,14 @@ export const REACT_LINK = [
   {
     label: 'Components',
     link: '/fe/react/components',
-    tags: ['components'],
+    tags: [
+      'Components',
+      'Function Component',
+      'Class Component',
+      'Props',
+      'State',
+      'Phases of a component'
+    ],
     children: [
       {
         label: 'Function Component'
@@ -98,7 +123,24 @@ export const REACT_LINK = [
   {
     label: 'Class Component',
     link: '/fe/react/class-component',
-    tags: ['class component'],
+    tags: [
+      'Class Components',
+      'defaultProps',
+      'Class Properties',
+      'displayName',
+      'Lifecycle Methods',
+      'constructor()',
+      'render()',
+      'getDerivedStateFromProps()',
+      'componentDidMount()',
+      'getDerivedStateFromProps()',
+      'shouldComponentUpdate()',
+      'getSnapshotBeforeUpdate()',
+      'componentDidUpdate()',
+      'componentWillUnmount()',
+      'getDerivedStateFromError()',
+      'componentDidCatch()'
+    ],
     children: [
       {
         label: 'Using Props',
@@ -164,7 +206,7 @@ export const REACT_LINK = [
   {
     label: 'Function Component',
     link: '/fe/react/function-component',
-    tags: ['function component'],
+    tags: ['Function Component', 'Adding State', 'useEffect()', 'useState()'],
     children: [
       {
         label: 'Adding State'
@@ -183,22 +225,22 @@ export const REACT_LINK = [
   {
     label: 'Controlled Component',
     link: '/fe/react/controlled-component',
-    tags: ['controlled component']
+    tags: ['Controlled Components']
   },
   {
     label: 'Uncontrolled Component',
     link: '/fe/react/uncontrolled-component',
-    tags: ['uncontrolled component']
+    tags: ['Uncontrolled Components', 'Refs']
   },
   {
     label: 'Fragments',
     link: '/fe/react/fragments',
-    tags: ['fragments']
+    tags: ['Fragments', 'Wrapper Hell']
   },
   {
     label: 'Lists',
     link: '/fe/react/lists',
-    tags: ['lists', 'keys'],
+    tags: ['Lists', 'Keys'],
     children: [
       {
         label: 'Keys'
@@ -208,7 +250,14 @@ export const REACT_LINK = [
   {
     label: 'Forms',
     link: '/fe/react/forms',
-    tags: ['forms'],
+    tags: [
+      'Forms',
+      'Controlled Components',
+      'Uncontrolled Components',
+      'Default Values',
+      'Handling Events',
+      'Synthetic Event'
+    ],
     children: [
       {
         label: 'Default Values'
@@ -224,7 +273,25 @@ export const REACT_LINK = [
   {
     label: 'Hooks',
     link: '/fe/react/hooks',
-    tags: ['hooks'],
+    tags: [
+      'Hooks',
+      'Rules of Hooks',
+      'useState()',
+      'Functional Updates',
+      'Lazy initial state',
+      'Bailing out state update',
+      'Batching state updates',
+      'useEffect() As componentDidMount()',
+      'useEffect() As componentWillUnmount()',
+      'useEffect() As componentDidUpdate()',
+      'useContext()',
+      'useReducer()',
+      'useCallback()',
+      'useMemo()',
+      'useRef()',
+      'useImperativeHandle()',
+      'useLayoutEffect()'
+    ],
     children: [
       {
         label: 'Rules of Hooks'
@@ -239,10 +306,12 @@ export const REACT_LINK = [
             label: 'Lazy initial state'
           },
           {
-            label: 'Bailing out of a state update'
+            label: 'Bailing out of a state update',
+            shortLabel: 'Bailing out state update'
           },
           {
-            label: 'Batching of state updates'
+            label: 'Batching of state updates',
+            shortLabel: 'Batching state updates'
           }
         ]
       },
@@ -275,7 +344,16 @@ export const REACT_LINK = [
   {
     label: 'Context',
     link: '/fe/react/context',
-    tags: ['context'],
+    tags: [
+      'Context',
+      'Context API',
+      'React.createContext',
+      'Context.Provider',
+      'Class.contextType',
+      'Context.Consumer',
+      'Context.displayName',
+      'Issues using Context'
+    ],
     children: [
       {
         label: 'When to use Context'
@@ -303,11 +381,11 @@ export const REACT_LINK = [
   {
     label: 'Render Props',
     link: '/fe/react/render-props',
-    tags: ['render props']
+    tags: ['Render Props', 'Sharing Component State']
   },
   {
     label: 'Error Boundary',
     link: '/fe/react/error-boundary',
-    tags: ['error boundary']
+    tags: ['Error Boundaries', 'Error Boundary', 'Errors']
   }
 ];

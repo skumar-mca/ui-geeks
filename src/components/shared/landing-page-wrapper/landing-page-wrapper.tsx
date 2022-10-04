@@ -100,7 +100,7 @@ const LandingPageWrapper = (props: ILandingPageWrapperProps) => {
             >
               {menuList.map((menu: any) => {
                 return (
-                  <div className='insight'>
+                  <div className='insight' key={menu.label}>
                     <YalsButton
                       onClick={redirectToTopic.bind(this, menu)}
                       variant={YALSButtonVariantTypes.Clear}

@@ -191,3 +191,9 @@
     }
   }
 }
+
+.device-type-mobile {
+  .#{$appPrefix}-time-line-wrapper {
+    margin-left: 25px;
+  }
+}

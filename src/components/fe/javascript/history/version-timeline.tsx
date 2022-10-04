@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import { AppPrefix } from '../../../../util/app-constants';
 import TimeLine from '../../../shared/time-line/time-line';
 import { ITimeLineItem } from '../../../shared/time-line/time-line.types';
 
@@ -97,7 +98,9 @@ const JSVersionTimeLine = () => {
   ];
 
   return (
-    <TimeLine heading='ECMAScript Versions' timeLineList={historyTimeline} />
+    <div className={`${AppPrefix}-time-line-wrapper`}>
+      <TimeLine heading='ECMAScript Versions' timeLineList={historyTimeline} />
+    </div>
   );
 };
 

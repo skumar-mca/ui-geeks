@@ -25,7 +25,7 @@ const HomeHeader = () => {
             <Link to='/'>
               <img src={ImagePaths.APP_LOGO} className='app-logo' />
 
-              <span className='app-name'>Yet Another Learnign Source</span>
+              <div className='app-name'>Yet Another Learning Source</div>
             </Link>
           </li>
         </ul>

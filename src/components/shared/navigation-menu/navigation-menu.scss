@@ -26,9 +26,17 @@
         border-left: 2px solid transparent;
 
         &.selected {
-          border-left: 2px solid $brightGreen;
-          background-color: $lightGray;
+          padding-top: 5px;
+          border-right: 2px solid $brightGreen;
+          background-color: $secondaryBgColor;
           font-weight: bold;
+
+          .#{$appPrefix}-on-page-items {
+            margin-top: 5px;
+            li {
+              padding: 0.2rem 5px 0.2rem 0px;
+            }
+          }
         }
 
         &:hover {

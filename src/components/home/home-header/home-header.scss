@@ -14,6 +14,9 @@
   }
 
   .app-name {
+    display: inline;
+    position: relative;
+    top: -2px;
     margin-left: 10px;
     font-weight: bold;
     color: $purple;
@@ -35,5 +38,16 @@
         padding: 5px 20px 5px 20px;
       }
     }
+  }
+}
+
+.device-type-mobile {
+  .app-logo {
+    margin-top: -3px;
+    margin-left: -10px;
+  }
+
+  .app-name {
+    font-size: 0.7rem;
   }
 }

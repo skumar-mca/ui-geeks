@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import React, { memo } from 'react';
 import { AppPrefix } from '../../util/app-constants';
-import { ImagePaths } from '../../util/image-path-constants';
 import HomeIntro from './home-intro/home-intro';
 import './home.scss';
 import LanguageComponent from './language-component/language-component';
@@ -90,14 +89,14 @@ const Home = () => {
           theme='lightGreen'
         />
 
-        <LanguageComponent
+        {/* <LanguageComponent
           title='Angular'
           tag={`The modern web developer's platform`}
           contentList={AngularContentList}
           imagePath={ImagePaths.Angular}
           homePagePath='/fe/javascript/introduction'
           theme='red'
-        />
+        /> */}
       </div>
     </>
   );

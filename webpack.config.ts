@@ -2,17 +2,17 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import path from 'path';
 import type { Configuration } from 'webpack';
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
-
 const devServer: DevServerConfiguration = {
   static: path.join(__dirname, 'build'),
   compress: true,
   port: 4001
 };
 
+const IsProduction = process.env.production;
+
 const config: Configuration = {
   entry: './src/index.tsx',
-  mode: 'production',
-  // mode: 'development',
+  mode: IsProduction ? 'production' : 'development',
   module: {
     rules: [
       {

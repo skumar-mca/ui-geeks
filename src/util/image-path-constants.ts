@@ -1,4 +1,5 @@
 export const ImagePaths = {
+  APP_LOGO: 'https://live.staticflickr.com/65535/52404548319_427430c397_n.jpg',
   JS_Logo: `//live.staticflickr.com/65535/52364799530_6b19c52df1_c.jpg`,
   React_Logo: `//live.staticflickr.com/65535/52364799530_6b19c52df1_c.jpg`,
   Angular: `images/angular-icon.png`,

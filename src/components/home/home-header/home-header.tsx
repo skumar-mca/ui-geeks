@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AppPrefix } from '../../../util/app-constants';
-import HomeIcon from '../../icons/home-icon';
+import { ImagePaths } from '../../../util/image-path-constants';
 import YALSFlex from '../../shared/yals-flex/yals-flex';
 import {
   FlexAlignItemsTypes,
@@ -23,14 +23,10 @@ const HomeHeader = () => {
         <ul className='ul-main-menu'>
           <li>
             <Link to='/'>
-              <HomeIcon />
+              <img src={ImagePaths.APP_LOGO} className='app-logo' />
+
+              <span className='app-name'>Yet Another Learnign Source</span>
             </Link>
-          </li>
-          <li>
-            <Link to='/fe/javascript-home'>JavaScript</Link>
-          </li>
-          <li>
-            <Link to='/fe/react-home'>React</Link>
           </li>
         </ul>
 

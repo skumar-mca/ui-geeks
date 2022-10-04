@@ -22,6 +22,7 @@ const LanguageComponent = (props: ILanguageProp) => {
   });
 
   const handleRedirect = () => {
+    debugger;
     navigate(homePagePath);
   };
 
@@ -47,6 +48,7 @@ const LanguageComponent = (props: ILanguageProp) => {
         </div>
 
         <div className='language-intro'>
+          {/* <Heading as='h3'>{tag}</Heading> */}
           <h5>{tag}</h5>
           <TextCarousal contentList={contentList} />
         </div>

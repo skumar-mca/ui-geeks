@@ -11,8 +11,8 @@ import ChevronRight from '../../icons/chevron-right';
 import { B, NewLine } from '../util/util';
 import YALSButton from '../yals-button/yals-button';
 import {
-  YALSButtonSizeTypes,
-  YALSButtonVariantTypes
+  YALSButtonVariantTypes,
+  YALSSizeTypes
 } from '../yals-button/yals-button.types';
 import './next-prev-btn.scss';
 import { INextPrevBtnProp } from './next-prev-btn.types';
@@ -64,7 +64,7 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
             <YALSButton
               onClick={onHandleClick.bind(this, prevIndex)}
               outline={false}
-              size={YALSButtonSizeTypes.Large}
+              size={YALSSizeTypes.Large}
               variant={YALSButtonVariantTypes.Dark}
               block={deviceType === DeviceType.Mobile}
             >
@@ -84,7 +84,7 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
             <YALSButton
               onClick={onHandleClick.bind(this, nextIndex)}
               outline={false}
-              size={YALSButtonSizeTypes.Large}
+              size={YALSSizeTypes.Large}
               variant={YALSButtonVariantTypes.Dark}
               block={deviceType === DeviceType.Mobile}
             >

@@ -2,7 +2,8 @@
 @import '../../../scss/colors.scss';
 
 .#{$appPrefix}-home-footer {
-  background-color: $lightGrayAlt;
+  background-color: $darkGrayAlt;
   color: white;
-  padding: 5px 10px 5px 10px;
+  padding: 10px;
+  font-size: 0.9rem;
 }

@@ -175,7 +175,7 @@ const YALSSearchContainer = (props: any) => {
                   variant={YALSButtonVariantTypes.Link}
                   onClick={clearSearchResult}
                 >
-                  try clearing search result
+                  try clearing search query.
                 </YalsButton>
               </div>
             </div>

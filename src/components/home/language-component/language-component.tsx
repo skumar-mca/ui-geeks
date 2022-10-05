@@ -22,7 +22,6 @@ const LanguageComponent = (props: ILanguageProp) => {
   });
 
   const handleRedirect = () => {
-    debugger;
     navigate(homePagePath);
   };
 

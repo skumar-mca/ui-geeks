@@ -14,13 +14,13 @@ export const YALSButtonVariantTypes = {
   Success: 'success'
 };
 
-export const YALSButtonSizeTypes = {
+export const YALSSizeTypes = {
   Small: 'sm',
   Large: 'lg'
 };
 
 export type YALSButtonVariantType = ValueOf<typeof YALSButtonVariantTypes>;
-export type YALSButtonSizeType = ValueOf<typeof YALSButtonSizeTypes>;
+export type YALSSizeType = ValueOf<typeof YALSSizeTypes>;
 
 export interface YALSButtonProps {
   children?: ReactNode | string;
@@ -28,7 +28,7 @@ export interface YALSButtonProps {
   className?: string;
   variant?: YALSButtonVariantType;
   outline?: boolean;
-  size?: YALSButtonSizeType;
+  size?: YALSSizeType;
   href?: string;
   title?: string;
   block?: boolean;

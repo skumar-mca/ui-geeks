@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 import { Button } from 'react-bootstrap';
 import { AppPrefix } from '../../../util/app-constants';
 import './yals-button.scss';
-import { YALSButtonProps, YALSButtonSizeTypes } from './yals-button.types';
+import { YALSButtonProps, YALSSizeTypes } from './yals-button.types';
 
 const YALSButton = (props: YALSButtonProps) => {
   const {
@@ -11,7 +11,7 @@ const YALSButton = (props: YALSButtonProps) => {
     className,
     variant,
     outline,
-    size = YALSButtonSizeTypes.Small,
+    size = YALSSizeTypes.Small,
     href,
     title,
     block,

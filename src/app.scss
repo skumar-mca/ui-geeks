@@ -116,3 +116,9 @@ body {
   box-shadow: none;
   border-color: $purple;
 }
+
+.text-sm {
+  font-size: 0.8rem;
+  color: $lightGrayAlt;
+  font-style: italic;
+}

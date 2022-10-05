@@ -1,0 +1,50 @@
+@import '../../../scss/colors.scss';
+
+.demo-component {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 10px;
+  background: $yellowDemoTheme;
+  border: 1px solid $lightGray;
+  box-shadow: 3px 4px 7px 0px #adadad;
+
+  h5 {
+    margin-bottom: 5px;
+    margin-top: 5px !important;
+  }
+
+  .hint {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: $lightGrayAlt;
+  }
+
+  .app-level-label-value-pair {
+    .app-level-label {
+      font-weight: bold;
+      color: $lightGrayAlt;
+      margin-bottom: 5px;
+    }
+
+    .app-level-value {
+      text-align: center;
+      color: $purple;
+    }
+  }
+
+  .wrapper-title {
+    position: relative;
+    right: -11px;
+    top: -25px;
+    border-right: 3px solid $purple;
+    border-top: 2px solid $purple;
+    background: $lightGreenThemeBg;
+    width: 150px;
+    float: right;
+    text-align: right;
+    padding: 2px 5px 2px 5px;
+    color: $bodyBgColor;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}

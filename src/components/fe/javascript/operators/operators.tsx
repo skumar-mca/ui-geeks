@@ -18,6 +18,7 @@ const JSOperators = () => {
   return (
     <Container>
       <Heading>Operators</Heading>
+
       <Para>
         JavaScript has a rich set of operators, which can be used to perform
         operations on given values. JavaScript has both <B>binary</B> and

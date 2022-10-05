@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 import Table from 'react-bootstrap/esm/Table';
 import { AppPrefix } from '../../../util/app-constants';
-import { YALSButtonSizeTypes } from '../yals-button/yals-button.types';
+import { YALSSizeTypes } from '../yals-button/yals-button.types';
 import './yals-table.scss';
 import { IYAPSTableProps, YALSTDType, YALSTHType } from './yals.table.types';
 
@@ -13,7 +13,7 @@ const YALSTable = (props: IYAPSTableProps) => {
     striped = true,
     bordered = true,
     hover = true,
-    size = YALSButtonSizeTypes.Small
+    size = YALSSizeTypes.Small
   } = props;
 
   const tableClasses = classNames({

@@ -8,7 +8,7 @@ import ReactDefaultProps from './default-props';
 const ReactClassComponentProperties = () => {
   return (
     <>
-      <Heading as='h4'>Class Properties</Heading>
+      <Heading as='h3'>Class Properties</Heading>
       <ReactDefaultProps />
 
       <Heading as='h4'>displayName</Heading>

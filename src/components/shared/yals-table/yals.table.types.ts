@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { YALSButtonSizeType } from '../yals-button/yals-button.types';
+import { YALSSizeType } from '../yals-button/yals-button.types';
 
 export interface YALSTHType {
   column: string;
@@ -16,5 +16,5 @@ export interface IYAPSTableProps {
   striped?: string | boolean | undefined;
   bordered?: boolean;
   hover?: boolean;
-  size?: YALSButtonSizeType;
+  size?: YALSSizeType;
 }

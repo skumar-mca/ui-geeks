@@ -7,7 +7,7 @@ const HomeFooter = () => {
   const homeFooter = classNames({ [`${AppPrefix}-home-footer`]: true });
   return (
     <div className={homeFooter}>
-      &#169; {new Date().getFullYear()} YALS - Yet another learning source.
+      &#169; {new Date().getFullYear()} YALS - Yet Another Learning Source.
     </div>
   );
 };

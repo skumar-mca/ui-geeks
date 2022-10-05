@@ -8,7 +8,20 @@ export interface IQuestionnarieQuestionProps {
     selectedOption: QuestionIDType | Array<QuestionIDType>
   ) => void;
   preSelected: QuestionIDType;
+  isSubmitted?: number;
 }
 export interface IQuestionnaireProps {
   questions: Array<any>;
+  fullPage?: boolean;
+}
+
+export interface IQuestionnaireTopicType {
+  id: number;
+  label: string;
+  questions: Array<any>;
+}
+export interface IQuestionnaireListType {
+  id: number;
+  label: string;
+  topics: Array<IQuestionnaireTopicType>;
 }

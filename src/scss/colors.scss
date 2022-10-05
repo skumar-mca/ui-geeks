@@ -5,6 +5,7 @@ $secondaryBgColor: #eeeef0;
 $purple: #6e45e2;
 $darkGreen: #002b36;
 $darkGray: #121212;
+$darkGrayAlt: #282828;
 $lightGray: #e1e1e1;
 $lightGrayAlt: #626262;
 $bodyBgColor: #f7f7f7;
@@ -48,4 +49,11 @@ $lightGreenThemeBg: linear-gradient(
   rgba(51, 204, 123, 1) 0%,
   rgba(53, 195, 124, 1) 32%,
   rgba(103, 106, 228, 1) 100%
+);
+
+$yellowDemoTheme: linear-gradient(
+  90deg,
+  rgba(239, 250, 133, 1) 0%,
+  rgba(212, 210, 29, 1) 50%,
+  rgba(239, 250, 133, 1) 100%
 );

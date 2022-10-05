@@ -9,7 +9,7 @@ import { B, BI, I, IU } from '../../../shared/util/util';
 const ReactDefaultProps = () => {
   return (
     <>
-      <Heading as='h3'>defaultProps</Heading>
+      <Heading as='h4'>defaultProps</Heading>
       <Para>
         It can be defined as a property on the component class itself, to set
         the <I>default props</I> for the class. This is used for <Space />

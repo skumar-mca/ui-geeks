@@ -7,8 +7,8 @@ import Heading from '../heading/heading';
 import { B, I, NewLine } from '../util/util';
 import YalsButton from '../yals-button/yals-button';
 import {
-  YALSButtonSizeTypes,
-  YALSButtonVariantTypes
+  YALSButtonVariantTypes,
+  YALSSizeTypes
 } from '../yals-button/yals-button.types';
 import { YALSCheckRadioTypes } from '../yals-check-radio/yals-check-radio.types';
 import YalsFlex from '../yals-flex/yals-flex';
@@ -172,7 +172,7 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
               disabled={currentQuestionIndex <= 0}
               onClick={onPrevClick}
               variant={YALSButtonVariantTypes.Primary}
-              size={YALSButtonSizeTypes.Small}
+              size={YALSSizeTypes.Small}
               className='btn-prev'
             >
               <ChevronLeft fillColor='white' /> Prev
@@ -181,7 +181,7 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
             <YalsButton
               disabled={currentQuestionIndex === questions.length - 1}
               variant={YALSButtonVariantTypes.Primary}
-              size={YALSButtonSizeTypes.Small}
+              size={YALSSizeTypes.Small}
               onClick={onNextClick}
               className='btn-next'
             >
@@ -206,7 +206,7 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
           <YalsButton
             onClick={onSubmitCurrent}
             variant={YALSButtonVariantTypes.Success}
-            size={YALSButtonSizeTypes.Small}
+            size={YALSSizeTypes.Small}
           >
             Verify
           </YalsButton>

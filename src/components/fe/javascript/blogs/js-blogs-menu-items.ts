@@ -6,7 +6,7 @@ export const JS_BLOG_MENU_ITEMS: Array<IMenuItem> = JS_BLOG_CONTENT.map(
   (blg: IBlogContentType) => {
     return {
       url: `${routePrefix}${blg.url}`,
-      label: blg.title
+      label: blg.label
     };
   }
 );

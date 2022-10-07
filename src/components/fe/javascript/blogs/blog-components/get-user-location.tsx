@@ -161,15 +161,16 @@ const JSBlogGetUserLocation = () => {
         The <Space />
         <BI>getCurrentPosition()</BI> <Space /> method of <Space />
         <I>{`window.navigator.geolocation`}</I> is used to get the current
-        position of the device. On first request, this will give a <I>prompt</I>
-        <Space /> to user in address bar to either <Space />
+        position of the device. On the first request, this will give a
+        <Space /> <I>prompt</I>
+        <Space /> to the user in the address bar to either <Space />
         <B>"Allow"</B> or <B>"Block"</B> the location request. For subsequent
-        request it will return either the success or error response.
+        requests it will return either the success or error response.
       </Para>
 
       <Para>
-        When executed first time, it will ask the user permission in below
-        popup.
+        When called the first time, it will ask the user permission in the popup
+        below.
         <YalsImage
           imagePath={ImagePaths.JS.BLOGS.GET_USER_LOCATION.PERMISSION_POPUP}
           alt='Asking User Permission For Location'
@@ -211,8 +212,8 @@ const getUserLocation = () => {
       </Para>
 
       <Para>
-        If user click on <B>"Allow"</B> button, <BI>successCallback</BI> will be
-        called, returning below information.
+        If the user clicks on the <B>"Allow"</B> button, <Space />
+        <BI>successCallback</BI> will be called, returning below information.
       </Para>
 
       <Code>
@@ -231,9 +232,9 @@ const getUserLocation = () => {
       </Code>
 
       <Para>
-        But, if user denies permission by clicking on <B>"Block"</B> button,
-        <Space /> <BI>errorCallback</BI> will be called, returning error
-        information.
+        But, if the user denies permission by clicking on the <B>"Block"</B>
+        <Space /> button, <Space /> <BI>errorCallback</BI> will be called,
+        returning error information.
       </Para>
 
       <Code>
@@ -246,7 +247,7 @@ const getUserLocation = () => {
       <Heading as='h2'>Input parameters of getCurrentPosition()</Heading>
       <Heading as='h3'>successHandler</Heading>
       <Para>
-        This the callback method called when user location is successfully
+        This the callback method called when the user location is successfully
         accessed. It returns the <Space />
         <BI>GeolocationPosition</BI> object. The <Space />
         <I>GeolocationPosition</I> object contains <B>coords</B> and
@@ -260,7 +261,7 @@ const getUserLocation = () => {
 
       <Heading as='h3'>errorHandler</Heading>
       <Para>
-        This the callback method called when error is thrown while accessing
+        This the callback method called when an error is thrown while accessing
         location. It returns the <Space />
         <BI>GeolocationPositionError</BI> object. The <Space />
         <I>GeolocationPositionError</I> object contains <B>code</B> and

@@ -5,7 +5,7 @@ export const JS_BLOG_LINK: Array<any> = JS_BLOG_CONTENT.map(
   (blg: IBlogContentType) => {
     return {
       link: `${routePrefix}${blg.url}`,
-      label: blg.title
+      label: blg.label
     };
   }
 );

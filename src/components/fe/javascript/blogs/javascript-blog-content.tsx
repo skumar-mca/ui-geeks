@@ -5,7 +5,7 @@ const JSBlogGetUserLocation = lazy(
 
 export interface IBlogContentType {
   id: number;
-  title: string;
+  label: string;
   url: string;
   content: ReactNode | string;
 }
@@ -18,7 +18,7 @@ export interface IBlogMenuType {
 export const JS_BLOG_CONTENT: Array<IBlogContentType> = [
   {
     id: 1,
-    title: 'Get user location',
+    label: 'Get user location',
     url: 'get-user-location',
     content: <JSBlogGetUserLocation />
   }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { IOrderedListItemType } from '../../../../../types/common';
 import { ImagePaths } from '../../../../../util/image-path-constants';
 import Code from '../../../../shared/code/code';
@@ -153,25 +153,6 @@ const geolocationPositionOptionItems: Array<IOrderedListItemType> = [
 ];
 
 const JSBlogGetUserLocation = () => {
-  const successHandler = (successResponse: any) => {
-    console.log(successResponse);
-  };
-
-  const errorHandler = (errorResponse: any) => {
-    console.log(errorResponse);
-  };
-
-  const getUserLocation = () => {
-    window.navigator.geolocation.getCurrentPosition(
-      successHandler,
-      errorHandler
-    );
-  };
-
-  useEffect(() => {
-    getUserLocation();
-  }, []);
-
   return (
     <Container>
       <Heading as='h1'>Get User Location</Heading>

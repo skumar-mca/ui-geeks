@@ -40,7 +40,7 @@ const geolocationPositionItems: Array<IOrderedListItemType> = [
       <>
         <B>altitude</B>
         <NewLine />
-        This represents the user position's <B>altitude</B> in <I>meters</I>,
+        This represents the user location's <B>altitude</B> in <I>meters</I>,
         relative to sea level.
       </>
     )
@@ -80,9 +80,9 @@ const geolocationPositionItems: Array<IOrderedListItemType> = [
       <>
         <B>heading</B>
         <NewLine />
-        This represents the <B>direction</B> towards which the device is
-        faicing. Value is specified in <I>degrees</I>, indicating how far off
-        from heading true <B>north</B> the device is. <I>0 (Zero)</I> degrees
+        This represents the <B>direction</B> towards which the device is facing.
+        Value is specified in <I>degrees</I>, indicating how far off from
+        heading true <B>north</B> the device is. <I>0 (Zero)</I> degrees
         represents the <B>true north</B>, and the direction is determined
         clockwise, which means that east is 90 degrees and west is 270 degrees.
         If speed is 0 (Zero), heading is <BI>NaN</BI>. If the device is unable
@@ -98,13 +98,14 @@ const geolocationPositionErrorItems: Array<IOrderedListItemType> = [
       <>
         <B>code</B>
         <NewLine />
-        This represent the error code, which can have either of below value:
+        This represent the <I>error code</I>, which can have either of below
+        values:
         <NewLine />
-        <B>1:</B> PERMISSION_DENIED
+        <B>1:</B> <I>PERMISSION_DENIED</I>
         <NewLine />
-        <B>2:</B> POSITION_UNAVAILABLE
+        <B>2:</B> <I>POSITION_UNAVAILABLE</I>
         <NewLine />
-        <B>3:</B> TIMEOUT
+        <B>3:</B> <I>TIMEOUT</I>
       </>
     )
   },
@@ -113,7 +114,7 @@ const geolocationPositionErrorItems: Array<IOrderedListItemType> = [
       <>
         <B>message</B>
         <NewLine />
-        User friendly error message.
+        User-friendly error message.
       </>
     )
   }
@@ -137,7 +138,7 @@ const geolocationPositionOptionItems: Array<IOrderedListItemType> = [
         <B>timeout</B>
         <NewLine />
         Maximum length of time in <I>milliseconds</I>, device is allowed to take
-        to return a position. Default value is <I>Infinity</I>.
+        to return a location. Default value is <I>Infinity</I>.
       </>
     )
   },
@@ -160,9 +161,20 @@ const JSBlogGetUserLocation = () => {
         The <Space />
         <BI>getCurrentPosition()</BI> <Space /> method of <Space />
         <I>{`window.navigator.geolocation`}</I> is used to get the current
-        position of the device. This will give a <I>prompt</I> to user in
-        address bar to either <Space />
-        <B>"Allow"</B> or <B>"Block"</B> the location request.
+        position of the device. On first request, this will give a <I>prompt</I>
+        <Space /> to user in address bar to either <Space />
+        <B>"Allow"</B> or <B>"Block"</B> the location request. For subsequent
+        request it will return either the success or error response.
+      </Para>
+
+      <Para>
+        When executed first time, it will ask the user permission in below
+        popup.
+        <YalsImage
+          imagePath={ImagePaths.JS.BLOGS.GET_USER_LOCATION.PERMISSION_POPUP}
+          alt='Asking User Permission For Location'
+          width='100%'
+        />
       </Para>
 
       <Para>
@@ -199,17 +211,8 @@ const getUserLocation = () => {
       </Para>
 
       <Para>
-        Above code will ask the user permission in below popup.
-        <YalsImage
-          imagePath={ImagePaths.JS.BLOGS.GET_USER_LOCATION.PERMISSION_POPUP}
-          alt='Asking User Permission For Location'
-          width='100%'
-        />
-      </Para>
-
-      <Para>
         If user click on <B>"Allow"</B> button, <BI>successCallback</BI> will be
-        called and log below information.
+        called, returning below information.
       </Para>
 
       <Code>
@@ -228,8 +231,9 @@ const getUserLocation = () => {
       </Code>
 
       <Para>
-        But, if user denies permission by clicking on <B>"Block"</B> button,{' '}
-        <BI>errorCallback</BI> will be called and log below information.
+        But, if user denies permission by clicking on <B>"Block"</B> button,
+        <Space /> <BI>errorCallback</BI> will be called, returning error
+        information.
       </Para>
 
       <Code>
@@ -244,13 +248,13 @@ const getUserLocation = () => {
       <Para>
         This the callback method called when user location is successfully
         accessed. It returns the <Space />
-        <BI>GeolocationPosition</BI> object.
+        <BI>GeolocationPosition</BI> object. The <Space />
+        <I>GeolocationPosition</I> object contains <B>coords</B> and
+        <Space /> <B>timeStamp</B> attributes.
       </Para>
 
       <Para>
-        <I>GeolocationPosition</I> object contains <B>coords</B> and
-        <Space /> <B>timeStamp</B> attributes. The <BI>coords</BI> attribute
-        contains below given properties:
+        The <BI>coords</BI> attribute contains below given properties:
         <OrderedList unOrdered items={geolocationPositionItems} />
       </Para>
 
@@ -258,10 +262,7 @@ const getUserLocation = () => {
       <Para>
         This the callback method called when error is thrown while accessing
         location. It returns the <Space />
-        <BI>GeolocationPositionError</BI> object.
-      </Para>
-
-      <Para>
+        <BI>GeolocationPositionError</BI> object. The <Space />
         <I>GeolocationPositionError</I> object contains <B>code</B> and
         <Space /> <B>message</B> attributes.
         <OrderedList unOrdered items={geolocationPositionErrorItems} />

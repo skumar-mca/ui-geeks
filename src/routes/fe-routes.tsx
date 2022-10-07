@@ -1,6 +1,7 @@
 import React, { lazy } from 'react';
 import { Route } from 'react-router-dom';
 import JSArrays from '../components/fe/javascript/arrays/arrays';
+import JSBlog from '../components/fe/javascript/blogs/javascript-blog';
 import JSClass from '../components/fe/javascript/class/class';
 import JSConsole from '../components/fe/javascript/console/console';
 import JSControlStructures from '../components/fe/javascript/control-structures/control-structures';
@@ -54,6 +55,7 @@ const FERouter = (
   <>
     <Route path='/fe' element={<FEHome />} />
     <Route path='fe/javascript-home' element={<JSLandingPage />} />
+    <Route path='fe/blogs/javascript/:blogId' element={<JSBlog />} />
     <Route path='fe/javascript' element={<JSHome />}>
       <Route path='introduction' element={<JSIntroduction />} />
       <Route path='history' element={<JSHistory />} />

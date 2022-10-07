@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface IMenuItem {
   url: string;
   label: string;
@@ -5,7 +7,7 @@ export interface IMenuItem {
 
 export interface INavigationMenuProps {
   menuList: Array<IMenuItem>;
-  menuTitle?: string;
-  menuLinks: Array<any>;
+  menuTitle?: string | ReactNode;
+  menuLinks?: Array<any>;
   onMenuClick?: (menuItem?: IMenuItem) => void;
 }

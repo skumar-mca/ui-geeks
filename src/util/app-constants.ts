@@ -7,7 +7,8 @@ export const ALL_OF_ABOVE = `All of the above`;
 export const DeviceType = {
   Mobile: 'mobile',
   Tablet: 'tablet',
-  Desktop: 'desktop'
+  Desktop: 'desktop',
+  LargeDesktop: 'large-desktop'
 };
 
 export const TYPER_SPEED = 350;

@@ -41,7 +41,7 @@ body {
 .yals-left-section {
   position: sticky;
   top: 0;
-  height: 96vh;
+  height: 100%;
   padding-top: 35px;
 }
 
@@ -49,6 +49,7 @@ body {
   background-color: $bodyBgColor;
   padding: 0px 10px 0px 10px;
   padding-top: 35px;
+  flex: 1 1 75px;
 
   .mobile-menu-wrapper {
     position: fixed;
@@ -121,4 +122,12 @@ body {
   font-size: 0.8rem;
   color: $lightGrayAlt;
   font-style: italic;
+}
+
+.yals-sep {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: $lightGray;
+  height: 2px;
+  width: 85%;
 }

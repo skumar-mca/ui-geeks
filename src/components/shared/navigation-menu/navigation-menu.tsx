@@ -27,7 +27,7 @@ const NavigationMenu = (props: INavigationMenuProps) => {
               >
                 {itm.label}
 
-                {isSelectedRoute(itm.url) && (
+                {menuLinks && isSelectedRoute(itm.url) && (
                   <OnPageItems allItems={menuLinks} onMenuClick={onMenuClick} />
                 )}
               </Link>

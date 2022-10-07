@@ -22,7 +22,11 @@ const useDeviceType = () => {
     return DeviceType.Tablet;
   }
 
-  return DeviceType.Desktop;
+  if (width > 950 && width <= 1400) {
+    return DeviceType.Desktop;
+  }
+
+  return DeviceType.LargeDesktop;
 };
 
 export default useDeviceType;

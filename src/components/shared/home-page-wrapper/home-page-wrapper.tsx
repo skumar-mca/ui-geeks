@@ -1,7 +1,6 @@
 import React, { memo, Suspense, useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
-import { Outlet } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { DeviceType } from '../../../util/app-constants';
@@ -23,7 +22,14 @@ import YALSModal from '../../shared/yals-modal/yals-modal';
 import { IHomePageWrapperProps } from './home-page-wrapper.types';
 
 const HomePageWrapper = (props: IHomePageWrapperProps) => {
-  const { menuLinks, menuItems, breadcrumbLink } = props;
+  const {
+    menuLinks,
+    menuItems,
+    breadcrumbLink,
+    children,
+    isCustomHome = false,
+    customMenuContent
+  } = props;
 
   const deviceType = useDeviceType();
 
@@ -44,11 +50,33 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
     return crntItem || {};
   };
 
+  const showLeftCustomMenu =
+    isCustomHome ||
+    (deviceType !== DeviceType.LargeDesktop && customMenuContent);
+
+  const showRightMenu =
+    !isCustomHome &&
+    customMenuContent &&
+    deviceType === DeviceType.LargeDesktop;
   return (
     <Row>
       {deviceType != DeviceType.Mobile && (
-        <Col lg={2} md={3} sm={4} className='yals-left-section'>
-          <NavigationMenu menuLinks={menuLinks} menuList={menuItems} />
+        <Col lg={2} md={3} sm={4} xxl={2} className='yals-left-section'>
+          {menuItems && (
+            <NavigationMenu menuLinks={menuLinks} menuList={menuItems} />
+          )}
+          {showLeftCustomMenu && (
+            <>
+              {!isCustomHome && (
+                <YALSFlex justifyContent={FlexJustifyContentTypes.Center}>
+                  <div className='yals-sep'></div>
+                </YALSFlex>
+              )}
+              <div className='yals-left-section-custom-menu'>
+                {customMenuContent}
+              </div>
+            </>
+          )}
         </Col>
       )}
 
@@ -56,11 +84,14 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
         lg={deviceType === DeviceType.Mobile ? 12 : 10}
         md={deviceType === DeviceType.Mobile ? 12 : 9}
         sm={deviceType === DeviceType.Mobile ? 12 : 8}
+        xxl={deviceType === DeviceType.Mobile ? 12 : showRightMenu ? 8 : 10}
       >
-        <YALSBreadcrumb
-          items={breadcrumbLink}
-          currentMenuItem={getCurrentRouteMenu()}
-        />
+        {breadcrumbLink && (
+          <YALSBreadcrumb
+            items={breadcrumbLink}
+            currentMenuItem={getCurrentRouteMenu()}
+          />
+        )}
 
         {deviceType === DeviceType.Mobile && (
           <>
@@ -86,25 +117,40 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
                 onHide={toggleMenu}
                 fullScreen={true}
                 modalContent={
-                  <NavigationMenu
-                    menuLinks={menuLinks}
-                    menuList={menuItems}
-                    onMenuClick={hideMenu}
-                  />
+                  menuItems ? (
+                    <NavigationMenu
+                      menuLinks={menuLinks}
+                      menuList={menuItems}
+                      onMenuClick={hideMenu}
+                    />
+                  ) : (
+                    <>{customMenuContent}</>
+                  )
                 }
               />
             )}
           </>
         )}
 
-        <Suspense fallback={<ContentLoader />}>
-          <Outlet />
-        </Suspense>
-        <Container>
-          <NextPrevButtons allItems={menuLinks} />
-        </Container>
+        <Suspense fallback={<ContentLoader />}>{children}</Suspense>
+
+        {deviceType === DeviceType.Mobile && customMenuContent && (
+          <>{customMenuContent}</>
+        )}
+
+        {menuLinks.length > 1 && (
+          <Container>
+            <NextPrevButtons allItems={menuLinks} />
+          </Container>
+        )}
         <ScrollTopButton />
       </Col>
+
+      {showRightMenu && (
+        <Col xxl={2} className='yals-left-section'>
+          <>{customMenuContent}</>
+        </Col>
+      )}
     </Row>
   );
 };

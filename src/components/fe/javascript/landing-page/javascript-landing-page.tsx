@@ -4,6 +4,7 @@ import LandingPageWrapper from '../../../shared/landing-page-wrapper/landing-pag
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B } from '../../../shared/util/util';
+import { JS_BLOG_LINK } from '../blogs/js-blog-link-tree';
 import { JSLINK } from '../js-link-tree';
 
 const JSLandingPage = () => {
@@ -13,6 +14,7 @@ const JSLandingPage = () => {
       imagePath='images/js-icon.png'
       title='JavaScript'
       wordCloudUrl={ImagePaths.JS.JS_WORD_CLOUD}
+      blogList={JS_BLOG_LINK}
     >
       <Para>
         JavaScript (JS) is a light-weight,

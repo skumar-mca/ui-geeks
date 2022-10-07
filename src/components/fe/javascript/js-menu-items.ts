@@ -1,7 +1,7 @@
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
 
 const routePrefix = '/fe/javascript/';
-export const JSMenuItems: Array<IMenuItem> = [
+export const JS_ROUTE_PATH: Array<IMenuItem> = [
   {
     url: `${routePrefix}introduction`,
     label: 'Introduction'

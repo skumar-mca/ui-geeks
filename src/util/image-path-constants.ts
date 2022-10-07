@@ -20,7 +20,13 @@ export const ImagePaths = {
     DEFER_SCRIP_LOADING:
       'https://live.staticflickr.com/65535/52364579558_8a4611e2bb_b.jpg',
     ASYNC_SCRIPT_LOADING: `https://live.staticflickr.com/65535/52363415682_f03614832b_b.jpg`,
-    JS_WORD_CLOUD: `https://live.staticflickr.com/65535/52383011714_14b54b9e25_b.jpg`
+    JS_WORD_CLOUD: `https://live.staticflickr.com/65535/52383011714_14b54b9e25_b.jpg`,
+    BLOGS: {
+      GET_USER_LOCATION: {
+        PERMISSION_POPUP:
+          'https://live.staticflickr.com/65535/52410655599_1ca759fc9d_z.jpg'
+      }
+    }
   },
   REACT: {
     LOGO: 'https://live.staticflickr.com/65535/52364799530_6b19c52df1_c.jpg',

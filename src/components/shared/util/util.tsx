@@ -104,4 +104,19 @@ const OrderedList = (props: IOrderedListProps) => {
   );
 };
 
-export { ScriptTag, NewLine, Indent, OrderedList, BI, IU, I, B };
+const loadComponentFromPath = (path: string) => {
+  console.log('loadComponentFromPath');
+  return React.lazy(() => import(`../../fe/${path}`));
+};
+
+export {
+  ScriptTag,
+  NewLine,
+  Indent,
+  OrderedList,
+  BI,
+  IU,
+  I,
+  B,
+  loadComponentFromPath
+};

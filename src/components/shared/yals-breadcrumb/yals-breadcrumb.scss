@@ -16,6 +16,10 @@
   .breadcrumb-item.active {
     font-weight: bold;
   }
+
+  .inactive-item {
+    font-weight: normal !important;
+  }
 }
 
 .device-type-mobile {

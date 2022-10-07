@@ -1,6 +1,6 @@
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
 const routePrefix = '/fe/react/';
-export const ReactMenuItems: Array<IMenuItem> = [
+export const REACT_ROUTE_PATH: Array<IMenuItem> = [
   {
     url: `${routePrefix}introduction`,
     label: 'Introduction'

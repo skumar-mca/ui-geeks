@@ -1,12 +1,15 @@
 import classNames from 'classnames';
 import React from 'react';
+import Col from 'react-bootstrap/esm/Col';
+import Row from 'react-bootstrap/esm/Row';
 import { useNavigate } from 'react-router-dom';
-import { AppPrefix } from '../../../util/app-constants';
+import useDeviceType from '../../../custom-hooks/use-device-type';
+import { AppPrefix, DeviceType } from '../../../util/app-constants';
 import TextCarousal from '../../shared/text-carousal/text-carousal';
 import { NewLine } from '../../shared/util/util';
 import YALSButton from '../../shared/yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../../shared/yals-button/yals-button.types';
-import YALSFlex from '../../shared/yals-flex/yals-flex';
+import YalsFlex from '../../shared/yals-flex/yals-flex';
 import {
   FlexAlignItemsTypes,
   FlexJustifyContentTypes
@@ -14,9 +17,18 @@ import {
 import './language-component.scss';
 import { ILanguageProp } from './language-component.types';
 const LanguageComponent = (props: ILanguageProp) => {
-  const { title, tag, contentList, imagePath, homePagePath, theme } = props;
+  const {
+    title,
+    tag,
+    contentList,
+    imagePath,
+    homePagePath,
+    theme,
+    demoComponent
+  } = props;
   const navigate = useNavigate();
 
+  const deviceType = useDeviceType();
   const introHeader = classNames({
     [`${AppPrefix}-language`]: true,
     [`theme-${theme}`]: theme
@@ -26,35 +38,59 @@ const LanguageComponent = (props: ILanguageProp) => {
     navigate(homePagePath);
   };
 
+  const showDemo =
+    demoComponent &&
+    [DeviceType.Desktop, DeviceType.LargeDesktop].includes(deviceType);
+
   return (
-    <>
-      <YALSFlex
-        className={introHeader}
-        justifyContent={FlexJustifyContentTypes.SpaceEvenly}
-        alignItems={FlexAlignItemsTypes.Center}
-      >
-        <div className='language-section'>
-          {imagePath && (
-            <img src={imagePath} alt={imagePath} className='language-icon' />
-          )}
-
-          <h2>{title}</h2>
-          <h5>{tag}</h5>
-          <div className='carousal-content'>
-            <TextCarousal contentList={contentList} />
-          </div>
-
-          <NewLine />
-          <YALSButton
-            variant={YALSButtonVariantTypes.Dark}
-            outline={false}
-            onClick={handleRedirect}
+    <div className={introHeader}>
+      <div className='language-section'>
+        <Row>
+          <Col
+            sm={12}
+            md={showDemo ? 8 : 12}
+            lg={showDemo ? 8 : 12}
+            xxl={showDemo ? 8 : 12}
           >
-            Learn Now
-          </YALSButton>
-        </div>
-      </YALSFlex>
-    </>
+            <YalsFlex
+              justifyContent={FlexJustifyContentTypes.Center}
+              alignItems={FlexAlignItemsTypes.Center}
+            >
+              <div>
+                {imagePath && (
+                  <img
+                    src={imagePath}
+                    alt={imagePath}
+                    className='language-icon'
+                  />
+                )}
+
+                <h2>{title}</h2>
+                <h5>{tag}</h5>
+                <div className='carousal-content'>
+                  <TextCarousal contentList={contentList} />
+                </div>
+
+                <NewLine />
+                <YALSButton
+                  variant={YALSButtonVariantTypes.Dark}
+                  outline={false}
+                  onClick={handleRedirect}
+                >
+                  Learn Now
+                </YALSButton>
+              </div>
+            </YalsFlex>
+          </Col>
+
+          {showDemo && (
+            <Col md={4} sm={4} lg={4} xxl={4}>
+              <>{demoComponent}</>
+            </Col>
+          )}
+        </Row>
+      </div>
+    </div>
   );
 };
 

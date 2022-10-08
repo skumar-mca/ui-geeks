@@ -1,12 +1,15 @@
 @import '../../../scss/colors.scss';
+@import '../../../scss/variables.scss';
 
 .demo-component {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  border-radius: 4px;
   padding: 10px;
-  background: $yellowDemoTheme;
+  background: $lightGray;
   border: 1px solid $lightGray;
-  box-shadow: 3px 4px 7px 0px #adadad;
+  margin-right: 10px;
+  height: 100%;
+  text-align: left;
+  flex: 1 1 35px;
 
   h5 {
     margin-bottom: 5px;
@@ -32,19 +35,43 @@
     }
   }
 
-  .wrapper-title {
-    position: relative;
-    right: -11px;
-    top: -25px;
-    border-right: 3px solid $purple;
-    border-top: 2px solid $purple;
-    background: $lightGreenThemeBg;
-    width: 150px;
-    float: right;
-    text-align: right;
-    padding: 2px 5px 2px 5px;
-    color: $bodyBgColor;
-    font-size: 0.9rem;
-    font-weight: bold;
+  .result-item {
+    font-size: 0.8rem;
+    border-bottom: 1px solid $primaryColor;
+    margin-bottom: 5px;
+    .key-label {
+      font-style: italic;
+      margin-right: 10px;
+    }
+
+    .key-value {
+      font-weight: bold;
+    }
+  }
+
+  .view-mode-col {
+    padding: 5px;
+
+    .prev {
+      margin-right: 5px;
+    }
+  }
+
+  .demo-view {
+    margin-top: 10px;
+    max-height: 265px;
+    overflow: auto;
+  }
+
+  .#{$appPrefix}-code {
+    max-height: 265px;
+    overflow: auto;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .action-button-row {
+    height: 35px;
   }
 }

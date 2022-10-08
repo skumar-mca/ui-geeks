@@ -11,4 +11,5 @@ export interface ILanguageProp {
   imagePath?: string;
   homePagePath: string;
   theme: string;
+  demoComponent?: ReactNode;
 }

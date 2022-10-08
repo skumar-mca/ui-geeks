@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React, { memo } from 'react';
 import { AppPrefix } from '../../util/app-constants';
+import JSHomeDemoComponent from '../fe/javascript/js-home-demo-component/js-home-demo-component';
+import ReactHomeDemoComponent from '../fe/react/react-home-demo-component/react-home-demo-component';
 import HomeIntro from './home-intro/home-intro';
 import './home.scss';
 import LanguageComponent from './language-component/language-component';
@@ -150,6 +152,7 @@ const Home = () => {
           imagePath='images/js-icon.png'
           homePagePath='/fe/javascript-home'
           theme='yellow'
+          demoComponent={<JSHomeDemoComponent />}
         />
 
         <LanguageComponent
@@ -159,6 +162,7 @@ const Home = () => {
           imagePath='images/react-icon.png'
           homePagePath='/fe/react-home'
           theme='lightGreen'
+          demoComponent={<ReactHomeDemoComponent />}
         />
 
         {/* <LanguageComponent

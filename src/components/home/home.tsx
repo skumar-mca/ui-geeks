@@ -6,38 +6,110 @@ import './home.scss';
 import LanguageComponent from './language-component/language-component';
 
 const JSContentList = [
-  { content: 'JavaScript is Interpreted/JIT compiled.' },
   {
-    content: 'With NodeJs, JavaScript can run on non-browser environments.'
-  },
-  { content: 'Functions are treated as first-class citizens.' },
-  {
-    content: 'It was created by Brenden Eich at NetScape in 1995.'
-  },
-  {
-    content: 'Primarily there are 7 types in JavaScript.'
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>JavaScript is
+        Interpreted/JIT compiled.<span className='large-quote'>&#10078;</span>
+      </>
+    )
   },
   {
-    content: 'functions are just special type of object.'
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>With NodeJs, JavaScript can
+        run on non-browser environments.
+        <span className='large-quote'>&#10078;</span>
+      </>
+    )
   },
   {
-    content: 'Objects are a way of grouping similar/meaningful data together.'
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>Functions are treated as
+        first-class citizens.<span className='large-quote'>&#10078;</span>
+      </>
+    )
   },
   {
-    content: `Array.unshift() function prepends items to the start of the array.`
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>It was created by Brenden
+        Eich at NetScape in 1995.<span className='large-quote'>&#10078;</span>
+      </>
+    )
+  },
+  {
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>Primarily there are 7 types
+        in JavaScript.<span className='large-quote'>&#10078;</span>
+      </>
+    )
+  },
+  {
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>functions are just special
+        type of object.<span className='large-quote'>&#10078;</span>
+      </>
+    )
+  },
+  {
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>Objects are a way of
+        grouping similar/meaningful data together.
+        <span className='large-quote'>&#10078;</span>
+      </>
+    )
+  },
+  {
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>Array.unshift() function
+        prepends items to the start of the array.
+        <span className='large-quote'>&#10078;</span>
+      </>
+    )
   }
 ];
 
 const ReactContentList = [
-  { content: 'React is a JavaScript library for building user interfaces.' },
   {
-    content:
-      'Components let you split the UI into independent, reusable pieces.'
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>React is a JavaScript
+        library for building user interfaces.
+        <span className='large-quote'>&#10078;</span>
+      </>
+    )
   },
-  { content: 'User-Defined Components Must Be Capitalized.' },
   {
-    content:
-      'A higher-order component is a function that takes a component and returns a new component.'
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>Components let you split
+        the UI into independent, reusable pieces.
+        <span className='large-quote'>&#10078;</span>
+      </>
+    )
+  },
+  {
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>User-Defined Components
+        Must Be Capitalized.<span className='large-quote'>&#10078;</span>
+      </>
+    )
+  },
+  {
+    content: (
+      <>
+        <span className='large-quote'>&#10077;</span>A higher-order component is
+        a function that takes a component and returns a new component.
+        <span className='large-quote'>&#10078;</span>
+      </>
+    )
   }
 ];
 

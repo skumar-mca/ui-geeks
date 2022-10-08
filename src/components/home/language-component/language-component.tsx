@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AppPrefix } from '../../../util/app-constants';
 import TextCarousal from '../../shared/text-carousal/text-carousal';
+import { NewLine } from '../../shared/util/util';
 import YALSButton from '../../shared/yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../../shared/yals-button/yals-button.types';
 import YALSFlex from '../../shared/yals-flex/yals-flex';
@@ -36,7 +37,14 @@ const LanguageComponent = (props: ILanguageProp) => {
           {imagePath && (
             <img src={imagePath} alt={imagePath} className='language-icon' />
           )}
+
           <h2>{title}</h2>
+          <h5>{tag}</h5>
+          <div className='carousal-content'>
+            <TextCarousal contentList={contentList} />
+          </div>
+
+          <NewLine />
           <YALSButton
             variant={YALSButtonVariantTypes.Dark}
             outline={false}
@@ -44,12 +52,6 @@ const LanguageComponent = (props: ILanguageProp) => {
           >
             Learn Now
           </YALSButton>
-        </div>
-
-        <div className='language-intro'>
-          {/* <Heading as='h3'>{tag}</Heading> */}
-          <h5>{tag}</h5>
-          <TextCarousal contentList={contentList} />
         </div>
       </YALSFlex>
     </>

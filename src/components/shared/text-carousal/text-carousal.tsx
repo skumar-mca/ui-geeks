@@ -1,9 +1,41 @@
 import classNames from 'classnames';
 import React, { memo, useEffect, useState } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
+import YalsFlex from '../yals-flex/yals-flex';
+import {
+  FlexAlignItemsTypes,
+  FlexDirectionTypes,
+  FlexJustifyContentTypes
+} from '../yals-flex/yals-flex.types';
 import './text-carousal.scss';
 import { ITextCarousalProps } from './text-carousal.types';
 
+const RenderCarousalPager = (props: any) => {
+  const { index, totalItems, setContentIndex } = props;
+
+  const numArr = Array.from(Array(totalItems).keys());
+
+  const onHandleClick = (ind: number) => {
+    setContentIndex(() => ind);
+  };
+
+  return (
+    <YalsFlex
+      className='carousal-pager'
+      justifyContent={FlexJustifyContentTypes.Center}
+      alignItems={FlexAlignItemsTypes.Center}
+    >
+      {numArr.map((itm: number) => {
+        return (
+          <div
+            onClick={onHandleClick.bind(this, itm)}
+            className={`circle ${itm === index ? 'circle-current' : ''}`}
+          ></div>
+        );
+      })}
+    </YalsFlex>
+  );
+};
 const TextCarousal = (props: ITextCarousalProps) => {
   const { contentList } = props;
 
@@ -39,9 +71,21 @@ const TextCarousal = (props: ITextCarousalProps) => {
   }, []);
 
   return (
-    <div className={textCarousalClasses} key={`item-${contentIndex}`}>
-      {contentList[contentIndex].content}
-    </div>
+    <YalsFlex
+      className={textCarousalClasses}
+      justifyContent={FlexJustifyContentTypes.SpaceBetween}
+      flexDirection={FlexDirectionTypes.Column}
+    >
+      <div key={`item-${contentIndex}`}>
+        {contentList[contentIndex].content}
+      </div>
+
+      <RenderCarousalPager
+        index={contentIndex}
+        totalItems={contentList.length}
+        setContentIndex={setContentIndex}
+      />
+    </YalsFlex>
   );
 };
 

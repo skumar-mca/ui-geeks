@@ -18,7 +18,7 @@ export interface IBlogMenuType {
 export const JS_BLOG_CONTENT: Array<IBlogContentType> = [
   {
     id: 1,
-    label: 'Get user location',
+    label: 'How to get user location.',
     url: 'get-user-location',
     content: <JSBlogGetUserLocation />
   }

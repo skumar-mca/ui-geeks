@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
+import { useNavigate } from 'react-router-dom';
 import ChevronLeft from '../../icons/chevron-left';
 import ChevronRight from '../../icons/chevron-right';
 import Code from '../code/code';
@@ -19,8 +20,9 @@ import {
   IDemoWrapperProps
 } from './demo-component-wrapper.types';
 const DemoComponentWrapper = (props: IDemoWrapperProps) => {
-  const { demoComponentList } = props;
+  const { demoComponentList, homePage, homePageLabel } = props;
 
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [viewMode, setViewMode] = useState(DemoViewType.VIEW);
 
@@ -44,9 +46,15 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
     }
   };
 
+  const redirectToHomePage = () => {
+    if (homePage) {
+      navigate(homePage);
+    }
+  };
+
   return (
     <div
-      className='demo-component'
+      className={`demo-component ${homePageLabel ? 'full-page-demo' : ''}`}
       key={`demo-${demoComponentList[currentIndex].id}`}
     >
       <YalsFlex
@@ -55,6 +63,13 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
         height='100%'
       >
         <div>
+          {homePageLabel && (
+            <YalsButton onClick={redirectToHomePage} className='back-button'>
+              <ChevronLeft />
+              <span className='label'>{homePageLabel}</span>
+            </YalsButton>
+          )}
+
           <Heading as='h5'>{demoComponentList[currentIndex].label}</Heading>
 
           {viewMode === DemoViewType.VIEW && (

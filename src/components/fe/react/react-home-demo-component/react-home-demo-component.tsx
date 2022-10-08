@@ -1,6 +1,7 @@
 import React from 'react';
 import { CodeLanguageTypes } from '../../../shared/code/code.types';
 import DemoComponentWrapper from '../../../shared/demo-component-wrapper/demo-component-wrapper';
+import { REACT_PRIMARY_ROUTES } from '../react-menu-items';
 import ReactHomeDemoStateUpdate, {
   ReactHomeDemoStateUpdateCode
 } from './state-update-demo';
@@ -16,7 +17,13 @@ const ReactHomeDemoComponent = () => {
     }
   ];
 
-  return <DemoComponentWrapper demoComponentList={demoComponents} />;
+  return (
+    <DemoComponentWrapper
+      demoComponentList={demoComponents}
+      homePage={REACT_PRIMARY_ROUTES.HOME_PAGE.url}
+      homePageLabel='React'
+    />
+  );
 };
 
 export default ReactHomeDemoComponent;

@@ -9,6 +9,8 @@ export interface IDemComponentItemType {
 }
 export interface IDemoWrapperProps {
   demoComponentList: Array<IDemComponentItemType>;
+  homePage?: string;
+  homePageLabel?: string;
 }
 
 export const DemoViewType = {

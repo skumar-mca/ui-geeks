@@ -2,7 +2,9 @@ import classNames from 'classnames';
 import React, { memo } from 'react';
 import { AppPrefix } from '../../util/app-constants';
 import JSHomeDemoComponent from '../fe/javascript/js-home-demo-component/js-home-demo-component';
+import { JS_PRIMARY_ROUTES } from '../fe/javascript/js-menu-items';
 import ReactHomeDemoComponent from '../fe/react/react-home-demo-component/react-home-demo-component';
+import { REACT_PRIMARY_ROUTES } from '../fe/react/react-menu-items';
 import HomeIntro from './home-intro/home-intro';
 import './home.scss';
 import LanguageComponent from './language-component/language-component';
@@ -153,6 +155,7 @@ const Home = () => {
           homePagePath='/fe/javascript-home'
           theme='yellow'
           demoComponent={<JSHomeDemoComponent />}
+          demoLink={JS_PRIMARY_ROUTES.DEMO}
         />
 
         <LanguageComponent
@@ -163,6 +166,7 @@ const Home = () => {
           homePagePath='/fe/react-home'
           theme='lightGreen'
           demoComponent={<ReactHomeDemoComponent />}
+          demoLink={REACT_PRIMARY_ROUTES.DEMO}
         />
 
         {/* <LanguageComponent

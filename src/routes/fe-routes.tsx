@@ -13,6 +13,7 @@ import JSGrammer from '../components/fe/javascript/grammer/grammer';
 import JSHoisting from '../components/fe/javascript/hoisting/hoisting';
 import JSInclude from '../components/fe/javascript/include-javascript/include-javascript';
 import JSIteratorsGenerators from '../components/fe/javascript/iterators-generators/iterators-generators';
+import JSHomeDemoComponent from '../components/fe/javascript/js-home-demo-component/js-home-demo-component';
 import JSLandingPage from '../components/fe/javascript/landing-page/javascript-landing-page';
 import JSModules from '../components/fe/javascript/modules/modules';
 import JSObjects from '../components/fe/javascript/objects/objects';
@@ -36,6 +37,7 @@ import ReactJSX from '../components/fe/react/jsx/jsx';
 import ReactLandingPage from '../components/fe/react/landing-page/react-landing-page';
 import ReactLists from '../components/fe/react/lists-and-keys/lists';
 import ReactHome from '../components/fe/react/react-home';
+import ReactHomeDemoComponent from '../components/fe/react/react-home-demo-component/react-home-demo-component';
 import ReactRenderProps from '../components/fe/react/render-props/render-props';
 import ReactUnControlledComponent from '../components/fe/react/uncontrolled-component/uncontrolled-component';
 
@@ -56,6 +58,7 @@ const FERouter = (
     <Route path='/fe' element={<FEHome />} />
     <Route path='fe/javascript-home' element={<JSLandingPage />} />
     <Route path='fe/blogs/javascript/:blogId' element={<JSBlog />} />
+    <Route path='fe/demoes/javascript' element={<JSHomeDemoComponent />} />
     <Route path='fe/javascript' element={<JSHome />}>
       <Route path='introduction' element={<JSIntroduction />} />
       <Route path='history' element={<JSHistory />} />
@@ -84,6 +87,7 @@ const FERouter = (
     </Route>
 
     <Route path='fe/react-home' element={<ReactLandingPage />} />
+    <Route path='fe/demoes/react' element={<ReactHomeDemoComponent />} />
     <Route path='fe/react' element={<ReactHome />}>
       <Route path='introduction' element={<ReactIntroduction />} />
       <Route path='jsx' element={<ReactJSX />} />

@@ -74,4 +74,25 @@
   .action-button-row {
     height: 35px;
   }
+
+  .back-button {
+    margin-bottom: 25px;
+    .label {
+      font-size: 1.8rem;
+      color: $h2Color;
+      margin-left: 10px;
+      position: relative;
+      top: 7px;
+    }
+  }
+}
+
+.full-page-demo {
+  .demo-view {
+    max-height: 100% !important;
+  }
+
+  .#{$appPrefix}-code {
+    max-height: 100% !important;
+  }
 }

@@ -58,3 +58,11 @@ export const REACT_ROUTE_PATH: Array<IMenuItem> = [
     label: 'Error Boundary'
   }
 ];
+
+export const REACT_PRIMARY_ROUTES = {
+  HOME_PAGE: { url: '/fe/react-home', label: 'React' },
+  DEMO: {
+    url: '/fe/demoes/react',
+    label: 'React Demoes'
+  }
+};

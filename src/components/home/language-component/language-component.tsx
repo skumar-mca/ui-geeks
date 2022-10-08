@@ -24,7 +24,8 @@ const LanguageComponent = (props: ILanguageProp) => {
     imagePath,
     homePagePath,
     theme,
-    demoComponent
+    demoComponent,
+    demoLink
   } = props;
   const navigate = useNavigate();
 
@@ -38,9 +39,17 @@ const LanguageComponent = (props: ILanguageProp) => {
     navigate(homePagePath);
   };
 
+  const handleRedirectToDemo = () => {
+    if (demoLink) {
+      navigate(demoLink.url);
+    }
+  };
+
   const showDemo =
     demoComponent &&
     [DeviceType.Desktop, DeviceType.LargeDesktop].includes(deviceType);
+
+  const isMobile = [DeviceType.Mobile, DeviceType.Tablet].includes(deviceType);
 
   return (
     <div className={introHeader}>
@@ -79,6 +88,16 @@ const LanguageComponent = (props: ILanguageProp) => {
                 >
                   Learn Now
                 </YALSButton>
+
+                {isMobile && demoLink && (
+                  <YALSButton
+                    variant={YALSButtonVariantTypes.Secondary}
+                    onClick={handleRedirectToDemo}
+                    className='ms-5'
+                  >
+                    Demoes
+                  </YALSButton>
+                )}
               </div>
             </YalsFlex>
           </Col>

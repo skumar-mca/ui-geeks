@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
 
 export interface ILanguageCarousalItemType {
   content: ReactNode | string;
@@ -12,4 +13,5 @@ export interface ILanguageProp {
   homePagePath: string;
   theme: string;
   demoComponent?: ReactNode;
+  demoLink?: IMenuItem;
 }

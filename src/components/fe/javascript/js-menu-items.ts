@@ -89,3 +89,11 @@ export const JS_ROUTE_PATH: Array<IMenuItem> = [
     label: 'Iterators and Generators'
   }
 ];
+
+export const JS_PRIMARY_ROUTES = {
+  HOME_PAGE: { url: '/fe/javascript-home', label: 'React' },
+  DEMO: {
+    url: 'fe/demoes/javascript',
+    label: 'JavaScript Demoes'
+  }
+};

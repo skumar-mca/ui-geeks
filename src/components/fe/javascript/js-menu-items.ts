@@ -92,6 +92,8 @@ export const JS_ROUTE_PATH: Array<IMenuItem> = [
 
 export const JS_PRIMARY_ROUTES = {
   HOME_PAGE: { url: '/fe/javascript-home', label: 'React' },
+  ARRAY: `${routePrefix}arrays`,
+  STRING: `${routePrefix}data-types?qtext=String`,
   DEMO: {
     url: 'fe/demoes/javascript',
     label: 'JavaScript Demoes'

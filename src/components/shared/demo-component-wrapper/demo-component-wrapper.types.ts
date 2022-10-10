@@ -6,6 +6,10 @@ export interface IDemComponentItemType {
   component: ReactNode;
   code: string;
   codeLanguage?: string;
+  moreDetail: {
+    label: string | ReactNode;
+    link: string;
+  };
 }
 export interface IDemoWrapperProps {
   demoComponentList: Array<IDemComponentItemType>;

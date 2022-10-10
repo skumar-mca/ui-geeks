@@ -10,10 +10,19 @@
   height: 100%;
   text-align: left;
   flex: 1 1 35px;
+  .more-detail-info {
+    margin-top: -12px;
+    margin-left: -10px;
+    .yals-btn {
+      font-size: 0.8rem;
+      color: $lightGrayAlt;
+    }
+  }
 
   h5 {
     margin-bottom: 5px;
     margin-top: 5px !important;
+    color: $purple !important;
   }
 
   .hint {
@@ -46,6 +55,7 @@
 
     .key-value {
       font-weight: bold;
+      float: right;
     }
   }
 
@@ -76,7 +86,7 @@
   }
 
   .back-button {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     .label {
       font-size: 1.8rem;
       color: $h2Color;
@@ -88,6 +98,9 @@
 }
 
 .full-page-demo {
+  margin-left: -10px;
+  margin-right: -10px;
+
   .demo-view {
     max-height: 100% !important;
   }

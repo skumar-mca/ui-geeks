@@ -6,4 +6,5 @@ export interface ITextCarousalItemType {
 
 export interface ITextCarousalProps {
   contentList: Array<ITextCarousalItemType>;
+  uniqueKey: string;
 }

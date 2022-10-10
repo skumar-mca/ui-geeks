@@ -46,16 +46,25 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
     }
   };
 
-  const redirectToHomePage = () => {
-    if (homePage) {
-      navigate(homePage);
+  const navigateToURL = (url?: string) => {
+    if (url) {
+      navigate(url);
     }
   };
+  const redirectToHomePage = () => {
+    navigateToURL(homePage);
+  };
+
+  const redirectToMoreDetailPage = () => {
+    navigateToURL(currentElemnt.moreDetail.link);
+  };
+
+  const currentElemnt = demoComponentList[currentIndex];
 
   return (
     <div
       className={`demo-component ${homePageLabel ? 'full-page-demo' : ''}`}
-      key={`demo-${demoComponentList[currentIndex].id}`}
+      key={`demo-${currentElemnt.id}`}
     >
       <YalsFlex
         flexDirection={FlexDirectionTypes.Column}
@@ -70,38 +79,45 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
             </YalsButton>
           )}
 
-          <Heading as='h5'>{demoComponentList[currentIndex].label}</Heading>
+          <Heading as='h5'>{currentElemnt.label}</Heading>
+          {currentElemnt.moreDetail && (
+            <div className='more-detail-info'>
+              <YalsButton
+                variant={YALSButtonVariantTypes.Link}
+                onClick={redirectToMoreDetailPage}
+              >
+                {currentElemnt?.moreDetail.label}
+              </YalsButton>
+            </div>
+          )}
 
           {viewMode === DemoViewType.VIEW && (
-            <div className='demo-view'>
-              {demoComponentList[currentIndex].component}
-            </div>
+            <div className='demo-view'>{currentElemnt.component}</div>
           )}
 
           {viewMode === DemoViewType.CODE && (
             <Code
               language={
-                demoComponentList[currentIndex].codeLanguage ||
-                CodeLanguageTypes.JavaScript
+                currentElemnt.codeLanguage || CodeLanguageTypes.JavaScript
               }
             >
-              {demoComponentList[currentIndex].code}
+              {currentElemnt.code}
             </Code>
           )}
         </div>
 
         <Row className='action-button-row'>
-          <Col sm={6} className='view-mode-col'>
+          <Col sm={6} md={6} xs={6} lg={6} className='view-mode-col'>
             <YalsButton
               variant={YALSButtonVariantTypes.Primary}
               onClick={toggleViewMode}
             >
-              {viewMode === DemoViewType.CODE ? 'See Demo' : 'See Code'}
+              {viewMode === DemoViewType.CODE ? 'Show Demo' : 'Show Code'}
             </YalsButton>
           </Col>
 
           {demoComponentList.length > 1 && (
-            <Col sm={6} className='view-mode-col'>
+            <Col sm={6} md={6} xs={6} lg={6} className='view-mode-col'>
               <YalsFlex justifyContent={FlexJustifyContentTypes.End}>
                 <YalsButton
                   variant={YALSButtonVariantTypes.Light}

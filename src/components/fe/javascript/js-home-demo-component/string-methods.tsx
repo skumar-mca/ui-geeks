@@ -11,6 +11,8 @@ const JSHomeDemoStringMethods = () => {
   const numberOfWords = () => inputValue.split(' ').length;
   const getLowerCaseValue = () => inputValue.toLowerCase();
   const getUpperCaseValue = () => inputValue.toUpperCase();
+  const substr = (startIndex: number, endIndex: number) =>
+    inputValue.substring(startIndex, endIndex);
 
   const titleCase = () =>
     inputValue.replace(
@@ -27,7 +29,6 @@ const JSHomeDemoStringMethods = () => {
     <>
       <YALSInput
         id='string_value'
-        label='Enter string value'
         placeHolder='Enter string value...'
         value={inputValue}
         onChange={onHandleValueChange}
@@ -66,6 +67,11 @@ const JSHomeDemoStringMethods = () => {
               <span className='key-label'>Reverse:</span>
               <span className='key-value'>{printReverse()}</span>
             </div>
+
+            <div className='result-item'>
+              <span className='key-label'>Substring:</span>
+              <span className='key-value'>{substr(2, 10)}</span>
+            </div>
           </Para>
         )}
       </div>
@@ -75,24 +81,27 @@ const JSHomeDemoStringMethods = () => {
 
 export default JSHomeDemoStringMethods;
 
-export const JSHomeDemoStringMethodsCode = `const getLength = () => 
+export const JSHomeDemoStringMethodsCode = `const getLength = inputValue => 
   inputValue.length;
 
-const numberOfWords = () => 
+const numberOfWords = inputValue => 
   inputValue.split(' ').length;
 
-const getLowerCaseValue = () => 
+const getLowerCaseValue = inputValue => 
   inputValue.toLowerCase();
 
-const getUpperCaseValue = () => 
+const getUpperCaseValue = inputValue => 
   inputValue.toUpperCase();
 
-const titleCase = () =>
+const titleCase = inputValue =>
   inputValue.replace(
     /\w\S*/g,
     (txt) => txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase()
   );
 
-const printReverse = () => inputValue.split('')
+const substr = (inputValue, startIndex, endIndex) =>
+  inputValue.substring(startIndex, endIndex);
+
+const printReverse = inputValue => inputValue.split('')
   .reverse().join('');
 `;

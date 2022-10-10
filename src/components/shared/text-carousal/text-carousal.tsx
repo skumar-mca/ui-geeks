@@ -11,7 +11,7 @@ import './text-carousal.scss';
 import { ITextCarousalProps } from './text-carousal.types';
 
 const RenderCarousalPager = (props: any) => {
-  const { index, totalItems, setContentIndex } = props;
+  const { index, totalItems, setContentIndex, uniqueKey } = props;
 
   const numArr = Array.from(Array(totalItems).keys());
 
@@ -28,6 +28,7 @@ const RenderCarousalPager = (props: any) => {
       {numArr.map((itm: number) => {
         return (
           <div
+            key={`${uniqueKey}-${itm}`}
             onClick={onHandleClick.bind(this, itm)}
             className={`circle ${itm === index ? 'circle-current' : ''}`}
           ></div>
@@ -37,7 +38,7 @@ const RenderCarousalPager = (props: any) => {
   );
 };
 const TextCarousal = (props: ITextCarousalProps) => {
-  const { contentList } = props;
+  const { contentList, uniqueKey = '' } = props;
 
   const textCarousalClasses = classNames({
     [`${AppPrefix}-text-carousal`]: true
@@ -83,6 +84,7 @@ const TextCarousal = (props: ITextCarousalProps) => {
       <RenderCarousalPager
         index={contentIndex}
         totalItems={contentList.length}
+        uniqueKey={uniqueKey}
         setContentIndex={setContentIndex}
       />
     </YalsFlex>

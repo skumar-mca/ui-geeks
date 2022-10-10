@@ -77,7 +77,7 @@ const LanguageComponent = (props: ILanguageProp) => {
                 <h2>{title}</h2>
                 <h5>{tag}</h5>
                 <div className='carousal-content'>
-                  <TextCarousal contentList={contentList} />
+                  <TextCarousal contentList={contentList} uniqueKey={theme} />
                 </div>
 
                 <NewLine />
@@ -93,7 +93,7 @@ const LanguageComponent = (props: ILanguageProp) => {
                   <YALSButton
                     variant={YALSButtonVariantTypes.Secondary}
                     onClick={handleRedirectToDemo}
-                    className='ms-5'
+                    className='ms-2'
                   >
                     Demoes
                   </YALSButton>

@@ -69,7 +69,7 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
       <YalsFlex
         flexDirection={FlexDirectionTypes.Column}
         justifyContent={FlexJustifyContentTypes.SpaceBetween}
-        height='100%'
+        height={homePageLabel ? 'auto' : '100%'}
       >
         <div>
           {homePageLabel && (

@@ -7,7 +7,16 @@ import './yals-input.scss';
 import { IYALSInputProps } from './yals-input.types';
 
 const YALSInput = (props: IYALSInputProps) => {
-  const { id, value, label, placeHolder, icon, onChange, onKeyUp } = props;
+  const {
+    id,
+    value,
+    type = 'text',
+    label,
+    placeHolder,
+    icon,
+    onChange,
+    onKeyUp
+  } = props;
 
   const inputClasses = classNames({
     [`${AppPrefix}-input`]: true
@@ -24,6 +33,7 @@ const YALSInput = (props: IYALSInputProps) => {
       <InputGroup>
         <Form.Control
           id={id}
+          type={type}
           placeholder={placeHolder}
           aria-label={id}
           aria-describedby={id}

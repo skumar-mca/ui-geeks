@@ -86,12 +86,10 @@ const ReactHomeDemoStateUpdate = () => {
         </Row>
 
         <NewLine />
-        <div className='result-item'>
-          <span className='key-label'>Form Values:</span>
-          <span className='key-value'>
-            {JSON.stringify(inputValue, null, ' ')}
-          </span>
-        </div>
+
+        <B>Form Values:</B>
+        <NewLine />
+        <span className='text-sm'>{JSON.stringify(inputValue, null, ' ')}</span>
         <NewLine />
       </div>
     </>
@@ -129,7 +127,7 @@ export const ReactHomeDemoStateUpdateCode = `const ReactStateUpdateDemo = () => 
   return (
     <>
       <button onClick={increment}>Increment</button>
-      <span><i>Counter<i>: </span>
+      <span><i>Counter</i>: </span>
       <span><b>{counter}</b></span>
       <button onClick={decrement}>Decrement</button>
 
@@ -139,7 +137,6 @@ export const ReactHomeDemoStateUpdateCode = `const ReactStateUpdateDemo = () => 
         id='language'
         placeHolder='Enter value...'
         value={inputValue.language}
-      
         onChange={onHandleChange}
       />
 
@@ -152,7 +149,7 @@ export const ReactHomeDemoStateUpdateCode = `const ReactStateUpdateDemo = () => 
         onChange={onHandleChange}
       />
       
-      <span><i>Form Values: <i></span>
+      <i>Form Values: </i>
       <span>
         <b>
           {JSON.stringify(inputValue, null, ' ')}

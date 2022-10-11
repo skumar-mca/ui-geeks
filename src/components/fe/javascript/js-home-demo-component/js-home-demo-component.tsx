@@ -23,7 +23,7 @@ const JSHomeDemoComponent = () => {
       component: <JSHomeDemoArrayMethods />,
       code: JSHomeDemoArrayMethodsCode,
       moreDetail: {
-        label: 'Learn more about Array methods here.',
+        label: 'Learn more about Array methods',
         link: JS_PRIMARY_ROUTES.ARRAY
       }
     },
@@ -33,7 +33,7 @@ const JSHomeDemoComponent = () => {
       component: <JSHomeDemoDeviceInfo />,
       code: JSHomeDemoDeviceInfoCode,
       moreDetail: {
-        label: 'Learn other powerfull features of JavaScript.',
+        label: 'Learn other powerfull features of JavaScript',
         link: JS_PRIMARY_ROUTES.HOME_PAGE.url
       }
     },
@@ -43,7 +43,7 @@ const JSHomeDemoComponent = () => {
       component: <JSHomeDemoStringMethods />,
       code: JSHomeDemoStringMethodsCode,
       moreDetail: {
-        label: 'Learn more about String methods here.',
+        label: 'Learn more about String methods',
         link: JS_PRIMARY_ROUTES.STRING
       }
     }

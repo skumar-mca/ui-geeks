@@ -9,9 +9,9 @@
   margin-right: 10px;
   height: 100%;
   text-align: left;
-  flex: 1 1 35px;
+  // flex: 1 1 35px;
   .more-detail-info {
-    margin-top: -12px;
+    margin-top: -10px;
     margin-left: -10px;
     .yals-btn {
       font-size: 0.8rem;
@@ -60,8 +60,6 @@
   }
 
   .view-mode-col {
-    padding: 5px;
-
     .prev {
       margin-right: 5px;
     }
@@ -100,7 +98,7 @@
 .full-page-demo {
   margin-left: -10px;
   margin-right: -10px;
-
+  padding: 10px 15px 10px 15px;
   .demo-view {
     max-height: 100% !important;
   }

@@ -20,7 +20,12 @@ import {
   IDemoWrapperProps
 } from './demo-component-wrapper.types';
 const DemoComponentWrapper = (props: IDemoWrapperProps) => {
-  const { demoComponentList, homePage, homePageLabel } = props;
+  const {
+    demoComponentList,
+    homePage,
+    homePageLabel,
+    isSplitView = false
+  } = props;
 
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,14 +61,18 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
   };
 
   const redirectToMoreDetailPage = () => {
-    navigateToURL(currentElemnt.moreDetail.link);
+    if (currentElemnt.moreDetail) {
+      navigateToURL(currentElemnt.moreDetail.link);
+    }
   };
 
   const currentElemnt = demoComponentList[currentIndex];
 
   return (
     <div
-      className={`demo-component ${homePageLabel ? 'full-page-demo' : ''}`}
+      className={`demo-component ${
+        homePageLabel || isSplitView ? 'full-page-demo' : ''
+      } `}
       key={`demo-${currentElemnt.id}`}
     >
       <YalsFlex
@@ -79,7 +88,10 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
             </YalsButton>
           )}
 
-          <Heading as='h5'>{currentElemnt.label}</Heading>
+          {currentElemnt.label && (
+            <Heading as='h5'>{currentElemnt.label}</Heading>
+          )}
+
           {currentElemnt.moreDetail && (
             <div className='more-detail-info'>
               <YalsButton
@@ -91,33 +103,53 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
             </div>
           )}
 
-          {viewMode === DemoViewType.VIEW && (
-            <div className='demo-view'>{currentElemnt.component}</div>
-          )}
+          <Row>
+            {(viewMode === DemoViewType.VIEW || isSplitView) && (
+              <Col
+                xs={isSplitView ? 6 : 12}
+                sm={isSplitView ? 6 : 12}
+                lg={isSplitView ? 6 : 12}
+              >
+                <div className='demo-view'>{currentElemnt.component}</div>
+              </Col>
+            )}
 
-          {viewMode === DemoViewType.CODE && (
-            <Code
-              language={
-                currentElemnt.codeLanguage || CodeLanguageTypes.JavaScript
-              }
+            <Col
+              xs={isSplitView ? 12 : 12}
+              sm={isSplitView ? 6 : 12}
+              lg={isSplitView ? 6 : 12}
             >
-              {currentElemnt.code}
-            </Code>
-          )}
+              {(viewMode === DemoViewType.CODE || isSplitView) && (
+                <Code
+                  language={
+                    currentElemnt.codeLanguage || CodeLanguageTypes.JavaScript
+                  }
+                >
+                  {currentElemnt.code}
+                </Code>
+              )}
+            </Col>
+          </Row>
         </div>
 
-        <Row className='action-button-row'>
-          <Col sm={6} md={6} xs={6} lg={6} className='view-mode-col'>
-            <YalsButton
-              variant={YALSButtonVariantTypes.Primary}
-              onClick={toggleViewMode}
-            >
-              {viewMode === DemoViewType.CODE ? 'Show Demo' : 'Show Code'}
-            </YalsButton>
-          </Col>
+        <Row
+          className={`${
+            demoComponentList.length > 1 ? 'action-button-row' : ''
+          }`}
+        >
+          {!isSplitView && (
+            <Col sm={6} md={6} xs={12} lg={6} className='view-mode-col'>
+              <YalsButton
+                variant={YALSButtonVariantTypes.Primary}
+                onClick={toggleViewMode}
+              >
+                {viewMode === DemoViewType.CODE ? 'Show Demo' : 'Show Code'}
+              </YalsButton>
+            </Col>
+          )}
 
           {demoComponentList.length > 1 && (
-            <Col sm={6} md={6} xs={6} lg={6} className='view-mode-col'>
+            <Col sm={6} md={6} xs={12} lg={6} className='view-mode-col'>
               <YalsFlex justifyContent={FlexJustifyContentTypes.End}>
                 <YalsButton
                   variant={YALSButtonVariantTypes.Light}

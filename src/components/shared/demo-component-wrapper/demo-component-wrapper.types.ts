@@ -2,11 +2,11 @@ import { ReactNode } from 'react';
 
 export interface IDemComponentItemType {
   id: number;
-  label: string | ReactNode;
+  label?: string | ReactNode;
   component: ReactNode;
   code: string;
   codeLanguage?: string;
-  moreDetail: {
+  moreDetail?: {
     label: string | ReactNode;
     link: string;
   };
@@ -15,6 +15,7 @@ export interface IDemoWrapperProps {
   demoComponentList: Array<IDemComponentItemType>;
   homePage?: string;
   homePageLabel?: string;
+  isSplitView?: boolean;
 }
 
 export const DemoViewType = {

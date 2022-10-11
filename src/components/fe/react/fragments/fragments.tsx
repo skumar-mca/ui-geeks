@@ -36,10 +36,10 @@ const ReactFragments = () => {
       <Para>
         <IU>Syntax:</IU>
         <Code language={CodeLanguageTypes.JSX}>{`<React.Fragment>
-    <ChildComponent1 />
-    <ChildComponent2 />
-    ………………………………….
-    <ChildComponentN />
+    <Child1 />
+    <Child2 />
+    …………………………
+    <ChildN />
 </React.Fragment>
 `}</Code>
       </Para>
@@ -48,12 +48,22 @@ const ReactFragments = () => {
       <Para>
         <IU>Syntax:</IU>
         <Code language={CodeLanguageTypes.JSX}>{`<>
-    <ChildComponent1 />
-    <ChildComponent2 />
-    ………………………………….
-    <ChildComponentN />
+    <Child1 />
+    <Child2 />
+    …………………………
+    <ChildN />
 </>
 `}</Code>
+      </Para>
+
+      <Para>
+        <IU>Example:</IU>
+        <Code language={CodeLanguageTypes.JSX}>{`const FragmentDemo = () => {
+  return <>
+      <span>Username: John</span>
+      <span>Age: 25</span>
+  </>
+}`}</Code>
       </Para>
     </Container>
   );

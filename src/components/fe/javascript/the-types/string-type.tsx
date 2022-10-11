@@ -22,6 +22,18 @@ const JSStringType = () => {
 "hello".charAt(1)   // 'e'
 "hello, world".replace("world", "Javascript") // "hello, JavaScript"
 "hello".toUpperCase() // "HELLO"
+"hello".startsWith("s") // false
+"hello".endsWith("o") // true
+"hello".endsWith("O") // false
+"hello".includes("lo") // false
+"hello".repeat(2) // "hellohello"
+"hello".split('') // ["h", "e", "l", "l", "o"]
+"hello".padStart(10,'*')  // "hello".padStart(10,'*')
+"hello".padEnd(10,'*')  // "hello*****"
+
+" hello ".trim()  // "hello"
+" hello ".trimLeft()  // "hello "
+" hello ".trimRight() // " hello"
 
 "hello".substr(1, 2)    // "el"
 // Returns 2 characters, starting at index 1

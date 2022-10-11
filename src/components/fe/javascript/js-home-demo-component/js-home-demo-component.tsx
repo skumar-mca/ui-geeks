@@ -18,16 +18,6 @@ const JSHomeDemoComponent = () => {
 
   const demoComponents = [
     {
-      id: 3,
-      label: 'Array methods.',
-      component: <JSHomeDemoArrayMethods />,
-      code: JSHomeDemoArrayMethodsCode,
-      moreDetail: {
-        label: 'Learn more about Array methods',
-        link: JS_PRIMARY_ROUTES.ARRAY
-      }
-    },
-    {
       id: 1,
       label: 'Know your device.',
       component: <JSHomeDemoDeviceInfo />,
@@ -45,6 +35,16 @@ const JSHomeDemoComponent = () => {
       moreDetail: {
         label: 'Learn more about String methods',
         link: JS_PRIMARY_ROUTES.STRING
+      }
+    },
+    {
+      id: 3,
+      label: 'Array methods.',
+      component: <JSHomeDemoArrayMethods />,
+      code: JSHomeDemoArrayMethodsCode,
+      moreDetail: {
+        label: 'Learn more about Array methods',
+        link: JS_PRIMARY_ROUTES.ARRAY
       }
     }
   ];

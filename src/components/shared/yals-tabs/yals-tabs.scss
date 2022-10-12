@@ -1,0 +1,39 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-tabs {
+  background-color: $lightGray;
+  border-radius: 2px;
+  .nav-tabs {
+    border-bottom: 1px solid $bodyBgColor;
+    font-size: 0.9rem;
+    .nav-link {
+      height: 30px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      padding-top: 3px;
+      &:hover {
+        border-color: transparent;
+        border-bottom: 1px solid $brightGreen;
+      }
+    }
+
+    .nav-link.active {
+      border-bottom: 1px solid $purple;
+      background-color: transparent;
+    }
+  }
+
+  .tab-content {
+    padding: 10px;
+    border-bottom: 1px solid $lightGray;
+    border-left: 1px solid $lightGray;
+    border-right: 1px solid $lightGray;
+  }
+
+  .#{$appPrefix}-code {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import useCurrentPath from '../../../../custom-hooks/useCurrentRoute';
+import Code from '../../../shared/code/code';
 import DemoComponentWrapper from '../../../shared/demo-component-wrapper/demo-component-wrapper';
 import { JS_PRIMARY_ROUTES } from '../js-menu-items';
 import JSHomeDemoArrayMethods, {
@@ -20,32 +21,62 @@ const JSHomeDemoComponent = () => {
     {
       id: 1,
       label: 'Know your device.',
-      component: <JSHomeDemoDeviceInfo />,
-      code: JSHomeDemoDeviceInfoCode,
       moreDetail: {
         label: 'Learn other powerfull features of JavaScript',
         link: JS_PRIMARY_ROUTES.HOME_PAGE.url
-      }
+      },
+      tabs: [
+        {
+          id: 1,
+          content: <JSHomeDemoDeviceInfo />,
+          label: 'Output'
+        },
+        {
+          id: 2,
+          content: <Code>{JSHomeDemoDeviceInfoCode}</Code>,
+          label: 'Code'
+        }
+      ]
     },
     {
       id: 2,
       label: 'Magical manipulation of string.',
-      component: <JSHomeDemoStringMethods />,
-      code: JSHomeDemoStringMethodsCode,
       moreDetail: {
         label: 'Learn more about String methods',
         link: JS_PRIMARY_ROUTES.STRING
-      }
+      },
+      tabs: [
+        {
+          id: 1,
+          content: <JSHomeDemoStringMethods />,
+          label: 'Output'
+        },
+        {
+          id: 2,
+          content: <Code>{JSHomeDemoStringMethodsCode}</Code>,
+          label: 'Code'
+        }
+      ]
     },
     {
       id: 3,
       label: 'Array methods.',
-      component: <JSHomeDemoArrayMethods />,
-      code: JSHomeDemoArrayMethodsCode,
       moreDetail: {
         label: 'Learn more about Array methods',
         link: JS_PRIMARY_ROUTES.ARRAY
-      }
+      },
+      tabs: [
+        {
+          id: 1,
+          content: <JSHomeDemoArrayMethods />,
+          label: 'Output'
+        },
+        {
+          id: 2,
+          content: <Code>{JSHomeDemoArrayMethodsCode}</Code>,
+          label: 'Code'
+        }
+      ]
     }
   ];
 

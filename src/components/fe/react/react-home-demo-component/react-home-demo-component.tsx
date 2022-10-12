@@ -1,5 +1,6 @@
 import React from 'react';
 import useCurrentPath from '../../../../custom-hooks/useCurrentRoute';
+import Code from '../../../shared/code/code';
 import { CodeLanguageTypes } from '../../../shared/code/code.types';
 import DemoComponentWrapper from '../../../shared/demo-component-wrapper/demo-component-wrapper';
 import { REACT_PRIMARY_ROUTES } from '../react-menu-items';
@@ -18,24 +19,50 @@ const ReactHomeDemoComponent = () => {
     {
       id: 1,
       label: 'React state update.',
-      component: <ReactHomeDemoStateUpdate />,
-      code: ReactHomeDemoStateUpdateCode,
-      codeLanguage: CodeLanguageTypes.JSX,
       moreDetail: {
         label: 'Learn more about state updates',
         link: REACT_PRIMARY_ROUTES.STATE
-      }
+      },
+      tabs: [
+        {
+          id: 1,
+          content: <ReactHomeDemoStateUpdate />,
+          label: 'Output'
+        },
+        {
+          id: 2,
+          content: (
+            <Code language={CodeLanguageTypes.JSX}>
+              {ReactHomeDemoStateUpdateCode}
+            </Code>
+          ),
+          label: 'Code'
+        }
+      ]
     },
     {
       id: 2,
       label: 'Reactive DOM manipulation.',
-      component: <ReactHomeDemoBackgroundChange />,
-      code: ReactHomeDemoBackgroundChangeCode,
-      codeLanguage: CodeLanguageTypes.JSX,
       moreDetail: {
         label: 'Learn more about DOM manipulation',
         link: REACT_PRIMARY_ROUTES.HOME_PAGE.url
-      }
+      },
+      tabs: [
+        {
+          id: 1,
+          content: <ReactHomeDemoBackgroundChange />,
+          label: 'Output'
+        },
+        {
+          id: 2,
+          content: (
+            <Code language={CodeLanguageTypes.JSX}>
+              {ReactHomeDemoBackgroundChangeCode}
+            </Code>
+          ),
+          label: 'Code'
+        }
+      ]
     }
   ];
 

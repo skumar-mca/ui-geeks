@@ -1,53 +1,29 @@
 import React, { useState } from 'react';
-import Col from 'react-bootstrap/esm/Col';
-import Row from 'react-bootstrap/esm/Row';
 import { useNavigate } from 'react-router-dom';
 import ChevronLeft from '../../icons/chevron-left';
 import ChevronRight from '../../icons/chevron-right';
-import Code from '../code/code';
-import { CodeLanguageTypes } from '../code/code.types';
-import Heading from '../heading/heading';
+import InfoIcon from '../../icons/info-icon';
 import YalsButton from '../yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../yals-button/yals-button.types';
-import YalsFlex from '../yals-flex/yals-flex';
-import {
-  FlexDirectionTypes,
-  FlexJustifyContentTypes
-} from '../yals-flex/yals-flex.types';
+import YALSTabs from '../yals-tabs/yals-tabs';
 import './demo-component-wrapper.scss';
-import {
-  DemoViewType,
-  IDemoWrapperProps
-} from './demo-component-wrapper.types';
+import { IDemoWrapperProps } from './demo-component-wrapper.types';
 const DemoComponentWrapper = (props: IDemoWrapperProps) => {
-  const {
-    demoComponentList,
-    homePage,
-    homePageLabel,
-    isSplitView = false
-  } = props;
+  const { demoComponentList, homePage, homePageLabel } = props;
 
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [viewMode, setViewMode] = useState(DemoViewType.VIEW);
-
-  const toggleViewMode = () => {
-    setViewMode((prev: string) =>
-      prev === DemoViewType.CODE ? DemoViewType.VIEW : DemoViewType.CODE
-    );
-  };
+  const currentComponent = demoComponentList[currentIndex];
 
   const onPrevClick = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prev: number) => prev - 1);
-      setViewMode(() => DemoViewType.VIEW);
     }
   };
 
   const onNextClick = () => {
     if (currentIndex < demoComponentList.length - 1) {
       setCurrentIndex((prev: number) => prev + 1);
-      setViewMode(() => DemoViewType.VIEW);
     }
   };
 
@@ -56,127 +32,89 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
       navigate(url);
     }
   };
+
   const redirectToHomePage = () => {
     navigateToURL(homePage);
   };
 
   const redirectToMoreDetailPage = () => {
-    if (currentElemnt.moreDetail) {
-      navigateToURL(currentElemnt.moreDetail.link);
+    if (currentComponent.moreDetail) {
+      navigateToURL(currentComponent.moreDetail.link);
     }
   };
 
-  const currentElemnt = demoComponentList[currentIndex];
-
   return (
     <div
-      className={`demo-component ${
-        homePageLabel || isSplitView ? 'full-page-demo' : ''
-      } `}
-      key={`demo-${currentElemnt.id}`}
+      className={`demo-component ${homePageLabel ? 'full-page-demo' : ''} `}
+      key={`demo-${currentComponent.id}`}
     >
-      <YalsFlex
-        flexDirection={FlexDirectionTypes.Column}
-        justifyContent={FlexJustifyContentTypes.SpaceBetween}
-        height={'100%'}
-      >
+      <div>
         <div>
-          {homePageLabel && (
-            <YalsButton onClick={redirectToHomePage} className='back-button'>
-              <ChevronLeft />
-              <span className='label'>{homePageLabel}</span>
-            </YalsButton>
-          )}
-
-          {currentElemnt.label && (
-            <Heading as='h5'>{currentElemnt.label}</Heading>
-          )}
-
-          {currentElemnt.moreDetail && (
-            <div className='more-detail-info'>
-              <YalsButton
-                variant={YALSButtonVariantTypes.Link}
-                onClick={redirectToMoreDetailPage}
-              >
-                {currentElemnt?.moreDetail.label}
+          <>
+            {homePageLabel && (
+              <YalsButton onClick={redirectToHomePage} className='back-button'>
+                <ChevronLeft />
+                <span className='label'>{homePageLabel}</span>
               </YalsButton>
-            </div>
-          )}
-
-          <Row>
-            {(viewMode === DemoViewType.VIEW || isSplitView) && (
-              <Col
-                xs={isSplitView ? 6 : 12}
-                sm={isSplitView ? 6 : 12}
-                lg={isSplitView ? 6 : 12}
-              >
-                <div className='demo-view'>{currentElemnt.component}</div>
-              </Col>
             )}
 
-            <Col
-              xs={isSplitView ? 12 : 12}
-              sm={isSplitView ? 6 : 12}
-              lg={isSplitView ? 6 : 12}
-            >
-              {(viewMode === DemoViewType.CODE || isSplitView) && (
-                <Code
-                  language={
-                    currentElemnt.codeLanguage || CodeLanguageTypes.JavaScript
-                  }
-                >
-                  {currentElemnt.code}
-                </Code>
-              )}
-            </Col>
-          </Row>
+            <div>
+              <>
+                {currentComponent.label && (
+                  <>
+                    <h5>
+                      {currentComponent.label}
+                      {currentComponent.moreDetail && (
+                        <YalsButton
+                          variant={YALSButtonVariantTypes.Clear}
+                          onClick={redirectToMoreDetailPage}
+                          className='more-info-icon'
+                          title='See more details'
+                        >
+                          <InfoIcon
+                            height={25}
+                            width={25}
+                            fillColor={'rgba(53, 195, 124, 1)'}
+                          />
+                        </YalsButton>
+                      )}
+                    </h5>
+                  </>
+                )}
+
+                {demoComponentList.length > 1 && (
+                  <div className='prev-next-btn'>
+                    <YalsButton
+                      variant={YALSButtonVariantTypes.Secondary}
+                      disabled={currentIndex <= 0}
+                      className='prev'
+                      onClick={onPrevClick}
+                      title='See pevious demo'
+                    >
+                      <ChevronLeft height={16} width={16} fillColor='white' />
+                    </YalsButton>
+
+                    <YalsButton
+                      variant={YALSButtonVariantTypes.Primary}
+                      disabled={currentIndex === demoComponentList.length - 1}
+                      className='next'
+                      onClick={onNextClick}
+                      title='See next demo'
+                    >
+                      <ChevronRight fillColor='white' height={16} width={16} />
+                    </YalsButton>
+                  </div>
+                )}
+              </>
+            </div>
+          </>
+
+          <YALSTabs
+            id={`${currentComponent.id}`}
+            tabs={currentComponent.tabs}
+          />
         </div>
-
-        <Row
-          className={`${
-            demoComponentList.length > 1 ? 'action-button-row' : ''
-          }`}
-        >
-          {!isSplitView && (
-            <Col sm={6} md={6} xs={12} lg={6} className='view-mode-col'>
-              <YalsButton
-                variant={YALSButtonVariantTypes.Primary}
-                onClick={toggleViewMode}
-              >
-                {viewMode === DemoViewType.CODE ? 'Show Demo' : 'Show Code'}
-              </YalsButton>
-            </Col>
-          )}
-
-          {demoComponentList.length > 1 && (
-            <Col sm={6} md={6} xs={12} lg={6} className='view-mode-col'>
-              <YalsFlex justifyContent={FlexJustifyContentTypes.End}>
-                <YalsButton
-                  variant={YALSButtonVariantTypes.Light}
-                  disabled={currentIndex <= 0}
-                  block
-                  className='prev'
-                  onClick={onPrevClick}
-                  title='See pevious demo'
-                >
-                  <ChevronLeft />
-                </YalsButton>
-
-                <YalsButton
-                  variant={YALSButtonVariantTypes.Dark}
-                  disabled={currentIndex === demoComponentList.length - 1}
-                  block
-                  className='next'
-                  onClick={onNextClick}
-                  title='See next demo'
-                >
-                  <ChevronRight fillColor='white' />
-                </YalsButton>
-              </YalsFlex>
-            </Col>
-          )}
-        </Row>
-      </YalsFlex>
+      </div>
     </div>
   );
 };

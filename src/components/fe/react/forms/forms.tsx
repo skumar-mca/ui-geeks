@@ -11,7 +11,7 @@ import ReactUnControlledComponent from '../uncontrolled-component/uncontrolled-c
 import ReactFormHandlingEvents from './handling-events';
 
 const ReactForms = () => {
-  useDOMTitle('YALS: React | Forms');
+  useDOMTitle('UI-Geeks: React | Forms');
 
   return (
     <Container>

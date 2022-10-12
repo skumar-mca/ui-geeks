@@ -36,7 +36,7 @@ const loopStatement = [
 ];
 
 const JSLoops = () => {
-  useDOMTitle('YALS: JavaScript | Looping/Iteration statements');
+  useDOMTitle('UI-Geeks: JavaScript | Looping/Iteration statements');
 
   return (
     <>

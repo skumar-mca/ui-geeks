@@ -19,19 +19,19 @@
       text-align: left;
     }
 
-    .yals-btn {
+    .#{$appPrefix}-btn {
       text-align: left;
     }
   }
 
   .next-btn-wrapper {
     text-align: right;
-    .yals-btn {
+    .#{$appPrefix}-btn {
       text-align: right;
     }
     .next-button {
       text-align: right;
-      .yals-text-bold {
+      .#{$appPrefix}-text-bold {
         margin-right: 15px;
       }
     }

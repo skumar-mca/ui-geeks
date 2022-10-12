@@ -21,7 +21,7 @@ const classDefType = [
   }
 ];
 const JSClass = () => {
-  useDOMTitle('YALS: JavaScript | Class');
+  useDOMTitle('UI-Geeks: JavaScript | Class');
 
   return (
     <Container>

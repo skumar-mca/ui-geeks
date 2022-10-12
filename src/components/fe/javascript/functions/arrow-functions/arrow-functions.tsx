@@ -12,7 +12,7 @@ import JSArrowFunctionsLimitations from './limitations';
 import JSArrowFunctionsReturningObject from './returning-object-literal';
 
 const JSArrowFunctions = () => {
-  useDOMTitle('YALS: JavaScript | Arrow functions');
+  useDOMTitle('UI-Geeks: JavaScript | Arrow functions');
   return (
     <Container>
       <Heading>Arrow functions</Heading>

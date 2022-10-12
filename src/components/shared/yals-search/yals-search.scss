@@ -6,7 +6,7 @@
   width: 100px;
   margin-right: 5px;
 
-  .yals-search-input {
+  .#{$appPrefix}-search-input {
     margin: auto;
     max-width: 250px;
 
@@ -30,7 +30,7 @@
 }
 
 .#{$appPrefix}-search-container {
-  .yals-search-input {
+  .#{$appPrefix}-search-input {
     .input-group-text {
       background-color: #6e45e2;
     }
@@ -52,7 +52,7 @@
 
         flex-grow: inherit;
 
-        .yals-btn {
+        .#{$appPrefix}-btn {
           &:active {
             border: none;
           }
@@ -84,7 +84,7 @@
       }
     }
 
-    h4.yals-heading {
+    h4.#{$appPrefix}-heading {
       margin-left: 10px;
     }
 
@@ -96,7 +96,7 @@
         font-weight: bold;
       }
 
-      .yals-btn {
+      .#{$appPrefix}-btn {
         margin-top: -5px;
       }
     }

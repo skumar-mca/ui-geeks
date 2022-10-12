@@ -11,7 +11,7 @@ import JSPrototypeWithCreate from './prototype-with-create';
 import JSPrototypeWithSetPrototypeOf from './prototype-with-setPrototypeOf';
 
 const JSPrototypeChain = () => {
-  useDOMTitle('YALS: JavaScript | Inheritance and the Prototype chain');
+  useDOMTitle('UI-Geeks: JavaScript | Inheritance and the Prototype chain');
 
   return (
     <Container>

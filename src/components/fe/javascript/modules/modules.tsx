@@ -8,7 +8,7 @@ import JSModulesImport from './import-statement/import-statement';
 import JSModulesIntro from './modules-intro';
 
 const JSModules = () => {
-  useDOMTitle('YALS: JavaScript | Modules');
+  useDOMTitle('UI-Geeks: JavaScript | Modules');
 
   return (
     <Container>

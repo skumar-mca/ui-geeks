@@ -7,7 +7,7 @@ import JSAccessingObjects from './accessing-objects';
 import JSObjectsIntro from './objects-intro';
 
 const JSObjects = () => {
-  useDOMTitle('YALS: JavaScript | Objects');
+  useDOMTitle('UI-Geeks: JavaScript | Objects');
 
   return (
     <Container>

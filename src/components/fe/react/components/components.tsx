@@ -13,7 +13,7 @@ import ReactProps from './props/props';
 import ReactState from './state/state';
 
 const ReactComponents = () => {
-  useDOMTitle('YALS: React | Components');
+  useDOMTitle('UI-Geeks: React | Components');
 
   return (
     <Container>

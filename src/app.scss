@@ -26,26 +26,26 @@ body {
   }
 }
 
-.yals-ordered-list-expanded {
+.#{$appPrefix}-ordered-list-expanded {
   li {
     margin-bottom: 1rem;
   }
 }
 
-.yals-ordered-list {
+.#{$appPrefix}-ordered-list {
   li {
     margin-bottom: 0.5rem;
   }
 }
 
-.yals-left-section {
+.#{$appPrefix}-left-section {
   position: sticky;
   top: 0;
   height: 100%;
   padding-top: 35px;
 }
 
-.yals-content-section {
+.#{$appPrefix}-content-section {
   background-color: $bodyBgColor;
   padding: 0px 10px 0px 10px;
   padding-top: 35px;
@@ -71,7 +71,7 @@ body {
   }
 }
 
-.yals-right-section {
+.#{$appPrefix}-right-section {
   position: sticky;
   top: 0;
   height: 96vh;
@@ -83,13 +83,13 @@ body {
 }
 
 .device-type-mobile {
-  .yals-breadcrumb {
+  .#{$appPrefix}-breadcrumb {
     padding-left: 0px;
   }
-  .yals-container {
+  .#{$appPrefix}-container {
     padding: 0px;
   }
-  .yals-left-section {
+  .#{$appPrefix}-left-section {
     display: none;
   }
 }
@@ -124,7 +124,7 @@ body {
   font-style: italic;
 }
 
-.yals-sep {
+.#{$appPrefix}-sep {
   margin-top: 25px;
   margin-bottom: 25px;
   background-color: $lightGray;

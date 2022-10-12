@@ -9,7 +9,7 @@ import ReactClassComponentProperties from './class-properties';
 import ReactClassPropsIntro from './class-props';
 
 const ReactClassComponents = () => {
-  useDOMTitle('YALS: React | Class Component');
+  useDOMTitle('UI-Geeks: React | Class Component');
 
   return (
     <Container>

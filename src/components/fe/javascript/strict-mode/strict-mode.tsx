@@ -7,7 +7,7 @@ import JSStrictModeIntro from './strict-mode-intro';
 import JSStrictModeRestrictions from './strict-mode-restrictions';
 
 const JSStrictMode = () => {
-  useDOMTitle('YALS: JavaScript | Strict mode');
+  useDOMTitle('UI-Geeks: JavaScript | Strict mode');
 
   return (
     <Container>

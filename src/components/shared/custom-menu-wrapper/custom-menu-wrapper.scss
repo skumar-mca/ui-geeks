@@ -15,7 +15,7 @@
   }
 
   .menu-section {
-    .yals-menu-wrapper {
+    .#{$appPrefix}-menu-wrapper {
       padding: 0 !important;
       .menu-ul {
         li {

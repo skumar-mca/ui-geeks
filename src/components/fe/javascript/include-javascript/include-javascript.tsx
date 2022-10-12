@@ -15,7 +15,7 @@ import JSDeferScriptLoading from './defer-loading';
 import JSScriptLoadingIntro from './script-loading-intro';
 
 const JSInclude = () => {
-  useDOMTitle('YALS: JavaScript | How To Include Code');
+  useDOMTitle('UI-Geeks: JavaScript | How To Include Code');
 
   return (
     <Container>

@@ -4,7 +4,7 @@ import Container from '../../../shared/container/container';
 import ReactRenderPropsIntro from './render-props-intro';
 
 const ReactRenderProps = () => {
-  useDOMTitle('YALS: React | Render Props');
+  useDOMTitle('UI-Geeks: React | Render Props');
   return (
     <Container>
       <ReactRenderPropsIntro />

@@ -7,7 +7,7 @@ import ReactBasicHooks from './basic-hooks';
 import ReactHooksIntro from './hooks-intro';
 
 const ReactHooks = () => {
-  useDOMTitle('YALS: React | Hooks');
+  useDOMTitle('UI-Geeks: React | Hooks');
   return (
     <Container>
       <Heading>Hooks</Heading>

@@ -13,7 +13,7 @@ import JSTernaryOperator from './ternary-operator';
 import JSUnaryOperators from './unary-operators/unary-operators';
 
 const JSOperators = () => {
-  useDOMTitle('YALS: JavaScript | Operators');
+  useDOMTitle('UI-Geeks: JavaScript | Operators');
 
   return (
     <Container>

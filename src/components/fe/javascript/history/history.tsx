@@ -10,7 +10,7 @@ import { HistoryQuestions } from '../questionnaires/history-questionnaire';
 import JSVersionTimeLine from './version-timeline';
 
 const JSHistory = () => {
-  useDOMTitle('YALS: JavaScript | History');
+  useDOMTitle('UI-Geeks: JavaScript | History');
 
   return (
     <Container>

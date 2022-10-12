@@ -1,7 +1,7 @@
 {
-  "name": "yals",
+  "name": "ui-geeks.in",
   "version": "1.0.0",
-  "description": "Yet Another Learning Source",
+  "description": "UI Geeks | UI Learning Platform",
   "main": "src/index.ts",
   "scripts": {
     "start": "webpack serve --open --mode development",

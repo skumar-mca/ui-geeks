@@ -7,7 +7,7 @@ import ReactFunctionComponentIntro from './function-component-intro';
 import ReactStateAddToFunction from './state-with-function';
 
 const ReactFunctionComponents = () => {
-  useDOMTitle('YALS: React | Class Component');
+  useDOMTitle('UI-Geeks: React | Class Component');
 
   return (
     <Container>

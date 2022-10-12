@@ -1,5 +1,7 @@
 export const ImagePaths = {
-  APP_LOGO: 'https://live.staticflickr.com/65535/52404548319_427430c397_n.jpg',
+  APP_LOGO: 'https://live.staticflickr.com/65535/52423809250_e0122b7bfc_o.png',
+  APP_SIGNATURE:
+    'https://live.staticflickr.com/65535/52423640439_79bf09e627_n.jpg',
   JS_Logo: `//live.staticflickr.com/65535/52364799530_6b19c52df1_c.jpg`,
   React_Logo: `//live.staticflickr.com/65535/52364799530_6b19c52df1_c.jpg`,
   Angular: `images/angular-icon.png`,

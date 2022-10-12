@@ -9,7 +9,7 @@ import JSFunctionClosuresIntro from './closures-intro';
 import JSFunctionClosureUseCases from './closures-use-cases';
 
 const JSFunctionClosures = () => {
-  useDOMTitle('YALS: JavaScript | Closures');
+  useDOMTitle('UI-Geeks: JavaScript | Closures');
   return (
     <Container>
       <Heading>Closures</Heading>

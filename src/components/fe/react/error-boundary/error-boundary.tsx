@@ -26,7 +26,7 @@ const notCheckItems: Array<IOrderedListItemType> = [
 ];
 
 const ReactErrorBoundary = () => {
-  useDOMTitle('YALS: React | Error Boundaries');
+  useDOMTitle('UI-Geeks: React | Error Boundaries');
 
   return (
     <Container>

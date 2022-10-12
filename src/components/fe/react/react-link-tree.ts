@@ -1,7 +1,7 @@
 export const REACT_LINK = [
   {
     label: 'Introduction',
-    link: '/fe/react/introduction',
+    link: '/react/introduction',
     tags: [
       'Declarative',
       'Single Page Application',
@@ -48,7 +48,7 @@ export const REACT_LINK = [
   },
   {
     label: 'JSX',
-    link: '/fe/react/jsx',
+    link: '/react/jsx',
     tags: [
       'JSX',
       'Expressions in JSX',
@@ -92,7 +92,7 @@ export const REACT_LINK = [
   },
   {
     label: 'Components',
-    link: '/fe/react/components',
+    link: '/react/components',
     tags: [
       'Components',
       'Function Component',
@@ -122,7 +122,7 @@ export const REACT_LINK = [
   },
   {
     label: 'Class Component',
-    link: '/fe/react/class-component',
+    link: '/react/class-component',
     tags: [
       'Class Components',
       'defaultProps',
@@ -205,7 +205,7 @@ export const REACT_LINK = [
   },
   {
     label: 'Function Component',
-    link: '/fe/react/function-component',
+    link: '/react/function-component',
     tags: ['Function Component', 'Adding State', 'useEffect()', 'useState()'],
     children: [
       {
@@ -224,22 +224,22 @@ export const REACT_LINK = [
   },
   {
     label: 'Controlled Component',
-    link: '/fe/react/controlled-component',
+    link: '/react/controlled-component',
     tags: ['Controlled Components']
   },
   {
     label: 'Uncontrolled Component',
-    link: '/fe/react/uncontrolled-component',
+    link: '/react/uncontrolled-component',
     tags: ['Uncontrolled Components', 'Refs']
   },
   {
     label: 'Fragments',
-    link: '/fe/react/fragments',
+    link: '/react/fragments',
     tags: ['Fragments', 'Wrapper Hell']
   },
   {
     label: 'Lists',
-    link: '/fe/react/lists',
+    link: '/react/lists',
     tags: ['Lists', 'Keys'],
     children: [
       {
@@ -249,7 +249,7 @@ export const REACT_LINK = [
   },
   {
     label: 'Forms',
-    link: '/fe/react/forms',
+    link: '/react/forms',
     tags: [
       'Forms',
       'Controlled Components',
@@ -272,7 +272,7 @@ export const REACT_LINK = [
   },
   {
     label: 'Hooks',
-    link: '/fe/react/hooks',
+    link: '/react/hooks',
     tags: [
       'Hooks',
       'Rules of Hooks',
@@ -343,7 +343,7 @@ export const REACT_LINK = [
   },
   {
     label: 'Context',
-    link: '/fe/react/context',
+    link: '/react/context',
     tags: [
       'Context',
       'Context API',
@@ -380,12 +380,12 @@ export const REACT_LINK = [
   },
   {
     label: 'Render Props',
-    link: '/fe/react/render-props',
+    link: '/react/render-props',
     tags: ['Render Props', 'Sharing Component State']
   },
   {
     label: 'Error Boundary',
-    link: '/fe/react/error-boundary',
+    link: '/react/error-boundary',
     tags: ['Error Boundaries', 'Error Boundary', 'Errors']
   }
 ];

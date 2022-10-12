@@ -11,7 +11,7 @@ import JSTDZ from './tdz';
 import JSVariables from './variables';
 
 const JSGrammer = () => {
-  useDOMTitle('YALS: JavaScript | Grammer and types');
+  useDOMTitle('UI-Geeks: JavaScript | Grammer and types');
 
   return (
     <Container>

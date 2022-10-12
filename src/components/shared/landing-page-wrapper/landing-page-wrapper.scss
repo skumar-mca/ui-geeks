@@ -49,7 +49,7 @@
 
       flex-grow: inherit;
 
-      .yals-btn {
+      .#{$appPrefix}-btn {
         &:active {
           border: none;
         }

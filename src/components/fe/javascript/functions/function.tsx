@@ -14,7 +14,7 @@ import JSInnerFunctions from './inner-functions';
 import JSFunctionRestArgument from './rest-parameters';
 
 const JSFunctions = () => {
-  useDOMTitle('YALS: JavaScript | Functions');
+  useDOMTitle('UI-Geeks: JavaScript | Functions');
 
   return (
     <Container>

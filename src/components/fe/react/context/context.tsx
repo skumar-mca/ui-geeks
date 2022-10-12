@@ -7,7 +7,7 @@ import ReactContextIntro from './context-intro';
 import ReactContextWhenToUse from './context-when-to-use';
 
 const ReactContext = () => {
-  useDOMTitle('YALS: React | Context');
+  useDOMTitle('UI-Geeks: React | Context');
 
   return (
     <Container>

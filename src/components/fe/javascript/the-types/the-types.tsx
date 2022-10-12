@@ -19,7 +19,7 @@ import JSSymbolType from './symbol-type';
 import JSUndefinedType from './undefined-type';
 
 const JSTypes = () => {
-  useDOMTitle('YALS: JavaScript | Data Types');
+  useDOMTitle('UI-Geeks: JavaScript | Data Types');
 
   const dataTypes: Array<IOrderedListItemType> = [
     {

@@ -12,7 +12,7 @@ import ReactJSXRenderingElements from './rendering-elements';
 import ReactWhyJSX from './why-jsx';
 
 const ReactJSX = () => {
-  useDOMTitle('YALS: React | JSX');
+  useDOMTitle('UI-Geeks: React | JSX');
 
   return (
     <Container>

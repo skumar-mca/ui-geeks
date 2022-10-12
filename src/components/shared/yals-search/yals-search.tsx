@@ -26,7 +26,7 @@ const YALSSearch = () => {
   return (
     <>
       <div className={searchClasses} onClick={showSearchModal}>
-        <InputGroup className='yals-search-input'>
+        <InputGroup className={`${AppPrefix}-search-input`}>
           <Form.Control
             placeholder='search...'
             aria-label='search content'

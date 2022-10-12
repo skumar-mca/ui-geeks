@@ -4,7 +4,7 @@ import Para from '../../../shared/para/para';
 import { B, I, NewLine, OrderedList } from '../../../shared/util/util';
 
 const JSControlStructuresIntro = () => {
-  useDOMTitle('YALS: JavaScript | Operators');
+  useDOMTitle('UI-Geeks: JavaScript | Operators');
 
   return (
     <>

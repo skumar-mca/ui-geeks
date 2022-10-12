@@ -9,7 +9,7 @@ import JSControlStructuresIntro from './control-structures-intro';
 import JSLoops from './loop-statements/loop-statements';
 
 const JSControlStructures = () => {
-  useDOMTitle('YALS: JavaScript | Control Structures');
+  useDOMTitle('UI-Geeks: JavaScript | Control Structures');
 
   return (
     <Container>

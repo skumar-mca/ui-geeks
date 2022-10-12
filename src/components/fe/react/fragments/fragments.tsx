@@ -9,7 +9,7 @@ import Space from '../../../shared/space/space';
 import { B, BI, I, IU } from '../../../shared/util/util';
 
 const ReactFragments = () => {
-  useDOMTitle('YALS: React | Fragments');
+  useDOMTitle('UI-Geeks: React | Fragments');
   return (
     <Container>
       <Heading>Fragments</Heading>

@@ -7,7 +7,7 @@ import ReactListKeys from './list-keys';
 import ReactListsIntro from './lists-intro';
 
 const ReactLists = () => {
-  useDOMTitle('YALS: React | Lists');
+  useDOMTitle('UI-Geeks: React | Lists');
 
   return (
     <Container>

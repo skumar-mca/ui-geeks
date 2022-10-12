@@ -6,7 +6,7 @@ import Para from '../../../shared/para/para';
 import { BI, I } from '../../../shared/util/util';
 import JSValueOfThis from './value-of-this/value-of-this';
 const JSThis = () => {
-  useDOMTitle('YALS: JavaScript | The "this" keyword');
+  useDOMTitle('UI-Geeks: JavaScript | The "this" keyword');
 
   return (
     <Container>

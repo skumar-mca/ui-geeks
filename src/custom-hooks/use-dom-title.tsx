@@ -5,7 +5,7 @@ const useDOMTitle = (title: string) => {
     document.title = title;
 
     return () => {
-      document.title = 'YALS | Yet Another Learning Source';
+      document.title = 'UI Geeks | UI Learning Platform';
     };
   }, []);
 };

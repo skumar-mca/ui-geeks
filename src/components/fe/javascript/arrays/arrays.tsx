@@ -10,7 +10,7 @@ import JSArrayMethods from './array-methods';
 import JSArraysIntro from './arrays-intro';
 
 const JSArrays = () => {
-  useDOMTitle('YALS: JavaScript | Arrays');
+  useDOMTitle('UI-Geeks: JavaScript | Arrays');
 
   return (
     <Container>

@@ -1,7 +1,7 @@
 export const JSLINK = [
   {
     label: 'Introduction',
-    link: '/fe/javascript/introduction',
+    link: '/javascript/introduction',
     tags: [
       'Interpreted',
       'Compiled',
@@ -48,12 +48,12 @@ export const JSLINK = [
   },
   {
     label: 'History of JavaScript',
-    link: '/fe/javascript/history',
+    link: '/javascript/history',
     tags: ['History']
   },
   {
     label: 'Include JavaScript code',
-    link: '/fe/javascript/include-code',
+    link: '/javascript/include-code',
     tags: ['Scripts', 'Async', 'Defer'],
     children: [
       {
@@ -66,12 +66,12 @@ export const JSLINK = [
   },
   {
     label: 'JavaScript Console',
-    link: '/fe/javascript/console',
+    link: '/javascript/console',
     tags: ['Console']
   },
   {
     label: 'Building block of JavaScript: the types',
-    link: '/fe/javascript/data-types',
+    link: '/javascript/data-types',
     tags: [
       'Types',
       'Datatypes',
@@ -116,7 +116,7 @@ export const JSLINK = [
   },
   {
     label: 'Grammar and types',
-    link: '/fe/javascript/grammer',
+    link: '/javascript/grammer',
     tags: [
       'Grammer',
       'Comments',
@@ -209,7 +209,7 @@ export const JSLINK = [
   },
   {
     label: 'Operators',
-    link: '/fe/javascript/operators',
+    link: '/javascript/operators',
     tags: [
       'Operators',
       'Binary Operators',
@@ -312,7 +312,7 @@ export const JSLINK = [
   },
   {
     label: 'Control Structures',
-    link: '/fe/javascript/control-structures',
+    link: '/javascript/control-structures',
     tags: [
       'Conditional Statements',
       'if else',
@@ -365,7 +365,7 @@ export const JSLINK = [
   },
   {
     label: 'Objects',
-    link: '/fe/javascript/objects',
+    link: '/javascript/objects',
     tags: [
       'object',
       'Creating Objects',
@@ -390,7 +390,7 @@ export const JSLINK = [
   },
   {
     label: 'Arrays',
-    link: '/fe/javascript/arrays',
+    link: '/javascript/arrays',
     tags: [
       'Array',
       'Accessing Array Elements',
@@ -453,7 +453,7 @@ export const JSLINK = [
   },
   {
     label: 'Functions',
-    link: '/fe/javascript/functions',
+    link: '/javascript/functions',
     tags: [
       'Functions',
       'Function Declaration',
@@ -498,7 +498,7 @@ export const JSLINK = [
   },
   {
     label: 'Closures',
-    link: '/fe/javascript/closures',
+    link: '/javascript/closures',
     tags: [
       'Closures',
       'Lexical Scope',
@@ -527,7 +527,7 @@ export const JSLINK = [
   },
   {
     label: 'Arrow functions',
-    link: '/fe/javascript/arrow-functions',
+    link: '/javascript/arrow-functions',
     tags: ['Arrow Functions', 'Class Fields'],
     children: [
       {
@@ -556,7 +556,7 @@ export const JSLINK = [
   },
   {
     label: 'JavaScript Modules',
-    link: '/fe/javascript/modules',
+    link: '/javascript/modules',
     tags: [
       'Modules',
       'JavaScript Modules',
@@ -615,7 +615,7 @@ export const JSLINK = [
   },
   {
     label: 'The "this" keyword',
-    link: '/fe/javascript/this-keyword',
+    link: '/javascript/this-keyword',
     tags: [
       'this',
       'Value of this',
@@ -698,7 +698,7 @@ export const JSLINK = [
   },
   {
     label: 'Class',
-    link: '/fe/javascript/class-keyword',
+    link: '/javascript/class-keyword',
     tags: [
       'Class',
       'Class Declaration',
@@ -750,7 +750,7 @@ export const JSLINK = [
   },
   {
     label: 'Inheritance and the Prototype chain',
-    link: '/fe/javascript/prototype-chain',
+    link: '/javascript/prototype-chain',
     tags: [
       'Inheritance',
       'prototype',
@@ -781,7 +781,7 @@ export const JSLINK = [
   },
   {
     label: 'Strict mode',
-    link: '/fe/javascript/strict-mode',
+    link: '/javascript/strict-mode',
     tags: ['Strict mode'],
     children: [
       {
@@ -796,7 +796,7 @@ export const JSLINK = [
   },
   {
     label: 'Hoisting',
-    link: '/fe/javascript/hoisting',
+    link: '/javascript/hoisting',
     tags: [
       'Hoisting',
       'Function Hoisting',
@@ -817,7 +817,7 @@ export const JSLINK = [
   },
   {
     label: 'Exception Handling',
-    link: '/fe/javascript/exception-handling',
+    link: '/javascript/exception-handling',
     tags: ['Exception Handling', 'throw', 'try', 'catch', 'finally', 'error()'],
     children: [
       {
@@ -839,7 +839,7 @@ export const JSLINK = [
   },
   {
     label: 'Iterators and Generators',
-    link: '/fe/javascript/iterators-and-generators',
+    link: '/javascript/iterators-and-generators',
     tags: ['Iterators', 'Generators', 'Iterables', 'Iterators and Generators'],
     children: [
       {

@@ -12,7 +12,7 @@
 
   .prev-next-btn {
     margin-bottom: 10px;
-    .yals-btn {
+    .#{$appPrefix}-btn {
       padding-top: 0;
     }
     .prev {

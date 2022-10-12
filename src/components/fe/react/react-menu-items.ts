@@ -1,5 +1,5 @@
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
-const routePrefix = '/fe/react/';
+const routePrefix = '/react/';
 export const REACT_ROUTE_PATH: Array<IMenuItem> = [
   {
     url: `${routePrefix}introduction`,
@@ -60,10 +60,10 @@ export const REACT_ROUTE_PATH: Array<IMenuItem> = [
 ];
 
 export const REACT_PRIMARY_ROUTES = {
-  HOME_PAGE: { url: '/fe/react-home', label: 'React' },
+  HOME_PAGE: { url: '/react-home', label: 'React' },
   STATE: `${routePrefix}function-component`,
   DEMO: {
-    url: '/fe/demoes/react',
+    url: '/demoes/react',
     label: 'React Demoes'
   }
 };

@@ -6,7 +6,7 @@
   border-bottom: 2px solid $lightGray;
   padding-bottom: 20px;
 
-  .yals-heading {
+  .#{$appPrefix}-heading {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }

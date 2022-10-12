@@ -7,7 +7,7 @@ import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, Indent, IU, NewLine } from '../../../shared/util/util';
 const JSExceptionHandling = () => {
-  useDOMTitle('YALS: JavaScript | Exception Handling');
+  useDOMTitle('UI-Geeks: JavaScript | Exception Handling');
 
   return (
     <Container>

@@ -13,7 +13,7 @@ import ReactTrends from './react-trends';
 import ReactVirtualDOM from './virtual-dom';
 
 const ReactIntroduction = () => {
-  useDOMTitle('YALS: React | Introduction');
+  useDOMTitle('UI-Geeks: React | Introduction');
 
   return (
     <Container>

@@ -120,7 +120,7 @@ const YALSSearchContainer = (props: any) => {
 
   return (
     <div className={searchClasses}>
-      <InputGroup className='yals-search-input'>
+      <InputGroup className={`${AppPrefix}-search-input`}>
         <Form.Control
           placeholder='search...'
           aria-label='search content'

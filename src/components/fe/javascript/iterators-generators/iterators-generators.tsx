@@ -10,7 +10,7 @@ import JSIterables from './iterables';
 import JSIterators from './iterators';
 
 const JSIteratorsGenerators = () => {
-  useDOMTitle('YALS: JavaScript | Iterators and Generators');
+  useDOMTitle('UI-Geeks: JavaScript | Iterators and Generators');
 
   return (
     <Container>

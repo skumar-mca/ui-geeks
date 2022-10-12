@@ -152,7 +152,7 @@ const Home = () => {
           tag='Web Development Language'
           contentList={JSContentList}
           imagePath='images/js-icon.png'
-          homePagePath='/fe/javascript-home'
+          homePagePath='/javascript-home'
           theme='yellow'
           demoComponent={<JSHomeDemoComponent />}
           demoLink={JS_PRIMARY_ROUTES.DEMO}
@@ -163,7 +163,7 @@ const Home = () => {
           tag='Build reusable interfaces'
           contentList={ReactContentList}
           imagePath='images/react-icon.png'
-          homePagePath='/fe/react-home'
+          homePagePath='/react-home'
           theme='lightGreen'
           demoComponent={<ReactHomeDemoComponent />}
           demoLink={REACT_PRIMARY_ROUTES.DEMO}
@@ -174,7 +174,7 @@ const Home = () => {
           tag={`The modern web developer's platform`}
           contentList={AngularContentList}
           imagePath={ImagePaths.Angular}
-          homePagePath='/fe/javascript/introduction'
+          homePagePath='/javascript/introduction'
           theme='red'
         /> */}
       </div>

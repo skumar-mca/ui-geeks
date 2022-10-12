@@ -9,7 +9,7 @@
   margin-bottom: 5px;
 
   // Hide the copy code button
-  .yals-code {
+  .#{$appPrefix}-code {
     button {
       display: none;
     }
@@ -22,7 +22,7 @@
 
   .options {
     cursor: pointer;
-    .yals-check-radio {
+    .#{$appPrefix}-check-radio {
       margin-bottom: 3px;
       font-size: 0.8rem;
 

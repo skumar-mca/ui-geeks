@@ -13,7 +13,7 @@ import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionna
 import { ConsoleQuestions } from '../questionnaires/console-questionnaire';
 
 const JSConsole = () => {
-  useDOMTitle('YALS: JavaScript | Console');
+  useDOMTitle('UI-Geeks: JavaScript | Console');
 
   const REPLSteps: Array<IOrderedListItemType> = [
     {

@@ -55,11 +55,11 @@ const JSHistory = lazy(
 
 const FERouter = (
   <>
-    <Route path='/fe' element={<FEHome />} />
-    <Route path='fe/javascript-home' element={<JSLandingPage />} />
-    <Route path='fe/blogs/javascript/:blogId' element={<JSBlog />} />
-    <Route path='fe/demoes/javascript' element={<JSHomeDemoComponent />} />
-    <Route path='fe/javascript' element={<JSHome />}>
+    <Route path='/' element={<FEHome />} />
+    <Route path='/javascript-home' element={<JSLandingPage />} />
+    <Route path='/blogs/javascript/:blogId' element={<JSBlog />} />
+    <Route path='/demoes/javascript' element={<JSHomeDemoComponent />} />
+    <Route path='/javascript' element={<JSHome />}>
       <Route path='introduction' element={<JSIntroduction />} />
       <Route path='history' element={<JSHistory />} />
       <Route path='include-code' element={<JSInclude />} />
@@ -86,9 +86,9 @@ const FERouter = (
       />
     </Route>
 
-    <Route path='fe/react-home' element={<ReactLandingPage />} />
-    <Route path='fe/demoes/react' element={<ReactHomeDemoComponent />} />
-    <Route path='fe/react' element={<ReactHome />}>
+    <Route path='/react-home' element={<ReactLandingPage />} />
+    <Route path='/demoes/react' element={<ReactHomeDemoComponent />} />
+    <Route path='/react' element={<ReactHome />}>
       <Route path='introduction' element={<ReactIntroduction />} />
       <Route path='jsx' element={<ReactJSX />} />
       <Route path='components' element={<ReactComponents />} />

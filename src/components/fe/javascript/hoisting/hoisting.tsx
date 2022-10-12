@@ -10,7 +10,7 @@ import JSFunctionHoisting from './function-hoisting';
 import JSVariableHoisting from './variable-hoisting';
 
 const JSHoisting = () => {
-  useDOMTitle('YALS: JavaScript | Hoisting');
+  useDOMTitle('UI-Geeks: JavaScript | Hoisting');
 
   return (
     <Container>

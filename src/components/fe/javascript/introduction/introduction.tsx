@@ -9,7 +9,7 @@ import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionna
 import { IntroductionQuestions } from '../questionnaires/introduction-questionnaire';
 
 const JSIntroduction = () => {
-  useDOMTitle('YALS: JavaScript | Introduction');
+  useDOMTitle('UI-Geeks: JavaScript | Introduction');
 
   return (
     <Container>

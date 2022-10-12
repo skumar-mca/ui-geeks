@@ -25,10 +25,11 @@ const JSStringType = () => {
 "hello".startsWith("s") // false
 "hello".endsWith("o") // true
 "hello".endsWith("O") // false
-"hello".includes("lo") // false
+"hello".includes("lo") // true
+"hello".indexOf("lo") // 3
 "hello".repeat(2) // "hellohello"
 "hello".split('') // ["h", "e", "l", "l", "o"]
-"hello".padStart(10,'*')  // "hello".padStart(10,'*')
+"hello".padStart(10,'*')  // "*****hello"
 "hello".padEnd(10,'*')  // "hello*****"
 
 " hello ".trim()  // "hello"

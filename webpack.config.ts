@@ -69,6 +69,9 @@ const config: Configuration = {
     maxAssetSize: 512000
   },
   devServer,
+  optimization: {
+    chunkIds: 'deterministic'
+  },
   plugins: [
     new ForkTsCheckerWebpackPlugin({
       async: false

@@ -3,32 +3,43 @@
 
 .#{$appPrefix}-home-intro {
   height: 400px;
-  background-color: #282a35;
+  background-color: $appBg;
+
   text-align: center;
+
+  .bg-image {
+    width: 50%;
+    img {
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 70%;
+      width: 70%;
+    }
+  }
 
   .intro-section {
     z-index: 1;
     height: 100%;
+    width: 50%;
 
     vertical-align: middle;
     text-align: center;
-    .yals-name {
-      font-size: 4.5rem;
+    .#{$appPrefix}-name {
+      font-size: 2rem;
       font-style: italic;
       color: white;
     }
 
-    .yals-sub-name {
-      font-size: 2.2em;
+    .#{$appPrefix}-sub-name {
+      font-size: 2em;
       font-style: italic;
       color: $purple;
     }
 
-    .yals-tagline {
-      color: $brightGreen;
+    .#{$appPrefix}-tagline {
+      color: $boxShadow;
       font-style: italic;
-      font-size: 1.1em;
-      text-align: right;
+      font-size: 1em;
       margin-top: 50px;
     }
   }
@@ -36,16 +47,16 @@
 
 .device-type-mobile {
   .#{$appPrefix}-home-intro {
-    .yals-name {
-      font-size: 3.5rem;
+    .#{$appPrefix}-name {
+      font-size: 1.5rem;
     }
 
-    .yals-sub-name {
-      font-size: 2rem;
+    .#{$appPrefix}-sub-name {
+      font-size: 1.1rem;
     }
 
-    .yals-tagline {
-      font-size: 1.1em;
+    .#{$appPrefix}-tagline {
+      font-size: 0.7rem;
       text-align: center;
     }
   }

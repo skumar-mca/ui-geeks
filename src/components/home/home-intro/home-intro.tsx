@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import { AppPrefix } from '../../../util/app-constants';
+import { ImagePaths } from '../../../util/image-path-constants';
 import TextTyper from '../../shared/text-typer/text-typer';
 import YALSFlex from '../../shared/yals-flex/yals-flex';
 import {
@@ -15,26 +16,28 @@ const HomeIntro = () => {
     <>
       <YALSFlex
         className={homeIntro}
-        justifyContent={FlexJustifyContentTypes.Center}
+        justifyContent={FlexJustifyContentTypes.SpaceAround}
         alignItems={FlexAlignItemsTypes.Center}
       >
+        <div className='bg-image'>
+          <img src={ImagePaths.APP_IMAGE} alt='ui-geeks background' />
+        </div>
+
         <YALSFlex
           justifyContent={FlexJustifyContentTypes.Center}
           alignItems={FlexAlignItemsTypes.Center}
           className='intro-section'
         >
           <div>
-            <h1 className='yals-name'>UI Geeks</h1>
-            <h2 className='yals-sub-name'>
+            <h1 className={`${AppPrefix}-name`}>UI Learning Platform</h1>
+            <h2 className={`${AppPrefix}-sub-name`}>
               <TextTyper
-                words={[
-                  'UI Learning Platform',
-                  'UI Learning Source',
-                  'UI Learning Portal'
-                ]}
+                words={['JavaScript', 'React', 'Angular', 'CSS', 'SCSS']}
               />
             </h2>
-            <h3 className='yals-tagline'> - Let's understand UI better!</h3>
+            <h3 className={`${AppPrefix}-tagline`}>
+              "Let's understand UI better"
+            </h3>
           </div>
         </YALSFlex>
       </YALSFlex>

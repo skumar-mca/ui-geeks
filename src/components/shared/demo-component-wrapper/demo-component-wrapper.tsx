@@ -62,23 +62,7 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
               <>
                 {currentComponent.label && (
                   <>
-                    <h5>
-                      {currentComponent.label}
-                      {currentComponent.moreDetail && (
-                        <YalsButton
-                          variant={YALSButtonVariantTypes.Clear}
-                          onClick={redirectToMoreDetailPage}
-                          className='more-info-icon'
-                          title='See more details'
-                        >
-                          <InfoIcon
-                            height={25}
-                            width={25}
-                            fillColor={'rgba(53, 195, 124, 1)'}
-                          />
-                        </YalsButton>
-                      )}
-                    </h5>
+                    <h5>{currentComponent.label}</h5>
                   </>
                 )}
 
@@ -103,6 +87,17 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
                     >
                       <ChevronRight fillColor='white' height={16} width={16} />
                     </YalsButton>
+
+                    {currentComponent.moreDetail && (
+                      <YalsButton
+                        variant={YALSButtonVariantTypes.Clear}
+                        onClick={redirectToMoreDetailPage}
+                        className='more-info-icon'
+                        title='See more details'
+                      >
+                        <InfoIcon height={25} width={25} />
+                      </YalsButton>
+                    )}
                   </div>
                 )}
               </>

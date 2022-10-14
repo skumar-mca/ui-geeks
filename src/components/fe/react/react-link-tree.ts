@@ -383,5 +383,91 @@ export const REACT_LINK = [
     label: 'Error Boundary',
     link: '/react/error-boundary',
     tags: ['Error Boundaries', 'Error Boundary', 'Errors']
+  },
+  {
+    label: 'React Router',
+    link: '/react/react-routes',
+    tags: [
+      'React Router',
+      'Browser Router',
+      'Routes',
+      'Route',
+      'Route Config',
+      'Outlet',
+      'Layout Route',
+      'Not Found Route',
+      'Nested Routes',
+      'Index Route',
+      'Descendant Routes',
+      'Navigation',
+      '<Link>',
+      'Relative Link',
+      'useNavigate()',
+      'Sharing/Accessing URL Data',
+      'Adding state to React Route',
+      'useLocation()',
+      'useParams()',
+      'useSearchParams()'
+    ],
+    children: [
+      { label: 'Installation' },
+      { label: 'BrowserRouter' },
+      { label: '<Routes>' },
+      {
+        label: '<Route>',
+        children: [
+          {
+            label: 'Route Config'
+          },
+          {
+            label: '<Outlet>'
+          },
+          {
+            label: 'Layout Route'
+          },
+          {
+            label: 'Not Found Route'
+          },
+          {
+            label: 'Nested Routes'
+          },
+          {
+            label: 'Index Route'
+          },
+          {
+            label: 'Descendant Routes'
+          }
+        ]
+      },
+      {
+        label: 'Navigation',
+        children: [
+          {
+            label: '<Link>'
+          },
+          {
+            label: 'Relative Link'
+          },
+          {
+            label: 'useNavigate()'
+          },
+          {
+            label: 'Sharing/Accessing URL Data'
+          },
+          {
+            label: 'Adding state to URL'
+          },
+          {
+            label: 'useLocation()'
+          },
+          {
+            label: 'useParams()'
+          },
+          {
+            label: 'useSearchParams()'
+          }
+        ]
+      }
+    ]
   }
 ];

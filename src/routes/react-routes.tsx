@@ -1,5 +1,6 @@
 import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import ReactRouterComponents from '../components/fe/react/react-router/react-router';
 const ReactClassComponents = lazy(
   () => import('../components/fe/react/class-components/class-components')
 );
@@ -81,6 +82,7 @@ const ReactRoutes = () => {
         <Route path='context' element={<ReactContext />} />
         <Route path='render-props' element={<ReactRenderProps />} />
         <Route path='error-boundary' element={<ReactErrorBoundary />} />
+        <Route path='react-routes' element={<ReactRouterComponents />} />
       </Route>
     </Routes>
   );

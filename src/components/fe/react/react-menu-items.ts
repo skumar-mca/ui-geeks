@@ -56,6 +56,10 @@ export const REACT_ROUTE_PATH: Array<IMenuItem> = [
   {
     url: `${routePrefix}error-boundary`,
     label: 'Error Boundary'
+  },
+  {
+    url: `${routePrefix}react-routes`,
+    label: 'React Router'
   }
 ];
 

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { AppPrefix } from '../../../util/app-constants';
 import { ImagePaths } from '../../../util/image-path-constants';
@@ -36,4 +36,4 @@ const HomeHeader = () => {
   );
 };
 
-export default HomeHeader;
+export default memo(HomeHeader);

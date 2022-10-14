@@ -13,7 +13,7 @@ import ReactHomeDemoStateUpdate, {
 
 const ReactHomeDemoComponent = () => {
   const current = useCurrentPath();
-  const isFullPageDemo = current.indexOf('/demoes/') > -1;
+  const isFullPageDemo = current.indexOf('/demoes') > -1;
 
   const demoComponents = [
     {

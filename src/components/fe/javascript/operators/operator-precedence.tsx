@@ -201,10 +201,10 @@ const operatorTDList = [
           '||=',
           '??='
         ].map((itm: string) => (
-          <>
+          <React.Fragment key={itm}>
             <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
             <Space />
-          </>
+          </React.Fragment>
         ))}
       </>
     )

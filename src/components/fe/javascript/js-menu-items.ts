@@ -91,11 +91,11 @@ export const JS_ROUTE_PATH: Array<IMenuItem> = [
 ];
 
 export const JS_PRIMARY_ROUTES = {
-  HOME_PAGE: { url: '/javascript-home', label: 'React' },
+  HOME_PAGE: { url: '/javascript/home', label: 'React' },
   ARRAY: `${routePrefix}arrays`,
   STRING: `${routePrefix}data-types?qtext=String`,
   DEMO: {
-    url: 'demoes/javascript',
+    url: 'javascript/demoes',
     label: 'JavaScript Demoes'
   }
 };

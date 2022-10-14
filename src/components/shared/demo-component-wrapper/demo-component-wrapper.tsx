@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ChevronLeft from '../../icons/chevron-left';
 import ChevronRight from '../../icons/chevron-right';
@@ -114,4 +114,4 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
   );
 };
 
-export default DemoComponentWrapper;
+export default memo(DemoComponentWrapper);

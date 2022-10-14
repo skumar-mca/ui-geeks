@@ -15,7 +15,7 @@ import JSHomeDemoStringMethods, {
 
 const JSHomeDemoComponent = () => {
   const current = useCurrentPath();
-  const isFullPageDemo = current.indexOf('/demoes/') > -1;
+  const isFullPageDemo = current.indexOf('/demoes') > -1;
 
   const demoComponents = [
     {

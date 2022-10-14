@@ -169,10 +169,6 @@ export const REACT_LINK = [
         shortLabel: 'componentDidMount()'
       },
       {
-        label: 'static getDerivedStateFromProps()',
-        shortLabel: 'getDerivedStateFromProps()'
-      },
-      {
         label: 'shouldComponentUpdate()',
         shortLabel: 'shouldComponentUpdate()'
       },

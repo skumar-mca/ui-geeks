@@ -3,7 +3,10 @@ import React from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import { ImagePaths } from '../../../util/image-path-constants';
 import TextTyper from '../../shared/text-typer/text-typer';
-import YALSFlex from '../../shared/yals-flex/yals-flex';
+import {
+  default as YalsFlex,
+  default as YALSFlex
+} from '../../shared/yals-flex/yals-flex';
 import {
   FlexAlignItemsTypes,
   FlexJustifyContentTypes
@@ -19,9 +22,13 @@ const HomeIntro = () => {
         justifyContent={FlexJustifyContentTypes.SpaceAround}
         alignItems={FlexAlignItemsTypes.Center}
       >
-        <div className='bg-image'>
+        <YalsFlex
+          justifyContent={FlexJustifyContentTypes.Center}
+          alignItems={FlexAlignItemsTypes.Center}
+          className='bg-image'
+        >
           <img src={ImagePaths.APP_IMAGE} alt='ui-geeks background' />
-        </div>
+        </YalsFlex>
 
         <YALSFlex
           justifyContent={FlexJustifyContentTypes.Center}

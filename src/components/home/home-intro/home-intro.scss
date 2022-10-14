@@ -2,18 +2,18 @@
 @import '../../../scss/colors.scss';
 
 .#{$appPrefix}-home-intro {
+  flex-direction: row;
   height: 400px;
   background-color: $appBg;
 
   text-align: center;
 
   .bg-image {
-    width: 50%;
+    height: 50%;
     img {
       background-repeat: no-repeat;
       background-size: contain;
-      height: 70%;
-      width: 70%;
+      width: 50%;
     }
   }
 
@@ -47,6 +47,7 @@
 
 .device-type-mobile {
   .#{$appPrefix}-home-intro {
+    flex-direction: column;
     .#{$appPrefix}-name {
       font-size: 1.5rem;
     }
@@ -58,6 +59,17 @@
     .#{$appPrefix}-tagline {
       font-size: 0.7rem;
       text-align: center;
+    }
+
+    .intro-section {
+      height: 50%;
+      width: 100%;
+    }
+
+    .bg-image {
+      img {
+        width: 50%;
+      }
     }
   }
 }

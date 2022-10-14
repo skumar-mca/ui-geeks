@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import './home-footer.scss';
 
@@ -12,4 +12,4 @@ const HomeFooter = () => {
   );
 };
 
-export default HomeFooter;
+export default memo(HomeFooter);

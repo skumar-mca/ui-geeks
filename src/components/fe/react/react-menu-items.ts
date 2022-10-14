@@ -60,10 +60,10 @@ export const REACT_ROUTE_PATH: Array<IMenuItem> = [
 ];
 
 export const REACT_PRIMARY_ROUTES = {
-  HOME_PAGE: { url: '/react-home', label: 'React' },
+  HOME_PAGE: { url: '/react/home', label: 'React' },
   STATE: `${routePrefix}function-component`,
   DEMO: {
-    url: '/demoes/react',
+    url: '/react/demoes',
     label: 'React Demoes'
   }
 };

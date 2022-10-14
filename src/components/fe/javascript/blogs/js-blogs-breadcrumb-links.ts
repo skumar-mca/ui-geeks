@@ -5,7 +5,7 @@ export const JS_BLOGS_BREADCRUMB_LINKS = [
   },
   {
     label: 'JavaScript',
-    link: '/javascript-home'
+    link: '/javascript/home'
   },
   {
     label: 'Blogs',

@@ -5,6 +5,6 @@ export const ReactBreadcrumbLink = [
   },
   {
     label: 'React',
-    link: '/react-home'
+    link: '/react/home'
   }
 ];

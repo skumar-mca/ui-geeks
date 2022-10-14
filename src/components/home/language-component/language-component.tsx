@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import { useNavigate } from 'react-router-dom';
@@ -113,4 +113,4 @@ const LanguageComponent = (props: ILanguageProp) => {
   );
 };
 
-export default LanguageComponent;
+export default memo(LanguageComponent);

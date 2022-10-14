@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { memo } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import NavigationMenu from '../../shared/navigation-menu/navigation-menu';
 import './custom-menu-wrapper.scss';
@@ -21,4 +21,4 @@ const CustomMenuWrapper = (props: ICustomMenuWrapperProps) => {
   );
 };
 
-export default CustomMenuWrapper;
+export default memo(CustomMenuWrapper);

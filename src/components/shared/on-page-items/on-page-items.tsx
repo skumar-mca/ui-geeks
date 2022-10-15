@@ -92,7 +92,7 @@ const OnPageItems = (props: any) => {
       {deviceType === DeviceType.LargeDesktop &&
         currentItem.children &&
         currentItem.children.length > 0 && (
-          <Heading as='h5'>Items on Page</Heading>
+          <Heading as='h5'>On this page</Heading>
         )}
       {getItems()}
     </div>

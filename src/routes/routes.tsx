@@ -6,7 +6,8 @@ import HomeFooter from '../components/home/home-footer/home-footer';
 import HomeHeader from '../components/home/home-header/home-header';
 import ContentLoader from '../components/shared/content-loader/content-loader';
 import { AppPrefix } from '../util/app-constants';
-import FERouter from './fe-routes';
+import JSRoutes from './js-routes';
+import ReactRoutes from './react-routes';
 
 const AppRouter = () => {
   return (
@@ -15,7 +16,8 @@ const AppRouter = () => {
       <div className={`${AppPrefix}-content-section`}>
         <Routes>
           <Route path='/' element={<Home />} />
-          {FERouter}
+          <Route path='/javascript/*' element={<JSRoutes />} />
+          <Route path='/react/*' element={<ReactRoutes />} />
           <Route path='*' element={<p>There's nothing here!</p>} />
         </Routes>
       </div>

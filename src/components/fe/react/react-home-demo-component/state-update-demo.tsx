@@ -39,8 +39,11 @@ const ReactHomeDemoStateUpdate = () => {
   return (
     <>
       <YalsFlex justifyContent={FlexJustifyContentTypes.SpaceBetween}>
-        <YalsButton variant={YALSButtonVariantTypes.Dark} onClick={increment}>
-          Increment
+        <YalsButton
+          variant={YALSButtonVariantTypes.Secondary}
+          onClick={decrement}
+        >
+          Decrement
         </YalsButton>
 
         <div>
@@ -49,12 +52,8 @@ const ReactHomeDemoStateUpdate = () => {
           <I>{counter}</I>
         </div>
 
-        <YalsButton
-          variant={YALSButtonVariantTypes.Secondary}
-          onClick={decrement}
-          className='ms-2'
-        >
-          Decrement
+        <YalsButton variant={YALSButtonVariantTypes.Dark} onClick={increment}>
+          Increment
         </YalsButton>
       </YalsFlex>
 

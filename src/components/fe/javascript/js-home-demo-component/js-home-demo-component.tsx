@@ -1,5 +1,6 @@
 import React from 'react';
 import useCurrentPath from '../../../../custom-hooks/useCurrentRoute';
+import { isIOS } from '../../../../util/util';
 import Code from '../../../shared/code/code';
 import DemoComponentWrapper from '../../../shared/demo-component-wrapper/demo-component-wrapper';
 import { JS_PRIMARY_ROUTES } from '../js-menu-items';
@@ -18,26 +19,6 @@ const JSHomeDemoComponent = () => {
   const isFullPageDemo = current.indexOf('/demoes') > -1;
 
   const demoComponents = [
-    {
-      id: 1,
-      label: 'Know your device.',
-      moreDetail: {
-        label: 'Learn other powerfull features of JavaScript',
-        link: JS_PRIMARY_ROUTES.HOME_PAGE.url
-      },
-      tabs: [
-        {
-          id: 1,
-          content: <JSHomeDemoDeviceInfo />,
-          label: 'Output'
-        },
-        {
-          id: 2,
-          content: <Code>{JSHomeDemoDeviceInfoCode}</Code>,
-          label: 'Code'
-        }
-      ]
-    },
     {
       id: 2,
       label: 'Magical manipulation of string.',
@@ -79,6 +60,29 @@ const JSHomeDemoComponent = () => {
       ]
     }
   ];
+
+  if (!isIOS()) {
+    demoComponents.unshift({
+      id: 1,
+      label: 'Know your device.',
+      moreDetail: {
+        label: 'Learn other powerfull features of JavaScript',
+        link: JS_PRIMARY_ROUTES.HOME_PAGE.url
+      },
+      tabs: [
+        {
+          id: 1,
+          content: <JSHomeDemoDeviceInfo />,
+          label: 'Output'
+        },
+        {
+          id: 2,
+          content: <Code>{JSHomeDemoDeviceInfoCode}</Code>,
+          label: 'Code'
+        }
+      ]
+    });
+  }
 
   return (
     <DemoComponentWrapper

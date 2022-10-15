@@ -53,7 +53,7 @@ const element = <h1>{greetUser("John")}</h1>
         Double quotes can be used to specify string literals as attributes. For
         example:
         <Code language={CodeLanguageTypes.JSX}>
-          {`const element = <a href="https://www.yals.tech">YALS</a>`}
+          {`const element = <a href="https://ui-geeks.in">YALS</a>`}
         </Code>
       </Para>
 
@@ -61,7 +61,7 @@ const element = <h1>{greetUser("John")}</h1>
         Also, curly braces can be used to embed JavaScript expressions as an
         attribute value. For example:
         <Code language={CodeLanguageTypes.JSX}>
-          {`const url = "www.yals.tech";
+          {`const url = "https://ui-geeks.in";
 const element = <a href={url}>YALS</a>`}
         </Code>
       </Para>

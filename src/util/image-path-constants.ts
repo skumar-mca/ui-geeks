@@ -27,7 +27,7 @@ export const ImagePaths = {
     BLOGS: {
       GET_USER_LOCATION: {
         PERMISSION_POPUP:
-          'https://live.staticflickr.com/65535/52410655599_1ca759fc9d_z.jpg'
+          'https://live.staticflickr.com/65535/52429844256_eb4d9579d2_z.jpg'
       }
     }
   },

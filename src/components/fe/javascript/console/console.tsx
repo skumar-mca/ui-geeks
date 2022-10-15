@@ -89,6 +89,7 @@ const JSConsole = () => {
           imagePath={ImagePaths.Console_Hello}
           imageTitle='JavaScript Console'
           alt='JavaScript Console'
+          width='100%'
         />
       </Para>
 

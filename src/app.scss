@@ -41,8 +41,14 @@ body {
 .#{$appPrefix}-left-section {
   position: sticky;
   top: 0;
-  height: 100%;
+
   padding-top: 35px;
+  overflow: auto;
+  max-height: calc(100vh - 50px);
+  .menu-divider {
+    width: 75%;
+    padding-left: 15px;
+  }
 }
 
 .#{$appPrefix}-content-section {
@@ -83,6 +89,10 @@ body {
       margin-top: 10px !important;
       margin-bottom: 10px !important;
     }
+  }
+
+  .menu-title {
+    padding-left: 0 !important;
   }
 }
 
@@ -133,11 +143,11 @@ body {
 }
 
 .#{$appPrefix}-sep {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   background-color: $lightGray;
   height: 2px;
-  width: 85%;
+  width: 100%;
 }
 
 .large-quote {

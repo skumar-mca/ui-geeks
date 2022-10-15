@@ -12,6 +12,7 @@ const ReactHome = () => {
       menuLinks={REACT_LINK}
       menuItems={REACT_ROUTE_PATH}
       breadcrumbLink={ReactBreadcrumbLink}
+      language={'React'}
     >
       <Outlet />
     </HomePageWrapper>

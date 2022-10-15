@@ -3,11 +3,15 @@
 
 .#{$appPrefix}-menu-wrapper {
   padding: 0px 10px 10px 0px;
-  height: calc(100vh - 50px);
   overflow: auto;
   .menu-title {
+    .#{$appPrefix}-heading {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
     font-weight: bold;
     margin-bottom: 10px;
+    padding-left: 10px;
   }
 
   .menu-ul {

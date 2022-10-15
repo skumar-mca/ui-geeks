@@ -8,4 +8,5 @@ export interface IHomePageWrapperProps {
   children: ReactNode;
   isCustomHome?: boolean;
   customMenuContent?: ReactNode;
+  language: string;
 }

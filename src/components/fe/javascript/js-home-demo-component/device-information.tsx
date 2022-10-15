@@ -21,23 +21,30 @@ const JSHomeDemoDeviceInfo = () => {
 
   const getDeviceInfo = () => {
     const userAgent = (navigator.userAgent || '').toLowerCase();
-    let isMobile =
-      window.matchMedia && window.matchMedia('(any-pointer:coarse)').matches;
+    const matchMedia =
+      window.matchMedia && window.matchMedia('(any-pointer:coarse)');
 
-    const isTablet =
-      /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
-        userAgent
-      );
+    let isMobile = matchMedia ? matchMedia.matches : false;
+
+    let isTablet = false;
 
     const clientInformation: any = window.clientInformation;
-    const userAgentInfo: any =
-      (clientInformation && clientInformation.userAgentData) || null;
+    const userAgentInfo: any = clientInformation
+      ? clientInformation.userAgentData
+      : {};
 
     const browserInfo = userAgentInfo.brands && userAgentInfo.brands[1];
 
     const today = new Date();
-    const datetime =
-      today.toLocaleDateString() + '  ' + today.toLocaleTimeString();
+    let datetime = '';
+
+    try {
+      isTablet =
+        /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
+          userAgent
+        );
+      datetime = today.toLocaleDateString() + '  ' + today.toLocaleTimeString();
+    } catch (e) {}
 
     setDeviceInfo((prev: any) => {
       return {
@@ -49,7 +56,7 @@ const JSHomeDemoDeviceInfo = () => {
             ? 'Mobile'
             : 'Desktop/Laptop'
           : '',
-        language: (clientInformation && clientInformation.language) || '',
+        language: clientInformation ? clientInformation.language : '',
         platform: userAgentInfo ? userAgentInfo.platform : '',
         browser: {
           name: browserInfo ? browserInfo.brand : '',
@@ -57,7 +64,7 @@ const JSHomeDemoDeviceInfo = () => {
         },
         deviceWidth: window.innerWidth,
         deviceHeight: window.innerHeight,
-        currentURL: window.location.href,
+        currentURL: window.location && window.location.href,
         bandwidth:
           clientInformation &&
           clientInformation.connection &&

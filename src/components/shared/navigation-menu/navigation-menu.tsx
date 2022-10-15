@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix, DeviceType } from '../../../util/app-constants';
+import { getOnPageItems } from '../../../util/util';
 import ChevronRight from '../../icons/chevron-right';
+import Heading from '../heading/heading';
 import OnPageItems from '../on-page-items/on-page-items';
 import './navigation-menu.scss';
 import { IMenuItem, INavigationMenuProps } from './navigation-menu.types';
@@ -18,19 +20,32 @@ const NavigationMenu = (props: INavigationMenuProps) => {
   const deviceType = useDeviceType();
 
   const [showSubMenu, setShowSubMenu] = useState(true);
+  const [itemsLength, setItemsLength] = useState(0);
 
   const handleMenuClick = (itm: IMenuItem) => {
     onMenuClick && onMenuClick.bind(this, itm);
     setShowSubMenu((prev: boolean) => !prev);
   };
 
+  const getOnPageItem = () => {
+    const items = getOnPageItems(currentPath, menuLinks || []);
+    if (items) {
+      setItemsLength(() => (items.children ? items.children.length : 0));
+    }
+  };
+
   useEffect(() => {
     setShowSubMenu(() => true);
+    getOnPageItem();
   }, [currentPath]);
 
   return (
     <div className={menuClasses}>
-      {menuTitle && <span className='menu-title'>{menuTitle}</span>}
+      {menuTitle && (
+        <div className='menu-title'>
+          <Heading as='h5'>{menuTitle}</Heading>
+        </div>
+      )}
       <ul className='menu-ul'>
         {menuList.map((itm: IMenuItem) => {
           return (
@@ -42,6 +57,7 @@ const NavigationMenu = (props: INavigationMenuProps) => {
               >
                 <span className='link-label'> {itm.label}</span>
                 {deviceType !== DeviceType.LargeDesktop &&
+                  itemsLength > 0 &&
                   isSelectedRoute(itm.url) && (
                     <span
                       className={`arrow ${

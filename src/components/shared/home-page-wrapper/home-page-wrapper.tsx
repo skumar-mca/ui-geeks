@@ -30,7 +30,8 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
     breadcrumbLink,
     children,
     isCustomHome = false,
-    customMenuContent
+    customMenuContent,
+    language
   } = props;
 
   const deviceType = useDeviceType();
@@ -81,19 +82,39 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
           xxl={2}
           className={`${AppPrefix}-left-section`}
         >
-          {menuItems && (
+          {menuItems && !isCustomHome && (
             <NavigationMenu menuLinks={menuLinks} menuList={menuItems} />
           )}
           {showLeftCustomMenu && (
             <>
               {!isCustomHome && (
-                <YALSFlex justifyContent={FlexJustifyContentTypes.Center}>
+                <YALSFlex
+                  justifyContent={FlexJustifyContentTypes.Start}
+                  className='menu-divider'
+                >
                   <div className={`${AppPrefix}-sep`}></div>
                 </YALSFlex>
               )}
               <div className={`${AppPrefix}-left-section-custom-menu`}>
                 {customMenuContent}
               </div>
+
+              {isCustomHome && (
+                <YALSFlex
+                  justifyContent={FlexJustifyContentTypes.Start}
+                  className='menu-divider'
+                >
+                  <div className={`${AppPrefix}-sep`}></div>
+                </YALSFlex>
+              )}
+
+              {isCustomHome && menuItems && (
+                <NavigationMenu
+                  menuLinks={menuLinks}
+                  menuList={menuItems}
+                  menuTitle={`${language} Concepts`}
+                />
+              )}
             </>
           )}
         </Col>

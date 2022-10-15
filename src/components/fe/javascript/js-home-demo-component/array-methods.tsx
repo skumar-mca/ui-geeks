@@ -25,6 +25,14 @@ const JSHomeDemoArrayMethods = () => {
     return logArray(numArr.sort((a: number, b: number) => a - b));
   };
 
+  const reverse = () => {
+    return logArray(numArr.reverse());
+  };
+
+  const length = () => {
+    return logArray(numArr.length);
+  };
+
   const unshift = () => {
     const arr = [1, 3, 6, 11, 16, 20];
     arr.unshift(50);
@@ -50,7 +58,7 @@ const JSHomeDemoArrayMethods = () => {
 
           <div className='result-item'>
             <span className='key-label'>Length of array:</span>
-            <span className='key-value'>{numArr.length}</span>
+            <span className='key-value'>{length()}</span>
           </div>
 
           <div className='result-item'>
@@ -60,7 +68,7 @@ const JSHomeDemoArrayMethods = () => {
 
           <div className='result-item'>
             <span className='key-label'>Reverse array elements:</span>
-            <span className='key-value'>{logArray(numArr.reverse())}</span>
+            <span className='key-value'>{reverse()}</span>
           </div>
 
           <div className='result-item'>
@@ -117,5 +125,13 @@ const slice = () => {
   let arr = [1, 3, 6, 11, 16, 20];
   arr = arr.slice(1, 4);
   console.log(arr);
+};
+
+const reverse = () => {
+  console.log(numArr.reverse());
+};
+
+const length = () => {
+  console.log(numArr.length);
 };
 `;

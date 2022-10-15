@@ -35,7 +35,7 @@ const YALSTable = (props: IYAPSTableProps) => {
             return (
               <tr key={`row-${index}`}>
                 {thList.map((th: any) => {
-                  return <td>{td[th.column]}</td>;
+                  return <td key={`${th.column}-${index}`}>{td[th.column]}</td>;
                 })}
               </tr>
             );

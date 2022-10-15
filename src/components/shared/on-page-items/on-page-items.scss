@@ -12,13 +12,21 @@
         padding: 2px !important;
         color: $lightGrayAlt;
         padding-left: 10px;
-        font-size: 0.7rem !important;
+        font-size: 0.8rem !important;
         text-align: left;
         word-break: break-word;
 
         &:hover {
           color: $h1Color !important;
         }
+      }
+
+      padding: 1px 0px 1px 0px;
+      border-bottom: 1px solid $secondaryBgColor;
+      .btn {
+        font-size: 0.8rem !important;
+        color: $lightPurple;
+        padding: 1px 2px 1px 0px !important;
       }
     }
   }

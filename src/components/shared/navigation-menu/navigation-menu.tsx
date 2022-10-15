@@ -1,8 +1,10 @@
 import classNames from 'classnames';
-import React, { memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useDeviceType from '../../../custom-hooks/use-device-type';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
-import { AppPrefix } from '../../../util/app-constants';
+import { AppPrefix, DeviceType } from '../../../util/app-constants';
+import ChevronRight from '../../icons/chevron-right';
 import OnPageItems from '../on-page-items/on-page-items';
 import './navigation-menu.scss';
 import { IMenuItem, INavigationMenuProps } from './navigation-menu.types';
@@ -12,6 +14,19 @@ const NavigationMenu = (props: INavigationMenuProps) => {
   const menuClasses = classNames({ [`${AppPrefix}-menu-wrapper`]: true });
   const currentPath = useCurrentPath();
   const isSelectedRoute = (url: string) => currentPath === url;
+
+  const deviceType = useDeviceType();
+
+  const [showSubMenu, setShowSubMenu] = useState(true);
+
+  const handleMenuClick = (itm: IMenuItem) => {
+    onMenuClick && onMenuClick.bind(this, itm);
+    setShowSubMenu((prev: boolean) => !prev);
+  };
+
+  useEffect(() => {
+    setShowSubMenu(() => true);
+  }, [currentPath]);
 
   return (
     <div className={menuClasses}>
@@ -23,14 +38,32 @@ const NavigationMenu = (props: INavigationMenuProps) => {
               <Link
                 to={itm.url}
                 className={isSelectedRoute(itm.url) ? 'selected' : ''}
-                onClick={onMenuClick && onMenuClick.bind(this, itm)}
+                onClick={handleMenuClick.bind(this, itm)}
               >
-                {itm.label}
-
-                {menuLinks && isSelectedRoute(itm.url) && (
-                  <OnPageItems allItems={menuLinks} onMenuClick={onMenuClick} />
-                )}
+                <span className='link-label'> {itm.label}</span>
+                {deviceType !== DeviceType.LargeDesktop &&
+                  isSelectedRoute(itm.url) && (
+                    <span
+                      className={`arrow ${
+                        showSubMenu ? 'arrow-down' : 'arrow-right'
+                      }`}
+                    >
+                      <ChevronRight />
+                    </span>
+                  )}
               </Link>
+
+              {showSubMenu &&
+                deviceType !== DeviceType.LargeDesktop &&
+                menuLinks &&
+                isSelectedRoute(itm.url) && (
+                  <div className='sub-menu'>
+                    <OnPageItems
+                      allItems={menuLinks}
+                      onMenuClick={onMenuClick}
+                    />
+                  </div>
+                )}
             </li>
           );
         })}

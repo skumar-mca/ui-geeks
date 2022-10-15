@@ -1,9 +1,10 @@
-import React, { memo, Suspense, useState } from 'react';
+import React, { memo, Suspense, useEffect, useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
-import { DeviceType } from '../../../util/app-constants';
+import { AppPrefix, DeviceType } from '../../../util/app-constants';
+import { getOnPageItems } from '../../../util/util';
 import ListIcon from '../../icons/list-icon';
 import Container from '../../shared/container/container';
 import ContentLoader from '../../shared/content-loader/content-loader';
@@ -19,6 +20,7 @@ import {
   FlexJustifyContentTypes
 } from '../../shared/yals-flex/yals-flex.types';
 import YALSModal from '../../shared/yals-modal/yals-modal';
+import OnPageItems from '../on-page-items/on-page-items';
 import { IHomePageWrapperProps } from './home-page-wrapper.types';
 
 const HomePageWrapper = (props: IHomePageWrapperProps) => {
@@ -34,6 +36,7 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
   const deviceType = useDeviceType();
 
   const [showMenu, setShowMenu] = useState(false);
+  const [hasSubMenu, setHasSubMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu((prev: boolean) => !prev);
@@ -55,13 +58,29 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
     (deviceType !== DeviceType.LargeDesktop && customMenuContent);
 
   const showRightMenu =
-    !isCustomHome &&
-    customMenuContent &&
+    ((!isCustomHome && customMenuContent) || hasSubMenu) &&
     deviceType === DeviceType.LargeDesktop;
+
+  useEffect(() => {
+    const items = getOnPageItems(currentPath, menuLinks || []);
+
+    if (items) {
+      setHasSubMenu(() => {
+        return items.children ? items.children.length > 0 : false;
+      });
+    }
+  }, [currentPath, menuLinks]);
+
   return (
     <Row>
       {deviceType != DeviceType.Mobile && (
-        <Col lg={2} md={3} sm={4} xxl={2} className='yals-left-section'>
+        <Col
+          lg={2}
+          md={3}
+          sm={4}
+          xxl={2}
+          className={`${AppPrefix}-left-section`}
+        >
           {menuItems && (
             <NavigationMenu menuLinks={menuLinks} menuList={menuItems} />
           )}
@@ -69,10 +88,10 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
             <>
               {!isCustomHome && (
                 <YALSFlex justifyContent={FlexJustifyContentTypes.Center}>
-                  <div className='yals-sep'></div>
+                  <div className={`${AppPrefix}-sep`}></div>
                 </YALSFlex>
               )}
-              <div className='yals-left-section-custom-menu'>
+              <div className={`${AppPrefix}-left-section-custom-menu`}>
                 {customMenuContent}
               </div>
             </>
@@ -147,7 +166,13 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
       </Col>
 
       {showRightMenu && (
-        <Col xxl={2} className='yals-left-section'>
+        <Col xxl={2} className={`${AppPrefix}-right-section`}>
+          {hasSubMenu && (
+            <div className='sub-menu'>
+              <OnPageItems allItems={menuLinks} />
+            </div>
+          )}
+
           <>{customMenuContent}</>
         </Col>
       )}

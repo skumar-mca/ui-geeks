@@ -1,8 +1,10 @@
 import classNames from 'classnames';
 import React, { memo, useEffect, useState } from 'react';
+import useDeviceType from '../../../custom-hooks/use-device-type';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
-import { AppPrefix } from '../../../util/app-constants';
+import { AppPrefix, DeviceType } from '../../../util/app-constants';
 import { buildChildren, getOnPageItems, populateId } from '../../../util/util';
+import Heading from '../heading/heading';
 import YALSButton from '../yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../yals-button/yals-button.types';
 import './on-page-items.scss';
@@ -11,7 +13,9 @@ const OnPageItems = (props: any) => {
   const { allItems, onMenuClick } = props;
   const currentPath = useCurrentPath();
 
-  const textCarousalClasses = classNames({
+  const deviceType = useDeviceType();
+
+  const onPageClasses = classNames({
     [`${AppPrefix}-on-page-items`]: true
   });
 
@@ -41,7 +45,6 @@ const OnPageItems = (props: any) => {
   const getItems = () => {
     const { children: menuChildrens } = currentItem;
     if (menuChildrens) {
-      //const childList = renderChildren(menuChildrens, 0, []);
       const childList = buildChildren(menuChildrens, 0, []);
 
       return (
@@ -63,6 +66,7 @@ const OnPageItems = (props: any) => {
       );
     }
   };
+
   const renderChildren = (
     childList: Array<any>,
     iteration: number,
@@ -83,7 +87,16 @@ const OnPageItems = (props: any) => {
     return childLIList;
   };
 
-  return <div className={textCarousalClasses}>{getItems()}</div>;
+  return (
+    <div className={onPageClasses}>
+      {deviceType === DeviceType.LargeDesktop &&
+        currentItem.children &&
+        currentItem.children.length > 0 && (
+          <Heading as='h5'>Items on Page</Heading>
+        )}
+      {getItems()}
+    </div>
+  );
 };
 
 export default memo(OnPageItems);

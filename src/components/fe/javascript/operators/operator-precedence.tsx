@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
@@ -25,10 +25,10 @@ const operatorTDList = [
     operator: (
       <>
         {['.', '[]'].map((itm: string) => (
-          <>
+          <Fragment key={itm}>
             <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
             <Space />
-          </>
+          </Fragment>
         ))}
       </>
     )
@@ -39,10 +39,10 @@ const operatorTDList = [
     operator: (
       <>
         {['( )', 'new'].map((itm: string) => (
-          <>
+          <Fragment key={itm}>
             <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
             <Space />
-          </>
+          </Fragment>
         ))}
       </>
     )
@@ -53,10 +53,10 @@ const operatorTDList = [
       <>
         {['!', '~', '-', '+', '++', '--', 'typeof', 'void', 'delete'].map(
           (itm: string) => (
-            <>
+            <Fragment key={itm}>
               <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
               <Space />
-            </>
+            </Fragment>
           )
         )}
       </>
@@ -67,10 +67,10 @@ const operatorTDList = [
     operator: (
       <>
         {['*', '/', '%'].map((itm: string) => (
-          <>
+          <Fragment key={itm}>
             <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
             <Space />
-          </>
+          </Fragment>
         ))}
       </>
     )
@@ -80,10 +80,10 @@ const operatorTDList = [
     operator: (
       <>
         {['+', '-'].map((itm: string) => (
-          <>
+          <Fragment key={itm}>
             <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
             <Space />
-          </>
+          </Fragment>
         ))}
       </>
     )
@@ -93,10 +93,10 @@ const operatorTDList = [
     operator: (
       <>
         {['<<', '>>', '>>>>'].map((itm: string) => (
-          <>
+          <Fragment key={itm}>
             <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
             <Space />
-          </>
+          </Fragment>
         ))}
       </>
     )
@@ -106,10 +106,10 @@ const operatorTDList = [
     operator: (
       <>
         {['<', '<=', '>', '>=', 'in', 'instanceof'].map((itm: string) => (
-          <>
+          <Fragment key={itm}>
             <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
             <Space />
-          </>
+          </Fragment>
         ))}
       </>
     )
@@ -119,10 +119,10 @@ const operatorTDList = [
     operator: (
       <>
         {['==', '!=', '===', '!=='].map((itm: string) => (
-          <>
+          <Fragment key={itm}>
             <YALSBadge content={itm} bg={YALSButtonVariantTypes.Secondary} />
             <Space />
-          </>
+          </Fragment>
         ))}
       </>
     )

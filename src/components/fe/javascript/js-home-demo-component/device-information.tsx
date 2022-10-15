@@ -20,15 +20,19 @@ const JSHomeDemoDeviceInfo = () => {
   });
 
   const getDeviceInfo = () => {
-    const userAgent = navigator.userAgent.toLowerCase();
-    let isMobile = window.matchMedia('(any-pointer:coarse)').matches;
+    const userAgent = (navigator.userAgent || '').toLowerCase();
+    let isMobile =
+      window.matchMedia && window.matchMedia('(any-pointer:coarse)').matches;
+
     const isTablet =
       /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
         userAgent
       );
 
     const clientInformation: any = window.clientInformation;
-    const userAgentInfo: any = clientInformation.userAgentData || null;
+    const userAgentInfo: any =
+      (clientInformation && clientInformation.userAgentData) || null;
+
     const browserInfo = userAgentInfo.brands && userAgentInfo.brands[1];
 
     const today = new Date();
@@ -45,7 +49,7 @@ const JSHomeDemoDeviceInfo = () => {
             ? 'Mobile'
             : 'Desktop/Laptop'
           : '',
-        language: clientInformation.language,
+        language: (clientInformation && clientInformation.language) || '',
         platform: userAgentInfo ? userAgentInfo.platform : '',
         browser: {
           name: browserInfo ? browserInfo.brand : '',
@@ -55,8 +59,11 @@ const JSHomeDemoDeviceInfo = () => {
         deviceHeight: window.innerHeight,
         currentURL: window.location.href,
         bandwidth:
-          clientInformation.connection && clientInformation.connection.downlink,
+          clientInformation &&
+          clientInformation.connection &&
+          clientInformation.connection.downlink,
         connectionType:
+          clientInformation &&
           clientInformation.connection &&
           clientInformation.connection.effectiveType,
         dateTime: datetime

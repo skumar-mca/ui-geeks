@@ -63,7 +63,7 @@ const ReactRouterNavigation = () => {
       <Heading as='h3'>useNavigate()</Heading>
       <Para>
         This hook returns a <I>function</I> which is used to change the URL
-        <I>programmatically</I>.
+        <Space /> <I>programmatically</I>.
       </Para>
 
       <IU>Example:</IU>
@@ -100,8 +100,8 @@ navigate("/home");`}</Code>
       <Para>
         This Hook returns a <B>location object</B> containing all related
         information for the current route. It contains <I>hash</I>, <I>key</I>,
-        <I>pathname</I>, <I>search</I> and <I>state</I> attributes of the
-        current route.
+        <Space /> <I>pathname</I>, <I>search</I> and <I>state</I> attributes of
+        the current route.
       </Para>
 
       <IU>Syntax:</IU>

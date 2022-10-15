@@ -40,10 +40,10 @@ const JSConsole = () => {
         which allows users to write/test JavaScript code.
       </Para>
 
+      <Heading as='h2'>Accessing console</Heading>
       <Para>
-        <Word bold>Ways of opening console:</Word> Below are the steps to open
-        console in most popular browsers. Other browsers should also have a
-        similar flow to the open console.
+        Below are the steps to open console in most popular browsers. Other
+        browsers should also have a similar flow to the open console.
       </Para>
 
       <Para>
@@ -66,6 +66,7 @@ const JSConsole = () => {
         </Word>
       </Para>
 
+      <Heading as='h2'>REPL</Heading>
       <Para>
         <Word bold>REPL (Read-Eval-Print-Loop)</Word> is running under the hood
         of every console. REPL follows the given steps:

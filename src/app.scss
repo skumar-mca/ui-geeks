@@ -75,7 +75,15 @@ body {
   position: sticky;
   top: 0;
   height: 96vh;
-  padding-top: 35px;
+  padding-top: 30px;
+  padding-left: 20px;
+
+  .sub-menu {
+    h5.ui-geeks-heading {
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+    }
+  }
 }
 
 .row {

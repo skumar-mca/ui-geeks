@@ -67,7 +67,15 @@ export const JSLINK = [
   {
     label: 'JavaScript Console',
     link: '/javascript/console',
-    tags: ['Console']
+    tags: ['Console'],
+    children: [
+      {
+        label: 'Accessing Console'
+      },
+      {
+        label: 'REPL'
+      }
+    ]
   },
   {
     label: 'Building block of JavaScript: the types',

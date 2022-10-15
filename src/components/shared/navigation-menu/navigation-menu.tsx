@@ -23,7 +23,6 @@ const NavigationMenu = (props: INavigationMenuProps) => {
   const [itemsLength, setItemsLength] = useState(0);
 
   const handleMenuClick = (itm: IMenuItem) => {
-    onMenuClick && onMenuClick.bind(this, itm);
     setShowSubMenu((prev: boolean) => !prev);
   };
 

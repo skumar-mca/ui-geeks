@@ -9,4 +9,5 @@ export interface IHomePageWrapperProps {
   isCustomHome?: boolean;
   customMenuContent?: ReactNode;
   language: string;
+  closeMobileMenuCtr?: number;
 }

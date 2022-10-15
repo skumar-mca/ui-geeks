@@ -14,9 +14,13 @@ import ScrollTopButton from '../../shared/scroll-top-btn/scroll-top-btn';
 import YALSBreadcrumb from '../../shared/yals-breadcrumb/yals-breadcrumb';
 import YALSButton from '../../shared/yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../../shared/yals-button/yals-button.types';
-import YALSFlex from '../../shared/yals-flex/yals-flex';
+import {
+  default as YalsFlex,
+  default as YALSFlex
+} from '../../shared/yals-flex/yals-flex';
 import {
   FlexAlignItemsTypes,
+  FlexDirectionTypes,
   FlexJustifyContentTypes
 } from '../../shared/yals-flex/yals-flex.types';
 import YALSModal from '../../shared/yals-modal/yals-modal';
@@ -34,6 +38,56 @@ const MenuDivider = () => {
   );
 };
 
+const RenderMenus = (props: any) => {
+  const {
+    menuItems,
+    isCustomHome,
+    menuLinks,
+    onMenuClick,
+    customMenuContent,
+    language
+  } = props;
+
+  const deviceType = useDeviceType();
+
+  const showLeftCustomMenu =
+    isCustomHome ||
+    (deviceType !== DeviceType.LargeDesktop && customMenuContent);
+
+  return (
+    <>
+      {menuItems && !isCustomHome && (
+        <NavigationMenu
+          menuLinks={menuLinks}
+          menuList={menuItems}
+          onMenuClick={onMenuClick}
+        />
+      )}
+
+      {showLeftCustomMenu && (
+        <>
+          {!isCustomHome && <MenuDivider />}
+
+          <div className={`${AppPrefix}-left-section-custom-menu`}>
+            {customMenuContent}
+          </div>
+
+          {isCustomHome && <MenuDivider />}
+
+          {isCustomHome && menuItems && (
+            <NavigationMenu
+              menuLinks={menuLinks}
+              menuList={menuItems}
+              onMenuClick={onMenuClick}
+              menuTitle={`${language} Concepts`}
+            />
+          )}
+        </>
+      )}
+    </>
+  );
+};
+
 const HomePageWrapper = (props: IHomePageWrapperProps) => {
   const {
     menuLinks,
@@ -42,7 +96,8 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
     children,
     isCustomHome = false,
     customMenuContent,
-    language
+    language,
+    closeMobileMenuCtr = 0
   } = props;
 
   const deviceType = useDeviceType();
@@ -65,10 +120,6 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
     return crntItem || {};
   };
 
-  const showLeftCustomMenu =
-    isCustomHome ||
-    (deviceType !== DeviceType.LargeDesktop && customMenuContent);
-
   const showRightMenu =
     ((!isCustomHome && customMenuContent) || hasSubMenu) &&
     deviceType === DeviceType.LargeDesktop;
@@ -83,6 +134,12 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
     }
   }, [currentPath, menuLinks]);
 
+  useEffect(() => {
+    if (closeMobileMenuCtr > 0) {
+      hideMenu();
+    }
+  }, [closeMobileMenuCtr]);
+
   return (
     <Row>
       {deviceType != DeviceType.Mobile && (
@@ -93,29 +150,13 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
           xxl={2}
           className={`${AppPrefix}-left-section`}
         >
-          {menuItems && !isCustomHome && (
-            <NavigationMenu menuLinks={menuLinks} menuList={menuItems} />
-          )}
-
-          {showLeftCustomMenu && (
-            <>
-              {!isCustomHome && <MenuDivider />}
-
-              <div className={`${AppPrefix}-left-section-custom-menu`}>
-                {customMenuContent}
-              </div>
-
-              {isCustomHome && <MenuDivider />}
-
-              {isCustomHome && menuItems && (
-                <NavigationMenu
-                  menuLinks={menuLinks}
-                  menuList={menuItems}
-                  menuTitle={`${language} Concepts`}
-                />
-              )}
-            </>
-          )}
+          <RenderMenus
+            menuItems={menuItems}
+            isCustomHome={isCustomHome}
+            menuLinks={menuLinks}
+            customMenuContent={customMenuContent}
+            language={language}
+          />
         </Col>
       )}
 
@@ -156,15 +197,16 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
                 onHide={toggleMenu}
                 fullScreen={true}
                 modalContent={
-                  menuItems ? (
-                    <NavigationMenu
+                  <YalsFlex flexDirection={FlexDirectionTypes.Column}>
+                    <RenderMenus
+                      menuItems={menuItems}
+                      isCustomHome={isCustomHome}
                       menuLinks={menuLinks}
-                      menuList={menuItems}
+                      customMenuContent={customMenuContent}
+                      language={language}
                       onMenuClick={hideMenu}
                     />
-                  ) : (
-                    <>{customMenuContent}</>
-                  )
+                  </YalsFlex>
                 }
               />
             )}
@@ -189,7 +231,7 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
         <Col xxl={2} className={`${AppPrefix}-right-section`}>
           {hasSubMenu && (
             <div className='sub-menu'>
-              <OnPageItems allItems={menuLinks} />
+              <OnPageItems allItems={menuLinks} onMenuClick={hideMenu} />
             </div>
           )}
 

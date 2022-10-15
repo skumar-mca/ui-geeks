@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import HomePageWrapper from '../../../shared/home-page-wrapper/home-page-wrapper';
 import NavigationMenu from '../../../shared/navigation-menu/navigation-menu';
@@ -25,6 +25,11 @@ const JSBlog = () => {
   const params = useParams();
   const { blogId } = params;
 
+  const [closeMobileMenuCtr, setCloseMobileMenuCtr] = useState(0);
+  const handleMenuClick = () => {
+    setCloseMobileMenuCtr((prev: number) => prev + 1);
+  };
+
   return (
     <HomePageWrapper
       menuLinks={JS_BLOG_LINK}
@@ -32,10 +37,12 @@ const JSBlog = () => {
       breadcrumbLink={JS_BLOGS_BREADCRUMB_LINKS}
       isCustomHome={true}
       language={'JavaScript'}
+      closeMobileMenuCtr={closeMobileMenuCtr}
       customMenuContent={
         <NavigationMenu
           menuList={JS_BLOG_MENU_ITEMS}
           menuTitle={'JavaScript Blogs'}
+          onMenuClick={handleMenuClick}
         />
       }
     >

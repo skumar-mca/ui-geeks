@@ -23,6 +23,17 @@ import YALSModal from '../../shared/yals-modal/yals-modal';
 import OnPageItems from '../on-page-items/on-page-items';
 import { IHomePageWrapperProps } from './home-page-wrapper.types';
 
+const MenuDivider = () => {
+  return (
+    <YALSFlex
+      justifyContent={FlexJustifyContentTypes.Start}
+      className='menu-divider'
+    >
+      <div className={`${AppPrefix}-sep`}></div>
+    </YALSFlex>
+  );
+};
+
 const HomePageWrapper = (props: IHomePageWrapperProps) => {
   const {
     menuLinks,
@@ -85,28 +96,16 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
           {menuItems && !isCustomHome && (
             <NavigationMenu menuLinks={menuLinks} menuList={menuItems} />
           )}
+
           {showLeftCustomMenu && (
             <>
-              {!isCustomHome && (
-                <YALSFlex
-                  justifyContent={FlexJustifyContentTypes.Start}
-                  className='menu-divider'
-                >
-                  <div className={`${AppPrefix}-sep`}></div>
-                </YALSFlex>
-              )}
+              {!isCustomHome && <MenuDivider />}
+
               <div className={`${AppPrefix}-left-section-custom-menu`}>
                 {customMenuContent}
               </div>
 
-              {isCustomHome && (
-                <YALSFlex
-                  justifyContent={FlexJustifyContentTypes.Start}
-                  className='menu-divider'
-                >
-                  <div className={`${AppPrefix}-sep`}></div>
-                </YALSFlex>
-              )}
+              {isCustomHome && <MenuDivider />}
 
               {isCustomHome && menuItems && (
                 <NavigationMenu

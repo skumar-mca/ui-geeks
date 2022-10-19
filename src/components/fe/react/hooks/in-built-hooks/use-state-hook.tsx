@@ -98,7 +98,7 @@ const ReactUseStateHook = () => {
       </Para>
 
       <Code language={CodeLanguageTypes.JSX}>
-        {`const [counter, setCounter]	 = useState(()=>{
+        {`const [counter, setCounter] = useState(()=>{
   const initialState = expensiveComputation();
   return initialState;
 });`}

@@ -6,29 +6,51 @@ import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
-import { BI, I, NewLine, OrderedList } from '../../../shared/util/util';
+import { B, BI, I, NewLine, OrderedList } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
 import YALSImage from '../../../shared/yals-image/yals-image';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { ConsoleQuestions } from '../questionnaires/console-questionnaire';
+
+const summaryItems: Array<IOrderedListItemType> = [
+  {
+    label: <>Browser Console can be used to test JavaScript code.</>
+  },
+  {
+    label: (
+      <>
+        <B>REPL</B> is running under the hood of every console.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        In JavaScript, all expressions return a result, few like <Space />
+        <I>console.log()</I> return <BI>undefined</BI>.
+      </>
+    )
+  }
+];
+
+const REPLSteps: Array<IOrderedListItemType> = [
+  {
+    label: 'Read user input (i.e., JavaScript code expression).'
+  },
+  {
+    label: 'Evaluate/Run the code.'
+  },
+  {
+    label: 'Print the result.'
+  },
+  {
+    label: 'Loop back to Step 1 (i.e., wait for user input).'
+  }
+];
 
 const JSConsole = () => {
   useDOMTitle('UI-Geeks: JavaScript | Console');
-
-  const REPLSteps: Array<IOrderedListItemType> = [
-    {
-      label: 'Read user input (i.e., JavaScript code expression).'
-    },
-    {
-      label: 'Evaluate/Run the code.'
-    },
-    {
-      label: 'Print the result.'
-    },
-    {
-      label: 'Loop back to Step 1 (i.e., wait for user input).'
-    }
-  ];
 
   return (
     <Container>
@@ -40,7 +62,7 @@ const JSConsole = () => {
         which allows users to write/test JavaScript code.
       </Para>
 
-      <Heading as='h2'>Accessing console</Heading>
+      <Heading as='h2'>Accessing Console</Heading>
       <Para>
         Below are the steps to open console in most popular browsers. Other
         browsers should also have a similar flow to the open console.
@@ -105,6 +127,8 @@ const JSConsole = () => {
         <Space /> <I>console.log( )</I> returns nothing and in JavaScript
         <Space /> <BI>"nothing"</BI> is represented as <BI>undefined</BI>.
       </Para>
+
+      <YALSSummary items={summaryItems} />
 
       <Para>
         <YALSQuestionaire questions={ConsoleQuestions} />

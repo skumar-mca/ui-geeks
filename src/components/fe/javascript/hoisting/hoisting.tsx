@@ -1,13 +1,43 @@
 import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
+import { IOrderedListItemType } from '../../../../types/common';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, I } from '../../../shared/util/util';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import JSClassHoisting from './class-hoisting';
 import JSFunctionHoisting from './function-hoisting';
 import JSVariableHoisting from './variable-hoisting';
+
+const summaryItems: Array<IOrderedListItemType> = [
+  {
+    label: (
+      <>
+        In <B>hoisting</B>, declarations of <I>functions, variables</I> or
+        <Space /> <I>classes</I> are moved to <B>top</B> of their <I>scope</I>,
+        prior to the execution of the code.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        <B>Function declarations</B> are hoisted but <B>function expressions</B>
+        <Space /> are not hoisted.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        JavaScript only hoists <B>declarations</B> and not the
+        <Space /> <B>initialization</B>.
+      </>
+    )
+  }
+];
 
 const JSHoisting = () => {
   useDOMTitle('UI-Geeks: JavaScript | Hoisting');
@@ -28,6 +58,8 @@ const JSHoisting = () => {
         <JSVariableHoisting />
         <JSClassHoisting />
       </Para>
+
+      <YALSSummary items={summaryItems} />
     </Container>
   );
 };

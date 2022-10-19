@@ -1,5 +1,6 @@
 import React from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
+import { IOrderedListItemType } from '../../../../types/common';
 import Code from '../../../shared/code/code';
 import { CodeLanguageTypes } from '../../../shared/code/code.types';
 import Container from '../../../shared/container/container';
@@ -7,6 +8,28 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, IU } from '../../../shared/util/util';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
+
+const summaryItems: Array<IOrderedListItemType> = [
+  {
+    label: (
+      <>
+        <B>Fragments</B> are used to <B>return multiple elements</B> from a
+        component.
+      </>
+    )
+  },
+  {
+    label: <>Groups elements without adding extra DOM nodes.</>
+  },
+  {
+    label: (
+      <>
+        Fixes the <B>"wrapper hell"</B> and invalid re-structuring of code.
+      </>
+    )
+  }
+];
 
 const ReactFragments = () => {
   useDOMTitle('UI-Geeks: React | Fragments');
@@ -65,6 +88,8 @@ const ReactFragments = () => {
   </>
 }`}</Code>
       </Para>
+
+      <YALSSummary items={summaryItems} />
     </Container>
   );
 };

@@ -3,6 +3,7 @@ import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
 import { B, BI, I, NewLine } from '../../../shared/util/util';
 
 const JSStringLiterals = () => {
@@ -28,8 +29,8 @@ console.log("JavaScript".length); // 10
       <Heading as='h4'>Template Literals</Heading>
       <Para>
         These are string values enclosed by the <BI>back-tick (`)</BI>
-        character instead of double or single quotes. Also known as{' '}
-        <B>string interpolation</B>. They provide syntactic sugar for
+        <Space /> character instead of double or single quotes. Also known as
+        <Space /> <B>string interpolation</B>. They provide syntactic sugar for
         constructing strings. <B>{`\${ }`}</B> construct is used to add
         dynamic/variable value to the string literal.
       </Para>

@@ -6,9 +6,9 @@ import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
-import { B, BI, OrderedList } from '../../../shared/util/util';
-import Word from '../../../shared/word/word';
+import { B, BI, I, OrderedList } from '../../../shared/util/util';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { TheTypesQuestions } from '../questionnaires/types-questionnaire';
 import JSBigIntType from './big-int-type';
 import JSBooleanType from './boolean-type';
@@ -18,55 +18,107 @@ import JSStringType from './string-type';
 import JSSymbolType from './symbol-type';
 import JSUndefinedType from './undefined-type';
 
+const summaryItems: Array<IOrderedListItemType> = [
+  {
+    label: (
+      <>
+        There are <B>7</B> primary types in JavaScript.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        <BI>Number</BI> type can store both integer and floating point numbers.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        Unary operator <B>"+"</B> can also be used to convert string to number.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        <BI>NaN</BI> is toxic, operations with NaN will always return NaN.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        <BI>BigInt</BI> represents integers with arbitrary precision.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        <BI>Symbol()</BI> always returns a unique value.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        <I>false, 0, empty string (""), NaN, null</I> and <I>undefined</I> are
+        treated as
+        <BI>false</BI>.
+      </>
+    )
+  }
+];
+
+const dataTypes: Array<IOrderedListItemType> = [
+  {
+    label: 'Number'
+  },
+  {
+    label: 'BigInt'
+  },
+  {
+    label: 'String'
+  },
+  {
+    label: 'Boolean'
+  },
+  {
+    label: 'Symbol'
+  },
+  {
+    label: 'Object',
+    items: [
+      {
+        label: 'Function'
+      },
+      {
+        label: 'Array'
+      },
+      {
+        label: 'Date'
+      },
+      {
+        label: 'RegExp'
+      }
+    ]
+  },
+  {
+    label: 'null'
+  },
+  {
+    label: 'undefined'
+  }
+];
+
 const JSTypes = () => {
   useDOMTitle('UI-Geeks: JavaScript | Data Types');
 
-  const dataTypes: Array<IOrderedListItemType> = [
-    {
-      label: 'Number'
-    },
-    {
-      label: 'BigInt'
-    },
-    {
-      label: 'String'
-    },
-    {
-      label: 'Boolean'
-    },
-    {
-      label: 'Symbol'
-    },
-    {
-      label: 'Object',
-      items: [
-        {
-          label: 'Function'
-        },
-        {
-          label: 'Array'
-        },
-        {
-          label: 'Date'
-        },
-        {
-          label: 'RegExp'
-        }
-      ]
-    },
-    {
-      label: 'null'
-    },
-    {
-      label: 'undefined'
-    }
-  ];
-
   return (
     <Container>
-      <Heading>
-        Building block of JavaScript: <Word italic>the types</Word>
-      </Heading>
+      <Heading>Data types</Heading>
 
       <Para>
         Primarily there are <B>7</B> types in JavaScript:
@@ -118,6 +170,8 @@ const JSTypes = () => {
       <JSUndefinedType />
 
       <JSBooleanType />
+
+      <YALSSummary items={summaryItems} />
 
       <Para>
         <YALSQuestionaire questions={TheTypesQuestions} />

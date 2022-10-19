@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React, { memo, useEffect, useState } from 'react';
+import { createSearchParams, useSearchParams } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix, DeviceType } from '../../../util/app-constants';
@@ -12,6 +13,9 @@ import './on-page-items.scss';
 const OnPageItems = (props: any) => {
   const { allItems, onMenuClick } = props;
   const currentPath = useCurrentPath();
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const qTextValue = searchParams.get('qtext');
 
   const deviceType = useDeviceType();
 
@@ -40,6 +44,7 @@ const OnPageItems = (props: any) => {
     }
 
     onMenuClick && onMenuClick(itm);
+    setSearchParams(createSearchParams({ qtext: label }));
   };
 
   const getItems = () => {
@@ -51,7 +56,14 @@ const OnPageItems = (props: any) => {
         <ul>
           {childList.map((itm) => {
             return (
-              <li key={itm.label}>
+              <li
+                key={itm.label}
+                className={`${
+                  qTextValue === populateId(itm.shortLabel || itm.label)
+                    ? 'selected-sub-menu'
+                    : ``
+                }`}
+              >
                 <YALSButton
                   onClick={(evt: any) => scrollToItem(evt, itm)}
                   variant={YALSButtonVariantTypes.Clear}

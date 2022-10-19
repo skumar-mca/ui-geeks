@@ -2,6 +2,7 @@ import React, { memo, Suspense, useEffect, useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import useDeviceType from '../../../custom-hooks/use-device-type';
+import useQTextScroll from '../../../custom-hooks/use-qtext-scroll';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix, DeviceType } from '../../../util/app-constants';
 import { getOnPageItems } from '../../../util/util';
@@ -80,6 +81,7 @@ const RenderMenus = (props: any) => {
               menuList={menuItems}
               onMenuClick={onMenuClick}
               menuTitle={`${language} Concepts`}
+              showMainLinkOnly={true}
             />
           )}
         </>
@@ -101,6 +103,7 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
   } = props;
 
   const deviceType = useDeviceType();
+  useQTextScroll();
 
   const [showMenu, setShowMenu] = useState(false);
   const [hasSubMenu, setHasSubMenu] = useState(false);

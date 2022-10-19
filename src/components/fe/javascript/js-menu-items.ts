@@ -1,99 +1,99 @@
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
 
-const routePrefix = '/javascript/';
+export const JS_routePrefix = '/javascript/';
 export const JS_ROUTE_PATH: Array<IMenuItem> = [
   {
-    url: `${routePrefix}introduction`,
+    url: `${JS_routePrefix}introduction`,
     label: 'Introduction'
   },
   {
-    url: `${routePrefix}history`,
+    url: `${JS_routePrefix}history`,
 
     label: 'History'
   },
   {
-    url: `${routePrefix}include-code`,
+    url: `${JS_routePrefix}include-code`,
     label: 'Including Scripts'
   },
   {
-    url: `${routePrefix}console`,
+    url: `${JS_routePrefix}console`,
     label: 'Console'
   },
   {
-    url: `${routePrefix}data-types`,
+    url: `${JS_routePrefix}data-types`,
     label: 'Data types'
   },
   {
-    url: `${routePrefix}grammer`,
+    url: `${JS_routePrefix}grammer`,
 
     label: 'Grammer and Types'
   },
   {
-    url: `${routePrefix}operators`,
+    url: `${JS_routePrefix}operators`,
     label: 'Operators'
   },
   {
-    url: `${routePrefix}control-structures`,
+    url: `${JS_routePrefix}control-structures`,
     label: 'Control Structures'
   },
   {
-    url: `${routePrefix}objects`,
+    url: `${JS_routePrefix}objects`,
     label: 'Objects'
   },
   {
-    url: `${routePrefix}arrays`,
+    url: `${JS_routePrefix}arrays`,
     label: 'Arrays'
   },
   {
-    url: `${routePrefix}functions`,
+    url: `${JS_routePrefix}functions`,
     label: 'Functions'
   },
   {
-    url: `${routePrefix}closures`,
+    url: `${JS_routePrefix}closures`,
     label: 'Closures'
   },
   {
-    url: `${routePrefix}arrow-functions`,
+    url: `${JS_routePrefix}arrow-functions`,
     label: 'Arrow Functions'
   },
   {
-    url: `${routePrefix}modules`,
+    url: `${JS_routePrefix}modules`,
     label: 'Modules'
   },
   {
-    url: `${routePrefix}this-keyword`,
+    url: `${JS_routePrefix}this-keyword`,
     label: 'this Keyword'
   },
   {
-    url: `${routePrefix}class-keyword`,
+    url: `${JS_routePrefix}class-keyword`,
     label: 'Class'
   },
   {
-    url: `${routePrefix}prototype-chain`,
+    url: `${JS_routePrefix}prototype-chain`,
     label: 'Prototype Chain'
   },
   {
-    url: `${routePrefix}strict-mode`,
+    url: `${JS_routePrefix}strict-mode`,
     label: 'Strict Mode'
   },
   {
-    url: `${routePrefix}hoisting`,
+    url: `${JS_routePrefix}hoisting`,
     label: 'Hoisting'
   },
   {
-    url: `${routePrefix}exception-handling`,
+    url: `${JS_routePrefix}exception-handling`,
     label: 'Exception Handling'
   },
   {
-    url: `${routePrefix}iterators-and-generators`,
+    url: `${JS_routePrefix}iterators-and-generators`,
     label: 'Iterators and Generators'
   }
 ];
 
 export const JS_PRIMARY_ROUTES = {
   HOME_PAGE: { url: '/javascript/home', label: 'React' },
-  ARRAY: `${routePrefix}arrays`,
-  STRING: `${routePrefix}data-types?qtext=String`,
+  ARRAY: `${JS_routePrefix}arrays`,
+  STRING: `${JS_routePrefix}data-types?qtext=String`,
   DEMO: {
     url: 'javascript/demoes',
     label: 'JavaScript Demoes'

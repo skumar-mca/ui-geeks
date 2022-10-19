@@ -1,4 +1,5 @@
 import React from 'react';
+import { IOrderedListItemType } from '../../../../types/common';
 import Code from '../../../shared/code/code';
 import { CodeLanguageTypes } from '../../../shared/code/code.types';
 import Heading from '../../../shared/heading/heading';
@@ -6,6 +7,26 @@ import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, I, IU } from '../../../shared/util/util';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
+
+const summaryItems: Array<IOrderedListItemType> = [
+  {
+    label: (
+      <>
+        An input element whose value is controlled by React is called a
+        <B>Controlled Component</B>.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        It accepts <I>input props</I> and updates them by calling the <Space />
+        <I>change handlers</I>.
+      </>
+    )
+  }
+];
 
 const ReactControlledComponent = () => {
   return (
@@ -24,6 +45,11 @@ const ReactControlledComponent = () => {
         controlled by React is called a <B>"controlled component"</B>. With a
         controlled component, the input's value is always driven by the React
         state.
+      </Para>
+
+      <Para>
+        Controlled components accept <I>input props</I> and update them by
+        calling the <I>change handlers</I>.
       </Para>
 
       <Para>
@@ -78,6 +104,8 @@ const ReactControlledComponent = () => {
 </select>`}
         </Code>
       </Note>
+
+      <YALSSummary items={summaryItems} />
     </>
   );
 };

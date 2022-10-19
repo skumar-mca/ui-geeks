@@ -1,13 +1,44 @@
 import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
+import { IOrderedListItemType } from '../../../../types/common';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
+import Space from '../../../shared/space/space';
+import { B, BI, I } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { HistoryQuestions } from '../questionnaires/history-questionnaire';
 import JSVersionTimeLine from './version-timeline';
+
+const summaryItems: Array<IOrderedListItemType> = [
+  {
+    label: (
+      <>
+        JavaScript is known as a <I>scripting language</I> for the web, but it
+        also runs on <I>non-browser</I> environments.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        It was created by <B>Brenden Eich</B> in 1995, its first <Space />
+        <B>ECMAScript</B> version was released in June, 1997.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        It was originally going to be called <BI>"LiveScript"</BI> but later
+        renamed as <BI>"JavaScript"</BI>.
+      </>
+    )
+  }
+];
 
 const JSHistory = () => {
   useDOMTitle('UI-Geeks: JavaScript | History');
@@ -58,6 +89,8 @@ const JSHistory = () => {
         Both JAVA & JavaScript are registered trademarks of Oracle in the U.S.
         and other countries.
       </Note>
+
+      <YALSSummary items={summaryItems} />
 
       <Para>
         <YALSQuestionaire questions={HistoryQuestions} />

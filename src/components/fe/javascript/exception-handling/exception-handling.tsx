@@ -1,11 +1,52 @@
 import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
+import { IOrderedListItemType } from '../../../../types/common';
 import Code from '../../../shared/code/code';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, Indent, IU, NewLine } from '../../../shared/util/util';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
+
+const summaryItems: Array<IOrderedListItemType> = [
+  {
+    label: (
+      <>
+        The <BI>try</BI>, <BI>catch</BI> and <BI>finally</BI> statements are
+        used to handle <I>runtime exceptions</I>.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        The <BI>throw</BI> statement specifies the value to be thrown, can be
+        any valid value like <I>number, string, object</I>, etc.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        The <BI>finally</BI> block contains statements to be executed after
+        <Space /> <BI>try</BI> and <BI>catch</BI> block executes. If a value is
+        returned from the finally block, it becomes the return value of the
+        entire <I>try...catch…finally</I> block.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        The <BI>Error()</BI> constructor throws more succinct messages. Contains
+        <BI>"name"</BI>, <BI>"message"</BI>, <BI>"cause"</BI>, etc with error
+        details.
+      </>
+    )
+  }
+];
+
 const JSExceptionHandling = () => {
   useDOMTitle('UI-Geeks: JavaScript | Exception Handling');
 
@@ -148,6 +189,8 @@ finally {
 `}
         </Code>
       </Para>
+
+      <YALSSummary items={summaryItems} />
     </Container>
   );
 };

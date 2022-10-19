@@ -34,7 +34,7 @@ const keyFeatures: Array<IOrderedListItemType> = [
   {
     label: (
       <>
-        <B>Uni-direction</B> data flow, provides stable code.
+        <B>Uni-directional</B> data flow, provides stable code.
       </>
     )
   },

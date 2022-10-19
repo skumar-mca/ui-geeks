@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 const useQTextScroll = (qTextId: string = 'qtext') => {
   const [searchParams]: any = useSearchParams();
   const id = searchParams.get(qTextId);
+
   useEffect(() => {
     if (id) {
       const element = document.getElementById(id);

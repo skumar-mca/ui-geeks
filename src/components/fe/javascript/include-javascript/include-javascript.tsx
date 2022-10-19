@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import useDOMTitle from '../../../../custom-hooks/use-dom-title';
-import { TextAlignTypes } from '../../../../types/common';
+import { IOrderedListItemType, TextAlignTypes } from '../../../../types/common';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Note from '../../../shared/note/note';
@@ -9,10 +9,62 @@ import Space from '../../../shared/space/space';
 import { B, BI, Indent, NewLine, ScriptTag } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { IncludeScriptQuestions } from '../questionnaires/include-script-questionnaire';
 import JSAsyncScriptLoading from './async-loading';
 import JSDeferScriptLoading from './defer-loading';
 import JSScriptLoadingIntro from './script-loading-intro';
+const summaryItems: Array<IOrderedListItemType> = [
+  {
+    label: (
+      <>
+        <B>{`<script>`}</B> tags is used for adding JavaScript code to webpage.
+      </>
+    )
+  },
+  {
+    label: <>HTML on the page is loaded in the order in which they appear.</>
+  },
+  {
+    label: (
+      <>
+        In <B>"Default Script Loading"</B> strategy, HTML parsing is paused
+        during the period of script download and execution.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        With the <BI>async</BI> attribute, the script is downloaded without
+        blocking the page.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        Scripts with <BI>async</BI> attributes can be downloaded/executed in any
+        order.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        With the <BI>defer</BI> attribute, scripts will not be executed, until
+        everything is loaded.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        Scripts with <BI>defer</BI> attributes will execute in the given order.
+      </>
+    )
+  }
+];
 
 const JSInclude = () => {
   useDOMTitle('UI-Geeks: JavaScript | How To Include Code');
@@ -104,6 +156,8 @@ const JSInclude = () => {
         been loaded. On larger sites with lots of JavaScript files, this can
         cause a <B>major performance issue</B>.
       </Note>
+
+      <YALSSummary items={summaryItems} />
 
       <Para>
         <YALSQuestionaire questions={IncludeScriptQuestions} />

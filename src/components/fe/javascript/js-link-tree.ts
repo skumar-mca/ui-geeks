@@ -78,7 +78,7 @@ export const JSLINK = [
     ]
   },
   {
-    label: 'Building block of JavaScript: the types',
+    label: 'Data types',
     link: '/javascript/data-types',
     tags: [
       'Types',

@@ -26,8 +26,26 @@ export interface IOrderedListItemType {
   label: ReactNode | string;
   items?: Array<IOrderedListItemType>;
 }
+
 export interface IOrderedListProps {
   items: Array<IOrderedListItemType>;
   unOrdered?: boolean;
   expanded?: boolean;
+}
+
+export interface ILabelURLType {
+  url: string;
+  label: string | ReactNode;
+}
+
+export interface IMenuTreeItemType {
+  label: string;
+  children: Array<ILabelURLType>;
+}
+
+export interface ILinkTreeType {
+  label: string;
+  link: string;
+  tags: Array<string>;
+  children?: Array<ILabelURLType>;
 }

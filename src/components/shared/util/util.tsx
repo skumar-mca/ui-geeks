@@ -5,6 +5,7 @@ import {
   IOrderedListProps,
   IScriptTagProps
 } from '../../../types/common';
+import { AppPrefix } from '../../../util/app-constants';
 import Word from '../word/word';
 
 const ScriptTag = (props: IScriptTagProps) => {
@@ -64,7 +65,7 @@ const Indent = (props: IIndentProps) => {
 const OrderedList = (props: IOrderedListProps) => {
   const { items, unOrdered = false, expanded = false } = props;
 
-  const clsName = `yals-ordered-list${expanded ? '-expanded' : ''}`;
+  const clsName = `${AppPrefix}-ordered-list${expanded ? '-expanded' : ''}`;
   if (!items) {
     return null;
   }

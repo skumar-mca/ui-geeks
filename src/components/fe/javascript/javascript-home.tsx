@@ -11,7 +11,6 @@ import { JS_ROUTE_PATH } from './js-menu-items';
 
 const JSHome = () => {
   useQTextScroll();
-
   return (
     <HomePageWrapper
       menuLinks={JSLINK}

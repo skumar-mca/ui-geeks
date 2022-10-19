@@ -27,7 +27,7 @@ const ReactStateIntro = () => {
 
       <Para>
         This is commonly called a <B>"top-down"</B> or <B>"unidirectional"</B>
-        <Space /> data flow. Any state is always owned by sme specific
+        <Space /> data flow. Any state is always owned by some specific
         component, and any data or UI derived from that state can only affect
         components <B>"below" them in the tree</B>.
       </Para>

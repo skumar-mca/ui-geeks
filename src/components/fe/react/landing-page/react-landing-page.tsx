@@ -11,6 +11,7 @@ const ReactLandingPage = () => {
       imagePath='images/react-icon.png'
       title='React'
       wordCloudUrl={ImagePaths.REACT.WORD_CLOUD}
+      menuTree={[]}
     >
       <ReactDefinition />
     </LandingPageWrapper>

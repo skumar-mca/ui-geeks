@@ -6,6 +6,8 @@ import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { JS_SUMMARY } from '../js-summary-list';
 import { IntroductionQuestions } from '../questionnaires/introduction-questionnaire';
 
 const JSIntroduction = () => {
@@ -159,6 +161,8 @@ const JSIntroduction = () => {
         <Space /> method of Array can be called to sort all the items of the
         array, we do not need to write down the steps to sort the array.
       </Para>
+
+      <YALSSummary items={JS_SUMMARY.INTRODUCTION} />
 
       <Para>
         <YALSQuestionaire questions={IntroductionQuestions} />

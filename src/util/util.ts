@@ -45,3 +45,22 @@ export const isIOS = () => {
     (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
   );
 };
+
+export const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
+
+export const scrollToQText = () => {
+  const queryPart = location.href.split('?');
+  if (queryPart && queryPart[1]) {
+    const keyValuePair = (queryPart[1] || '').split('=');
+    const id = keyValuePair && keyValuePair[1] ? keyValuePair[1] : null;
+
+    if (id) {
+      const element = document.getElementById(id);
+      if (element) {
+        window.scrollTo({ top: element.offsetTop - 50, behavior: 'smooth' });
+      }
+    }
+  }
+};

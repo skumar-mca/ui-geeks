@@ -9,6 +9,37 @@ import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, IU, OrderedList } from '../../../shared/util/util';
+import YALSSummary from '../../../shared/yals-summary/yals-summary';
+
+const summaryItems: Array<IOrderedListItemType> = [
+  {
+    label: (
+      <>
+        <B>Error boundaries</B> are <I>class components</I> that <Space />
+        <B>catch JavaScript errors</B>. Errors can be logged and a <Space />
+        <B>fallback UI</B> can be displayed.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        Error boundaries do not catch errors for: <I>Event handlers</I>,
+        <Space /> <I>asynchronous code</I>, <I>server side rendering</I> and in
+        error boundary itself.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        A class component becomes an error boundary if it defines
+        <BI>getDerivedStateFromError()</BI> or <BI>componentDidCatch()</BI> or
+        both.
+      </>
+    )
+  }
+];
 
 const notCheckItems: Array<IOrderedListItemType> = [
   {
@@ -42,7 +73,8 @@ const ReactErrorBoundary = () => {
         <B>catch JavaScript errors</B> anywhere in their child component tree,
         <B>log those errors</B>, and <B>display a fallback UI</B> instead of the
         component tree that crashed. Error boundaries catch errors during
-        <I>rendering</I>, in <I>lifecycle methods</I>, and in <Space />
+        <Space /> <I>rendering</I>, in <I>lifecycle methods</I>, and in
+        <Space />
         <I>constructors</I> of the whole tree below them.
       </Para>
 
@@ -113,6 +145,8 @@ const ReactErrorBoundary = () => {
 </ErrorBoundary>`}
         </Code>
       </Para>
+
+      <YALSSummary items={summaryItems} />
     </Container>
   );
 };

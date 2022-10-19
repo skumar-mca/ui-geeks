@@ -14,11 +14,17 @@ const ReactHelloWorld = () => {
       <Para>
         <BI>React</BI> is the entry point to the React library. If we load
         <Space /> <I>React</I> from a <Space /> <B>{`<script>`}</B> tag, the
-        top-level APIs are available on the <BI>React</BI> global. If we use
-        <Space /> <I>ES6</I> with <I>npm</I>, we can write <Space />
-        <BI>{`import React from 'react'`}</BI>. If we use <I>ES5</I>
-        <Space /> <I>npm</I>, we can write {`var React = require('react')`}.
+        top-level APIs are available on the <BI>React</BI> global.
       </Para>
+
+      <Code language={CodeLanguageTypes.JSX}>
+        {`// If we use ES6 with npm, we can write:
+import React from 'react'
+
+// If we use ES5 npm, we can write:
+var React = require('react')
+`}
+      </Code>
 
       <Para>The smallest React example looks like this:</Para>
 

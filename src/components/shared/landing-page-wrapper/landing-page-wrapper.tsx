@@ -1,11 +1,12 @@
 import classNames from 'classnames';
 import React, { memo, useEffect, useState } from 'react';
+import Col from 'react-bootstrap/esm/Col';
+import Row from 'react-bootstrap/esm/Row';
 import { useNavigate } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import { TextAlignTypes } from '../../../types/common';
 import { AppPrefix, DeviceType } from '../../../util/app-constants';
-import { buildChildren } from '../../../util/util';
-import { IBlogMenuType } from '../../fe/javascript/blogs/javascript-blog-content';
+import { buildChildren, scrollToTop } from '../../../util/util';
 import Heading from '../heading/heading';
 import Para from '../para/para';
 import { NewLine } from '../util/util';
@@ -16,13 +17,23 @@ import {
   FlexAlignItemsTypes,
   FlexJustifyContentTypes
 } from '../yals-flex/yals-flex.types';
+import { RenderItem } from '../yals-menu-tree/menu-tree-component';
+import YALSMenuTree from '../yals-menu-tree/yals-menu-tree';
 
 import './landing-page-wrapper.scss';
 import { ILandingPageWrapperProps } from './landing-page-wrapper.types';
 
 const LandingPageWrapper = (props: ILandingPageWrapperProps) => {
-  const { linksMenu, imagePath, wordCloudUrl, title, children, blogList } =
-    props;
+  const {
+    linksMenu,
+    imagePath,
+    wordCloudUrl,
+    title,
+    children,
+    blogList,
+    menuTree,
+    customContentMenuTree
+  } = props;
 
   const deviceType = useDeviceType();
   const navigate = useNavigate();
@@ -54,6 +65,7 @@ const LandingPageWrapper = (props: ILandingPageWrapperProps) => {
   };
 
   useEffect(() => {
+    scrollToTop();
     buildMenuList();
   }, []);
 
@@ -92,60 +104,52 @@ const LandingPageWrapper = (props: ILandingPageWrapperProps) => {
             </YalsButton>
           </Para>
           <div className='content-details-section'>
-            <Para>
-              <Heading as='h1'>Course Content</Heading>
-            </Para>
-            <Para>
-              <YalsFlex
-                justifyContent={FlexJustifyContentTypes.SpaceAround}
-                className='topic-list'
-              >
-                {menuList.map((menu: any) => {
-                  return (
-                    <div className='insight' key={menu.label}>
-                      <YalsButton
-                        onClick={redirectToTopic.bind(this, menu)}
-                        variant={YALSButtonVariantTypes.Clear}
-                      >
-                        <div className='insight-value'>{menu.label}</div>
-                        {menu.childList.length > 0 && (
-                          <div className='insight-key'>
-                            {menu.childList.length + 1} Topics
-                          </div>
-                        )}
-                      </YalsButton>
-                    </div>
-                  );
-                })}
-              </YalsFlex>
-            </Para>
+            <Heading as='h1'>Course Content</Heading>
 
-            {blogList && (
-              <>
-                <Para>
-                  <Heading as='h1'>Blogs</Heading>
-                </Para>
-                <Para>
-                  <YalsFlex
-                    justifyContent={FlexJustifyContentTypes.SpaceAround}
-                    className='topic-list'
-                  >
-                    {blogList.map((blog: IBlogMenuType) => {
-                      return (
-                        <div className='insight' key={blog.label}>
-                          <YalsButton
-                            onClick={redirectToTopic.bind(this, blog)}
-                            variant={YALSButtonVariantTypes.Clear}
-                          >
-                            <div className='insight-value'>{blog.label}</div>
-                          </YalsButton>
-                        </div>
-                      );
-                    })}
-                  </YalsFlex>
-                </Para>
-              </>
-            )}
+            <Para>
+              {menuTree ? (
+                <YALSMenuTree menuTree={menuTree} linksMenu={linksMenu} />
+              ) : (
+                <YalsFlex
+                  justifyContent={FlexJustifyContentTypes.SpaceAround}
+                  className='topic-list'
+                >
+                  {menuList.map((menu: any) => {
+                    return (
+                      <div className='insight' key={menu.label}>
+                        <YalsButton
+                          onClick={redirectToTopic.bind(this, menu)}
+                          variant={YALSButtonVariantTypes.Clear}
+                        >
+                          <div className='insight-value'>{menu.label}</div>
+                          {menu.childList.length > 0 && (
+                            <div className='insight-key'>
+                              {menu.childList.length + 1} Topics
+                            </div>
+                          )}
+                        </YalsButton>
+                      </div>
+                    );
+                  })}
+                </YalsFlex>
+              )}
+
+              {customContentMenuTree && (
+                <div className={`${AppPrefix}-menu-tree`}>
+                  <Row>
+                    <Heading as='h4'>{customContentMenuTree.label}</Heading>
+                    {customContentMenuTree.children.length <= 3 && (
+                      <Col xl={4} lg={4} md={4} sm={12}>
+                        <RenderItem
+                          menus={customContentMenuTree.children}
+                          url={'/javascript'}
+                        />
+                      </Col>
+                    )}
+                  </Row>
+                </div>
+              )}
+            </Para>
           </div>
         </div>
       </div>

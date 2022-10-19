@@ -12,7 +12,13 @@ import './navigation-menu.scss';
 import { IMenuItem, INavigationMenuProps } from './navigation-menu.types';
 
 const NavigationMenu = (props: INavigationMenuProps) => {
-  const { menuList, menuTitle, menuLinks, onMenuClick } = props;
+  const {
+    menuList,
+    menuTitle,
+    menuLinks,
+    showMainLinkOnly = false,
+    onMenuClick
+  } = props;
   const menuClasses = classNames({ [`${AppPrefix}-menu-wrapper`]: true });
   const currentPath = useCurrentPath();
   const isSelectedRoute = (url: string) => currentPath === url;
@@ -45,43 +51,56 @@ const NavigationMenu = (props: INavigationMenuProps) => {
           <Heading as='h5'>{menuTitle}</Heading>
         </div>
       )}
-      <ul className='menu-ul'>
-        {menuList.map((itm: IMenuItem) => {
-          return (
-            <li key={itm.url}>
-              <Link
-                to={itm.url}
-                className={isSelectedRoute(itm.url) ? 'selected' : ''}
-                onClick={handleMenuClick.bind(this, itm)}
-              >
-                <span className='link-label'> {itm.label}</span>
-                {deviceType !== DeviceType.LargeDesktop &&
-                  itemsLength > 0 &&
-                  isSelectedRoute(itm.url) && (
-                    <span
-                      className={`arrow ${
-                        showSubMenu ? 'arrow-down' : 'arrow-right'
-                      }`}
-                    >
-                      <ChevronRight />
-                    </span>
-                  )}
-              </Link>
 
-              {showSubMenu &&
-                deviceType !== DeviceType.LargeDesktop &&
-                menuLinks &&
-                isSelectedRoute(itm.url) && (
-                  <div className='sub-menu'>
-                    <OnPageItems
-                      allItems={menuLinks}
-                      onMenuClick={onMenuClick}
-                    />
-                  </div>
-                )}
-            </li>
-          );
-        })}
+      <ul className='menu-ul'>
+        {showMainLinkOnly && (
+          <li key={menuList[0].url}>
+            <Link
+              to={menuList[0].url}
+              onClick={handleMenuClick.bind(this, menuList[0])}
+            >
+              <span className='link-label'>Learn Now</span>
+            </Link>
+          </li>
+        )}
+
+        {!showMainLinkOnly &&
+          menuList.map((itm: IMenuItem) => {
+            return (
+              <li key={itm.url}>
+                <Link
+                  to={itm.url}
+                  className={isSelectedRoute(itm.url) ? 'selected' : ''}
+                  onClick={handleMenuClick.bind(this, itm)}
+                >
+                  <span className='link-label'> {itm.label}</span>
+                  {deviceType !== DeviceType.LargeDesktop &&
+                    itemsLength > 0 &&
+                    isSelectedRoute(itm.url) && (
+                      <span
+                        className={`arrow ${
+                          showSubMenu ? 'arrow-down' : 'arrow-right'
+                        }`}
+                      >
+                        <ChevronRight />
+                      </span>
+                    )}
+                </Link>
+
+                {showSubMenu &&
+                  deviceType !== DeviceType.LargeDesktop &&
+                  menuLinks &&
+                  isSelectedRoute(itm.url) && (
+                    <div className='sub-menu'>
+                      <OnPageItems
+                        allItems={menuLinks}
+                        onMenuClick={onMenuClick}
+                      />
+                    </div>
+                  )}
+              </li>
+            );
+          })}
       </ul>
     </div>
   );

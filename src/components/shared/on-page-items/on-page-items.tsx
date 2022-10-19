@@ -36,8 +36,9 @@ const OnPageItems = (props: any) => {
 
   const scrollToItem = (evt: any, itm: any) => {
     evt.preventDefault();
-    const label = itm.altLabel || itm.label;
-    const elm = document.getElementById(populateId(label));
+
+    const label = populateId(itm.altLabel || itm.label);
+    const elm = document.getElementById(label);
     if (elm) {
       var scrollDiv = elm.offsetTop - 50;
       window.scrollTo({ top: scrollDiv, behavior: 'smooth' });

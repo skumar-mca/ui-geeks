@@ -153,19 +153,18 @@ export const JSLINK = [
         ]
       },
       {
-        label: 'Variables',
-        children: [
-          {
-            label: 'let'
-          },
-          {
-            label: 'const'
-          },
-          {
-            label: 'var'
-          }
-        ]
+        label: 'Variables'
       },
+      {
+        label: 'let'
+      },
+      {
+        label: 'const'
+      },
+      {
+        label: 'var'
+      },
+
       {
         label: 'Variable naming rules'
       },

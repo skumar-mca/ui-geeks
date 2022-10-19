@@ -11,6 +11,10 @@
   .#{$appPrefix}-navigate-btn {
     display: block;
     margin-bottom: 10px;
+
+    .no-link {
+      text-decoration: none;
+    }
   }
 
   .#{$appPrefix}-btn {
@@ -29,20 +33,33 @@
 
 .device-type-mobile {
   .#{$appPrefix}-menu-tree {
+    padding: 0px;
+    .row {
+      .#{$appPrefix}-navigate-btn {
+        background-color: $lightGray;
+        padding: 5px 0px 5px 10px;
+      }
+    }
+
     .#{$appPrefix}-navigate-btn {
       display: block;
-      padding: 10px 0px 10px 10px;
-      background-color: $lightGray;
+      padding: 5px 0px 5px 0px;
       margin-bottom: 5px;
+      width: 100%;
 
       .#{$appPrefix}-btn {
         display: block;
         color: rgba(103, 106, 228, 1);
-
+        font-size: 1.1rem;
         &:hover {
           text-decoration: none;
         }
       }
+    }
+
+    h2 {
+      margin-top: 3rem;
+      margin-bottom: 0px;
     }
   }
 }

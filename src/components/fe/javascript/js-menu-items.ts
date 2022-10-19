@@ -1,92 +1,112 @@
+import { getGroupedMenu } from '../../../util/util';
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
 
 export const JS_routePrefix = '/javascript/';
 export const JS_ROUTE_PATH: Array<IMenuItem> = [
   {
     url: `${JS_routePrefix}introduction`,
-    label: 'Introduction'
+    label: 'Introduction',
+    group: 'Introduction'
   },
   {
     url: `${JS_routePrefix}history`,
-
-    label: 'History'
+    label: 'History',
+    group: 'Introduction'
   },
   {
     url: `${JS_routePrefix}include-code`,
-    label: 'Including Scripts'
+    label: 'Including Scripts',
+    group: 'Introduction'
   },
   {
     url: `${JS_routePrefix}console`,
-    label: 'Console'
+    label: 'Console',
+    group: 'Introduction'
   },
   {
     url: `${JS_routePrefix}data-types`,
-    label: 'Data types'
+    label: 'Data types',
+    group: 'Fundamental Concepts'
   },
   {
     url: `${JS_routePrefix}grammer`,
-
-    label: 'Grammer and Types'
+    label: 'Grammer and Types',
+    group: 'Fundamental Concepts'
   },
   {
     url: `${JS_routePrefix}operators`,
-    label: 'Operators'
+    label: 'Operators',
+    group: 'Fundamental Concepts'
   },
   {
     url: `${JS_routePrefix}control-structures`,
-    label: 'Control Structures'
+    label: 'Control Structures',
+    group: 'Fundamental Concepts'
   },
   {
     url: `${JS_routePrefix}objects`,
-    label: 'Objects'
+    label: 'Objects',
+    group: 'Fundamental Concepts'
   },
   {
     url: `${JS_routePrefix}arrays`,
-    label: 'Arrays'
+    label: 'Arrays',
+    group: 'Fundamental Concepts'
   },
   {
     url: `${JS_routePrefix}functions`,
-    label: 'Functions'
+    label: 'Functions',
+    group: 'Fundamental Concepts'
   },
   {
     url: `${JS_routePrefix}closures`,
-    label: 'Closures'
+    label: 'Closures',
+    group: 'Advanved Concepts'
   },
   {
     url: `${JS_routePrefix}arrow-functions`,
-    label: 'Arrow Functions'
+    label: 'Arrow Functions',
+    group: 'Advanved Concepts'
   },
   {
     url: `${JS_routePrefix}modules`,
-    label: 'Modules'
+    label: 'Modules',
+    group: 'Advanved Concepts'
   },
   {
     url: `${JS_routePrefix}this-keyword`,
-    label: 'this Keyword'
+    label: 'this Keyword',
+    group: 'Advanved Concepts'
   },
   {
     url: `${JS_routePrefix}class-keyword`,
-    label: 'Class'
+    label: 'Class',
+    group: 'Advanved Concepts'
   },
   {
     url: `${JS_routePrefix}prototype-chain`,
-    label: 'Prototype Chain'
+    label: 'Prototype Chain',
+    group: 'Advanved Concepts'
   },
   {
     url: `${JS_routePrefix}strict-mode`,
-    label: 'Strict Mode'
+    label: 'Strict Mode',
+    group: 'Advanved Concepts'
   },
   {
     url: `${JS_routePrefix}hoisting`,
-    label: 'Hoisting'
+    label: 'Hoisting',
+    group: 'Advanved Concepts'
   },
   {
     url: `${JS_routePrefix}exception-handling`,
-    label: 'Exception Handling'
+    label: 'Exception Handling',
+    group: 'Advanved Concepts'
   },
   {
     url: `${JS_routePrefix}iterators-and-generators`,
-    label: 'Iterators and Generators'
+    label: 'Iterators and Generators',
+    group: 'Advanved Concepts'
   }
 ];
 
@@ -98,4 +118,8 @@ export const JS_PRIMARY_ROUTES = {
     url: 'javascript/demoes',
     label: 'JavaScript Demoes'
   }
+};
+
+export const getJSGroupedMenu = () => {
+  return getGroupedMenu(JS_ROUTE_PATH);
 };

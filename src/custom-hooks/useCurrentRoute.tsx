@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { scrollToTop } from '../util/util';
+import { scrollToQText } from '../util/util';
 
 const useCurrentPath = () => {
   const location = useLocation();
 
   useEffect(() => {
-    scrollToTop();
+    scrollToQText();
   }, [location.pathname]);
 
   return location.pathname;

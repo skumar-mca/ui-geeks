@@ -1,3 +1,5 @@
+import { IMenuItem } from '../components/shared/navigation-menu/navigation-menu.types';
+
 export const getOnPageItems = (currentPath: string, allItems: Array<any>) => {
   if (!allItems || !currentPath) {
     return [];
@@ -9,7 +11,10 @@ export const populateId = (str: string) => {
   if (!str) {
     return '';
   }
-  return str.toString().replace(/[^a-zA-Z]/g, '');
+  return str
+    .toString()
+    .replace(/[^a-zA-Z ]/g, '')
+    .replaceAll(' ', '_');
 };
 
 export const buildChildren = (
@@ -62,5 +67,23 @@ export const scrollToQText = () => {
         window.scrollTo({ top: element.offsetTop - 50, behavior: 'smooth' });
       }
     }
+    return;
   }
+
+  scrollToTop();
+};
+
+export const getGroupedMenu = (routePathArray: Array<IMenuItem>) => {
+  const groupCategory = routePathArray
+    .map((item: IMenuItem) => item.group)
+    .filter((value, index, self) => self.indexOf(value) === index);
+
+  const groupedMenu = groupCategory.map((itm: any) => {
+    return {
+      label: itm,
+      children: routePathArray.filter((rt: IMenuItem) => rt.group === itm)
+    };
+  });
+
+  return groupedMenu;
 };

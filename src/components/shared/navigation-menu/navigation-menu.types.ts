@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 export interface IMenuItem {
   url: string;
   label: string;
+  group?: string;
 }
 
 export interface INavigationMenuProps {

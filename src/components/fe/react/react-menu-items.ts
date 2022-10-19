@@ -1,65 +1,81 @@
+import { getGroupedMenu } from '../../../util/util';
 import { IMenuItem } from '../../shared/navigation-menu/navigation-menu.types';
 const routePrefix = '/react/';
 export const REACT_ROUTE_PATH: Array<IMenuItem> = [
   {
     url: `${routePrefix}introduction`,
-    label: 'Introduction'
+    label: 'Introduction',
+    group: 'Basic Concepts'
   },
   {
     url: `${routePrefix}jsx`,
-    label: 'JSX'
+    label: 'JSX',
+    group: 'Basic Concepts'
   },
   {
     url: `${routePrefix}components`,
-    label: 'Components'
+    label: 'Components',
+    group: 'Basic Concepts'
   },
   {
     url: `${routePrefix}class-component`,
-    label: 'Class Component'
+    label: 'Class Component',
+    group: 'Core Concepts'
   },
   {
     url: `${routePrefix}function-component`,
-    label: 'Function Component'
+    label: 'Function Component',
+    group: 'Core Concepts'
   },
   {
     url: `${routePrefix}controlled-component`,
-    label: 'Controlled Component'
+    label: 'Controlled Component',
+    group: 'Core Concepts'
   },
   {
     url: `${routePrefix}uncontrolled-component`,
-    label: 'Uncontrolled Component'
+    label: 'Uncontrolled Component',
+    group: 'Core Concepts'
   },
   {
     url: `${routePrefix}fragments`,
-    label: 'Fragments'
+    label: 'Fragments',
+    group: 'Core Concepts'
   },
   {
     url: `${routePrefix}lists`,
-    label: 'Lists'
+    label: 'Lists',
+    group: 'Core Concepts'
   },
   {
     url: `${routePrefix}forms`,
-    label: 'Forms'
+    label: 'Forms',
+    group: 'Core Concepts'
   },
   {
     url: `${routePrefix}hooks`,
-    label: 'Hooks'
+    label: 'Hooks',
+    group: 'Advanced Concepts'
   },
   {
     url: `${routePrefix}context`,
-    label: 'Context'
+    label: 'Context',
+    group: 'Advanced Concepts'
   },
   {
     url: `${routePrefix}render-props`,
-    label: 'Render Props'
+    label: 'Render Props',
+    group: 'Advanced Concepts'
   },
   {
     url: `${routePrefix}error-boundary`,
-    label: 'Error Boundary'
+    label: 'Error Boundary',
+    group: 'Advanced Concepts'
   },
   {
     url: `${routePrefix}react-routes`,
-    label: 'React Router'
+    label: 'React Router',
+    group: 'Advanced Concepts'
   }
 ];
 
@@ -70,4 +86,8 @@ export const REACT_PRIMARY_ROUTES = {
     url: '/react/demoes',
     label: 'React Demoes'
   }
+};
+
+export const getReactGroupedMenu = () => {
+  return getGroupedMenu(REACT_ROUTE_PATH);
 };

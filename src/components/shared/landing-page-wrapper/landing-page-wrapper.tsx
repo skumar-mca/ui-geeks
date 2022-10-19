@@ -104,34 +104,9 @@ const LandingPageWrapper = (props: ILandingPageWrapperProps) => {
             </YalsButton>
           </Para>
           <div className='content-details-section'>
-            <Heading as='h1'>Course Content</Heading>
-
             <Para>
-              {menuTree ? (
+              {menuTree && (
                 <YALSMenuTree menuTree={menuTree} linksMenu={linksMenu} />
-              ) : (
-                <YalsFlex
-                  justifyContent={FlexJustifyContentTypes.SpaceAround}
-                  className='topic-list'
-                >
-                  {menuList.map((menu: any) => {
-                    return (
-                      <div className='insight' key={menu.label}>
-                        <YalsButton
-                          onClick={redirectToTopic.bind(this, menu)}
-                          variant={YALSButtonVariantTypes.Clear}
-                        >
-                          <div className='insight-value'>{menu.label}</div>
-                          {menu.childList.length > 0 && (
-                            <div className='insight-key'>
-                              {menu.childList.length + 1} Topics
-                            </div>
-                          )}
-                        </YalsButton>
-                      </div>
-                    );
-                  })}
-                </YalsFlex>
               )}
 
               {customContentMenuTree && (

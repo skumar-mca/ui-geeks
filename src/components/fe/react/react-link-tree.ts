@@ -186,16 +186,14 @@ export const REACT_LINK = [
       },
       {
         label: 'Error Handling Methods',
-        shortLabel: 'Error Handling',
-        children: [
-          {
-            label: 'static getDerivedStateFromError()',
-            shortLabel: 'getDerivedStateFromError()'
-          },
-          {
-            label: 'componentDidCatch()'
-          }
-        ]
+        shortLabel: 'Error Handling'
+      },
+      {
+        label: 'static getDerivedStateFromError()',
+        shortLabel: 'getDerivedStateFromError()'
+      },
+      {
+        label: 'componentDidCatch()'
       }
     ]
   },
@@ -209,12 +207,10 @@ export const REACT_LINK = [
       },
       {
         label: 'Lifecycle Methods',
-        shortLabel: 'Lifecycle Methods',
-        children: [
-          {
-            label: 'useEffect()'
-          }
-        ]
+        shortLabel: 'Lifecycle Methods'
+      },
+      {
+        label: 'useEffect()'
       }
     ]
   },
@@ -293,23 +289,21 @@ export const REACT_LINK = [
         label: 'Rules of Hooks'
       },
       {
-        label: 'useState()',
-        children: [
-          {
-            label: 'Functional Updates'
-          },
-          {
-            label: 'Lazy initial state'
-          },
-          {
-            label: 'Bailing out of a state update',
-            shortLabel: 'Bailing out state update'
-          },
-          {
-            label: 'Batching of state updates',
-            shortLabel: 'Batching state updates'
-          }
-        ]
+        label: 'useState()'
+      },
+      {
+        label: 'Functional Updates'
+      },
+      {
+        label: 'Lazy initial state'
+      },
+      {
+        label: 'Bailing out of a state update',
+        shortLabel: 'Bailing out state update'
+      },
+      {
+        label: 'Batching of state updates',
+        shortLabel: 'Batching state updates'
       },
       {
         label: 'useEffect()'

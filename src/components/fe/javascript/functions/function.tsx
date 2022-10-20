@@ -47,7 +47,7 @@ const summaryItems: Array<IOrderedListItemType> = [
   {
     label: (
       <>
-        The <BI>"argument"</BI> is a keyword which holds <Space />
+        The <BI>"arguments"</BI> is a keyword which holds <Space />
         <I>all the parameters</I> of a function in an <I>Array-like</I> object.
         It seems verbose, since it hides the actual declaration of parameters.
       </>

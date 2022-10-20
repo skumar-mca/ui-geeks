@@ -87,3 +87,30 @@ export const getGroupedMenu = (routePathArray: Array<IMenuItem>) => {
 
   return groupedMenu;
 };
+
+export const generateSiteMap = () => {
+  const pathArr: Array<string> = [];
+  const domain = 'https://ui-geeks.in/#';
+
+  const buildLinks = (links: Array<any>) => {
+    links.map((rt: any) => {
+      const childList = rt.children ? buildChildren(rt.children, 0, []) : [];
+
+      pathArr.push(`${domain}${rt.link}`);
+
+      if (childList && childList.length > 0) {
+        childList.map((ch: any) => {
+          pathArr.push(
+            `${domain}${rt.link}?qtext=${populateId(ch.shortLabel || ch.label)}`
+          );
+        });
+      }
+    });
+  };
+
+  // buildLinks(JSLINK);
+  // buildLinks(REACT_LINK);
+  // buildLinks(JS_BLOG_LINK);
+
+  console.log(pathArr.join('\n'));
+};

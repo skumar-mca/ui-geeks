@@ -170,7 +170,7 @@ console.log(res[1]);  // 10
   return [arg, arguments[0]];
 }
 
-const res = normalFunc(15);
+const res = strictFunc(15);
 console.log(res[0]);  // 10
 console.log(res[1]);  // 15
 // The value of arguments[0] was not changed.`}

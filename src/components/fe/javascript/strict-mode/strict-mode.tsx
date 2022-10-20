@@ -5,7 +5,9 @@ import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import { B, BI, I } from '../../../shared/util/util';
+import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { StrictModeQuestions } from '../questionnaires/strict-mode-questionnaire';
 import JSStrictModeIntro from './strict-mode-intro';
 import JSStrictModeRestrictions from './strict-mode-restrictions';
 
@@ -72,6 +74,10 @@ const JSStrictMode = () => {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={StrictModeQuestions} />
+      </Para>
     </Container>
   );
 };

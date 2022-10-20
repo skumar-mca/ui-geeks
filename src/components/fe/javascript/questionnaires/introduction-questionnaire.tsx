@@ -126,6 +126,28 @@ export const IntroductionQuestions = [
   },
   {
     id: 6,
+    question: (
+      <>
+        {EMPTY_LINE} scans the entire code and transforms it into another form,
+        before they are executed by the computer.
+      </>
+    ),
+    options: [
+      {
+        label: 'Interpreted Language',
+        id: 1
+      },
+      {
+        label: `Compiled Language`,
+        id: 2
+      }
+    ],
+    type: YALSCheckRadioTypes.Radio,
+    name: 'intro_6',
+    answer: 2
+  },
+  {
+    id: 7,
     question: <>JavaScript is an interpreted language.</>,
     options: [
       {
@@ -138,11 +160,11 @@ export const IntroductionQuestions = [
       }
     ],
     type: YALSCheckRadioTypes.Radio,
-    name: 'intro_6',
+    name: 'intro_7',
     answer: 1
   },
   {
-    id: 7,
+    id: 8,
     question: (
       <>
         Programming language, where instructions are written in step by step
@@ -168,11 +190,11 @@ export const IntroductionQuestions = [
       }
     ],
     type: YALSCheckRadioTypes.Radio,
-    name: 'intro_7',
+    name: 'intro_8',
     answer: 2
   },
   {
-    id: 8,
+    id: 9,
     question: (
       <>Declarative language describes {EMPTY_LINE} of desired output.</>
     ),
@@ -195,11 +217,11 @@ export const IntroductionQuestions = [
       }
     ],
     type: YALSCheckRadioTypes.Radio,
-    name: 'intro_8',
+    name: 'intro_9',
     answer: 1
   },
   {
-    id: 9,
+    id: 10,
     question: (
       <>
         {EMPTY_LINE} programming language is a style that treats object as
@@ -225,7 +247,7 @@ export const IntroductionQuestions = [
       }
     ],
     type: YALSCheckRadioTypes.Radio,
-    name: 'intro_9',
+    name: 'intro_10',
     answer: 1
   }
 ];

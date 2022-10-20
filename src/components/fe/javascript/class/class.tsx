@@ -6,7 +6,9 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, OrderedList } from '../../../shared/util/util';
+import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { ClassQuestions } from '../questionnaires/class-questionnaire';
 import JSClassConstructor from './class-constructor';
 import JSClassDeclaration from './class-declaration';
 import JSClassExpression from './class-expression';
@@ -135,6 +137,10 @@ const JSClass = () => {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={ClassQuestions} />
+      </Para>
     </Container>
   );
 };

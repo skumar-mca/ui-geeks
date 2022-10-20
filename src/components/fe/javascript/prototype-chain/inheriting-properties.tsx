@@ -3,7 +3,7 @@ import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
-import { B, BI, I, IU, NewLine, OrderedList } from '../../../shared/util/util';
+import { B, BI, I, IU, OrderedList } from '../../../shared/util/util';
 
 const protoList = [
   {
@@ -97,7 +97,6 @@ const JSInheritingProperties = () => {
   }
 }`}</Code>
 
-      <NewLine />
       <Para>
         <Heading as='h5'>__proto__</Heading> It is one of the ways to
         <B>set the prototype of an object</B>. There are other ways to set the

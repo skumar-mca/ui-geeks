@@ -1,143 +1,155 @@
 import React from 'react';
+import { EMPTY_LINE } from '../../../../util/app-constants';
 import Code from '../../../shared/code/code';
 import { YALSCheckRadioTypes } from '../../../shared/yals-check-radio/yals-check-radio.types';
 
-export const ArrayQuestions = [
+export const ControlStructureQuestions = [
   {
     id: 1,
     question: (
       <>
-        Array's _____________ property can be used to get total number items in
-        array.
+        The {EMPTY_LINE} checks the number/string value against a given set of
+        values.
       </>
     ),
     options: [
       {
-        label: 'size',
+        label: 'if-else',
         id: 1
       },
       {
-        label: 'totalItems',
+        label: 'while',
         id: 2
       },
       {
-        label: 'length',
+        label: 'do-while',
         id: 3
       },
       {
-        label: 'items',
+        label: 'switch-case',
         id: 4
       }
     ],
     type: YALSCheckRadioTypes.Radio,
-    name: 'arr_1',
-    answer: 3,
-    explanation: `The length property of the array holds the highest/last index of the array + 1.`
+    name: 'control_1',
+    answer: 4
   },
   {
     id: 2,
     question: (
-      <>The _____________ method can be used add an item at top of array.</>
+      <>Loops can be terminated forcefully using {EMPTY_LINE} statements.</>
     ),
     options: [
       {
-        label: 'push',
+        label: 'break, throw and return',
         id: 1
       },
       {
-        label: 'unshift',
+        label: 'end and terminate',
         id: 2
       },
       {
-        label: 'shift',
+        label: 'switch and return',
         id: 3
       },
       {
-        label: 'pop',
+        label: 'None of the above',
         id: 4
       }
     ],
     type: YALSCheckRadioTypes.Radio,
-    name: 'arr_2',
-    answer: 2
+    name: 'control_2',
+    answer: 1
   },
   {
     id: 3,
-    question: <>Type of values an array can store.</>,
+    question: (
+      <>
+        What would be the output of below code.
+        <Code>{`const num = 5;
+if(num === 5); { console.log(num); }
+else { console.log(0); }`}</Code>
+      </>
+    ),
     options: [
       {
-        label: 'string',
+        label: '5',
         id: 1
       },
       {
-        label: 'number',
+        label: '0',
         id: 2
       },
       {
-        label: 'object',
+        label: '50',
         id: 3
       },
       {
-        label: 'All of the Above',
+        label: 'Error',
         id: 4
       }
     ],
-    type: YALSCheckRadioTypes.Checkbox,
-    name: 'arr_3',
-    answer: [4]
+    type: YALSCheckRadioTypes.Radio,
+    name: 'control_3',
+    answer: 4
   },
   {
     id: 4,
     question: (
       <>
         What would be the output of below code.
-        <Code>{`const arr = [1, 2, 3, , 5];
-console.log(arr);`}</Code>
+        <Code>{`let sum = 0;
+for(let num = 1; num <=5; i++) {
+  sum += num;
+}
+console.log(sum);`}</Code>
       </>
     ),
     options: [
       {
-        label: '[1, 2, 3, empty, 5]',
+        label: '10',
         id: 1
       },
       {
-        label: `[1, 2, 3, '', 5]`,
+        label: `15`,
         id: 2
       },
       {
-        label: '[1, 2, 3, undefined, 5]',
+        label: `0`,
         id: 3
       },
       {
-        label: `Error`,
+        label: `12345`,
         id: 4
       }
     ],
     type: YALSCheckRadioTypes.Radio,
-    name: 'arr_4',
-    answer: 1
+    name: 'control_4',
+    answer: 2
   },
   {
     id: 5,
     question: (
       <>
         What would be the output of below code.
-        <Code>{`const arr = [1, 2, 3, 4, 5];
-arr.length = 0;
-console.log(arr)`}</Code>
+        <Code>{`let sum = 0;
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => { sum += i; }, 1)
+}
+console.log(sum)`}</Code>
       </>
     ),
     options: [
       {
-        label: '[1, 2, 3, 4, 5]',
+        label: '10',
         id: 1
       },
       {
-        label: `[2, 3, 4, 5]`,
+        label: `25`,
         id: 2
       },
       {
-        label: '[ ]',
+        label: `0`,
         id: 3
       },
       {
@@ -146,7 +158,7 @@ console.log(arr)`}</Code>
       }
     ],
     type: YALSCheckRadioTypes.Radio,
-    name: 'arr_5',
+    name: 'control_5',
     answer: 3
   }
 ];

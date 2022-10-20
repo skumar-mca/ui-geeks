@@ -6,7 +6,9 @@ import Heading from '../../../../shared/heading/heading';
 import Para from '../../../../shared/para/para';
 import Space from '../../../../shared/space/space';
 import { B, BI, I } from '../../../../shared/util/util';
+import YalsQuestionnaire from '../../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../../shared/yals-summary/yals-summary';
+import { ClosureQuestions } from '../../questionnaires/closures-questionnaire';
 import JSClosureScopeChain from './closure-scope-chain';
 import JSClosuresInLoop from './closures-in-loop';
 import JSFunctionClosuresIntro from './closures-intro';
@@ -66,6 +68,10 @@ const JSFunctionClosures = () => {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={ClosureQuestions} />
+      </Para>
     </Container>
   );
 };

@@ -6,7 +6,9 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { IteratorQuestions } from '../questionnaires/iterator-questionnaire';
 import JSGenerators from './generators';
 import JSIterables from './iterables';
 import JSIterators from './iterators';
@@ -102,6 +104,10 @@ const JSIteratorsGenerators = () => {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={IteratorQuestions} />
+      </Para>
     </Container>
   );
 };

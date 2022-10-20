@@ -6,7 +6,9 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { FunctionQuestions } from '../questionnaires/function-questionnaire';
 import JSAnonymousFunctions from './anonymous-functions';
 import JSFunctionArgumentKeyword from './function-arguments';
 import JSFunctionsDeclaration from './function-declaration';
@@ -106,6 +108,10 @@ const JSFunctions = () => {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={FunctionQuestions} />
+      </Para>
     </Container>
   );
 };

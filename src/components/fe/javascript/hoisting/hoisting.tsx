@@ -6,7 +6,9 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, I } from '../../../shared/util/util';
+import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { HoistingQuestions } from '../questionnaires/hoisting-questionnaire';
 import JSClassHoisting from './class-hoisting';
 import JSFunctionHoisting from './function-hoisting';
 import JSVariableHoisting from './variable-hoisting';
@@ -60,6 +62,10 @@ const JSHoisting = () => {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={HoistingQuestions} />
+      </Para>
     </Container>
   );
 };

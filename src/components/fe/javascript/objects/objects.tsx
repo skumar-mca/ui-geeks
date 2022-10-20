@@ -6,7 +6,9 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B } from '../../../shared/util/util';
+import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { ObjectQuestions } from '../questionnaires/objects-questionnaire';
 import JSAccessingObjects from './accessing-objects';
 import JSObjectsIntro from './objects-intro';
 
@@ -67,6 +69,10 @@ const JSObjects = () => {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={ObjectQuestions} />
+      </Para>
     </Container>
   );
 };

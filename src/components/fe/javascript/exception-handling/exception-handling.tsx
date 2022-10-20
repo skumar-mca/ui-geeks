@@ -7,7 +7,9 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, Indent, IU, NewLine } from '../../../shared/util/util';
+import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { ExceptionHandlingQuestions } from '../questionnaires/exception-questionnaire';
 
 const summaryItems: Array<IOrderedListItemType> = [
   {
@@ -191,6 +193,10 @@ finally {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={ExceptionHandlingQuestions} />
+      </Para>
     </Container>
   );
 };

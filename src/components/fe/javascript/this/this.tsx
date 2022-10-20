@@ -6,7 +6,9 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { ThisQuestions } from '../questionnaires/this-questionnaire';
 import JSValueOfThis from './value-of-this/value-of-this';
 
 const summaryItems: Array<IOrderedListItemType> = [
@@ -109,6 +111,10 @@ const JSThis = () => {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={ThisQuestions} />
+      </Para>
     </Container>
   );
 };

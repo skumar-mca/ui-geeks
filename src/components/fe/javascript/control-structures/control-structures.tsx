@@ -6,7 +6,9 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
+import { ControlStructureQuestions } from '../questionnaires/control-struc-questionnaire';
 import JSIfElse from './conditional-statements/if-else/if-else';
 import JSSwitchCase from './conditional-statements/if-else/switch-case';
 import JSControlStructuresIntro from './control-structures-intro';
@@ -75,6 +77,10 @@ const JSControlStructures = () => {
       </Para>
 
       <YALSSummary items={summaryItems} />
+
+      <Para>
+        <YalsQuestionnaire questions={ControlStructureQuestions} />
+      </Para>
     </Container>
   );
 };

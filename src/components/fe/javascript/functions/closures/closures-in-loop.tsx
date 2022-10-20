@@ -148,7 +148,7 @@ function setupHelp() {
 
         <Code>
           {`// Rewriting setupHelp to include the solution
-function setupHelp(){
+function setupHelp() {
   for(let i = 0; i< helpText.length; i++) {
     let item  = helpText[i];
     getElement(item.id).onfocus = () => {

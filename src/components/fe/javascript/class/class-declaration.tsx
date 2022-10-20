@@ -12,7 +12,7 @@ const JSClassDeclaration = () => {
     this.lastName = lastName;
   }
 
-  showName(){
+  showName() {
     console.log(this.firstName + "-" + this.lastName);
   }
 }

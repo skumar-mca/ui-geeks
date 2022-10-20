@@ -18,7 +18,7 @@ const JSClassExpression = () => {
     this.firstName = firstName;
     this.lastName = lastName;
   }
-  showName(){
+  showName() {
     console.log(this.firstName + “-” + this.lastName);
   }
 }
@@ -32,7 +32,7 @@ const JSClassExpression = () => {
     this.firstName = firstName;
     this.lastName = lastName;
   }
-  showName(){
+  showName() {
     console.log(this.firstName + "-" + this.lastName);
   }
 }

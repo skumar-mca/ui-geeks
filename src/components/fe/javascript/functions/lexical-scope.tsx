@@ -61,7 +61,7 @@ const JSFunctionLexicalScope = () => {
       </Para>
 
       <Code>
-        {`if(true) { const x =1; }
+        {`if(true) { const x = 1; }
 else { const x = 2; }
 console.log(x);	// ReferenceError`}
       </Code>
@@ -80,7 +80,7 @@ console.log(x);	// ReferenceError`}
       </Para>
 
       <Code>
-        {`if(true) { var x =1; }
+        {`if(true) { var x = 1; }
 else { var x = 2; }
 console.log(x);	// 1`}
       </Code>

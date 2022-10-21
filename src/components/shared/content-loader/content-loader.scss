@@ -114,3 +114,21 @@
     }
   }
 }
+
+.#{$themeDark} {
+  .#{$appPrefix}-content-loader {
+    .placeholder-content {
+      background: $darkThemeBg;
+      background: linear-gradient(
+        to right,
+        $darkThemeBgAlt 2%,
+        $darkThemeBg 18%,
+        $darkThemeBgAlt 33%
+      );
+
+      &_item {
+        background: $darkThemeBg;
+      }
+    }
+  }
+}

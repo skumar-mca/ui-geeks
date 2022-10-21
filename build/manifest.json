@@ -1,0 +1,33 @@
+{
+  "short_name": "UI Geeks",
+  "name": "UI Geeks | UI Learning Platform",
+  "icons": [
+    {
+      "src": "./images/ui-geeks.png",
+      "type": "image/png"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#282735",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#282735",
+  "shortcuts": [
+    {
+      "name": "JavaScript",
+      "short_name": "JavaScript",
+      "description": "Learn core and advanced concepts of JavaScript.",
+      "url": "/#/javascript/home?source=pwa",
+      "icons": [{ "src": "./images/js-icon.png" }]
+    },
+    {
+      "name": "React",
+      "short_name": "React",
+      "description": "Learn core and advanced concepts of React.",
+      "url": "/#/react/home?source=pwa",
+      "icons": [{ "src": "./images/react-icon-manifest.png" }]
+    }
+  ],
+  "description": "UI-Geeks is an online learning platform. Learn core and advanced concepts of UI terminologies like JavaScript, React, Angular, SCSS, CSS. Blogs, brief summary, multiple choice questions on topics."
+}

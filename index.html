@@ -34,7 +34,7 @@
         "description": "UI-Geeks is an online learning platform. Learn core and advanced concepts of UI terminologies like JavaScript, React, Angular, SCSS, CSS. Blogs, brief summary, multiple choice questions on topics."
       }
     </script>
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
     <div id="root"></div>
@@ -51,6 +51,23 @@
       }
       gtag('js', new Date());
       gtag('config', 'G-BRNZ91CF58');
+    </script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('sw.js', {
+            scope: '.'
+          })
+          .then(
+            (registration) => {
+              console.log('SW Registered', registration.scope);
+            },
+            () => {
+              console.log('SW not Registered');
+            }
+          );
+      }
     </script>
   </body>
 </html>

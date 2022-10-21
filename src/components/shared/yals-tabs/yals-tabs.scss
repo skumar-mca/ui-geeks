@@ -37,3 +37,30 @@
     font-size: 0.9rem;
   }
 }
+
+.#{$themeDark} {
+  .#{$appPrefix}-tabs {
+    border: 1px solid transparent;
+    background-color: $darkThemeBg;
+
+    .nav-tabs {
+      border-bottom: 1px solid $darkThemeBgAlt;
+    }
+
+    .tab-content {
+      border: 1px solid transparent;
+    }
+
+    .nav-link {
+      color: $darkThemeColor;
+    }
+
+    .nav-link.active {
+      color: $darkThemeColor;
+      background-color: $darkThemeBgAlt;
+      border-top-color: $darkThemeBgAlt;
+      border-left-color: $darkThemeBgAlt;
+      border-right-color: $darkThemeBgAlt;
+    }
+  }
+}

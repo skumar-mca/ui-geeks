@@ -1,5 +1,7 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { THEME_CONSTANT } from '../../../util/app-constants';
+import { AppContext } from '../../../util/app-context';
 import ChevronLeft from '../../icons/chevron-left';
 import ChevronRight from '../../icons/chevron-right';
 import InfoIcon from '../../icons/info-icon';
@@ -12,6 +14,8 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
   const { demoComponentList, homePage, homePageLabel } = props;
 
   const navigate = useNavigate();
+  const appContext = useContext(AppContext);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentComponent = demoComponentList[currentIndex];
 
@@ -95,7 +99,15 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
                         className='more-info-icon'
                         title='See more details'
                       >
-                        <InfoIcon height={25} width={25} />
+                        <InfoIcon
+                          height={25}
+                          width={25}
+                          fillColor={
+                            appContext.theme === THEME_CONSTANT.DARK_THEME
+                              ? 'white'
+                              : '#46465e'
+                          }
+                        />
                       </YalsButton>
                     )}
                   </div>

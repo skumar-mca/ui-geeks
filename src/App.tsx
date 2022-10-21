@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <HashRouter>
-      <div className={`app-body device-type-${deviceType}`}>
+      <div className={`device-type-${deviceType}`}>
         <AppRouter />
       </div>
     </HashRouter>

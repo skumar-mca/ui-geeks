@@ -1,11 +1,16 @@
 import classNames from 'classnames';
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useContext, useEffect, useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import { useNavigate } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
-import { AppPrefix, DeviceType } from '../../../util/app-constants';
+import {
+  AppPrefix,
+  DeviceType,
+  THEME_CONSTANT
+} from '../../../util/app-constants';
+import { AppContext } from '../../../util/app-context';
 import ChevronLeft from '../../icons/chevron-left';
 import ChevronRight from '../../icons/chevron-right';
 import { B, NewLine } from '../util/util';
@@ -22,6 +27,7 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
   const navigate = useNavigate();
   const currentPath = useCurrentPath();
   const deviceType = useDeviceType();
+  const appContext = useContext(AppContext);
 
   const prevNextBtnClasses = classNames({
     [`${AppPrefix}-prev-next-btn`]: true
@@ -65,7 +71,11 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
               onClick={onHandleClick.bind(this, prevIndex)}
               outline={false}
               size={YALSSizeTypes.Large}
-              variant={YALSButtonVariantTypes.Dark}
+              variant={
+                appContext.theme === THEME_CONSTANT.LIGHT_THEME
+                  ? YALSButtonVariantTypes.Dark
+                  : YALSButtonVariantTypes.Secondary
+              }
               block={deviceType === DeviceType.Mobile}
             >
               <div className='prev-button'>
@@ -85,7 +95,11 @@ const NextPrevButtons = (props: INextPrevBtnProp) => {
               onClick={onHandleClick.bind(this, nextIndex)}
               outline={false}
               size={YALSSizeTypes.Large}
-              variant={YALSButtonVariantTypes.Dark}
+              variant={
+                appContext.theme === THEME_CONSTANT.LIGHT_THEME
+                  ? YALSButtonVariantTypes.Dark
+                  : YALSButtonVariantTypes.Secondary
+              }
               block={deviceType === DeviceType.Mobile}
             >
               <div className='next-button'>

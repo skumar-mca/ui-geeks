@@ -28,3 +28,11 @@
     margin-bottom: 15px;
   }
 }
+
+.#{$themeDark} {
+  .#{$appPrefix}-breadcrumb {
+    a {
+      color: $darkThemeColor;
+    }
+  }
+}

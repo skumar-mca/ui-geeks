@@ -156,3 +156,25 @@ body {
   margin-right: 5px;
   line-height: 0;
 }
+
+.#{$themeDark} {
+  background-color: $darkThemeBg;
+
+  .#{$appPrefix}-content-section,
+  .#{$appPrefix}-home-header {
+    background-color: $darkThemeBg;
+    color: $darkThemeColor;
+  }
+
+  .text-sm {
+    color: $darkThemeColor;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4f5151 !important;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #949494 !important;
+  }
+}

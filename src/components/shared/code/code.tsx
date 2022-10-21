@@ -1,7 +1,14 @@
 import classNames from 'classnames';
-import React, { memo } from 'react';
-import { anOldHope, CopyBlock, dracula, github } from 'react-code-blocks';
-import { AppPrefix } from '../../../util/app-constants';
+import React, { memo, useContext } from 'react';
+import {
+  anOldHope,
+  CopyBlock,
+  dracula,
+  github,
+  pojoaque
+} from 'react-code-blocks';
+import { AppPrefix, THEME_CONSTANT } from '../../../util/app-constants';
+import { AppContext } from '../../../util/app-context';
 import './code.scss';
 import { ICodeProps } from './code.types';
 
@@ -15,6 +22,8 @@ const Code = (props: ICodeProps) => {
     highlight,
     copyBtn = true
   } = props;
+
+  const appContext = useContext(AppContext);
 
   const codeClasses = classNames({
     [`${AppPrefix}-code`]: true,
@@ -31,7 +40,9 @@ const Code = (props: ICodeProps) => {
         return github;
 
       default:
-        return anOldHope;
+        return appContext.theme === THEME_CONSTANT.DARK_THEME
+          ? pojoaque
+          : anOldHope;
     }
   };
 

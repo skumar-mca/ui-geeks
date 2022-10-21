@@ -86,3 +86,14 @@
     }
   }
 }
+
+.#{$themeDark} {
+  .demo-component {
+    background-color: $darkThemeBg;
+    color: $darkThemeColor;
+    border: 1px solid transparent;
+  }
+  .full-page-demo {
+    background-color: $darkThemeBg;
+  }
+}

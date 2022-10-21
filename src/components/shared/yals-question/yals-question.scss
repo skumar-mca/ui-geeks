@@ -43,3 +43,9 @@
     }
   }
 }
+
+.#{$themeDark} {
+  .#{$appPrefix}-question {
+    background-color: $darkThemeBg;
+  }
+}

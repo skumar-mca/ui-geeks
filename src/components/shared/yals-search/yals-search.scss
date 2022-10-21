@@ -5,6 +5,7 @@
   text-align: center;
   width: 100px;
   margin-right: 5px;
+  display: inline-block;
 
   .#{$appPrefix}-search-input {
     margin: auto;
@@ -98,6 +99,41 @@
 
       .#{$appPrefix}-btn {
         margin-top: -5px;
+      }
+    }
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-search-input {
+    input {
+      background-color: $darkThemeBgAlt;
+      color: $darkThemeColor;
+      &:focus {
+        border-color: $darkThemeGray;
+      }
+    }
+
+    .input-group-text {
+      border: 1px solid $darkThemeGray;
+    }
+  }
+
+  .search-result-wrapper {
+    .insight {
+      background-color: $darkThemeBgAlt !important;
+      color: $darkThemeColor !important;
+
+      &:hover {
+        box-shadow: 1px 1px 2px 0px #696767 !important;
+      }
+
+      .insight-value {
+        color: $darkThemeColor !important;
+      }
+
+      .matching-term {
+        color: #c3c3c3 !important;
       }
     }
   }

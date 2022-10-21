@@ -40,6 +40,19 @@
       }
     }
   }
+
+  .theme-switch {
+    .btn-clear {
+      padding: 0;
+      margin-top: -5px;
+      &:active {
+        border-color: transparent;
+      }
+    }
+
+    display: inline-block;
+    margin-right: 25px;
+  }
 }
 
 .device-type-mobile {
@@ -50,5 +63,13 @@
 
   .app-name {
     font-size: 0.7rem;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-home-header {
+    .app-name {
+      color: $darkThemeColor;
+    }
   }
 }

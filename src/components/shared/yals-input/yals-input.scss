@@ -22,3 +22,11 @@
     cursor: pointer;
   }
 }
+
+.#{$themeDark} {
+  .#{$appPrefix}-input {
+    .input-label {
+      color: $darkThemeColor;
+    }
+  }
+}

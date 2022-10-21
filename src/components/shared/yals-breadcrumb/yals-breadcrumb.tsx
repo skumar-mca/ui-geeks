@@ -1,13 +1,16 @@
 import classNames from 'classnames';
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useContext, useEffect, useState } from 'react';
 import { Breadcrumb } from 'react-bootstrap';
-import { AppPrefix } from '../../../util/app-constants';
+import { AppPrefix, THEME_CONSTANT } from '../../../util/app-constants';
+import { AppContext } from '../../../util/app-context';
 import HomeIcon from '../../icons/home-icon';
 import './yals-breadcrumb.scss';
 import { IYALSBreadcrumbProps } from './yals-breadcrumb.types';
 
 const YALSBreadcrumb = (props: IYALSBreadcrumbProps) => {
   const { items, currentMenuItem } = props;
+
+  const appContext = useContext(AppContext);
 
   const [breadCrumbItems, setBreadCrumbItems] = useState(items);
 
@@ -31,7 +34,17 @@ const YALSBreadcrumb = (props: IYALSBreadcrumbProps) => {
             active={!itm.link}
             className={!itm.link ? 'inactive-item' : ''}
           >
-            {itm.label === 'Home' ? <HomeIcon /> : itm.label}
+            {itm.label === 'Home' ? (
+              <HomeIcon
+                fillColor={
+                  appContext.theme === THEME_CONSTANT.DARK_THEME
+                    ? '#dedede'
+                    : ''
+                }
+              />
+            ) : (
+              itm.label
+            )}
           </Breadcrumb.Item>
         );
       })}

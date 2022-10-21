@@ -2,6 +2,8 @@
 @import '../../../scss/colors.scss';
 
 .#{$appPrefix}-on-page-items {
+  padding-left: 15px;
+
   ul {
     list-style: none;
     padding: 0 !important;
@@ -29,7 +31,7 @@
       }
 
       padding: 1px 0px 1px 0px;
-      border-bottom: 1px solid $secondaryBgColor;
+      border-bottom: 1px solid $lightGray;
       .btn {
         font-size: 0.8rem !important;
         color: $lightPurple;
@@ -46,6 +48,36 @@
         .btn {
           padding: 3px 2px 3px 0px !important;
         }
+      }
+    }
+  }
+}
+
+.#{$themeDark} {
+  .selected-sub-menu {
+    background-color: #413f3f !important;
+  }
+
+  .#{$appPrefix}-right-section {
+    .#{$appPrefix}-on-page-items {
+      background-color: transparent;
+
+      h5.#{$appPrefix}-heading {
+        color: #f4f4f4;
+      }
+    }
+  }
+
+  .#{$appPrefix}-on-page-items {
+    background-color: #353535;
+
+    li {
+      border-bottom: 1px solid $darkThemeGray;
+    }
+    .#{$appPrefix}-btn {
+      color: $white;
+      &:active {
+        border-color: transparent !important;
       }
     }
   }

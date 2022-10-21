@@ -4,3 +4,18 @@
 .#{$appPrefix}-modal {
   z-index: 99999;
 }
+
+.#{$appPrefix}-modal {
+  z-index: 99999;
+}
+
+.#{$themeDark} {
+  .modal-content {
+    background-color: $darkThemeBg;
+    color: $darkThemeColor;
+
+    .btn-close {
+      color: $darkThemeColor;
+    }
+  }
+}

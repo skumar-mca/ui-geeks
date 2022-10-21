@@ -68,7 +68,6 @@
       }
 
       .sub-menu {
-        padding-left: 20px;
         overflow: auto;
       }
     }
@@ -79,6 +78,29 @@
   .menu-ul {
     a {
       padding: 5px 0px 5px 10px !important;
+    }
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-menu-wrapper {
+    .menu-title {
+      .#{$appPrefix}-heading {
+        color: $darkThemeColor;
+      }
+    }
+
+    a.selected {
+      background-color: #3f3f41 !important;
+
+      .arrow {
+        svg {
+          fill: $white;
+        }
+      }
+    }
+    .link-label {
+      color: $darkThemeColor;
     }
   }
 }

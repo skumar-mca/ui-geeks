@@ -49,6 +49,7 @@
 
       .#{$appPrefix}-btn {
         display: block;
+        margin-bottom: 0px;
         color: rgba(103, 106, 228, 1);
         font-size: 1.1rem;
         &:hover {
@@ -60,6 +61,32 @@
     h2 {
       margin-top: 3rem;
       margin-bottom: 0px;
+    }
+  }
+
+  .#{$themeDark} {
+    .#{$appPrefix}-menu-tree {
+      .row {
+        .#{$appPrefix}-navigate-btn {
+          background-color: #5c5c5c !important;
+          border-radius: 4px;
+          .#{$appPrefix}-btn {
+            color: #fbfbfb !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-menu-tree {
+    .row {
+      .#{$appPrefix}-navigate-btn {
+        .#{$appPrefix}-btn {
+          color: #fbfbfb !important;
+        }
+      }
     }
   }
 }

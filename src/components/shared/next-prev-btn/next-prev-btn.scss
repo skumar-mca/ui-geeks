@@ -44,3 +44,9 @@
     margin-bottom: 5px;
   }
 }
+
+.#{$themeDark} {
+  .#{$appPrefix}-prev-next-btn {
+    border: 1px solid $darkThemeGray;
+  }
+}

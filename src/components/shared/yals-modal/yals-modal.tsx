@@ -1,15 +1,18 @@
 import classNames from 'classnames';
-import React, { memo } from 'react';
+import React, { memo, useContext } from 'react';
 import Modal from 'react-bootstrap/esm/Modal';
-import { AppPrefix } from '../../../util/app-constants';
+import { AppPrefix, THEME_CONSTANT } from '../../../util/app-constants';
+import { AppContext } from '../../../util/app-context';
 import './yals-modal.scss';
 import { IYALSModalProps } from './yals-modal.types';
 
 const YALSModal = (props: IYALSModalProps) => {
   const { show, fullScreen, modalHeader, modalContent, onHide } = props;
 
+  const appContext = useContext(AppContext);
   const modalClasses = classNames({
-    [`${AppPrefix}-modal`]: true
+    [`${AppPrefix}-modal`]: true,
+    [`theme-${appContext.theme}`]: true
   });
 
   const isFullScreen = fullScreen ? true : 'false';
@@ -21,7 +24,12 @@ const YALSModal = (props: IYALSModalProps) => {
       fullscreen={isFullScreen}
       onHide={onHide}
     >
-      <Modal.Header closeButton>
+      <Modal.Header
+        closeButton
+        closeVariant={
+          appContext.theme === THEME_CONSTANT.DARK_THEME ? 'white' : ''
+        }
+      >
         <Modal.Title>{modalHeader}</Modal.Title>
       </Modal.Header>
       <Modal.Body>{modalContent}</Modal.Body>

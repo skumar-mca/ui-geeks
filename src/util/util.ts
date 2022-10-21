@@ -1,4 +1,5 @@
 import { IMenuItem } from '../components/shared/navigation-menu/navigation-menu.types';
+import { THEME_CONSTANT } from './app-constants';
 
 export const getOnPageItems = (currentPath: string, allItems: Array<any>) => {
   if (!allItems || !currentPath) {
@@ -113,4 +114,15 @@ export const generateSiteMap = () => {
   // buildLinks(JS_BLOG_LINK);
 
   console.log(pathArr.join('\n'));
+};
+
+export const THEME = {
+  getTheme: () => {
+    return (
+      localStorage.getItem(THEME_CONSTANT.KEY) || THEME_CONSTANT.LIGHT_THEME
+    );
+  },
+  setTheme: (themeValue: string) => {
+    localStorage.setItem(THEME_CONSTANT.KEY, themeValue);
+  }
 };

@@ -12,3 +12,9 @@ export const DeviceType = {
 };
 
 export const TYPER_SPEED = 350;
+
+export const THEME_CONSTANT = {
+  KEY: 'theme',
+  LIGHT_THEME: 'light',
+  DARK_THEME: 'dark'
+};

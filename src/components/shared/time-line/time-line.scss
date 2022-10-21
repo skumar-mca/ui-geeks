@@ -197,3 +197,11 @@
     margin-left: 25px;
   }
 }
+
+.#{$themeDark} {
+  .#{$appPrefix}-time-line {
+    .content {
+      background-color: $darkThemeBgAlt;
+    }
+  }
+}

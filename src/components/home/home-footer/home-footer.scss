@@ -8,3 +8,10 @@
   font-size: 0.9rem;
   height: 40px;
 }
+
+.#{$themeDark} {
+  .#{$appPrefix}-home-footer {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}

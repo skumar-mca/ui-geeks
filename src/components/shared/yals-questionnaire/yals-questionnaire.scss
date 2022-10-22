@@ -50,3 +50,18 @@
     font-size: 0.9em;
   }
 }
+
+.#{$themeDark} {
+  .#{$appPrefix}-questionaire {
+    .correct-answer {
+      background-color: #074324;
+      border: 1px solid #145331;
+    }
+
+    .wrong-answer {
+      background-color: #8c1d1d;
+      color: #f0c8c8;
+      border: 1px solid #9e2020;
+    }
+  }
+}

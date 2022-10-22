@@ -4,6 +4,7 @@ import { YALSSizeType } from '../yals-button/yals-button.types';
 export interface YALSTHType {
   column: string;
   label: string | ReactNode;
+  width?: string;
 }
 
 export interface YALSTDType {

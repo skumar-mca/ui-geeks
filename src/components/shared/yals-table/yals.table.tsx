@@ -26,7 +26,11 @@ const YALSTable = (props: IYAPSTableProps) => {
         <thead>
           <tr>
             {thList.map((th: YALSTHType) => {
-              return <th key={th.column}>{th.label}</th>;
+              return (
+                <th key={th.column} style={{ width: th.width || 'auto' }}>
+                  {th.label}
+                </th>
+              );
             })}
           </tr>
         </thead>

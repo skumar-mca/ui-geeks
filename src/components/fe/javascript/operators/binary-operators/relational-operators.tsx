@@ -1,8 +1,47 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
 import Heading from '../../../../shared/heading/heading';
 import Para from '../../../../shared/para/para';
 import { BI, NewLine } from '../../../../shared/util/util';
+import YALSTable from '../../../../shared/yals-table/yals.table';
+
+const operatorTHList = [
+  {
+    column: 'operator',
+    label: 'Operator',
+    width: '100px'
+  },
+  {
+    column: 'description',
+    label: 'Description'
+  },
+  {
+    column: 'example',
+    label: 'Example'
+  }
+];
+
+const operatorTDList = [
+  {
+    operator: '<',
+    description: `Less Than`,
+    example: `2 < 5`
+  },
+  {
+    operator: '>',
+    description: `Greater Than`,
+    example: `5 > 2`
+  },
+  {
+    operator: '<=',
+    description: `Less Than Equal To`,
+    example: `2 <= 2`
+  },
+  {
+    operator: '>=',
+    description: `Greater Than Equal To`,
+    example: `5 >= 2`
+  }
+];
 
 const JSBinaryRelationOperators = () => {
   return (
@@ -14,37 +53,7 @@ const JSBinaryRelationOperators = () => {
         <BI>false</BI>.
         <NewLine />
         <NewLine />
-        <Table striped bordered hover size='sm'>
-          <thead>
-            <tr>
-              <th style={{ width: '100px' }}>Operator</th>
-              <th>Description</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{`<`}</td>
-              <td>Less Than</td>
-              <td>{`2 < 5`}</td>
-            </tr>
-            <tr>
-              <td>{`>`}</td>
-              <td>Greater Than</td>
-              <td>{`5 > 2`}</td>
-            </tr>
-            <tr>
-              <td>{`<=`}</td>
-              <td>Less Than Equal To</td>
-              <td>{`2 <= 2`}</td>
-            </tr>
-            <tr>
-              <td>{`>=`}</td>
-              <td>Greater Than Equal To</td>
-              <td>{`2 >= 5`}</td>
-            </tr>
-          </tbody>
-        </Table>
+        <YALSTable thList={operatorTHList} tdList={operatorTDList}></YALSTable>
       </Para>
     </>
   );

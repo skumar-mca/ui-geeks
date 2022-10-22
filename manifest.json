@@ -8,8 +8,8 @@
       "sizes": "192x192"
     }
   ],
-  "id": "/?source=pwa",
-  "start_url": "/#/?source=pwa",
+  "id": "/",
+  "start_url": "/#/",
   "background_color": "#282735",
   "orientation": "portrait",
   "display": "fullscreen",
@@ -20,14 +20,14 @@
       "name": "JavaScript",
       "short_name": "JavaScript",
       "description": "Learn core and advanced concepts of JavaScript.",
-      "url": "/#/javascript/home?source=pwa",
+      "url": "/#/javascript/home",
       "icons": [{ "src": "./images/js-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "React",
       "short_name": "React",
       "description": "Learn core and advanced concepts of React.",
-      "url": "/#/react/home?source=pwa",
+      "url": "/#/react/home",
       "icons": [{ "src": "./images/react-192x192.png", "sizes": "192x192" }]
     }
   ],

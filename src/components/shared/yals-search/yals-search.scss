@@ -108,6 +108,7 @@
   .#{$appPrefix}-search-input {
     input {
       background-color: $darkThemeBgAlt;
+      border-color: $darkThemeBgAlt;
       color: $darkThemeColor;
       &:focus {
         border-color: $darkThemeGray;

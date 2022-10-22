@@ -45,6 +45,14 @@
 
     .nav-tabs {
       border-bottom: 1px solid $darkThemeBgAlt;
+
+      .nav-link.active {
+        color: $darkThemeColor;
+        background-color: $darkThemeBgAlt;
+        border-top-color: $darkThemeBgAlt;
+        border-left-color: $darkThemeBgAlt;
+        border-right-color: $darkThemeBgAlt;
+      }
     }
 
     .tab-content {
@@ -53,14 +61,6 @@
 
     .nav-link {
       color: $darkThemeColor;
-    }
-
-    .nav-link.active {
-      color: $darkThemeColor;
-      background-color: $darkThemeBgAlt;
-      border-top-color: $darkThemeBgAlt;
-      border-left-color: $darkThemeBgAlt;
-      border-right-color: $darkThemeBgAlt;
     }
   }
 }

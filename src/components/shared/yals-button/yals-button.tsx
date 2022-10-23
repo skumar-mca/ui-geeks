@@ -17,6 +17,8 @@ const YALSButton = (props: YALSButtonProps) => {
     block,
     active,
     disabled,
+    noHighlight = false,
+    target,
     onClick,
     onMouseMove
   } = props;
@@ -27,13 +29,15 @@ const YALSButton = (props: YALSButtonProps) => {
   });
 
   const btnWrapperClasses = classNames({
-    ['d-grid gap-2']: block
+    ['d-grid gap-2']: block,
+    ['btn-no-highlight']: noHighlight
   });
 
   return (
     <span className={btnWrapperClasses}>
       <Button
         href={href}
+        target={target}
         size={size as 'sm'}
         className={buttonClasses}
         variant={`${outline ? 'outline-' : ''}${variant}`}

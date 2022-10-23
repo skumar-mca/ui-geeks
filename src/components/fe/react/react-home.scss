@@ -11,3 +11,9 @@
 .mobile-menu-wrapper {
   z-index: 9;
 }
+
+.terminology-React {
+  .#{$appPrefix}-summary {
+    border-bottom: 2px solid $lightGray;
+  }
+}

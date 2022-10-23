@@ -144,7 +144,7 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
   }, [closeMobileMenuCtr]);
 
   return (
-    <Row>
+    <Row className={`terminology-${language}`}>
       {deviceType != DeviceType.Mobile && (
         <Col
           lg={2}

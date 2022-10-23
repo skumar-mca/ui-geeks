@@ -68,6 +68,8 @@
 
 .#{$themeDark} {
   .#{$appPrefix}-home-header {
+    box-shadow: 0px 3px 8px -2px $darkThemeBgAlt;
+
     .app-name {
       color: $darkThemeColor;
     }

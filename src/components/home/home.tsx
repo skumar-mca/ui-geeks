@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { memo } from 'react';
 import { AppPrefix } from '../../util/app-constants';
+import { ImagePaths } from '../../util/image-path-constants';
 import JSHomeDemoComponent from '../fe/javascript/js-home-demo-component/js-home-demo-component';
 import { JS_PRIMARY_ROUTES } from '../fe/javascript/js-menu-items';
 import ReactHomeDemoComponent from '../fe/react/react-home-demo-component/react-home-demo-component';
@@ -151,7 +152,7 @@ const Home = () => {
           title='JavaScript'
           tag='Web Development Language'
           contentList={JSContentList}
-          imagePath='images/js-icon.png'
+          imagePath={ImagePaths.JS.ICON}
           homePagePath='/javascript/home'
           theme='yellow'
           demoComponent={<JSHomeDemoComponent />}
@@ -162,7 +163,7 @@ const Home = () => {
           title='React'
           tag='Build reusable interfaces'
           contentList={ReactContentList}
-          imagePath='images/react-icon.png'
+          imagePath={ImagePaths.REACT.ICON}
           homePagePath='/react/home'
           theme='lightGreen'
           demoComponent={<ReactHomeDemoComponent />}

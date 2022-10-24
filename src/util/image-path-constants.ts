@@ -15,6 +15,7 @@ export const ImagePaths = {
   Asyn_Script_Loading: `https://live.staticflickr.com/65535/52363415682_f03614832b_b.jpg`,
   JS_WORD_CLOUD: `https://live.staticflickr.com/65535/52383011714_14b54b9e25_b.jpg`,
   JS: {
+    ICON: 'images/js-icon_100_100.png',
     LOGO: 'https://live.staticflickr.com/65535/52364799530_6b19c52df1_c.jpg',
     CONSOLE_HELLO:
       'https://live.staticflickr.com/65535/52364579673_48521f167d_w.jpg',
@@ -32,6 +33,7 @@ export const ImagePaths = {
     }
   },
   REACT: {
+    ICON: 'images/react-icon_100_100.png',
     LOGO: 'https://live.staticflickr.com/65535/52364799530_6b19c52df1_c.jpg',
     STACKOVERFLOW_TREND:
       'https://live.staticflickr.com/65535/52402131154_b9b99e2fde_b.jpg',

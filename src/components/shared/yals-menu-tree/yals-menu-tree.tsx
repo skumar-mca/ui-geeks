@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { IMenuTreeItemType } from '../../../types/common';
 import { AppPrefix } from '../../../util/app-constants';
 import Heading from '../heading/heading';
@@ -18,13 +18,13 @@ const YALSMenuTree = (props: IYalsMenuTreeProps) => {
     <div className={menuTreeClasses}>
       {menuTree.map((menu: IMenuTreeItemType) => {
         return (
-          <>
+          <Fragment key={menu.label}>
             <Heading as='h2'>{menu.label}</Heading>
             <MenuTreeComponent
               menuChildren={menu.children}
               linksMenu={linksMenu}
             />
-          </>
+          </Fragment>
         );
       })}
     </div>

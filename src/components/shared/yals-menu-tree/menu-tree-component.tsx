@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import useDeviceType from '../../../custom-hooks/use-device-type';
@@ -22,6 +22,7 @@ export const RenderItem = (props: any) => {
           <YalsFlex
             justifyContent={FlexJustifyContentTypes.FlexStart}
             width='100%'
+            key={`it-${mn.label}`}
           >
             {isLargeDevice && (
               <span>{counter ? `${counter + index}.` : ''} &nbsp;</span>
@@ -104,7 +105,7 @@ export const SubTree = (props: any) => {
           <>
             {setList.map((set: any, index: number) => {
               return (
-                <Col xl={4} lg={4} md={4} sm={12}>
+                <Col xl={4} lg={4} md={4} sm={12} key={`it-${set.startCount}`}>
                   <RenderItem
                     menus={set.items}
                     primaryURL={currentMenu.url}
@@ -134,7 +135,7 @@ const MenuTreeComponent = (props: any) => {
     <div>
       {menuChildren.map((menu: ILabelURLType) => {
         return (
-          <>
+          <Fragment key={`${menu.url}`}>
             <YALSNavigateButton
               to={menu.url}
               label={<Heading as='h4'>{menu.label}</Heading>}
@@ -145,7 +146,7 @@ const MenuTreeComponent = (props: any) => {
               linksMenu={linksMenu}
               deviceType={deviceType}
             />
-          </>
+          </Fragment>
         );
       })}
     </div>

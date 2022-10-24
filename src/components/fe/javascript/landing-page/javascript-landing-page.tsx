@@ -29,7 +29,7 @@ const JSLandingPage = () => {
       linksMenu={JSLINK}
       menuTree={menuTree}
       customContentMenuTree={customContentMenuTree}
-      imagePath='images/js-icon.png'
+      imagePath={ImagePaths.JS.ICON}
       title='JavaScript'
       wordCloudUrl={ImagePaths.JS.JS_WORD_CLOUD}
       blogList={JS_BLOG_LINK}

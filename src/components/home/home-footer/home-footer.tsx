@@ -29,6 +29,7 @@ const SocialIcons = () => {
         className='icon-twitter'
         target='_blank'
         href={SOCIAL_LINKS.TWITTER}
+        ariaLabel='UI Geeks | Twitter Home Page'
       >
         <IconTwitter {...iconProps} />
       </YalsButton>
@@ -38,6 +39,7 @@ const SocialIcons = () => {
         className='icon-linkedin'
         target='_blank'
         href={SOCIAL_LINKS.LINKEDIN}
+        ariaLabel='UI Geeks | LinkedIn Home Page'
       >
         <IconLinkedin {...iconProps} />
       </YalsButton>
@@ -47,6 +49,7 @@ const SocialIcons = () => {
         className='icon-instagram'
         target='_blank'
         href={SOCIAL_LINKS.INSTAGRAM}
+        ariaLabel='UI Geeks | Instagram Home Page'
       >
         <IconInstagram {...iconProps} />
       </YalsButton>
@@ -92,7 +95,12 @@ const HomeFooter = () => {
           </div>
           {isHomePage && (
             <div className='app-icon'>
-              <img src={ImagePaths.APP_LOGO} />
+              <img
+                src={ImagePaths.APP_LOGO}
+                alt='UI Geels Logo'
+                width='60px'
+                height='37px'
+              />
             </div>
           )}
         </div>

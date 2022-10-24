@@ -29,7 +29,12 @@ const HomeHeader = (props: any) => {
         <ul className='ul-main-menu'>
           <li>
             <Link to='/'>
-              <img src={ImagePaths.APP_LOGO} className='app-logo' />
+              <img
+                src={ImagePaths.APP_LOGO}
+                height='25px'
+                alt='UI Geeks Logo'
+                className='app-logo'
+              />
 
               <div className='app-name'>UI Geeks</div>
             </Link>

@@ -36,6 +36,7 @@ export interface YALSButtonProps {
   disabled?: boolean;
   noHighlight?: boolean;
   target?: string;
+  ariaLabel?: string;
   onClick?: (evt?: any) => void;
   onMouseMove?: (evt?: any) => void;
 }

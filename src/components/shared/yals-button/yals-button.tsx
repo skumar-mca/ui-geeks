@@ -19,6 +19,7 @@ const YALSButton = (props: YALSButtonProps) => {
     disabled,
     noHighlight = false,
     target,
+    ariaLabel = href,
     onClick,
     onMouseMove
   } = props;
@@ -43,10 +44,11 @@ const YALSButton = (props: YALSButtonProps) => {
         variant={`${outline ? 'outline-' : ''}${variant}`}
         onClick={onClick}
         title={title}
-        tabIndex={1}
+        tabIndex={0}
         active={active}
         disabled={disabled}
         onMouseMove={onMouseMove && onMouseMove}
+        aria-label={ariaLabel}
       >
         {children}
       </Button>

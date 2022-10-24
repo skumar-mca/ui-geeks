@@ -53,7 +53,8 @@
     }
 
     .#{$appPrefix}-btn {
-      &:hover {
+      &:hover,
+      &:focus {
         svg {
           fill: $darkThemeBgAlt;
           height: 25px;
@@ -91,7 +92,8 @@
     color: #ffffff;
 
     .#{$appPrefix}-btn {
-      &:hover {
+      &:hover,
+      &:focus {
         svg {
           fill: $darkThemeColor;
           height: 25px;

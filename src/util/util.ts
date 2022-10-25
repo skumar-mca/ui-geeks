@@ -1,5 +1,5 @@
 import { IMenuItem } from '../components/shared/navigation-menu/navigation-menu.types';
-import { THEME_CONSTANT } from './app-constants';
+import { DeviceType, THEME_CONSTANT } from './app-constants';
 
 export const getOnPageItems = (currentPath: string, allItems: Array<any>) => {
   if (!allItems || !currentPath) {
@@ -125,4 +125,8 @@ export const THEME = {
   setTheme: (themeValue: string) => {
     localStorage.setItem(THEME_CONSTANT.KEY, themeValue);
   }
+};
+
+export const isLargeDevice = (deviceType: string) => {
+  return [DeviceType.Desktop, DeviceType.LargeDesktop].includes(deviceType);
 };

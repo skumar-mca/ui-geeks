@@ -27,7 +27,12 @@ const HomeIntro = () => {
           alignItems={FlexAlignItemsTypes.Center}
           className='bg-image'
         >
-          <img src={ImagePaths.APP_IMAGE} alt='ui-geeks background' />
+          <img
+            src={ImagePaths.APP_IMAGE_WEBP}
+            alt='ui-geeks background'
+            width={'100%'}
+            height={'100%'}
+          />
         </YalsFlex>
 
         <YALSFlex

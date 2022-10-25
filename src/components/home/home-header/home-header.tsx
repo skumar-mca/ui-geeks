@@ -32,6 +32,7 @@ const HomeHeader = (props: any) => {
               <img
                 src={ImagePaths.APP_LOGO}
                 height='25px'
+                width='40px'
                 alt='UI Geeks Logo'
                 className='app-logo'
               />

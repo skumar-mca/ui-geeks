@@ -89,6 +89,7 @@ const JSHomeDemoComponent = () => {
       demoComponentList={demoComponents}
       homePage={isFullPageDemo ? JS_PRIMARY_ROUTES.HOME_PAGE.url : undefined}
       homePageLabel={isFullPageDemo ? 'JavaScript' : undefined}
+      language='JavaScript'
     />
   );
 };

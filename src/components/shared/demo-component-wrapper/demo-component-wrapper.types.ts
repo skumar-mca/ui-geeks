@@ -15,6 +15,7 @@ export interface IDemoWrapperProps {
   demoComponentList: Array<IDemComponentItemType>;
   homePage?: string;
   homePageLabel?: string;
+  language: string;
 }
 
 export const DemoViewType = {

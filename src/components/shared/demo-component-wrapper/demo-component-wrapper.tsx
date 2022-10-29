@@ -11,7 +11,7 @@ import YALSTabs from '../yals-tabs/yals-tabs';
 import './demo-component-wrapper.scss';
 import { IDemoWrapperProps } from './demo-component-wrapper.types';
 const DemoComponentWrapper = (props: IDemoWrapperProps) => {
-  const { demoComponentList, homePage, homePageLabel } = props;
+  const { demoComponentList, homePage, homePageLabel, language } = props;
 
   const navigate = useNavigate();
   const appContext = useContext(AppContext);
@@ -66,7 +66,7 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
               <>
                 {currentComponent.label && (
                   <>
-                    <h5>{currentComponent.label}</h5>
+                    <div className='demo-title'>{currentComponent.label}</div>
                   </>
                 )}
 
@@ -117,7 +117,7 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
           </>
 
           <YALSTabs
-            id={`${currentComponent.id}`}
+            id={`${language}_${currentComponent.id}`}
             tabs={currentComponent.tabs}
           />
         </div>

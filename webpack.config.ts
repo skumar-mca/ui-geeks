@@ -25,7 +25,9 @@ const config: Configuration = {
               '@babel/preset-env',
               '@babel/preset-react',
               '@babel/preset-typescript'
-            ]
+            ],
+            cacheCompression: false,
+            cacheDirectory: true
           }
         }
       },
@@ -71,6 +73,9 @@ const config: Configuration = {
   devServer,
   optimization: {
     chunkIds: 'deterministic'
+  },
+  cache: {
+    type: 'filesystem'
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin({

@@ -212,7 +212,9 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
           </YalsButton>
 
           {submitResponse[questions[currentQuestionIndex].id] == 1 && (
-            <>{getAnswer()}</>
+            <div className='correct-answer'>
+              <I>That's correct!</I>
+            </div>
           )}
 
           {submitResponse[questions[currentQuestionIndex].id] == 2 && (

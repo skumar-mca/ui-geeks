@@ -45,6 +45,7 @@ const ReactListExample = () => {
         demoComponentList={demoComponents}
         homePage={undefined}
         homePageLabel={undefined}
+        language='React'
       />
     </>
   );

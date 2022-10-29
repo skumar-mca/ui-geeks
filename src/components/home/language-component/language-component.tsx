@@ -75,7 +75,7 @@ const LanguageComponent = (props: ILanguageProp) => {
                 )}
 
                 <h2>{title}</h2>
-                <h5>{tag}</h5>
+                <h3>{tag}</h3>
                 <div className='carousal-content'>
                   <TextCarousal contentList={contentList} uniqueKey={theme} />
                 </div>

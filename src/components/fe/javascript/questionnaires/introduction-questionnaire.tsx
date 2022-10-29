@@ -26,7 +26,8 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Checkbox,
     name: 'intro_1',
-    answer: [1, 2, 3]
+    answer: [1, 2, 3],
+    explanation: `JavaScript supports Object-Oriented, Imperative and Declarative styles. Along with this, it is Single Threaded, Dynamic Language with Multi-Paradigm support.`
   },
   {
     id: 2,
@@ -46,7 +47,7 @@ export const IntroductionQuestions = [
         id: 2
       },
       {
-        label: 'Just in Time Compilation',
+        label: 'Just-in-Time Compilation',
         id: 3
       },
       {
@@ -56,7 +57,8 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'intro_2',
-    answer: 3
+    answer: 3,
+    explanation: `Modern JavaScript interpreters use a technique called just-in-time compilation to improve performance. In this technique, JavaScript source code gets compiled into binary format, so that it can run quickly.`
   },
   {
     id: 3,
@@ -73,7 +75,8 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'intro_3',
-    answer: 2
+    answer: 2,
+    explanation: `JavaScript has a single thread, which is used to execute the code. Because of this single thread, JavaScript is synchronous in nature.`
   },
   {
     id: 4,
@@ -92,7 +95,8 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'intro_4',
-    answer: 1
+    answer: 1,
+    explanation: `JavaScript treats functions as first class citizens. A programming language is said to have first-class functions, when functions are treated as other data types. For example: they can be stored in a variable, they can be passed as an argument to another function, can be extended, etc.`
   },
   {
     id: 5,
@@ -122,7 +126,8 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'intro_5',
-    answer: 2
+    answer: 2,
+    explanation: `Dynamic language is one, in which operations which are normally done at compile time, can be done at run time. Operations like Adding properties/methods to an object, changing class/object prototype.`
   },
   {
     id: 6,
@@ -144,7 +149,8 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'intro_6',
-    answer: 2
+    answer: 2,
+    explanation: `Compiled language scans the entire code and transforms (compiles) it into another form, before they are executed by the computer. The program is executed from a binary format, which was generated from the original source code (in plain-text format).`
   },
   {
     id: 7,
@@ -161,7 +167,8 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'intro_7',
-    answer: 1
+    answer: 1,
+    explanation: `JavaScript is an Interpreted Language. In an interpreted language, the code is run from top to bottom and the result of running the code is immediately returned. The interpreter reads and executes one line at a time.`
   },
   {
     id: 8,
@@ -191,7 +198,8 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'intro_8',
-    answer: 2
+    answer: 2,
+    explanation: `Imperative Programming language is a language where instructions for computers are written in step-by-step manner. This explicitly describes the order of execution to achieve the end result. Imperative language describes "How" of the desired output.`
   },
   {
     id: 9,
@@ -218,7 +226,8 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'intro_9',
-    answer: 1
+    answer: 1,
+    explanation: `Declarative programming language is one, in which programs describe their desired results without explicitly listing steps that must be performed. Declarative languages describe "WHAT" of the desired output.`
   },
   {
     id: 10,
@@ -248,6 +257,7 @@ export const IntroductionQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'intro_10',
-    answer: 1
+    answer: 1,
+    explanation: `Prototype based programming is a style of object oriented programming in which classes are not explicitly defined, rather derived by adding properties and methods to an empty object.`
   }
 ];

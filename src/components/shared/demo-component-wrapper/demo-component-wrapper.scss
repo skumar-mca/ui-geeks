@@ -4,7 +4,7 @@
 .demo-component {
   border-radius: 4px;
   padding: 10px;
-  background: $lightGray;
+  background: $demoBg;
   border: 1px solid $lightGray;
   margin-right: 10px;
   height: 100%;
@@ -20,10 +20,11 @@
     }
   }
 
-  h5 {
+  .demo-title {
     margin-bottom: 10px;
-
-    color: $purple !important;
+    font-size: 1.2rem;
+    color: $h1Color;
+    font-weight: bold;
   }
 
   .result-item {

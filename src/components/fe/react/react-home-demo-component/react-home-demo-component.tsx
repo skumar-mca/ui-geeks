@@ -71,6 +71,7 @@ const ReactHomeDemoComponent = () => {
       demoComponentList={demoComponents}
       homePage={isFullPageDemo ? REACT_PRIMARY_ROUTES.HOME_PAGE.url : undefined}
       homePageLabel={isFullPageDemo ? 'React' : undefined}
+      language='React'
     />
   );
 };

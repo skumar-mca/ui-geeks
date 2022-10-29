@@ -19,7 +19,9 @@
 
     input {
       cursor: pointer !important;
+      border-color: $lightGray;
     }
+
     .input-group-text {
       width: 35px;
       padding-left: 8px;

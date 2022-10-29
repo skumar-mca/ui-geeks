@@ -2,10 +2,10 @@
 @import '../../../scss/colors.scss';
 
 .#{$appPrefix}-tabs {
-  background-color: $lightGray;
+  background-color: $demoBg;
   border-radius: 2px;
   .nav-tabs {
-    border-bottom: 1px solid $bodyBgColor;
+    border-bottom: 1px solid $darkThemeColor;
     font-size: 0.9rem;
     .nav-link {
       height: 30px;
@@ -26,9 +26,9 @@
 
   .tab-content {
     padding: 10px;
-    border-bottom: 1px solid $lightGray;
-    border-left: 1px solid $lightGray;
-    border-right: 1px solid $lightGray;
+    border-bottom: 1px solid $demoBg;
+    border-left: 1px solid $demoBg;
+    border-right: 1px solid $demoBg;
   }
 
   .#{$appPrefix}-code {

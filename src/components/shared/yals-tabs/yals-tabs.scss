@@ -19,6 +19,7 @@
     }
 
     .nav-link.active {
+      border-color: transparent;
       border-bottom: 1px solid $purple;
       background-color: transparent;
     }

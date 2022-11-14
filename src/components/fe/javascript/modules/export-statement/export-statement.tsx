@@ -10,7 +10,7 @@ import JSModulesWildCardExport from './wild-card-export';
 const JSModulesExport = () => {
   return (
     <>
-      <Heading as='h2'>export statement</Heading>
+      <Heading as='h2'>export Statement</Heading>
       <Para>
         <JSModulesExportIntro />
         <JSModulesNamedExport />

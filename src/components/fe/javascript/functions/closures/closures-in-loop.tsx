@@ -9,7 +9,7 @@ import { B, BI, I, IU, NewLine } from '../../../../shared/util/util';
 const JSClosuresInLoop = () => {
   return (
     <>
-      <Heading as='h4'>Problem creating Closures in loop</Heading>
+      <Heading as='h4'>Problem Creating Closures in Loop</Heading>
 
       <Para>
         Prior to the introduction of the <B>let</B> keyword, a common problem
@@ -73,7 +73,7 @@ setupHelp();
         <B>last</B> help text.
       </Para>
 
-      <Heading as='h4'>Solutions to the above problem</Heading>
+      <Heading as='h4'>Solutions to the Above Problem</Heading>
       <Para>
         Let's see possible solutions with and without ES6's <BI>let</BI>{' '}
         keyword.

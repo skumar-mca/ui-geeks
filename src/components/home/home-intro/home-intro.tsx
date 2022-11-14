@@ -72,7 +72,7 @@ const HomeIntro = () => {
           <div>
             <h1 className={`${AppPrefix}-name`}>UI Learning Platform</h1>
             <h2 className={`${AppPrefix}-sub-name`}>
-              <span className={`${AppPrefix}-animate-right`} key={currentIndex}>
+              <span className={`${AppPrefix}-animate-top`} key={currentIndex}>
                 {languagesList[currentIndex]}
               </span>
             </h2>

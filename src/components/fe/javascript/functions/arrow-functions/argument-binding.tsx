@@ -7,7 +7,7 @@ import { BI } from '../../../../shared/util/util';
 const JSArrowFunctionsArgumentBinding = () => {
   return (
     <>
-      <Heading as='h4'>No binding of "arguments" object</Heading>
+      <Heading as='h4'>No Binding of "arguments" object</Heading>
       <Para>
         The
         <BI>arguments</BI> is a reserved word which holds the list of arguments

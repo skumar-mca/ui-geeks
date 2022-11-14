@@ -10,7 +10,7 @@ import JSModulesSideEffectImport from './side-effect-import';
 const JSModulesImport = () => {
   return (
     <>
-      <Heading as='h2'>import statement</Heading>
+      <Heading as='h2'>import Statement</Heading>
       <Para>
         <JSModulesImportIntro />
         <JSModulesNamedImport />

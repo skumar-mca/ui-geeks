@@ -9,7 +9,7 @@ import { B, BI, I } from '../../../../shared/util/util';
 const JSArrowFunctionsAsClassField = () => {
   return (
     <>
-      <Heading as='h4'>Arrow functions as class fields</Heading>
+      <Heading as='h4'>Arrow Functions as Class Fields</Heading>
       <Para>
         A class's body has <BI>this</BI> context, <I>arrow functions</I> as
         <BI>class fields</BI> uses the class's <BI>this</BI> context and

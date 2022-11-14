@@ -89,7 +89,7 @@ parseInt("0x10", 16)  // Will always give 16`}</Code>
       </Para>
 
       <Para>
-        <B>Unary operator "+"</B> can also be used to convert strings to
+        <B>Unary Operator "+"</B> can also be used to convert strings to
         numbers.
         <Code>{`+ "42"  // 42
 + "010"  // 10

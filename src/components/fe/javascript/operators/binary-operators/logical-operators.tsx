@@ -153,7 +153,7 @@ false || "Program"    // "Program"
 // Because operand1 can't be converted to true, therefore, returned operand2`}
       </Code>
 
-      <Heading as='h3'>Short-circuit evaluation</Heading>
+      <Heading as='h3'>Short-circuit Evaluation</Heading>
       <Para>
         Because logical operators are evaluated from left to right, they are
         tested for possible <BI>"short-circuit"</BI> evaluation using below

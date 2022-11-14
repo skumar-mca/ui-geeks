@@ -252,6 +252,12 @@ export const REACT_LINK = [
     ],
     children: [
       {
+        label: 'Controlled Components'
+      },
+      {
+        label: 'Uncontrolled Components'
+      },
+      {
         label: 'Default Values'
       },
       {
@@ -295,15 +301,15 @@ export const REACT_LINK = [
         label: 'Functional Updates'
       },
       {
-        label: 'Lazy initial state'
+        label: 'Lazy Initial State'
       },
       {
-        label: 'Bailing out of a state update',
-        shortLabel: 'Bailing out state update'
+        label: 'Bailing Out of a State Update',
+        shortLabel: 'Bailing Out State Update'
       },
       {
-        label: 'Batching of state updates',
-        shortLabel: 'Batching state updates'
+        label: 'Batching of State Updates',
+        shortLabel: 'Batching State Updates'
       },
       {
         label: 'useEffect()'

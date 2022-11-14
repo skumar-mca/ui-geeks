@@ -55,7 +55,7 @@ const JSFunctionClosureUseCases = () => {
       </Para>
 
       <Heading as='h2'>
-        Creating private methods/properties using Closures
+        Creating Private Methods/Properties using Closures
       </Heading>
 
       <Para>

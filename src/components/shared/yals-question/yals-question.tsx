@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { memo, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import YALSCheckRadio from '../yals-check-radio/yals-check-radio';
 import { YALSCheckRadioTypes } from '../yals-check-radio/yals-check-radio.types';
@@ -47,6 +47,16 @@ const YALSQuestion = (props: IYALSQuestionProps) => {
   const isChecked = (opt: any): boolean | undefined => {
     return opt.isChecked;
   };
+
+  useEffect(() => {
+    // set selected answer on load, primarily on next/prev navigation
+    if (preSelected) {
+      const preSelectedAnswer = preSelected[questionId];
+      if (preSelectedAnswer) {
+        setSelected(() => preSelectedAnswer);
+      }
+    }
+  }, []);
 
   return (
     <div className={questionClasses} key={`ques_${questionId}`}>

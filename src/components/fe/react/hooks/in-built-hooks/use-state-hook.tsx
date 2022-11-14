@@ -89,7 +89,7 @@ const ReactUseStateHook = () => {
         </Code>
       </Para>
 
-      <Heading as='h4'>Lazy initial state</Heading>
+      <Heading as='h4'>Lazy Initial State</Heading>
       <Para>
         The <B>initialValue</B> argument is the state used during the initial
         render. In subsequent renders, it is disregarded. If the initial state
@@ -104,14 +104,14 @@ const ReactUseStateHook = () => {
 });`}
       </Code>
 
-      <Heading as='h4'>Bailing out of a state update</Heading>
+      <Heading as='h4'>Bailing Out of a State Update</Heading>
       <Para>
         If we update a state Hook to the same value as the current state, React
         will bail out without rendering the children or firing effects. React
         uses the <BI>Object.is comparison algorithm</BI> for comparing values.
       </Para>
 
-      <Heading as='h4'>Batching of state updates</Heading>
+      <Heading as='h4'>Batching of State Updates</Heading>
       <Para>
         React may group several state updates into a single re-render to improve
         performance.

@@ -68,7 +68,7 @@ const JSVariableNamingRules = () => {
 
   return (
     <>
-      <Heading as='h2'>Variable naming rules</Heading>
+      <Heading as='h2'>Variable Naming Rules</Heading>
 
       <Para>
         Generally, we should stick to just using Latin characters (0-9, a-z,

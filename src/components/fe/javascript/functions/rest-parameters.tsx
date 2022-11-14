@@ -9,7 +9,7 @@ import { B, BI, I } from '../../../shared/util/util';
 const JSFunctionRestArgument = () => {
   return (
     <>
-      <Heading as='h2'>Rest parameters</Heading>
+      <Heading as='h2'>Rest Parameters</Heading>
 
       <Para>
         Using <BI>arguments</BI> <I>object</I> is pretty useful, but it does

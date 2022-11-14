@@ -53,7 +53,7 @@ const element = <h1>{greetUser("John")}</h1>
         Double quotes can be used to specify string literals as attributes. For
         example:
         <Code language={CodeLanguageTypes.JSX}>
-          {`const element = <a href="https://ui-geeks.in">YALS</a>`}
+          {`const element = <a href="https://ui-geeks.in">UI Geeks</a>`}
         </Code>
       </Para>
 
@@ -62,7 +62,7 @@ const element = <h1>{greetUser("John")}</h1>
         attribute value. For example:
         <Code language={CodeLanguageTypes.JSX}>
           {`const url = "https://ui-geeks.in";
-const element = <a href={url}>YALS</a>`}
+const element = <a href={url}>UI Geeks</a>`}
         </Code>
       </Para>
 

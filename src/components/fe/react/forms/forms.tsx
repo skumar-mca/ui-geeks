@@ -9,8 +9,8 @@ import { B, BI, I } from '../../../shared/util/util';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import ReactFormDefaultValue from '../components/uncontrolled-component/default-value';
 
-import ReactControlledComponents from '../controlled-component/controlled-components';
-import ReactUnControlledComponent from '../uncontrolled-component/uncontrolled-component';
+import ReactControlledComponentIntro from '../controlled-component/controlled-components-intro';
+import ReactUnControlledComponentIntro from '../uncontrolled-component/uncontrolled-component-intro';
 
 import ReactFormHandlingEvents from './handling-events';
 
@@ -69,8 +69,8 @@ const ReactForms = () => {
       </Para>
 
       <Para>
-        <ReactControlledComponents />
-        <ReactUnControlledComponent />
+        <ReactControlledComponentIntro />
+        <ReactUnControlledComponentIntro />
 
         <ReactFormDefaultValue />
 

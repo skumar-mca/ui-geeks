@@ -76,17 +76,17 @@
   }
 }
 
-.#{$appPrefix}-animate-right {
+.#{$appPrefix}-animate-top {
   position: relative;
-  animation: animateright 0.4s;
+  animation: animatetop 0.4s;
 }
-@keyframes animateright {
+@keyframes animatetop {
   from {
-    right: -300px;
+    top: -300px;
     opacity: 0;
   }
   to {
-    right: 0;
+    top: 0;
     opacity: 1;
   }
 }

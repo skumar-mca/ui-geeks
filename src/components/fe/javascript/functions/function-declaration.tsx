@@ -7,7 +7,7 @@ import { B, BI, I, Indent, NewLine } from '../../../shared/util/util';
 const JSFunctionsDeclaration = () => {
   return (
     <>
-      <Heading as='h2'>Function declaration</Heading>
+      <Heading as='h2'>Function Declaration</Heading>
       <Para>
         <B>function</B> keyword is used to declare a function.
       </Para>

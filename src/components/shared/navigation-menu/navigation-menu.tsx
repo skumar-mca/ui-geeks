@@ -29,7 +29,13 @@ const NavigationMenu = (props: INavigationMenuProps) => {
   const [itemsLength, setItemsLength] = useState(0);
 
   const handleMenuClick = (itm: IMenuItem) => {
-    setShowSubMenu((prev: boolean) => !prev);
+    const item = getOnPageItems(itm.url, menuLinks || []);
+    if (item.children) {
+      setShowSubMenu((prev: boolean) => !prev);
+      return;
+    }
+
+    onMenuClick && onMenuClick(itm);
   };
 
   const getOnPageItem = () => {

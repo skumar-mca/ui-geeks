@@ -6,7 +6,7 @@ import Para from '../../../../shared/para/para';
 const JSArrowFunctionsLineBreaks = () => {
   return (
     <>
-      <Heading as='h4'>Line breaks in arrow functions</Heading>
+      <Heading as='h4'>Line Breaks in Arrow Functions</Heading>
       <Para>
         An arrow function cannot contain a line break between its parameters and
         its arrow.

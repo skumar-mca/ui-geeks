@@ -31,7 +31,7 @@ const staticMmeber = [
 const JSClassPrivateField = () => {
   return (
     <>
-      <Heading as='h2'>Private field declarations</Heading>
+      <Heading as='h2'>Private Field Declarations</Heading>
       <Para>
         Private class members can be created by using <B>"#"</B> prefix. The
         privacy encapsulation of these class features is enforced by JavaScript

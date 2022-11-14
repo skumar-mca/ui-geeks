@@ -103,7 +103,7 @@ const paranthesesRules = [
 const JSArrowFunctionsLimitations = () => {
   return (
     <>
-      <Heading as='h4'>Limitations of Arrow function</Heading>
+      <Heading as='h4'>Limitations of Arrow Function</Heading>
       <Para>
         There are some limitations with arrow function as compared to
         traditional function:

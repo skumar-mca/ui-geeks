@@ -36,11 +36,11 @@ const loopStatement = [
 ];
 
 const JSLoops = () => {
-  useDOMTitle('UI-Geeks: JavaScript | Looping/Iteration statements');
+  useDOMTitle('UI-Geeks: JavaScript | Looping/Iteration Statements');
 
   return (
     <>
-      <Heading as='h2'>Looping/Iteration statements</Heading>
+      <Heading as='h2'>Looping/Iteration Statements</Heading>
       <Para>
         Iteration statements are used to iterate or loop a given set of
         statements until termination statement for the loop is reached. All

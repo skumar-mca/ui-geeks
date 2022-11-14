@@ -166,7 +166,7 @@ export const JSLINK = [
       },
 
       {
-        label: 'Variable naming rules'
+        label: 'Variable Naming Rules'
       },
       {
         label: 'Evaluating Variables'
@@ -277,7 +277,7 @@ export const JSLINK = [
                 label: 'Logical OR (||) operator'
               },
               {
-                label: 'Short-circuit evaluation'
+                label: 'Short-circuit Evaluation'
               }
             ]
           }
@@ -290,7 +290,7 @@ export const JSLINK = [
             label: 'Logical NOT (!) Operator'
           },
           {
-            label: 'Unary operator "+"'
+            label: 'Unary Operator "+"'
           },
           {
             label: 'delete Operator'
@@ -348,8 +348,8 @@ export const JSLINK = [
         ]
       },
       {
-        label: 'Looping/Iteration statements',
-        shortLabel: 'Looping statements',
+        label: 'Looping/Iteration Statements',
+        shortLabel: 'Looping Statements',
         children: [
           {
             label: 'while loop'
@@ -474,10 +474,10 @@ export const JSLINK = [
     ],
     children: [
       {
-        label: 'Function declaration'
+        label: 'Function Declaration'
       },
       {
-        label: 'Function expression'
+        label: 'Function Expression'
       },
       {
         label: 'Function Invocation/Calling',
@@ -487,7 +487,7 @@ export const JSLINK = [
         label: 'arguments'
       },
       {
-        label: 'Rest parameters'
+        label: 'Rest Parameters'
       },
       {
         label: 'Anonymous Functions',
@@ -518,17 +518,17 @@ export const JSLINK = [
         label: 'Lexical Scope'
       },
       {
-        label: 'Creating private methods/properties using Closures',
-        shortLabel: 'Creating private members'
+        label: 'Creating Private Methods/Properties using Closures',
+        shortLabel: 'Creating Private Members'
       },
       {
         label: 'Closure Scope Chain'
       },
       {
-        label: 'Problem creating Closures in loop'
+        label: 'Problem Creating Closures in Loop'
       },
       {
-        label: 'Solutions to the above problem'
+        label: 'Solutions to the Above Problem'
       }
     ]
   },
@@ -538,23 +538,23 @@ export const JSLINK = [
     tags: ['Arrow Functions', 'Class Fields'],
     children: [
       {
-        label: 'Limitations of Arrow function'
+        label: 'Limitations of Arrow Function'
       },
       {
-        label: 'Arrow functions as class fields'
+        label: 'Arrow Functions as Class Fields'
       },
       {
         label: 'Arrow function not to be used with call, apply and bind',
         shortLabel: 'Not use with call, apply and bind'
       },
       {
-        label: 'No binding of "arguments" object'
+        label: 'No Binding of "arguments" object'
       },
       {
         label: 'Returning "Object Literals"'
       },
       {
-        label: 'Line breaks in arrow functions'
+        label: 'Line Breaks in Arrow Functions'
       },
       {
         label: 'Parsing Order'
@@ -579,7 +579,7 @@ export const JSLINK = [
     ],
     children: [
       {
-        label: 'export statement',
+        label: 'export Statement',
         children: [
           {
             label: 'Named Export'
@@ -597,12 +597,12 @@ export const JSLINK = [
           },
           {
             label: 'Wild-card (*) export statement',
-            shortLabel: 'Rename Named export'
+            shortLabel: 'Wild-card export'
           }
         ]
       },
       {
-        label: 'import statement',
+        label: 'import Statement',
         children: [
           {
             label: 'Named import'
@@ -737,7 +737,7 @@ export const JSLINK = [
         shortLabel: 'Binding "this" to prototype/static'
       },
       {
-        label: 'Private field declarations'
+        label: 'Private Field Declarations'
       },
       {
         label: 'Inheritance',

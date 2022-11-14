@@ -7,7 +7,7 @@ import { B, BI, I, Indent, NewLine } from '../../../shared/util/util';
 const JSFunctionsExpression = () => {
   return (
     <>
-      <Heading as='h2'>Function expression</Heading>
+      <Heading as='h2'>Function Expression</Heading>
       <Para>
         This is very similar to function declaration and has almost the same
         syntax. The main difference is the <B>name-of-function</B>, which can be

@@ -219,7 +219,7 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
         <Suspense fallback={<ContentLoader />}>{children}</Suspense>
 
         {deviceType === DeviceType.Mobile && customMenuContent && (
-          <>{customMenuContent}</>
+          <div className='custom-menu-box'>{customMenuContent}</div>
         )}
 
         {menuLinks.length > 1 && (

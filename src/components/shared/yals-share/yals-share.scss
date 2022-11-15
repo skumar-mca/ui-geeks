@@ -1,0 +1,35 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-share {
+  max-width: 250px;
+  background-color: $lightGray;
+  border: 1px solid $secondaryBgColor;
+  padding: 5px 10px 5px 10px;
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 15px;
+  border-radius: 4px;
+
+  .share-text {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-right: 10px;
+  }
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-share {
+    margin-left: 0px;
+    margin-bottom: 15px;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-share {
+    background-color: $darkThemeBgAlt;
+    .share-text {
+      color: $darkThemeColor;
+    }
+  }
+}

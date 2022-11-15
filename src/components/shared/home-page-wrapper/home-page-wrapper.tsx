@@ -26,6 +26,7 @@ import {
 } from '../../shared/yals-flex/yals-flex.types';
 import YALSModal from '../../shared/yals-modal/yals-modal';
 import OnPageItems from '../on-page-items/on-page-items';
+import YALSShare from '../yals-share/yals-share';
 import { IHomePageWrapperProps } from './home-page-wrapper.types';
 
 const MenuDivider = () => {
@@ -216,7 +217,10 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
           </>
         )}
 
-        <Suspense fallback={<ContentLoader />}>{children}</Suspense>
+        <Suspense fallback={<ContentLoader />}>
+          <YALSShare />
+          {children}
+        </Suspense>
 
         {deviceType === DeviceType.Mobile && customMenuContent && (
           <div className='custom-menu-box'>{customMenuContent}</div>

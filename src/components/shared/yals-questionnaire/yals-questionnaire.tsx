@@ -264,9 +264,7 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
           )}
 
           {submitResponse[questions[currentQuestionIndex].id] == 2 && (
-            <div className='wrong-answer'>
-              Incorrect answer, please try again.
-            </div>
+            <div className='wrong-answer'>Incorrect answer!</div>
           )}
 
           {submitResponse[questions[currentQuestionIndex].id] == 0 && (

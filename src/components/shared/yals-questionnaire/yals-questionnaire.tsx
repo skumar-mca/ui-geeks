@@ -180,6 +180,7 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
   useEffect(() => {
     return () => {
       questions.map((ques: any) => {
+        ques.incorrectAttempt = 0;
         ques.options.map((opt: any) => {
           opt.isChecked = null;
         });

@@ -15,6 +15,7 @@ export interface IYALSQuestionProps {
   type: YALSCheckRadioType;
   name?: string;
   preSelected?: QuestionIDType | Array<QuestionIDType> | any;
+  showDefaultAnswer?: number;
   onChange: (
     questionId: string | number,
     selectedOptionId: QuestionIDType | Array<QuestionIDType>

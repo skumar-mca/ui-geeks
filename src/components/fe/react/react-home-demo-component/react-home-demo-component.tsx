@@ -7,6 +7,9 @@ import { REACT_PRIMARY_ROUTES } from '../react-menu-items';
 import ReactHomeDemoBackgroundChange, {
   ReactHomeDemoBackgroundChangeCode
 } from './background-change-demo';
+import ReactHomeCounterDemo, {
+  ReactHomeCounterDemoCode
+} from './state-update-counter-demo';
 import ReactHomeDemoStateUpdate, {
   ReactHomeDemoStateUpdateCode
 } from './state-update-demo';
@@ -18,6 +21,30 @@ const ReactHomeDemoComponent = () => {
   const demoComponents = [
     {
       id: 1,
+      label: 'Updating State Values.',
+      moreDetail: {
+        label: 'Learn more about state updates',
+        link: REACT_PRIMARY_ROUTES.STATE
+      },
+      tabs: [
+        {
+          id: 1,
+          content: <ReactHomeCounterDemo />,
+          label: 'Output'
+        },
+        {
+          id: 2,
+          content: (
+            <Code language={CodeLanguageTypes.JSX}>
+              {ReactHomeCounterDemoCode}
+            </Code>
+          ),
+          label: 'Code'
+        }
+      ]
+    },
+    {
+      id: 2,
       label: 'React state update.',
       moreDetail: {
         label: 'Learn more about state updates',
@@ -41,7 +68,7 @@ const ReactHomeDemoComponent = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       label: 'Reactive DOM manipulation.',
       moreDetail: {
         label: 'Learn more about DOM manipulation',

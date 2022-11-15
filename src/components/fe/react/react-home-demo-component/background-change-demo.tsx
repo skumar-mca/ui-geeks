@@ -9,7 +9,7 @@ import {
 } from '../../../shared/yals-flex/yals-flex.types';
 
 const ReactHomeDemoBackgroundChange = () => {
-  const [backgroundColor, setBackgroundColor] = useState('white');
+  const [backgroundColor, setBackgroundColor] = useState('#c0c0c0');
 
   const changeColor = (color: string) => {
     setBackgroundColor(() => color);

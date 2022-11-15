@@ -28,7 +28,13 @@ import {
 } from './yals-questionnaire.types';
 
 const RenderQuestion = (props: IQuestionnarieQuestionProps) => {
-  const { questions, currentQuestionIndex, handleAnswer, preSelected } = props;
+  const {
+    questions,
+    currentQuestionIndex,
+    handleAnswer,
+    preSelected,
+    showDefaultAnswer
+  } = props;
   const ques = questions[currentQuestionIndex];
   return (
     <YALSQuestion
@@ -40,6 +46,7 @@ const RenderQuestion = (props: IQuestionnarieQuestionProps) => {
       name={`${ques.name}_${currentQuestionIndex}`}
       onChange={handleAnswer}
       preSelected={preSelected}
+      showDefaultAnswer={showDefaultAnswer}
     />
   );
 };
@@ -50,6 +57,7 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [submitResponse, setSubmitResponse] = useState<any>({});
   const [answers, setAnswers] = useState<any>({});
+  const [showDefaultAnswer, setShowDefaultAnswer] = useState<number>(0);
 
   const questionnaireClasses = classNames({
     [`${AppPrefix}-questionaire`]: true
@@ -64,11 +72,19 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
     });
   };
 
+  const resetIncorrectAttempt = () => {
+    const ques = questions[currentQuestionIndex];
+    ques.incorrectAttempt = 0;
+  };
+
   const handleAnswer = (
     questionId: QuestionIDType,
     selectedOption: QuestionIDType | Array<QuestionIDType>
   ) => {
     handleSubmitresponse(questionId, -1);
+    setShowDefaultAnswer(() => 0);
+
+    resetIncorrectAttempt();
 
     setAnswers((prev: any) => {
       return { ...prev, [questionId]: selectedOption };
@@ -78,12 +94,14 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
   const onPrevClick = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex((prev: number) => prev - 1);
+      resetIncorrectAttempt();
     }
   };
 
   const onNextClick = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev: number) => prev + 1);
+      resetIncorrectAttempt();
     }
   };
 
@@ -93,6 +111,7 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
 
     if (!answers[ques.id]) {
       handleSubmitresponse(ques.id, 0);
+
       return;
     }
 
@@ -108,7 +127,21 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
         break;
     }
 
+    if (!isCorrectAnswer) {
+      ques.incorrectAttempt = (ques.incorrectAttempt || 0) + 1;
+    }
+
     handleSubmitresponse(ques.id, isCorrectAnswer ? 1 : 2);
+  };
+
+  const showCorrectAnswer = () => {
+    const ques = questions[currentQuestionIndex];
+    setAnswers((prev: any) => {
+      return { ...prev, [ques.id]: ques.answer };
+    });
+
+    handleSubmitresponse(ques.id, 1);
+    setShowDefaultAnswer((prev: number) => prev + 1);
   };
 
   const getAnswer = () => {
@@ -196,6 +229,7 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
         currentQuestionIndex={currentQuestionIndex}
         handleAnswer={handleAnswer}
         preSelected={answers}
+        showDefaultAnswer={showDefaultAnswer}
       />
 
       <div className='action-button'>
@@ -210,6 +244,17 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
           >
             Verify
           </YalsButton>
+
+          {questions[currentQuestionIndex].incorrectAttempt > 3 && (
+            <YalsButton
+              onClick={showCorrectAnswer}
+              variant={YALSButtonVariantTypes.Info}
+              size={YALSSizeTypes.Small}
+              className='show-correct-answer'
+            >
+              See Answer
+            </YalsButton>
+          )}
 
           {submitResponse[questions[currentQuestionIndex].id] == 1 && (
             <div className='correct-answer'>

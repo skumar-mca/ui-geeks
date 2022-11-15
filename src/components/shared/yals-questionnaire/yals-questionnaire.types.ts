@@ -9,6 +9,7 @@ export interface IQuestionnarieQuestionProps {
   ) => void;
   preSelected: QuestionIDType;
   isSubmitted?: number;
+  showDefaultAnswer?: number;
 }
 export interface IQuestionnaireProps {
   questions: Array<any>;

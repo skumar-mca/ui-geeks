@@ -81,7 +81,7 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
                     >
                       <ChevronLeft height={16} width={16} fillColor='white' />
                     </YalsButton>
-
+                    <div className='demo-ctr'>Example {currentIndex + 1}</div>
                     <YalsButton
                       variant={YALSButtonVariantTypes.Primary}
                       disabled={currentIndex === demoComponentList.length - 1}

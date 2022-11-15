@@ -7,14 +7,23 @@ import './yals-question.scss';
 import { IYALSQuestionProps } from './yals-question.types';
 
 const YALSQuestion = (props: IYALSQuestionProps) => {
-  const { question, questionId, options, type, name, preSelected, onChange } =
-    props;
+  const {
+    question,
+    questionId,
+    options,
+    type,
+    name,
+    preSelected,
+    showDefaultAnswer,
+    onChange
+  } = props;
 
   const questionClasses = classNames({
     [`${AppPrefix}-question`]: true
   });
 
   const [selected, setSelected] = useState<Array<string | number>>([]);
+  const [resetState, setResetState] = useState<number>(0);
 
   const onQuestionSelection = (opt: any, evt: any) => {
     const { id, checked } = evt.target;
@@ -25,7 +34,12 @@ const YALSQuestion = (props: IYALSQuestionProps) => {
       let currentSelected = [...selected];
 
       if (!checked) {
-        const itemIndex = currentSelected.indexOf(optionId);
+        let itemIndex = currentSelected.indexOf(optionId);
+
+        if (itemIndex === -1) {
+          itemIndex = currentSelected.indexOf(+optionId);
+        }
+
         if (itemIndex > -1) {
           currentSelected.splice(itemIndex, 1);
         }
@@ -48,15 +62,40 @@ const YALSQuestion = (props: IYALSQuestionProps) => {
     return opt.isChecked;
   };
 
-  useEffect(() => {
-    // set selected answer on load, primarily on next/prev navigation
+  const getPreSelectedValues = () => {
     if (preSelected) {
       const preSelectedAnswer = preSelected[questionId];
       if (preSelectedAnswer) {
-        setSelected(() => preSelectedAnswer);
+        return preSelectedAnswer;
       }
     }
+
+    return [];
+  };
+  const setPreSelected = () => {
+    // set selected answer on load, primarily on next/prev navigation
+    setSelected(() => getPreSelectedValues());
+  };
+
+  useEffect(() => {
+    setPreSelected();
   }, []);
+
+  useEffect(() => {
+    if (showDefaultAnswer && showDefaultAnswer > 0) {
+      setPreSelected();
+      setResetState((prev: number) => prev + 1);
+      const preSelectedAnswer = getPreSelectedValues();
+
+      options.map((opt: any) => {
+        opt.isChecked =
+          type === YALSCheckRadioTypes.Checkbox
+            ? preSelectedAnswer.indexOf(opt.id) > -1
+            : preSelectedAnswer == opt.id;
+        return opt;
+      });
+    }
+  }, [showDefaultAnswer]);
 
   return (
     <div className={questionClasses} key={`ques_${questionId}`}>
@@ -65,7 +104,7 @@ const YALSQuestion = (props: IYALSQuestionProps) => {
         {options.map((opt: any) => {
           return (
             <YALSCheckRadio
-              key={`${opt.id}_${questionId}`}
+              key={`${opt.id}_${questionId}_${resetState}`}
               label={opt.label}
               id={`${opt.id}_${questionId}`}
               type={type}

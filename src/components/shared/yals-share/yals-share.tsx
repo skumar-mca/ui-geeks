@@ -1,6 +1,7 @@
 import classNames from 'classnames';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import useDeviceType from '../../../custom-hooks/use-device-type';
+import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import {
   AppPrefix,
   DeviceType,
@@ -15,7 +16,7 @@ import {
 } from '../yals-flex/yals-flex.types';
 import './yals-share.scss';
 const YALSShare = () => {
-  const currentRoute = location.href;
+  const currentRoute = useCurrentPath();
   const appContext = useContext(AppContext);
   const deviceType = useDeviceType();
   const isMobile = [DeviceType.Mobile, DeviceType.Tablet].includes(deviceType);
@@ -24,11 +25,17 @@ const YALSShare = () => {
     [`${AppPrefix}-share`]: true
   });
 
+  useEffect(() => {
+    try {
+      eval(`window.FB && window.FB.XFBML && window.FB.XFBML.parse()`);
+    } catch (e) {}
+  }, [currentRoute]);
+
   return (
     <div className={shareClasses}>
-      <div className='share-text'> Share this on:</div>
+      <div className='share-text'>Liked the content, please share this on:</div>
       <YalsFlex
-        justifyContent={FlexJustifyContentTypes.SpaceBetween}
+        justifyContent={FlexJustifyContentTypes.FlexStart}
         alignItems={FlexAlignItemsTypes.Center}
       >
         {isMobile && (
@@ -49,7 +56,7 @@ const YALSShare = () => {
 
         <div
           className='fb-like'
-          data-href={currentRoute}
+          data-href={location.href}
           data-height='20px'
           data-layout='button_count'
           data-action='like'

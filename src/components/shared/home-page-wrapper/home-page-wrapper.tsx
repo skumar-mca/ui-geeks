@@ -217,19 +217,19 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
           </>
         )}
 
-        <Suspense fallback={<ContentLoader />}>
-          <YALSShare />
-          {children}
-        </Suspense>
+        <Suspense fallback={<ContentLoader />}>{children}</Suspense>
 
         {deviceType === DeviceType.Mobile && customMenuContent && (
           <div className='custom-menu-box'>{customMenuContent}</div>
         )}
 
         {menuLinks.length > 1 && (
-          <Container>
-            <NextPrevButtons allItems={menuLinks} />
-          </Container>
+          <>
+            <YALSShare />
+            <Container>
+              <NextPrevButtons allItems={menuLinks} />
+            </Container>
+          </>
         )}
         <ScrollTopButton />
       </Col>

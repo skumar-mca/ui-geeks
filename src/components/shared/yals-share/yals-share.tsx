@@ -8,6 +8,11 @@ import {
 } from '../../../util/app-constants';
 import { AppContext } from '../../../util/app-context';
 import IconWhatsapp from '../../icons/icon-whatsapp';
+import YalsFlex from '../yals-flex/yals-flex';
+import {
+  FlexAlignItemsTypes,
+  FlexJustifyContentTypes
+} from '../yals-flex/yals-flex.types';
 import './yals-share.scss';
 const YALSShare = () => {
   const currentRoute = location.href;
@@ -19,23 +24,43 @@ const YALSShare = () => {
     [`${AppPrefix}-share`]: true
   });
 
-  if (!isMobile) {
-    return null;
-  }
-
   return (
     <div className={shareClasses}>
-      <span className='share-text'> Share this on:</span>
-      <a
-        href={`whatsapp://send?text=${currentRoute}`}
-        data-action='share/whatsapp/share'
+      <div className='share-text'> Share this on:</div>
+      <YalsFlex
+        justifyContent={FlexJustifyContentTypes.SpaceBetween}
+        alignItems={FlexAlignItemsTypes.Center}
       >
-        <IconWhatsapp
-          fillColor={
-            appContext.theme === THEME_CONSTANT.DARK_THEME ? 'white' : 'green'
+        {isMobile && (
+          <a
+            href={`whatsapp://send?text=${currentRoute}`}
+            data-action='share/whatsapp/share'
+            className='whatsapp-share'
+          >
+            <IconWhatsapp
+              fillColor={
+                appContext.theme === THEME_CONSTANT.DARK_THEME
+                  ? 'white'
+                  : 'green'
+              }
+            />
+          </a>
+        )}
+
+        <div
+          className='fb-like'
+          data-href={currentRoute}
+          data-height='20px'
+          data-layout='button_count'
+          data-action='like'
+          data-size='small'
+          data-share='true'
+          data-lazy={true}
+          data-colorscheme={
+            appContext.theme === THEME_CONSTANT.DARK_THEME ? 'dark' : 'light'
           }
-        />
-      </a>
+        ></div>
+      </YalsFlex>
     </div>
   );
 };

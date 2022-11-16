@@ -26,7 +26,8 @@ export const ConsoleQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'console_1',
-    answer: 2
+    answer: 2,
+    explanation: `Browser Console can be used to write/test JavaScript code.`
   },
   {
     id: 2,
@@ -51,7 +52,8 @@ export const ConsoleQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'console_2',
-    answer: 2
+    answer: 2,
+    explanation: `REPL (Read-Eval-Print-Loop) is running under the hood of every console.`
   },
   {
     id: 3,
@@ -68,7 +70,8 @@ export const ConsoleQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'console_3',
-    answer: 1
+    answer: 1,
+    explanation: `Yes, in JavaScript, every expression has a result.`
   },
   {
     id: 4,
@@ -93,7 +96,8 @@ export const ConsoleQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'console_4',
-    answer: 3
+    answer: 3,
+    explanation: `Expressions like console.log( ) returns nothing and in JavaScript "nothing" is represented as undefined.`
   },
   {
     id: 5,
@@ -118,6 +122,7 @@ export const ConsoleQuestions = [
     ],
     type: YALSCheckRadioTypes.Checkbox,
     name: 'console_5',
-    answer: [1, 2, 3, 4]
+    answer: [1, 2, 3, 4],
+    explanation: `REPL (Read-Eval-Print-Loop) is running under the hood of every console, performing above steps.`
   }
 ];

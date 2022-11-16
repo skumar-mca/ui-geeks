@@ -28,7 +28,8 @@ export const IncludeScriptQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'is_1',
-    answer: 2
+    answer: 2,
+    explanation: `<script> tags is used for adding JavaScript code to webpage.`
   },
   {
     id: 2,
@@ -53,7 +54,8 @@ export const IncludeScriptQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'is_2',
-    answer: 1
+    answer: 1,
+    explanation: `A file(.js), containing the code is linked to the webpage via the "src" attribute of the script tag`
   },
   {
     id: 3,
@@ -80,7 +82,8 @@ export const IncludeScriptQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'is_3',
-    answer: 3
+    answer: 3,
+    explanation: `The DOMContentLoaded event can be used to wait until all HTML elements are loaded.`
   },
   {
     id: 4,
@@ -101,7 +104,8 @@ export const IncludeScriptQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'is_4',
-    answer: 1
+    answer: 1,
+    explanation: `Scripts loaded using the async attribute on <script> will download the script without blocking the page.`
   },
   {
     id: 5,
@@ -120,6 +124,7 @@ export const IncludeScriptQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'is_5',
-    answer: 2
+    answer: 2,
+    explanation: `Scripts loaded with the defer attribute will load in the order they appear on page. They won't run until page content has all loaded, which is useful if scripts depend either on the DOM or to each other.`
   }
 ];

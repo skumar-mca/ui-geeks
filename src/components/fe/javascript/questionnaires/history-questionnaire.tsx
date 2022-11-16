@@ -1,5 +1,6 @@
 import React from 'react';
 import { ALL_OF_ABOVE, EMPTY_LINE } from '../../../../util/app-constants';
+import { I } from '../../../shared/util/util';
 import { YALSCheckRadioTypes } from '../../../shared/yals-check-radio/yals-check-radio.types';
 
 export const HistoryQuestions = [
@@ -26,7 +27,8 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_1',
-    answer: 3
+    answer: 3,
+    explanation: `It was created by Brenden Eich at NetScape in 1995. It was first released with Netscape 2 in 1996.`
   },
   {
     id: 2,
@@ -51,7 +53,8 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_2',
-    answer: 3
+    answer: 3,
+    explanation: `Netscape submitted JavaScript to Ecma International, a European standards organization, which resulted in the first edition of the ECMAScript standard in 1997.`
   },
   {
     id: 3,
@@ -73,11 +76,16 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_3',
-    answer: 1
+    answer: 1,
+    explanation: `Yes, Fourth edition was abandoned, due to political differences concerning language complexity.`
   },
   {
     id: 4,
-    question: <>let keyword was introduced in?</>,
+    question: (
+      <>
+        The <I>let</I> keyword was introduced in?
+      </>
+    ),
     options: [
       {
         label: 'ES5',
@@ -98,7 +106,8 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_4',
-    answer: 2
+    answer: 2,
+    explanation: `ECMAScript 2015 (ES6), added let, const, for...of, maps, sets, WeakMap, promises, etc.`
   },
   {
     id: 5,
@@ -123,7 +132,8 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_5',
-    answer: 2
+    answer: 2,
+    explanation: `Block-scope, destructuring, async/await, exponential operator (**), Array.prototype.includes() were added in ES7.`
   },
   {
     id: 6,
@@ -148,7 +158,8 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_6',
-    answer: 4
+    answer: 4,
+    explanation: `ES11 introduced BigInt, nullish coalescing (??) and globalThis.`
   },
   {
     id: 7,
@@ -167,7 +178,8 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_7',
-    answer: 1
+    answer: 1,
+    explanation: `Both JAVA & JavaScript are registered trademarks of Oracle in the U.S. and other countries.`
   },
   {
     id: 8,
@@ -184,7 +196,8 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_8',
-    answer: 1
+    answer: 1,
+    explanation: `It was originally going to be called "LiveScript" but later renamed as "JavaScript".`
   },
   {
     id: 9,
@@ -209,7 +222,8 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_9',
-    answer: 4
+    answer: 4,
+    explanation: `ES12 introduced replaceAll() for string along with Promise.any, AggregateError, WeakRefAdded, logical assignment operators (??=, &&= , ||=), Array.sort() made more precise.`
   },
   {
     id: 10,
@@ -226,6 +240,7 @@ export const HistoryQuestions = [
     ],
     type: YALSCheckRadioTypes.Radio,
     name: 'hist_9',
-    answer: 1
+    answer: 1,
+    explanation: `JavaScript is known as a scripting language for the web, but it also runs on non-browser environments with the introduction of NodeJs.`
   }
 ];

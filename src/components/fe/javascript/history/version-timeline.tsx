@@ -87,7 +87,7 @@ const JSVersionTimeLine = () => {
       mileStone: 'ES12',
       title: 'replaceAll() for string, Promise.any, AggregateError, WeakRef',
       description:
-        'Added logical assignment operators (??=, &&= , ||=). Array.sort() made more precise.'
+        'Added logical assignment operators (??=, &&= , ||=), Array.sort() made more precise.'
     },
     {
       date: 'June, 2022',

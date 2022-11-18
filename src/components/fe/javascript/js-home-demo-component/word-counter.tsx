@@ -11,7 +11,8 @@ const JSHomeDemoWordCounter = () => {
   };
 
   useEffect(() => {
-    const words = (text || '').split(' ').length;
+    const textValue = (text || '').trim();
+    const words = !textValue ? 0 : textValue.split(' ').length;
     setWordCount(() => words);
   }, [text]);
 

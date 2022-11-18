@@ -82,6 +82,7 @@ export const REACT_ROUTE_PATH: Array<IMenuItem> = [
 export const REACT_PRIMARY_ROUTES = {
   HOME_PAGE: { url: '/react/home', label: 'React' },
   STATE: `${routePrefix}function-component`,
+  FORM_HANDLING: `${routePrefix}forms`,
   DEMO: {
     url: '/react/demoes',
     label: 'React Demoes'

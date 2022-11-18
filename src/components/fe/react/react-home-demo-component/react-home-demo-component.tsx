@@ -21,7 +21,7 @@ const ReactHomeDemoComponent = () => {
   const demoComponents = [
     {
       id: 1,
-      label: 'Updating State Values.',
+      label: 'React state update.',
       moreDetail: {
         label: 'Learn more about state updates',
         link: REACT_PRIMARY_ROUTES.STATE
@@ -45,10 +45,10 @@ const ReactHomeDemoComponent = () => {
     },
     {
       id: 2,
-      label: 'React state update.',
+      label: 'Handle form values.',
       moreDetail: {
-        label: 'Learn more about state updates',
-        link: REACT_PRIMARY_ROUTES.STATE
+        label: 'Learn more about form handling',
+        link: REACT_PRIMARY_ROUTES.FORM_HANDLING
       },
       tabs: [
         {
@@ -69,7 +69,7 @@ const ReactHomeDemoComponent = () => {
     },
     {
       id: 3,
-      label: 'Reactive DOM manipulation.',
+      label: 'React DOM manipulation.',
       moreDetail: {
         label: 'Learn more about DOM manipulation',
         link: REACT_PRIMARY_ROUTES.HOME_PAGE.url

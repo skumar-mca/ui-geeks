@@ -13,6 +13,9 @@ import JSHomeDemoDeviceInfo, {
 import JSHomeDemoStringMethods, {
   JSHomeDemoStringMethodsCode
 } from './string-methods';
+import JSHomeDemoWordCounter, {
+  JSHomeDemoWordCounterCode
+} from './word-counter';
 
 const JSHomeDemoComponent = () => {
   const current = useCurrentPath();
@@ -21,7 +24,7 @@ const JSHomeDemoComponent = () => {
   const demoComponents = [
     {
       id: 2,
-      label: 'Magical manipulation of string.',
+      label: 'String manipulation.',
       moreDetail: {
         label: 'Learn more about String methods',
         link: JS_PRIMARY_ROUTES.STRING
@@ -55,6 +58,26 @@ const JSHomeDemoComponent = () => {
         {
           id: 2,
           content: <Code>{JSHomeDemoArrayMethodsCode}</Code>,
+          label: 'Code'
+        }
+      ]
+    },
+    {
+      id: 4,
+      label: 'Word Counter.',
+      moreDetail: {
+        label: 'Learn more about String methods',
+        link: JS_PRIMARY_ROUTES.STRING
+      },
+      tabs: [
+        {
+          id: 1,
+          content: <JSHomeDemoWordCounter />,
+          label: 'Output'
+        },
+        {
+          id: 2,
+          content: <Code>{JSHomeDemoWordCounterCode}</Code>,
           label: 'Code'
         }
       ]

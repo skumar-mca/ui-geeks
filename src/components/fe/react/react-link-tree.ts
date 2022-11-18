@@ -2,6 +2,8 @@ export const REACT_LINK = [
   {
     label: 'Introduction',
     link: '/react/introduction',
+    lastUpdate: '10/20/2022',
+    wordCount: 610,
     tags: [
       'Declarative',
       'Single Page Application',
@@ -49,6 +51,8 @@ export const REACT_LINK = [
   {
     label: 'JSX',
     link: '/react/jsx',
+    lastUpdate: '10/20/2022',
+    wordCount: 800,
     tags: [
       'JSX',
       'Expressions in JSX',
@@ -93,6 +97,8 @@ export const REACT_LINK = [
   {
     label: 'Components',
     link: '/react/components',
+    lastUpdate: '10/20/2022',
+    wordCount: 760,
     tags: [
       'Components',
       'Function Component',
@@ -123,6 +129,8 @@ export const REACT_LINK = [
   {
     label: 'Class Component',
     link: '/react/class-component',
+    lastUpdate: '10/20/2022',
+    wordCount: 1900,
     tags: [
       'Class Components',
       'defaultProps',
@@ -200,6 +208,8 @@ export const REACT_LINK = [
   {
     label: 'Function Component',
     link: '/react/function-component',
+    lastUpdate: '10/20/2022',
+    wordCount: 1020,
     tags: ['Function Component', 'Adding State', 'useEffect()', 'useState()'],
     children: [
       {
@@ -217,21 +227,29 @@ export const REACT_LINK = [
   {
     label: 'Controlled Component',
     link: '/react/controlled-component',
+    lastUpdate: '10/20/2022',
+    wordCount: 275,
     tags: ['Controlled Components']
   },
   {
     label: 'Uncontrolled Component',
     link: '/react/uncontrolled-component',
+    lastUpdate: '10/20/2022',
+    wordCount: 280,
     tags: ['Uncontrolled Components', 'Refs']
   },
   {
     label: 'Fragments',
     link: '/react/fragments',
+    lastUpdate: '10/20/2022',
+    wordCount: 175,
     tags: ['Fragments', 'Wrapper Hell']
   },
   {
     label: 'Lists',
     link: '/react/lists',
+    lastUpdate: '10/20/2022',
+    wordCount: 315,
     tags: ['Lists', 'Keys'],
     children: [
       {
@@ -242,6 +260,8 @@ export const REACT_LINK = [
   {
     label: 'Forms',
     link: '/react/forms',
+    lastUpdate: '10/20/2022',
+    wordCount: 800,
     tags: [
       'Forms',
       'Controlled Components',
@@ -271,6 +291,8 @@ export const REACT_LINK = [
   {
     label: 'Hooks',
     link: '/react/hooks',
+    lastUpdate: '10/20/2022',
+    wordCount: 2080,
     tags: [
       'Hooks',
       'Rules of Hooks',
@@ -340,6 +362,8 @@ export const REACT_LINK = [
   {
     label: 'Context',
     link: '/react/context',
+    lastUpdate: '10/20/2022',
+    wordCount: 820,
     tags: [
       'Context',
       'Context API',
@@ -377,16 +401,22 @@ export const REACT_LINK = [
   {
     label: 'Render Props',
     link: '/react/render-props',
+    lastUpdate: '10/20/2022',
+    wordCount: 225,
     tags: ['Render Props', 'Sharing Component State']
   },
   {
     label: 'Error Boundary',
     link: '/react/error-boundary',
+    lastUpdate: '10/20/2022',
+    wordCount: 390,
     tags: ['Error Boundaries', 'Error Boundary', 'Errors']
   },
   {
     label: 'React Router',
     link: '/react/react-routes',
+    lastUpdate: '10/20/2022',
+    wordCount: 1045,
     tags: [
       'React Router',
       'Browser Router',

@@ -2,6 +2,8 @@ export const JSLINK = [
   {
     label: 'Introduction',
     link: '/javascript/introduction',
+    lastUpdate: '10/15/2022',
+    wordCount: 680,
     tags: [
       'Interpreted',
       'Compiled',
@@ -49,11 +51,15 @@ export const JSLINK = [
   {
     label: 'History of JavaScript',
     link: '/javascript/history',
+    lastUpdate: '10/15/2022',
+    wordCount: 335,
     tags: ['History']
   },
   {
     label: 'Include JavaScript code',
     link: '/javascript/include-code',
+    lastUpdate: '10/15/2022',
+    wordCount: 495,
     tags: ['Scripts', 'Async', 'Defer'],
     children: [
       {
@@ -67,6 +73,8 @@ export const JSLINK = [
   {
     label: 'JavaScript Console',
     link: '/javascript/console',
+    lastUpdate: '10/15/2022',
+    wordCount: 185,
     tags: ['Console'],
     children: [
       {
@@ -80,6 +88,8 @@ export const JSLINK = [
   {
     label: 'Data types',
     link: '/javascript/data-types',
+    lastUpdate: '10/15/2022',
+    wordCount: 1010,
     tags: [
       'Types',
       'Datatypes',
@@ -125,6 +135,8 @@ export const JSLINK = [
   {
     label: 'Grammar and types',
     link: '/javascript/grammer',
+    lastUpdate: '10/15/2022',
+    wordCount: 1840,
     tags: [
       'Grammer',
       'Comments',
@@ -217,6 +229,8 @@ export const JSLINK = [
   {
     label: 'Operators',
     link: '/javascript/operators',
+    lastUpdate: '10/15/2022',
+    wordCount: 1590,
     tags: [
       'Operators',
       'Binary Operators',
@@ -320,6 +334,8 @@ export const JSLINK = [
   {
     label: 'Control Structures',
     link: '/javascript/control-structures',
+    lastUpdate: '10/15/2022',
+    wordCount: 585,
     tags: [
       'Conditional Statements',
       'if else',
@@ -373,6 +389,8 @@ export const JSLINK = [
   {
     label: 'Objects',
     link: '/javascript/objects',
+    lastUpdate: '10/15/2022',
+    wordCount: 265,
     tags: [
       'object',
       'Creating Objects',
@@ -398,6 +416,8 @@ export const JSLINK = [
   {
     label: 'Arrays',
     link: '/javascript/arrays',
+    lastUpdate: '10/15/2022',
+    wordCount: 795,
     tags: [
       'Array',
       'Accessing Array Elements',
@@ -461,6 +481,8 @@ export const JSLINK = [
   {
     label: 'Functions',
     link: '/javascript/functions',
+    lastUpdate: '10/15/2022',
+    wordCount: 915,
     tags: [
       'Functions',
       'Function Declaration',
@@ -506,6 +528,8 @@ export const JSLINK = [
   {
     label: 'Closures',
     link: '/javascript/closures',
+    lastUpdate: '10/15/2022',
+    wordCount: 1425,
     tags: [
       'Closures',
       'Lexical Scope',
@@ -535,6 +559,8 @@ export const JSLINK = [
   {
     label: 'Arrow functions',
     link: '/javascript/arrow-functions',
+    lastUpdate: '10/15/2022',
+    wordCount: 1075,
     tags: ['Arrow Functions', 'Class Fields'],
     children: [
       {
@@ -564,6 +590,8 @@ export const JSLINK = [
   {
     label: 'JavaScript Modules',
     link: '/javascript/modules',
+    lastUpdate: '10/15/2022',
+    wordCount: 1020,
     tags: [
       'Modules',
       'JavaScript Modules',
@@ -623,6 +651,8 @@ export const JSLINK = [
   {
     label: 'The "this" keyword',
     link: '/javascript/this-keyword',
+    lastUpdate: '10/15/2022',
+    wordCount: 2360,
     tags: [
       'this',
       'Value of this',
@@ -706,6 +736,8 @@ export const JSLINK = [
   {
     label: 'Class',
     link: '/javascript/class-keyword',
+    lastUpdate: '10/15/2022',
+    wordCount: 1220,
     tags: [
       'Class',
       'Class Declaration',
@@ -758,6 +790,8 @@ export const JSLINK = [
   {
     label: 'Inheritance and the Prototype chain',
     link: '/javascript/prototype-chain',
+    lastUpdate: '10/15/2022',
+    wordCount: 750,
     tags: [
       'Inheritance',
       'prototype',
@@ -789,6 +823,8 @@ export const JSLINK = [
   {
     label: 'Strict mode',
     link: '/javascript/strict-mode',
+    lastUpdate: '10/15/2022',
+    wordCount: 535,
     tags: ['Strict mode'],
     children: [
       {
@@ -804,6 +840,8 @@ export const JSLINK = [
   {
     label: 'Hoisting',
     link: '/javascript/hoisting',
+    lastUpdate: '10/15/2022',
+    wordCount: 295,
     tags: [
       'Hoisting',
       'Function Hoisting',
@@ -825,6 +863,8 @@ export const JSLINK = [
   {
     label: 'Exception Handling',
     link: '/javascript/exception-handling',
+    lastUpdate: '10/15/2022',
+    wordCount: 275,
     tags: ['Exception Handling', 'throw', 'try', 'catch', 'finally', 'error()'],
     children: [
       {
@@ -847,6 +887,8 @@ export const JSLINK = [
   {
     label: 'Iterators and Generators',
     link: '/javascript/iterators-and-generators',
+    lastUpdate: '10/15/2022',
+    wordCount: 840,
     tags: ['Iterators', 'Generators', 'Iterables', 'Iterators and Generators'],
     children: [
       {

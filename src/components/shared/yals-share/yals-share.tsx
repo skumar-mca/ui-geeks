@@ -33,7 +33,7 @@ const YALSShare = () => {
 
   return (
     <div className={shareClasses}>
-      <div className='share-text'>Liked the content, please share this on:</div>
+      <div className='share-text'>Liked the content, please share this:</div>
       <YalsFlex
         justifyContent={FlexJustifyContentTypes.FlexStart}
         alignItems={FlexAlignItemsTypes.Center}

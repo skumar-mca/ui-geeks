@@ -7,7 +7,7 @@ export interface IDemComponentItemType {
   codeLanguage?: string;
   tabs: Array<IYalsTabType>;
   moreDetail?: {
-    label: string | ReactNode;
+    label: string;
     link: string;
   };
 }

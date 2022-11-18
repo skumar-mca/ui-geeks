@@ -27,6 +27,7 @@ import {
 import YALSModal from '../../shared/yals-modal/yals-modal';
 import OnPageItems from '../on-page-items/on-page-items';
 import YALSShare from '../yals-share/yals-share';
+import YALSTopicInfo from '../yals-topic-info/yals-topic-info';
 import { IHomePageWrapperProps } from './home-page-wrapper.types';
 
 const MenuDivider = () => {
@@ -144,6 +145,8 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
     }
   }, [closeMobileMenuCtr]);
 
+  const currentLinkItem = getCurrentRouteMenu();
+
   return (
     <Row className={`terminology-${language}`}>
       {deviceType != DeviceType.Mobile && (
@@ -215,6 +218,13 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
               />
             )}
           </>
+        )}
+
+        {currentLinkItem && (
+          <YALSTopicInfo
+            wordCount={currentLinkItem.wordCount}
+            lastUpdate={currentLinkItem.lastUpdate}
+          />
         )}
 
         <Suspense fallback={<ContentLoader />}>{children}</Suspense>

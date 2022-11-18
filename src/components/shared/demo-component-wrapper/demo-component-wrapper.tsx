@@ -64,12 +64,6 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
 
             <div>
               <>
-                {currentComponent.label && (
-                  <>
-                    <div className='demo-title'>{currentComponent.label}</div>
-                  </>
-                )}
-
                 {demoComponentList.length > 1 && (
                   <div className='prev-next-btn'>
                     <YalsButton
@@ -81,7 +75,10 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
                     >
                       <ChevronLeft height={16} width={16} fillColor='white' />
                     </YalsButton>
-                    <div className='demo-ctr'>Example {currentIndex + 1}</div>
+
+                    <div className='demo-ctr'>
+                      Example {currentIndex + 1} of {demoComponentList.length}
+                    </div>
                     <YalsButton
                       variant={YALSButtonVariantTypes.Primary}
                       disabled={currentIndex === demoComponentList.length - 1}
@@ -91,13 +88,15 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
                     >
                       <ChevronRight fillColor='white' height={16} width={16} />
                     </YalsButton>
-
                     {currentComponent.moreDetail && (
                       <YalsButton
                         variant={YALSButtonVariantTypes.Clear}
                         onClick={redirectToMoreDetailPage}
                         className='more-info-icon'
-                        title='See more details'
+                        title={
+                          currentComponent.moreDetail.label ||
+                          'See more details'
+                        }
                       >
                         <InfoIcon
                           height={25}
@@ -111,6 +110,12 @@ const DemoComponentWrapper = (props: IDemoWrapperProps) => {
                       </YalsButton>
                     )}
                   </div>
+                )}
+
+                {currentComponent.label && (
+                  <>
+                    <div className='demo-title'>{currentComponent.label}</div>
+                  </>
                 )}
               </>
             </div>

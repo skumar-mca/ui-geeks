@@ -80,9 +80,7 @@ const HomeFooter = () => {
               </div>
               <I>
                 Learn Core and Advanced Concepts, Blogs, Summary of JavaScript,
-                React, Angular, SCSS, CSS. Content of the website is prepared
-                from multiple resources and follows under MIT License and is
-                free to copy and distribute.
+                React, Angular, SCSS, CSS.
               </I>
             </div>
           </>

@@ -7,7 +7,6 @@ import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix, DeviceType } from '../../../util/app-constants';
 import { getOnPageItems } from '../../../util/util';
 import ListIcon from '../../icons/list-icon';
-import Container from '../../shared/container/container';
 import ContentLoader from '../../shared/content-loader/content-loader';
 import NavigationMenu from '../../shared/navigation-menu/navigation-menu';
 import NextPrevButtons from '../../shared/next-prev-btn/next-prev-btn';
@@ -236,9 +235,7 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
         {menuLinks.length > 1 && (
           <>
             <YALSShare />
-            <Container>
-              <NextPrevButtons allItems={menuLinks} />
-            </Container>
+            <NextPrevButtons allItems={menuLinks} />
           </>
         )}
         <ScrollTopButton />

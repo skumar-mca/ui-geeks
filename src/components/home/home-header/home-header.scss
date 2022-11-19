@@ -7,8 +7,8 @@
   width: 100%;
   z-index: 99;
   box-shadow: 0px 3px 8px -2px $boxShadow;
-  height: 35px;
-
+  height: 40px;
+  padding-top: 5px;
   .app-logo {
     margin-top: -5px;
   }
@@ -40,17 +40,20 @@
     }
   }
 
-  .theme-switch {
-    .btn-clear {
-      padding: 0;
-      margin-top: -5px;
-      &:active {
-        border-color: transparent;
+  .right-actions {
+    margin-top: -3px;
+    .theme-switch {
+      .btn-clear {
+        padding: 0;
+        margin-top: -5px;
+        &:active {
+          border-color: transparent;
+        }
       }
-    }
 
-    display: inline-block;
-    margin-right: 25px;
+      display: inline-block;
+      margin-right: 25px;
+    }
   }
 }
 

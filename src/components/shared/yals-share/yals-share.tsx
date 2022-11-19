@@ -40,7 +40,7 @@ const YALSShare = () => {
       >
         {isMobile && (
           <a
-            href={`whatsapp://send?text=${currentRoute}`}
+            href={`whatsapp://send?text=${location.href}`}
             data-action='share/whatsapp/share'
             className='whatsapp-share'
           >

@@ -23,7 +23,7 @@ const YALSScrollIndicator = () => {
 
   useLayoutEffect(() => {
     setScrollPercentage(() => calculateScrollPercentage());
-  }, [scrollPosition]);
+  }, [scrollPosition, currentPath]);
 
   if (isHomePage) {
     return null;

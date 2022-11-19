@@ -5,7 +5,9 @@ export const JS_BLOG_LINK: Array<any> = JS_BLOG_CONTENT.map(
   (blg: IBlogContentType) => {
     return {
       link: `${routePrefix}${blg.url}`,
-      label: blg.label
+      label: blg.label,
+      lastUpdate: '10/20/2022',
+      wordCount: 465
     };
   }
 );

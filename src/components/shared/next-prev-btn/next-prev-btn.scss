@@ -2,7 +2,7 @@
 @import '../../../scss/colors.scss';
 
 .#{$appPrefix}-prev-next-btn {
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 25px;
   margin-top: 20px;
   border: 1px solid $brightGreen;
@@ -40,7 +40,7 @@
 
 .device-type-mobile {
   .prev-btn-wrapper {
-    padding-right: 5px;
+    padding-right: 0px;
     margin-bottom: 5px;
   }
 }

@@ -45,7 +45,7 @@ const HomeHeader = (props: any) => {
             </li>
           </ul>
 
-          <div>
+          <div className='right-actions'>
             <div className='theme-switch'>
               <YalsButton
                 variant={YALSButtonVariantTypes.Clear}

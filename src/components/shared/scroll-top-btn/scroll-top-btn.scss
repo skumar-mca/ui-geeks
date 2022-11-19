@@ -9,6 +9,7 @@
   border-radius: 50%;
   bottom: 60px;
   right: 30px;
+  z-index: 9;
   &:hover {
     background-color: $brightGreen;
   }

@@ -43,7 +43,7 @@ const YALSShare = () => {
         alignItems={FlexAlignItemsTypes.Center}
       >
         <a
-          href={`whatsapp://send?text=${location.href}`}
+          href={`whatsapp://send?text=${encodeURIComponent(location.href)}`}
           data-action='share/whatsapp/share'
           className='whatsapp-share'
         >
@@ -53,6 +53,20 @@ const YALSShare = () => {
             }
           />
         </a>
+
+        <div
+          className='fb-like'
+          data-href={location.href}
+          data-height='20px'
+          data-layout='button_count'
+          data-action='like'
+          data-size='small'
+          data-share='true'
+          data-lazy={true}
+          data-colorscheme={
+            appContext.theme === THEME_CONSTANT.DARK_THEME ? 'dark' : 'light'
+          }
+        ></div>
       </YalsFlex>
     </div>
   );

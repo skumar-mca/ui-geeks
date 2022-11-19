@@ -84,7 +84,9 @@
         </div>
       </div>
     </div>
+
     <script defer src="dist/bundle.js"></script>
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -99,6 +101,7 @@
       gtag('config', 'G-BRNZ91CF58');
     </script>
 
+    <!-- Service workeer for PWA | STARTS -->
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker
@@ -115,5 +118,25 @@
           );
       }
     </script>
+    <!-- Service workeer for PWA | ENDS -->
+
+    <!-- Facebook Integration | STARTS -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: '688592692544878',
+          autoLogAppEvents: true,
+          xfbml: true,
+          version: 'v15.0'
+        });
+      };
+    </script>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js"
+    ></script>
+    <!-- Facebook Integration | ENDS -->
   </body>
 </html>

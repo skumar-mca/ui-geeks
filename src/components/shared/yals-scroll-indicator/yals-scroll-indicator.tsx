@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import useScrollPosition from '../../../custom-hooks/use-scroll-position';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix } from '../../../util/app-constants';
@@ -24,6 +24,10 @@ const YALSScrollIndicator = () => {
   useLayoutEffect(() => {
     setScrollPercentage(() => calculateScrollPercentage());
   }, [scrollPosition, currentPath]);
+
+  useEffect(() => {
+    setScrollPercentage(() => calculateScrollPercentage());
+  }, []);
 
   if (isHomePage) {
     return null;

@@ -37,7 +37,11 @@ const ScrollTopButton = () => {
       justifyContent={FlexJustifyContentTypes.Center}
       alignItems={FlexAlignItemsTypes.Center}
     >
-      <YALSButton onClick={onHandleClick} title='Click to scroll top'>
+      <YALSButton
+        onClick={onHandleClick}
+        noHighlight={true}
+        title='Click to scroll top'
+      >
         <ArrowUpIcon fillColor='white' height={30} width={30} />
       </YALSButton>
     </YALSFlex>

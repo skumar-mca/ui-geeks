@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import useQTextScroll from '../../../custom-hooks/use-qtext-scroll';
 import HomePageWrapper from '../../shared/home-page-wrapper/home-page-wrapper';
-import NavigationMenu from '../../shared/navigation-menu/navigation-menu';
+import YALSBox from '../../shared/yals-box/yals-box';
 import { JS_BLOG_MENU_ITEMS } from './blogs/js-blogs-menu-items';
 import './javascript-home.scss';
 import { JSBreadcrumbLink } from './js-breadcrumb-links';
@@ -18,10 +18,13 @@ const JSHome = () => {
       breadcrumbLink={JSBreadcrumbLink}
       language='JavaScript'
       customMenuContent={
-        <NavigationMenu
-          menuList={JS_BLOG_MENU_ITEMS}
-          menuTitle={'JavaScript Blogs'}
-        />
+        <>
+          <YALSBox>
+            <Link to={JS_BLOG_MENU_ITEMS[0].url}>
+              JavaScript Blogs ({JS_BLOG_MENU_ITEMS.length})
+            </Link>
+          </YALSBox>
+        </>
       }
     >
       <Outlet />

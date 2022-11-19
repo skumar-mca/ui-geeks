@@ -49,6 +49,10 @@ body {
     width: 75%;
     padding-left: 15px;
   }
+
+  .#{$appPrefix}-box {
+    margin-right: 5px;
+  }
 }
 
 .#{$appPrefix}-content-section {
@@ -83,6 +87,10 @@ body {
   height: 96vh;
   padding-top: 40px;
   padding-left: 20px;
+
+  .#{$appPrefix}-box {
+    margin-left: 15px;
+  }
 
   .sub-menu {
     h5.ui-geeks-heading {

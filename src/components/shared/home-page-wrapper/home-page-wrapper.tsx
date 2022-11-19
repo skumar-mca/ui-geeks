@@ -24,6 +24,7 @@ import {
   FlexJustifyContentTypes
 } from '../../shared/yals-flex/yals-flex.types';
 import YALSModal from '../../shared/yals-modal/yals-modal';
+import Container from '../container/container';
 import OnPageItems from '../on-page-items/on-page-items';
 import YALSShare from '../yals-share/yals-share';
 import YALSTopicInfo from '../yals-topic-info/yals-topic-info';
@@ -229,14 +230,14 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
         <Suspense fallback={<ContentLoader />}>{children}</Suspense>
 
         {deviceType === DeviceType.Mobile && customMenuContent && (
-          <div className='custom-menu-box'>{customMenuContent}</div>
+          <>{customMenuContent}</>
         )}
 
         {menuLinks.length > 1 && (
-          <>
+          <Container>
             <YALSShare />
             <NextPrevButtons allItems={menuLinks} />
-          </>
+          </Container>
         )}
         <ScrollTopButton />
       </Col>

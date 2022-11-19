@@ -31,6 +31,10 @@ const YALSShare = () => {
     } catch (e) {}
   }, [currentRoute]);
 
+  if (!isMobile) {
+    return null;
+  }
+
   return (
     <div className={shareClasses}>
       <div className='share-text'>Liked the content, please share this:</div>
@@ -38,35 +42,17 @@ const YALSShare = () => {
         justifyContent={FlexJustifyContentTypes.FlexStart}
         alignItems={FlexAlignItemsTypes.Center}
       >
-        {isMobile && (
-          <a
-            href={`whatsapp://send?text=${location.href}`}
-            data-action='share/whatsapp/share'
-            className='whatsapp-share'
-          >
-            <IconWhatsapp
-              fillColor={
-                appContext.theme === THEME_CONSTANT.DARK_THEME
-                  ? 'white'
-                  : 'green'
-              }
-            />
-          </a>
-        )}
-
-        <div
-          className='fb-like'
-          data-href={location.href}
-          data-height='20px'
-          data-layout='button_count'
-          data-action='like'
-          data-size='small'
-          data-share='true'
-          data-lazy={true}
-          data-colorscheme={
-            appContext.theme === THEME_CONSTANT.DARK_THEME ? 'dark' : 'light'
-          }
-        ></div>
+        <a
+          href={`whatsapp://send?text=${location.href}`}
+          data-action='share/whatsapp/share'
+          className='whatsapp-share'
+        >
+          <IconWhatsapp
+            fillColor={
+              appContext.theme === THEME_CONSTANT.DARK_THEME ? 'white' : 'green'
+            }
+          />
+        </a>
       </YalsFlex>
     </div>
   );

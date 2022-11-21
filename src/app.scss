@@ -200,6 +200,10 @@ body {
     border: 1px solid $darkThemeColor;
   }
 
+  h6.#{$appPrefix}-heading {
+    color: $darkThemeh6Color;
+  }
+
   h5.#{$appPrefix}-heading {
     color: $darkThemeh5Color;
   }

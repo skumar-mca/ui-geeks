@@ -32,6 +32,7 @@ const YALSBreadcrumb = (props: IYALSBreadcrumbProps) => {
             key={itm.label}
             href={`#${itm.link}`}
             active={!itm.link}
+            aria-label={itm.label}
             className={!itm.link ? 'inactive-item' : ''}
           >
             {itm.label === 'Home' ? (

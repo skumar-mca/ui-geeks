@@ -138,7 +138,7 @@ const YALSSearchContainer = (props: any) => {
       <div className='search-result-wrapper'>
         {searchResult.map((res: any) => {
           return (
-            <Para>
+            <Para key={res.language}>
               <Heading as='h4'>{res.language}</Heading>
               <YalsFlex
                 justifyContent={FlexJustifyContentTypes.SpaceAround}

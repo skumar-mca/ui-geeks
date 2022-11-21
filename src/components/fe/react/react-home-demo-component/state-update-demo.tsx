@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
+import Para from '../../../shared/para/para';
 import { B, NewLine } from '../../../shared/util/util';
 import YALSInput from '../../../shared/yals-input/yals-input';
 
@@ -23,7 +24,10 @@ const ReactHomeDemoStateUpdate = () => {
 
   return (
     <>
-      <h6>Controlled Component State Update</h6>
+      <Para>
+        <B>Controlled Component State Update</B>
+      </Para>
+
       <Row>
         <Col xs={6} md={6} sm={6} className='pe-2'>
           <YALSInput

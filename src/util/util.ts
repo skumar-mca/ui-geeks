@@ -39,6 +39,8 @@ export const buildChildren = (
 };
 
 export const isIOS = () => {
+  const navigator: any = window.navigator;
+
   return (
     [
       'iPad Simulator',
@@ -47,8 +49,12 @@ export const isIOS = () => {
       'iPad',
       'iPhone',
       'iPod'
-    ].includes(navigator.platform) ||
-    (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
+    ].includes((navigator.userAgentData || navigator).platform) ||
+    ((
+      (navigator.userAgentData && navigator.userAgentData.platform) ||
+      navigator.userAgent
+    ).includes('Mac') &&
+      'ontouchend' in document)
   );
 };
 

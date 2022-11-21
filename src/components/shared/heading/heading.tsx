@@ -21,7 +21,7 @@ const Heading = (props: any) => {
       className: headingClasses,
       style,
       id,
-      tabIndex: 1
+      tabIndex: 0
     },
     [...children]
   );

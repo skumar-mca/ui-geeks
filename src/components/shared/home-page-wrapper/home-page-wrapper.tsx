@@ -26,6 +26,8 @@ import {
 import YALSModal from '../../shared/yals-modal/yals-modal';
 import Container from '../container/container';
 import OnPageItems from '../on-page-items/on-page-items';
+import YALSAd from '../yals-ad/yals-ad';
+import { GOOGLE_AD_PLACEMENT } from '../yals-ad/yals-ad.types';
 import YALSShare from '../yals-share/yals-share';
 import YALSTopicInfo from '../yals-topic-info/yals-topic-info';
 import { IHomePageWrapperProps } from './home-page-wrapper.types';
@@ -237,6 +239,7 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
           <Container>
             <YALSShare />
             <NextPrevButtons allItems={menuLinks} />
+            <YALSAd placement={GOOGLE_AD_PLACEMENT.CONTENT_SECTION} />
           </Container>
         )}
         <ScrollTopButton />
@@ -251,6 +254,8 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
           )}
 
           <>{customMenuContent}</>
+
+          <YALSAd placement={GOOGLE_AD_PLACEMENT.RIGHT_SECTION} />
         </Col>
       )}
     </Row>

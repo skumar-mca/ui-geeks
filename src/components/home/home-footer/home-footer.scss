@@ -62,6 +62,20 @@
         }
       }
     }
+
+    .privacy-terms {
+      margin-top: 25px;
+      margin-bottom: 25px;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: $lightGrayAlt;
+        }
+      }
+    }
   }
 
   .detail-footer.home-page {
@@ -102,6 +116,18 @@
       }
       svg {
         fill: $white;
+      }
+    }
+  }
+  .detail-footer {
+    .privacy-terms {
+      a {
+        color: $darkThemeColor;
+
+        &:hover {
+          text-decoration: underline;
+          color: $darkThemeColor;
+        }
       }
     }
   }

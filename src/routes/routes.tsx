@@ -11,6 +11,14 @@ import { THEME } from '../util/util';
 import JSRoutes from './js-routes';
 import ReactRoutes from './react-routes';
 
+const YalsPrivacyPolicy = React.lazy(
+  () => import(`../components/shared/yals-privacy-policy/yals-privacy-policy`)
+);
+const YalsTermsConditions = React.lazy(
+  () =>
+    import(`../components/shared/yals-terms-conditions/yals-terms-conditions`)
+);
+
 const AppRouter = (props: any) => {
   const {} = props;
   const [theme, setTheme] = useState(THEME_CONSTANT.LIGHT_THEME);
@@ -36,6 +44,12 @@ const AppRouter = (props: any) => {
           <div className={`${AppPrefix}-content-section`}>
             <Routes>
               <Route path='/' element={<Home />} />
+              <Route path='/privacy-policy' element={<YalsPrivacyPolicy />} />
+              <Route
+                path='/terms-of-service'
+                element={<YalsTermsConditions />}
+              />
+
               <Route path='/javascript/*' element={<JSRoutes />} />
               <Route path='/react/*' element={<ReactRoutes />} />
               <Route path='*' element={<p>There's nothing here!</p>} />

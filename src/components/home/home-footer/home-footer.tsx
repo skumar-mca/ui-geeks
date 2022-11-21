@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix } from '../../../util/app-constants';
 import { ImagePaths } from '../../../util/image-path-constants';
@@ -82,6 +83,16 @@ const HomeFooter = () => {
                 Learn Core and Advanced Concepts, Blogs, Summary of JavaScript,
                 React, Angular, SCSS, CSS.
               </I>
+            </div>
+
+            <div className='privacy-terms'>
+              <Link className='me-2' to='/privacy-policy'>
+                Privacy Policy
+              </Link>
+              |
+              <Link className='ms-2' to='/terms-of-service'>
+                Terms of Service
+              </Link>
             </div>
           </>
         )}

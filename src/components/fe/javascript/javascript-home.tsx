@@ -4,6 +4,7 @@ import useQTextScroll from '../../../custom-hooks/use-qtext-scroll';
 import HomePageWrapper from '../../shared/home-page-wrapper/home-page-wrapper';
 import YALSBox from '../../shared/yals-box/yals-box';
 import { JS_BLOG_MENU_ITEMS } from './blogs/js-blogs-menu-items';
+import { JS_CHALLENGE_MENU_ITEMS } from './code-challenges/js-challenge-menu-items';
 import './javascript-home.scss';
 import { JSBreadcrumbLink } from './js-breadcrumb-links';
 import { JSLINK } from './js-link-tree';
@@ -22,6 +23,12 @@ const JSHome = () => {
           <YALSBox>
             <Link to={JS_BLOG_MENU_ITEMS[0].url}>
               JavaScript Blogs ({JS_BLOG_MENU_ITEMS.length})
+            </Link>
+          </YALSBox>
+
+          <YALSBox>
+            <Link to={JS_CHALLENGE_MENU_ITEMS[0].url}>
+              Code Challenges ({JS_CHALLENGE_MENU_ITEMS.length})
             </Link>
           </YALSBox>
         </>

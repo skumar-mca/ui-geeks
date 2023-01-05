@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import JSArrays from '../components/fe/javascript/arrays/arrays';
 import JSBlog from '../components/fe/javascript/blogs/javascript-blog';
 import JSClass from '../components/fe/javascript/class/class';
+import JSCodeChallenge from '../components/fe/javascript/code-challenges/javascript-code-challenge';
 import JSConsole from '../components/fe/javascript/console/console';
 import JSControlStructures from '../components/fe/javascript/control-structures/control-structures';
 import JSExceptionHandling from '../components/fe/javascript/exception-handling/exception-handling';
@@ -59,6 +60,10 @@ const JSRoutes = () => {
       </Route>
 
       <Route path='blogs/:blogId' element={<JSBlog />} />
+      <Route
+        path='code-challenges/:challengeURL'
+        element={<JSCodeChallenge />}
+      />
     </Routes>
   );
 };

@@ -5,6 +5,7 @@ import Heading from '../../../../shared/heading/heading';
 import Para from '../../../../shared/para/para';
 import {
   B,
+  BI,
   I,
   Indent,
   IU,
@@ -64,7 +65,7 @@ const JSChallengeDiagonalDifference = () => {
         <NewLine />
         <B>Input Format</B>
         <NewLine />
-        The first line contains a single integer, <I>n</I> , the number of rows
+        The first line contains a single integer, <BI>n</BI>, the number of rows
         and columns in the square matrix <I>arr</I>. Each of the next lines
         describes a row, <I>arr[i]</I>, and consists of <I>n</I> space-separated
         integers <I>{`arr[i][j]`}</I>.

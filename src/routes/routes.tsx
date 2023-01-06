@@ -21,7 +21,7 @@ const YalsTermsConditions = React.lazy(
 
 const AppRouter = (props: any) => {
   const {} = props;
-  const [theme, setTheme] = useState(THEME_CONSTANT.LIGHT_THEME);
+  const [theme, setTheme] = useState(THEME_CONSTANT.DARK_THEME);
 
   const onThemeChange = () => {
     const themeValue =

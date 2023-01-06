@@ -3,14 +3,7 @@ import Code from '../../../../shared/code/code';
 import Container from '../../../../shared/container/container';
 import Heading from '../../../../shared/heading/heading';
 import Para from '../../../../shared/para/para';
-import {
-  B,
-  I,
-  Indent,
-  IU,
-  NewLine,
-  OrderedList
-} from '../../../../shared/util/util';
+import { B, I, IU, NewLine, OrderedList } from '../../../../shared/util/util';
 
 const JSChallengeAVeryBigSum = () => {
   return (
@@ -75,15 +68,7 @@ const JSChallengeAVeryBigSum = () => {
         <NewLine />
         5
         <NewLine />
-        1000000001
-        <Indent />
-        1000000002
-        <Indent />
-        1000000003
-        <Indent />
-        1000000004
-        <Indent />
-        1000000005
+        <span>{`[1000000001, 1000000002, 1000000003, 1000000004, 1000000005]`}</span>
         <NewLine />
         <Para>
           <NewLine />

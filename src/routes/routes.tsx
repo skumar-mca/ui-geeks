@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 
 import { Route, Routes } from 'react-router';
 import Home from '../components/home/home';
@@ -18,6 +18,7 @@ const YalsTermsConditions = React.lazy(
   () =>
     import(`../components/shared/yals-terms-conditions/yals-terms-conditions`)
 );
+const Quotes = lazy(() => import('../components/quotes/quotes'));
 
 const AppRouter = (props: any) => {
   const {} = props;
@@ -50,6 +51,7 @@ const AppRouter = (props: any) => {
                 element={<YalsTermsConditions />}
               />
 
+              <Route path='/quotes' element={<Quotes />} />
               <Route path='/javascript/*' element={<JSRoutes />} />
               <Route path='/react/*' element={<ReactRoutes />} />
               <Route path='*' element={<p>There's nothing here!</p>} />

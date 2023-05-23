@@ -44,7 +44,17 @@ const VSCodeExtesnsionComponent = () => {
   return (
     <>
       <div className={extCls}>
-        <Heading as='h1'>Visual Studio Code Extensions</Heading>
+        <Heading as='h1'>
+          Visual Studio Code Extensions
+          <YalsButton
+            variant={YALSButtonVariantTypes.Link}
+            target='_blank'
+            href='https://marketplace.visualstudio.com/search?term=ui-geeks&target=VSCode&category=All%20categories&sortBy=Relevance'
+            size='sm'
+          >
+            View in Marketplace
+          </YalsButton>
+        </Heading>
         <div className='ext-content'>
           <YalsFlex
             justifyContent={FlexJustifyContentTypes.FlexStart}
@@ -81,7 +91,7 @@ const VSCodeExtesnsionComponent = () => {
                       </div>
                       <div>
                         <YalsButton
-                          variant={YALSButtonVariantTypes.Dark}
+                          variant={YALSButtonVariantTypes.Info}
                           outline={true}
                           size={YALSSizeTypes.Small}
                           onClick={showDemo.bind(this, ext)}

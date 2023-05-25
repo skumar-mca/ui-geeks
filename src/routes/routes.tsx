@@ -4,7 +4,6 @@ import { Route, Routes } from 'react-router';
 import Home from '../components/home/home';
 import HomeFooter from '../components/home/home-footer/home-footer';
 import HomeHeader from '../components/home/home-header/home-header';
-import ProfileComponent from '../components/profile/profile';
 import ContentLoader from '../components/shared/content-loader/content-loader';
 import { AppPrefix, THEME_CONSTANT } from '../util/app-constants';
 import { AppContext } from '../util/app-context';
@@ -24,6 +23,7 @@ const YalsTermsConditions = React.lazy(
     import(`../components/shared/yals-terms-conditions/yals-terms-conditions`)
 );
 const Quotes = lazy(() => import('../components/quotes/quotes'));
+const ProfileComponent = lazy(() => import('../components/profile/profile'));
 
 const AppRouter = (props: any) => {
   const {} = props;

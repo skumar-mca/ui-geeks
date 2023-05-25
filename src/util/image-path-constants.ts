@@ -94,8 +94,5 @@ export const ImagePaths = {
     BITBUCKET: 'assets/bitbucket.png',
     JENKINS: 'assets/jenkins.png'
   },
-  COMMON: {
-    DOWNLOAD: 'assets/download.png'
-  },
   RESUME_DOC: 'assets/SunilKumar.docx'
 };

@@ -37,6 +37,10 @@
 .header-section {
   margin-left: -15px;
   margin-right: -12px;
+
+  .profile-designation {
+    margin-left: 185px;
+  }
 }
 
 .header-banner {
@@ -84,5 +88,11 @@
         fill: $profile-primaryBgColor;
       }
     }
+  }
+}
+
+.device-type-mobile {
+  .profile-designation {
+    margin-left: 0px !important;
   }
 }

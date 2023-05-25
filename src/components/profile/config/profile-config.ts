@@ -1,4 +1,5 @@
 import { IProfileConfigType } from '../../../types/profile-config.types';
+import { SOCIAL_URL } from '../../../util/app-constants';
 import { ImagePaths } from '../../../util/image-path-constants';
 
 export const responsibilities = [
@@ -398,6 +399,42 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       name: 'Jenkins',
       description: 'The leading open source automation server.',
       icon: ImagePaths.TOOLS.JENKINS
+    }
+  ],
+  INFO: [
+    {
+      id: 1,
+      name: 'Phone',
+      description: '+91 9818234200',
+      isPhone: true
+    },
+    {
+      id: 2,
+      name: 'Email',
+      description: 'skumar.mca2010@gmail.com',
+      isEmail: true
+    },
+    {
+      id: 3,
+      name: 'LinkedIn',
+      description: SOCIAL_URL.LINKEDIN,
+      isLink: true
+    },
+
+    {
+      id: 4,
+      name: 'Location',
+      description: 'Noida, Uttar Pradesh, India'
+    },
+    {
+      id: 5,
+      name: 'Date of Birth',
+      description: '11-Apr-1986'
+    },
+    {
+      id: 6,
+      name: 'US VISA',
+      description: 'B1/B2'
     }
   ]
 };

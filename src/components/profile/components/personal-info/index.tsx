@@ -1,42 +1,9 @@
 import React from 'react';
-import { SOCIAL_URL } from '../../../../util/app-constants';
-
-const infoList = [
-  {
-    id: 1,
-    name: 'Phone',
-    description: '+91 9818234200',
-    isPhone: true
-  },
-  {
-    id: 2,
-    name: 'Email',
-    description: 'skumar.mca2010@gmail.com',
-    isEmail: true
-  },
-  {
-    id: 3,
-    name: 'LinkedIn',
-    description: SOCIAL_URL.LINKEDIN,
-    isLink: true
-  },
-
-  {
-    id: 4,
-    name: 'Location',
-    description: 'Noida, Uttar Pradesh, India'
-  },
-  {
-    id: 5,
-    name: 'Date of Birth',
-    description: '11-Apr-1986'
-  },
-  {
-    id: 6,
-    name: 'US VISA',
-    description: 'B1/B2'
-  }
-];
+import useDeviceType from '../../../../custom-hooks/use-device-type';
+import { DeviceType } from '../../../../util/app-constants';
+import { ImagePaths } from '../../../../util/image-path-constants';
+import YalsImage from '../../../shared/yals-image/yals-image';
+import { PROFILE_CONFIG } from '../../config/profile-config';
 
 const GenerateInfoValue = ({ info }: any) => {
   if (info.isPhone) {
@@ -59,6 +26,9 @@ const GenerateInfoValue = ({ info }: any) => {
 };
 
 const PersonalInfo = () => {
+  const infoList = PROFILE_CONFIG.INFO;
+  const deviceType = useDeviceType();
+  const isMobile = [DeviceType.Mobile, DeviceType.Tablet].includes(deviceType);
   return (
     <div className='custom-list mb-3'>
       <div className='custom-list-wrapper'>
@@ -80,6 +50,25 @@ const PersonalInfo = () => {
           })}
         </div>
       </div>
+
+      {!isMobile && (
+        <>
+          <div className='custom-list mb-3'>
+            <div className='custom-list-wrapper'>
+              <div className='header-title'>Scan QR</div>
+              <div className='heading-separator'></div>
+              <div className='profile-qr'>
+                <YalsImage
+                  height='150px'
+                  width='150px'
+                  imagePath={ImagePaths.PROFILE.PROFILE_QR}
+                  alt='Profile | Sunil Kumar'
+                />
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

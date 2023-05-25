@@ -53,7 +53,9 @@ export const ImagePaths = {
       'https://live.staticflickr.com/65535/52403185702_1f4fbdbddd_c.jpg'
   },
   PROFILE: {
-    SUNIL: 'assets/sunil.png'
+    SUNIL: 'assets/sunil.png',
+    PROFILE_QR:
+      'https://live.staticflickr.com/65535/52924769249_51f2574bb1_n.jpg'
   },
   TECH: {
     ANGULAR: 'assets/angular.png',

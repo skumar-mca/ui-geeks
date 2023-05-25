@@ -6,6 +6,7 @@ export interface IProfileConfigType {
   CERTIFICATIONS: Array<ICertificationType>;
   EMPLOYMENTS: Array<any>;
   TOOLS: Array<IToolType>;
+  INFO: Array<IInfoType>;
 }
 
 export interface IProjectConfigType {
@@ -56,4 +57,13 @@ export interface IToolType {
   name: string;
   description: string;
   icon: string;
+}
+
+export interface IInfoType {
+  id: number;
+  name: string;
+  description: string;
+  isPhone?: boolean;
+  isEmail?: boolean;
+  isLink?: boolean;
 }

@@ -59,7 +59,7 @@ export const ImagePaths = {
   },
   SUPPORT_US: {
     BUY_ME_COFFEE: `https://live.staticflickr.com/65535/52931936880_6cfa459e93.jpg`,
-    PAYTM: `https://live.staticflickr.com/65535/52931696064_8dc20240e1_z.jpg`
+    PAYTM: `assets/sunil-paytm-qr.png`
   },
   TECH: {
     ANGULAR: 'assets/angular.png',

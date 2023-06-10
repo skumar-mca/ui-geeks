@@ -9,6 +9,8 @@ import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, IU, OrderedList } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 
 const summaryItems: Array<IOrderedListItemType> = [
@@ -56,11 +58,23 @@ const notCheckItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Error Boundary`,
+    description: `React Class Component that catch javascript errors`
+  },
+  {
+    topic: `Error Handling Methods`,
+    description: `componentDidCatch, getDerivedStateFromError()`
+  }
+];
+
 const ReactErrorBoundary = () => {
   useDOMTitle('UI-Geeks: React | Error Boundaries');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Error Boundaries</Heading>
       <Para>
         A JavaScript error in a part of the UI shouldn't break the whole

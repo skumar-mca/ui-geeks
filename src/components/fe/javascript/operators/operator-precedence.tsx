@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, ReactNode } from 'react';
 import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
@@ -16,12 +16,27 @@ const operatorTHList = [
   {
     column: 'operator',
     label: 'Individual operators'
+  },
+  {
+    column: 'associativity',
+    label: 'Associativity'
   }
 ];
 
-const operatorTDList = [
+const ASSOCIATIVITY = {
+  LEFT_TO_RIGHT: 'Left-to-Right',
+  RIGHT_TO_LEFT: 'Right-to-Left',
+  NA: ''
+};
+
+const operatorTDList: Array<{
+  operatorType: string;
+  operator: ReactNode;
+  associativity: string;
+}> = [
   {
     operatorType: 'member',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         {['.', '[]'].map((itm: string) => (
@@ -33,9 +48,9 @@ const operatorTDList = [
       </>
     )
   },
-
   {
     operatorType: 'call/create instance',
+    associativity: ASSOCIATIVITY.NA,
     operator: (
       <>
         {['( )', 'new'].map((itm: string) => (
@@ -49,6 +64,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'negation/increment',
+    associativity: ASSOCIATIVITY.NA,
     operator: (
       <>
         {['!', '~', '-', '+', '++', '--', 'typeof', 'void', 'delete'].map(
@@ -64,6 +80,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'multiply/divide',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         {['*', '/', '%'].map((itm: string) => (
@@ -77,6 +94,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'addition/subtraction',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         {['+', '-'].map((itm: string) => (
@@ -90,6 +108,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'bitwise shift',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         {['<<', '>>', '>>>>'].map((itm: string) => (
@@ -103,6 +122,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'relational',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         {['<', '<=', '>', '>=', 'in', 'instanceof'].map((itm: string) => (
@@ -116,6 +136,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'equality',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         {['==', '!=', '===', '!=='].map((itm: string) => (
@@ -129,6 +150,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'bitwise-and',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         <YALSBadge content={'&'} bg={YALSButtonVariantTypes.Secondary} />
@@ -138,6 +160,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'bitwise-xor',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         <YALSBadge content={'^'} bg={YALSButtonVariantTypes.Secondary} />
@@ -147,6 +170,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'bitwise-or',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         <YALSBadge content={'|'} bg={YALSButtonVariantTypes.Secondary} />
@@ -156,6 +180,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'logical-and',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         <YALSBadge content={'&&'} bg={YALSButtonVariantTypes.Secondary} />
@@ -165,6 +190,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'logical-or',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         <YALSBadge content={'||'} bg={YALSButtonVariantTypes.Secondary} />
@@ -174,6 +200,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'conditional',
+    associativity: ASSOCIATIVITY.RIGHT_TO_LEFT,
     operator: (
       <>
         <YALSBadge content={'? :'} bg={YALSButtonVariantTypes.Secondary} />
@@ -183,6 +210,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'assignment',
+    associativity: ASSOCIATIVITY.RIGHT_TO_LEFT,
     operator: (
       <>
         {[
@@ -211,6 +239,7 @@ const operatorTDList = [
   },
   {
     operatorType: 'comma',
+    associativity: ASSOCIATIVITY.LEFT_TO_RIGHT,
     operator: (
       <>
         <YALSBadge content={','} bg={YALSButtonVariantTypes.Secondary} />

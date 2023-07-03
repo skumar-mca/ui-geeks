@@ -3,7 +3,7 @@ import Code from '../../../shared/code/code';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
-import { B, BI, IU, NewLine } from '../../../shared/util/util';
+import { B, BI, I, IU, NewLine, OrderedList } from '../../../shared/util/util';
 import YALSBadge from '../../../shared/yals-badge/yals-badge';
 import { YALSButtonVariantTypes } from '../../../shared/yals-button/yals-button.types';
 import YALSTable from '../../../shared/yals-table/yals.table';
@@ -249,6 +249,33 @@ const operatorTDList: Array<{
   }
 ];
 
+const associativityType = [
+  {
+    label: (
+      <>
+        <B>Left-Associativity</B>: <I>left-to-right</I> associativity where
+        expression is interpreted as:
+        <NewLine />
+        <I>
+          <B>(operandA Operator1 operandB)</B> Operator2 operandC
+        </I>
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        <B>Right-Associativity</B>: <I>right-to-left</I> associativity where
+        expression is interpreted as:
+        <NewLine />
+        <I>
+          operandA Operator1 <B>(operandB Operator2 operandC)</B>
+        </I>
+      </>
+    )
+  }
+];
+
 const JSOperatorPrecedence = () => {
   return (
     <>
@@ -282,6 +309,33 @@ const JSOperatorPrecedence = () => {
       </Para>
 
       <Code>{`50 + 10 / 8 + 2   // 53.25`}</Code>
+
+      <Heading as='h4'>Operator Associativity</Heading>
+      <Para>
+        When multiple operators in expression have the same precedence, then
+        JavaScript groups them by associativity. JavaScript have 2 types of
+        associativity:
+      </Para>
+      <Para>
+        <OrderedList items={associativityType} />
+      </Para>
+
+      <Para>
+        <I>
+          The <B>assignment</B> and <B>exponential</B> operators have
+          <B>right-associativity</B>.
+        </I>
+      </Para>
+
+      <Code>{`const a = b = 5; // Same as: a = (b = 5);`}</Code>
+
+      <Para>
+        <I>
+          Other <B>arithmetic</B> operators have <B>left-associativity</B>.
+        </I>
+      </Para>
+
+      <Code>{`const a = 4 / 3 / 2; // Same as: (4 / 3) / 2;`}</Code>
     </>
   );
 };

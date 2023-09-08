@@ -99,7 +99,7 @@ else { console.log(0); }`}</Code>
       <>
         What would be the output of below code.
         <Code>{`let sum = 0;
-for(let num = 1; num <=5; i++) {
+for(let num = 1; num <=5; num++) {
   sum += num;
 }
 console.log(sum);`}</Code>

@@ -12,7 +12,7 @@ const upcomingTopicList: Array<IUpcomingItemType> = [
     label: 'TypeScript',
     description: 'TypeScript is JavaScript with syntax for types.',
     icon: getTechImageUrl('TypeScript'),
-    releaseDate: '31-Jul-2023'
+    releaseDate: '30-Sep-2023'
   },
   {
     key: 'scss',

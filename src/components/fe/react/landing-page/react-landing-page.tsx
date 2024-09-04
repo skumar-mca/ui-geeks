@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ImagePaths } from '../../../../util/image-path-constants';
 import LandingPageWrapper from '../../../shared/landing-page-wrapper/landing-page-wrapper';
+import TopicBooks from '../../../shared/topic-books/topic-books';
 import ReactDefinition from '../introduction/definition';
-import ReactBooks from '../react-books';
 import { REACT_LINK } from '../react-link-tree';
 import { getReactGroupedMenu } from '../react-menu-items';
 
@@ -20,7 +20,7 @@ const ReactLandingPage = () => {
       title='React'
       wordCloudUrl={ImagePaths.REACT.WORD_CLOUD}
       menuTree={menuTree}
-      books={<ReactBooks />}
+      books={<TopicBooks title='React' showDescription={true} />}
     >
       <ReactDefinition />
     </LandingPageWrapper>

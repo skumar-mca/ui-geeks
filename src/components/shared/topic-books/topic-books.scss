@@ -74,7 +74,7 @@
 
   .book-desc {
     margin-bottom: 25px;
-    max-width: 25%;
+
     margin-right: 50px;
     font-size: 1.2em;
     color: #383838;
@@ -85,6 +85,11 @@
   .book-box-with-desc {
     background-color: $darkThemeBgAlt;
 
+    .book {
+      svg {
+        fill: white;
+      }
+    }
     .book-lover-text {
       .explore,
       .highlight {
@@ -103,7 +108,8 @@
   }
 }
 
-.device-type-mobile {
+.device-type-mobile,
+.device-type-tablet {
   .book-box-with-desc {
     .book-lover-text {
       .intro {
@@ -114,6 +120,14 @@
 
     .language-book-section {
       padding: 40px 35px;
+
+      .book-desc-box {
+        flex-direction: column;
+
+        .book-desc {
+          max-width: 80%;
+        }
+      }
 
       .book-desc {
         max-width: 100%;

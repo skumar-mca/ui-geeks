@@ -38,7 +38,7 @@ const HomeIntro = () => {
           flexDirection={FlexDirectionTypes.Row}
           className='bg-image w-100'
         >
-          <div>
+          <div className='site-name-section'>
             <div className='site-name ui-geeks-name'>
               <span className='ui'>UI</span>
               <span className='geeks'>Geeks</span>

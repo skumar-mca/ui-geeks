@@ -3,7 +3,6 @@ import React, { ReactNode, useEffect, useMemo, useState } from 'react';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import { BOOK_LINKS, BOOKS, DeviceType } from '../../../util/app-constants';
 import { ImagePaths } from '../../../util/image-path-constants';
-import { getTotalReadTime } from '../../../util/util';
 import IconPdf from '../../icons/icon-pdf';
 import IconWhatsapp from '../../icons/icon-whatsapp';
 import YalsFlex from '../yals-flex/yals-flex';
@@ -32,8 +31,6 @@ const TopicBooks = ({ title, showDescription = false }: ITopicBookProps) => {
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     setIsIndia(() => timeZone === 'Asia/Calcutta');
   }, []);
-
-  getTotalReadTime();
 
   const { bookURLs, pdfUrl } = useMemo(() => {
     let pdfUrl = '';
@@ -104,7 +101,7 @@ const TopicBooks = ({ title, showDescription = false }: ITopicBookProps) => {
       )}
 
       <div className='language-book-section'>
-        <div className='flex-group flex-justify-center'>
+        <div className='flex-group flex-justify-center book-desc-box'>
           {showDescription && (
             <div className='book-desc'>
               This JavaScript Core Concepts handbook contains the core concepts
@@ -150,7 +147,7 @@ const TopicBooks = ({ title, showDescription = false }: ITopicBookProps) => {
                     data-action='share/whatsapp/share'
                     className='whatsapp-share'
                   >
-                    <IconWhatsapp width={40} height={40} fillColor='white' />
+                    <IconWhatsapp width={40} height={40} fillColor='green' />
                   </a>
                 </YalsTooltip>
               </div>

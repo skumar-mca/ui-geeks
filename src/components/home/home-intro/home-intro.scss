@@ -110,6 +110,29 @@
   }
 }
 
+.device-type-tablet {
+  .bg-image {
+    gap: 10px;
+
+    .home-intro-img {
+      width: 60%;
+    }
+    .site-name-section {
+      padding-left: 20px;
+      .site-name {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+.device-type-desktop {
+  .bg-image {
+    .home-intro-img {
+      width: 85%;
+    }
+  }
+}
 .#{$appPrefix}-animate-top {
   position: relative;
   animation: animatetop 0.4s;

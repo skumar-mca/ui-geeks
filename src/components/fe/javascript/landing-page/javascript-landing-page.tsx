@@ -3,9 +3,9 @@ import { ImagePaths } from '../../../../util/image-path-constants';
 import LandingPageWrapper from '../../../shared/landing-page-wrapper/landing-page-wrapper';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
+import TopicBooks from '../../../shared/topic-books/topic-books';
 import { B } from '../../../shared/util/util';
 import { JS_BLOG_LINK } from '../blogs/js-blog-link-tree';
-import JSBooks from '../javascript-books';
 import { JSLINK } from '../js-link-tree';
 import { getJSGroupedMenu, JS_routePrefix } from '../js-menu-items';
 
@@ -34,7 +34,7 @@ const JSLandingPage = () => {
       title='JavaScript'
       wordCloudUrl={ImagePaths.JS.JS_WORD_CLOUD}
       blogList={JS_BLOG_LINK}
-      books={<JSBooks />}
+      books={<TopicBooks title='JavaScript' showDescription={true} />}
     >
       <Para>
         JavaScript (JS) is a light-weight,

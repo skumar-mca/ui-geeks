@@ -1,6 +1,13 @@
+import { JSLINK } from '../components/fe/javascript/js-link-tree';
+import { REACT_LINK } from '../components/fe/react/react-link-tree';
 import { IMenuItem } from '../components/shared/navigation-menu/navigation-menu.types';
 import { IPDFBookViewerItemType } from '../components/shared/pdf-book-viewer/pdf-book-viewer';
-import { BOOK_LINKS, DeviceType, THEME_CONSTANT } from './app-constants';
+import {
+  BOOK_LINKS,
+  DeviceType,
+  MAX_WORD_PER_MIN,
+  THEME_CONSTANT
+} from './app-constants';
 import { ImagePaths } from './image-path-constants';
 
 export const getOnPageItems = (currentPath: string, allItems: Array<any>) => {
@@ -201,4 +208,33 @@ export const getChapterPDFUrl = (currentPath: string) => {
   });
 
   return url;
+};
+
+const getHrAndMin = (mins: number) => {
+  const min = mins % 60;
+  const hours = Math.floor(mins / 60);
+
+  if (hours > 0) {
+    return `${hours} hr` + (min > 0 ? ` ${min} mins` : '');
+  }
+
+  return `${min} mins`;
+};
+export const getTotalReadTime = () => {
+  const JSTime = JSLINK.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.wordCount,
+    0
+  );
+
+  const ReactTime = REACT_LINK.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.wordCount,
+    0
+  );
+
+  console.log(
+    'JavaScript Read Time: ' + getHrAndMin(Math.ceil(JSTime / MAX_WORD_PER_MIN))
+  );
+  console.log(
+    'React Read Time: ' + getHrAndMin(Math.ceil(ReactTime / MAX_WORD_PER_MIN))
+  );
 };

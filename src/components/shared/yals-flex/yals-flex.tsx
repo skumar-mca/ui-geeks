@@ -13,7 +13,8 @@ const YALSFlex = (props: IYALSFlexProps) => {
     width,
     className,
     bgColor,
-    height
+    height,
+    gap
   } = props;
 
   const flexClasses = classNames({
@@ -30,7 +31,8 @@ const YALSFlex = (props: IYALSFlexProps) => {
     alignItems: alignItems,
     width: width,
     backgroundColor: bgColor,
-    height: height
+    height: height,
+    gap
   };
 
   return (

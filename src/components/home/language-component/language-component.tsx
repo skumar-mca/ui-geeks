@@ -1,16 +1,12 @@
 import classNames from 'classnames';
 import React, { memo } from 'react';
-import Col from 'react-bootstrap/esm/Col';
-import Row from 'react-bootstrap/esm/Row';
 import { useNavigate } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import { AppPrefix, DeviceType } from '../../../util/app-constants';
-import TextCarousal from '../../shared/text-carousal/text-carousal';
+import BookmarkIcon from '../../icons/bookmark-icon';
+import TopicBooks from '../../shared/topic-books/topic-books';
 import { NewLine } from '../../shared/util/util';
-import {
-  default as YALSButton,
-  default as YalsButton
-} from '../../shared/yals-button/yals-button';
+import { default as YalsButton } from '../../shared/yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../../shared/yals-button/yals-button.types';
 import YalsFlex from '../../shared/yals-flex/yals-flex';
 import {
@@ -18,7 +14,10 @@ import {
   FlexJustifyContentTypes
 } from '../../shared/yals-flex/yals-flex.types';
 import './language-component.scss';
-import { ILanguageProp } from './language-component.types';
+import {
+  ILanguageCarousalItemType,
+  ILanguageProp
+} from './language-component.types';
 const LanguageComponent = (props: ILanguageProp) => {
   const {
     title,
@@ -28,7 +27,8 @@ const LanguageComponent = (props: ILanguageProp) => {
     homePagePath,
     theme,
     demoComponent,
-    demoLink
+    demoLink,
+    keyPoints
   } = props;
   const navigate = useNavigate();
 
@@ -57,61 +57,80 @@ const LanguageComponent = (props: ILanguageProp) => {
   return (
     <div className={introHeader}>
       <div className='language-section'>
-        <Row>
-          <Col
-            sm={12}
-            md={showDemo ? 8 : 12}
-            lg={showDemo ? 8 : 12}
-            xxl={showDemo ? 8 : 12}
-          >
-            <YalsFlex
-              justifyContent={FlexJustifyContentTypes.Center}
-              alignItems={FlexAlignItemsTypes.Center}
+        <YalsFlex
+          justifyContent={FlexJustifyContentTypes.Center}
+          alignItems={FlexAlignItemsTypes.Center}
+          className='language-img-title'
+        >
+          <div>
+            <YalsButton
+              variant={YALSButtonVariantTypes.Link}
+              onClick={handleRedirect}
             >
-              <div>
-                {imagePath && (
-                  <img
-                    src={imagePath}
-                    alt={imagePath}
-                    className='language-icon'
-                  />
-                )}
+              {imagePath && (
+                <img
+                  src={imagePath}
+                  alt={imagePath}
+                  className='language-icon'
+                />
+              )}
+            </YalsButton>
+            <h2>{title}</h2>
+            <h3>{tag}</h3>
+          </div>
+        </YalsFlex>
 
-                <h2>{title}</h2>
-                <h3>{tag}</h3>
-                <div className='carousal-content'>
-                  <TextCarousal contentList={contentList} uniqueKey={theme} />
-                </div>
+        <YalsFlex
+          justifyContent={FlexJustifyContentTypes.SpaceAround}
+          alignItems={FlexAlignItemsTypes.Center}
+          className='language-details'
+        >
+          <YalsFlex
+            justifyContent={FlexJustifyContentTypes.SpaceBetween}
+            alignItems={FlexAlignItemsTypes.Center}
+            className='section-1'
+          >
+            <YalsFlex>{keyPoints}</YalsFlex>
+          </YalsFlex>
 
-                <NewLine />
-
-                <YalsButton
-                  variant={YALSButtonVariantTypes.Primary}
-                  className='explore-btn'
-                  onClick={handleRedirect}
-                >
-                  Learn Now
-                </YalsButton>
-
-                {false && isMobile && demoLink && (
-                  <YALSButton
-                    variant={YALSButtonVariantTypes.Secondary}
-                    onClick={handleRedirectToDemo}
-                    className='ms-2'
-                  >
-                    Demoes
-                  </YALSButton>
-                )}
-              </div>
+          <YalsFlex
+            justifyContent={FlexJustifyContentTypes.Center}
+            alignItems={FlexAlignItemsTypes.Center}
+            className='section-2'
+          >
+            <YalsFlex justifyContent={FlexJustifyContentTypes.Center}>
+              <TopicBooks title={title} />
             </YalsFlex>
-          </Col>
+          </YalsFlex>
 
-          {showDemo && (
-            <Col md={4} sm={4} lg={4} xxl={4}>
-              <>{demoComponent}</>
-            </Col>
-          )}
-        </Row>
+          <YalsFlex
+            justifyContent={FlexJustifyContentTypes.Center}
+            alignItems={FlexAlignItemsTypes.Center}
+            className='section-3'
+          >
+            <div className='topic-key-points'>
+              <ul>
+                {contentList.map((itm: ILanguageCarousalItemType) => {
+                  return (
+                    <li>
+                      <BookmarkIcon height={15} width={15} /> {itm.content}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </YalsFlex>
+        </YalsFlex>
+
+        <YalsButton
+          variant={YALSButtonVariantTypes.Primary}
+          className='explore-btn'
+          onClick={handleRedirect}
+        >
+          Explore Now
+        </YalsButton>
+        <NewLine />
+        <NewLine />
       </div>
     </div>
   );

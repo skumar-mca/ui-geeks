@@ -6,6 +6,10 @@ import JSHomeDemoComponent from '../fe/javascript/js-home-demo-component/js-home
 import { JS_PRIMARY_ROUTES } from '../fe/javascript/js-menu-items';
 import ReactHomeDemoComponent from '../fe/react/react-home-demo-component/react-home-demo-component';
 import { REACT_PRIMARY_ROUTES } from '../fe/react/react-menu-items';
+import IconAward from '../icons/icon-award';
+import IconChapter from '../icons/icon-chapter';
+import IconHourGlass from '../icons/icon-hour-glass';
+import IconPdf from '../icons/icon-pdf';
 import HomeIntro from './home-intro/home-intro';
 import './home.scss';
 import LanguageComponent from './language-component/language-component';
@@ -13,111 +17,93 @@ import UpcomingTopicsComponent from './upcoming-topics/upcoming-topics';
 
 const JSContentList = [
   {
+    content: <>JavaScript is Interpreted/JIT compiled.</>
+  },
+  {
+    content: <>With NodeJs, JavaScript can run on non-browser environments.</>
+  },
+  {
+    content: <>Functions are treated as first-class citizens.</>
+  },
+  {
+    content: <>It was created by Brenden Eich at NetScape in 1995.</>
+  },
+  {
+    content: <>Primarily there are 7 types in JavaScript.</>
+  },
+  {
+    content: <>functions are just special type of object.</>
+  },
+  {
     content: (
-      <>
-        <span className='large-quote'>&#10077;</span>JavaScript is
-        Interpreted/JIT compiled.<span className='large-quote'>&#10078;</span>
-      </>
+      <>Objects are a way of grouping similar/meaningful data together.</>
     )
   },
   {
     content: (
-      <>
-        <span className='large-quote'>&#10077;</span>With NodeJs, JavaScript can
-        run on non-browser environments.
-        <span className='large-quote'>&#10078;</span>
-      </>
+      <>Array.unshift() function prepends items to the start of the array.</>
     )
+  }
+];
+
+const JSKeyPoints = (
+  <div className='topic-key-points'>
+    <ul>
+      <li>
+        <IconChapter height={15} width={15}></IconChapter> 19 Chapters
+      </li>
+      <li>
+        <IconHourGlass height={15} width={15} /> 1 hours 30 mins read
+      </li>
+      <li>
+        <IconAward height={15} width={15} /> 200+ quiz questions
+      </li>
+      <li>
+        <IconPdf height={15} width={15} />
+        PDF version of each chapter
+      </li>
+    </ul>
+  </div>
+);
+
+const ReactContentList = [
+  {
+    content: <>React is a JavaScript library for building user interfaces.</>
+  },
+  {
+    content: (
+      <>Components let you split the UI into independent, reusable pieces.</>
+    )
+  },
+  {
+    content: <>User-Defined Components must be Capitalized.</>
   },
   {
     content: (
       <>
-        <span className='large-quote'>&#10077;</span>Functions are treated as
-        first-class citizens.<span className='large-quote'>&#10078;</span>
-      </>
-    )
-  },
-  {
-    content: (
-      <>
-        <span className='large-quote'>&#10077;</span>It was created by Brenden
-        Eich at NetScape in 1995.<span className='large-quote'>&#10078;</span>
-      </>
-    )
-  },
-  {
-    content: (
-      <>
-        <span className='large-quote'>&#10077;</span>Primarily there are 7 types
-        in JavaScript.<span className='large-quote'>&#10078;</span>
-      </>
-    )
-  },
-  {
-    content: (
-      <>
-        <span className='large-quote'>&#10077;</span>functions are just special
-        type of object.<span className='large-quote'>&#10078;</span>
-      </>
-    )
-  },
-  {
-    content: (
-      <>
-        <span className='large-quote'>&#10077;</span>Objects are a way of
-        grouping similar/meaningful data together.
-        <span className='large-quote'>&#10078;</span>
-      </>
-    )
-  },
-  {
-    content: (
-      <>
-        <span className='large-quote'>&#10077;</span>Array.unshift() function
-        prepends items to the start of the array.
-        <span className='large-quote'>&#10078;</span>
+        A higher-order component is a function that takes a component and
+        returns a new component.
       </>
     )
   }
 ];
 
-const ReactContentList = [
-  {
-    content: (
-      <>
-        <span className='large-quote'>&#10077;</span>React is a JavaScript
-        library for building user interfaces.
-        <span className='large-quote'>&#10078;</span>
-      </>
-    )
-  },
-  {
-    content: (
-      <>
-        <span className='large-quote'>&#10077;</span>Components let you split
-        the UI into independent, reusable pieces.
-        <span className='large-quote'>&#10078;</span>
-      </>
-    )
-  },
-  {
-    content: (
-      <>
-        <span className='large-quote'>&#10077;</span>User-Defined Components
-        must be Capitalized.<span className='large-quote'>&#10078;</span>
-      </>
-    )
-  },
-  {
-    content: (
-      <>
-        <span className='large-quote'>&#10077;</span>A higher-order component is
-        a function that takes a component and returns a new component.
-        <span className='large-quote'>&#10078;</span>
-      </>
-    )
-  }
-];
+const ReactKeyPoints = (
+  <div className='topic-key-points'>
+    <ul>
+      <li>
+        <IconChapter height={15} width={15}></IconChapter> 11 Chapters
+      </li>
+      <li>
+        <IconHourGlass height={15} width={15} /> 1 hour read
+      </li>
+      <li>
+        <IconPdf height={15} width={15} />
+        PDF version of each chapter
+      </li>
+    </ul>
+  </div>
+);
 
 const AngularContentList = [
   {
@@ -158,6 +144,7 @@ const Home = () => {
           theme='yellow'
           demoComponent={<JSHomeDemoComponent />}
           demoLink={JS_PRIMARY_ROUTES.DEMO}
+          keyPoints={JSKeyPoints}
         />
 
         <LanguageComponent
@@ -169,6 +156,7 @@ const Home = () => {
           theme='lightGreen'
           demoComponent={<ReactHomeDemoComponent />}
           demoLink={REACT_PRIMARY_ROUTES.DEMO}
+          keyPoints={ReactKeyPoints}
         />
 
         <UpcomingTopicsComponent />

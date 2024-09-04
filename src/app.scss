@@ -64,6 +64,7 @@ body {
   border-radius: 4px;
   font-weight: bold;
   transition: background-color 1s ease;
+  min-width: 300px;
   &:hover {
     background-color: #ebeaea;
     color: #282872;
@@ -86,13 +87,15 @@ body {
 }
 
 .theme-dark {
-  .ui-geeks-name {
-    .ui {
-      color: white;
-    }
+  .ul-main-menu {
+    .ui-geeks-name {
+      .ui {
+        color: white;
+      }
 
-    .geeks {
-      color: white;
+      .geeks {
+        color: white;
+      }
     }
   }
 }
@@ -324,4 +327,17 @@ body {
 
 .mr-1 {
   margin-right: 10px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 250px;
+  background-color: #9faaff;
+  transform: rotate(10deg);
+}
+
+.theme-dark {
+  .vertical-line {
+    background-color: rgb(205, 205, 205);
+  }
 }

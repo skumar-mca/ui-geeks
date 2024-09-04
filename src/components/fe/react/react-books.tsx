@@ -34,7 +34,7 @@ const ReactBooks = () => {
               <a href={BOOKS.REACT.REACT_NOTION_PRESS.url} target='_blank'>
                 <img
                   className='book-cover'
-                  src={ImagePaths.JS.BOOK_NOTION}
+                  src={ImagePaths.REACT.BOOK_NOTION}
                   alt='JavaScript book available on notion press.'
                 />
               </a>

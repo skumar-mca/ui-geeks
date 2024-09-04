@@ -1,0 +1,125 @@
+@import '../../../scss/colors.scss';
+.book-box {
+  .book-lover-text {
+    padding-top: 25px;
+    text-align: center;
+
+    .intro {
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    .explore {
+      font-size: 1.5em;
+      color: #282872;
+    }
+
+    .highlight {
+      color: #282872;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  .book-info {
+    padding: 10px;
+
+    .book-cover {
+      svg {
+        transition: transform 1s ease;
+      }
+
+      &:hover {
+        svg {
+          transform: rotate(2deg) scale(1.8);
+        }
+      }
+    }
+
+    img.book-cover {
+      height: 120px;
+      width: 80px;
+      border-radius: 4px;
+
+      transition: transform 1s ease;
+      &:hover {
+        transform: rotate(2deg) scale(1.8);
+      }
+    }
+  }
+
+  .book-type-box {
+    border: 1px solid #eaeaea;
+    padding: 2px;
+    border-radius: 4px;
+    box-shadow: 3px 4px 7px 0px #ececec;
+
+    &:hover {
+      border-color: #9bacf5;
+      box-shadow: 3px 4px 7px 0px #a8b8ff;
+    }
+  }
+
+  .book-type {
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(129, 127, 127);
+    margin-bottom: 2px;
+  }
+}
+
+.book-box-with-desc {
+  background-color: #ececec;
+  margin-bottom: 20px;
+
+  .book-desc {
+    margin-bottom: 25px;
+    max-width: 25%;
+    margin-right: 50px;
+    font-size: 1.2em;
+    color: #383838;
+    line-height: 1.5;
+  }
+}
+.theme-dark {
+  .book-box-with-desc {
+    background-color: $darkThemeBgAlt;
+
+    .book-lover-text {
+      .explore,
+      .highlight {
+        color: black;
+      }
+    }
+
+    .book-desc {
+      color: $darkThemeColor;
+    }
+  }
+  .book-box {
+    .book-type-box {
+      box-shadow: 0.3px 4px 7px 0px #2d2d2d;
+    }
+  }
+}
+
+.device-type-mobile {
+  .book-box-with-desc {
+    .book-lover-text {
+      .intro {
+        padding: 0px 5px;
+        font-size: 1.3em;
+      }
+    }
+
+    .language-book-section {
+      padding: 40px 35px;
+
+      .book-desc {
+        max-width: 100%;
+        margin-right: 0;
+        margin: 40px 0px;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 export const ImagePaths = {
+  UI_GEEKS_HOME_IMAGE: `images/ui-geeks-intro-home.png`,
   APP_LOGO: 'https://live.staticflickr.com/65535/52423809250_e0122b7bfc_o.png',
   APP_IMAGE: 'https://live.staticflickr.com/65535/52423809260_d96da7d5d9.jpg',
   APP_IMAGE_WEBP: `images/ui-geeks-icon-webp.webp`,
@@ -39,9 +40,7 @@ export const ImagePaths = {
       }
     },
     BOOK_KINDLE:
-      'https://live.staticflickr.com/65535/53963691886_faafede619_w.jpg',
-    BOOK_NOTION:
-      'https://live.staticflickr.com/65535/53962801047_21b534c059.jpg'
+      'https://live.staticflickr.com/65535/53963691886_faafede619_w.jpg'
   },
   REACT: {
     ICON: 'images/react-icon_100_100.png',
@@ -61,7 +60,9 @@ export const ImagePaths = {
     WORD_CLOUD:
       'https://live.staticflickr.com/65535/52403185702_1f4fbdbddd_c.jpg',
     BOOK_KINDLE:
-      'https://live.staticflickr.com/65535/53963692201_8faae0d77c.jpg'
+      'https://live.staticflickr.com/65535/53963692201_8faae0d77c.jpg',
+    BOOK_NOTION:
+      'https://live.staticflickr.com/65535/53962801047_21b534c059.jpg'
   },
   PROFILE: {
     SUNIL: 'assets/sunil.png',

@@ -6,16 +6,15 @@ import useQTextScroll from '../../../custom-hooks/use-qtext-scroll';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix, DeviceType } from '../../../util/app-constants';
 import { getChapterPDFUrl, getOnPageItems } from '../../../util/util';
+import IconPdf from '../../icons/icon-pdf';
+import IconWhatsapp from '../../icons/icon-whatsapp';
 import ListIcon from '../../icons/list-icon';
 import ContentLoader from '../../shared/content-loader/content-loader';
 import NavigationMenu from '../../shared/navigation-menu/navigation-menu';
 import NextPrevButtons from '../../shared/next-prev-btn/next-prev-btn';
 import ScrollTopButton from '../../shared/scroll-top-btn/scroll-top-btn';
 import YALSBreadcrumb from '../../shared/yals-breadcrumb/yals-breadcrumb';
-import {
-  default as YALSButton,
-  default as YalsButton
-} from '../../shared/yals-button/yals-button';
+import { default as YALSButton } from '../../shared/yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../../shared/yals-button/yals-button.types';
 import {
   default as YalsFlex,
@@ -29,11 +28,11 @@ import {
 import YALSModal from '../../shared/yals-modal/yals-modal';
 import Container from '../container/container';
 import OnPageItems from '../on-page-items/on-page-items';
-import PDFBookViewer from '../pdf-book-viewer/pdf-book-viewer';
 import YALSShare from '../yals-share/yals-share';
+import YalsTooltip from '../yals-tooltip/yals-tooltip';
 import YALSTopicInfo from '../yals-topic-info/yals-topic-info';
+import './home-page-wrapper.scss';
 import { IHomePageWrapperProps } from './home-page-wrapper.types';
-
 const MenuDivider = () => {
   return (
     <YALSFlex
@@ -111,14 +110,10 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
   const deviceType = useDeviceType();
   useQTextScroll();
 
-  const [viewMode, setViewMode] = useState('HTML');
+  const isMobile = [DeviceType.Mobile, DeviceType.Tablet].includes(deviceType);
 
   const [showMenu, setShowMenu] = useState(false);
   const [hasSubMenu, setHasSubMenu] = useState(false);
-
-  const toggleViewMode = () => {
-    setViewMode((prev: string) => (prev === 'HTML' ? 'PDF' : 'HTML'));
-  };
 
   const toggleMenu = () => {
     setShowMenu((prev: boolean) => !prev);
@@ -162,7 +157,7 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
   }, [currentPath]);
 
   return (
-    <Row className={`terminology-${language}`}>
+    <Row className={`home-page-content terminology-${language}`}>
       {deviceType != DeviceType.Mobile && (
         <Col
           lg={2}
@@ -242,43 +237,36 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
         )}
 
         {chapterPDFUrl && (
-          <YalsButton onClick={toggleViewMode} className='float-right'>
-            <YalsFlex
-              alignItems={FlexAlignItemsTypes.Center}
-              className='read-pdf'
-            >
-              <img
-                src='images/pdf.png'
-                height='40'
-                width='40'
-                alt='View in PDF'
-                className={`mr-1 toggle-img ${
-                  viewMode === 'HTML' ? 'disabled-image' : ''
-                }`}
-                title='View PDF version'
-              />
+          <div className='pdf-share-btns'>
+            <YalsTooltip content='View PDF format'>
+              <a
+                href={chapterPDFUrl?.url}
+                target='_blank'
+                className='view-pdf-btn'
+              >
+                <IconPdf width={30} height={30} fillColor='#e12929' />
+              </a>
+            </YalsTooltip>
 
-              <img
-                src='images/html.png'
-                height='40'
-                width='40'
-                alt='View in HTML'
-                title='View HTML/Web version'
-                className={`toggle-img ${
-                  viewMode === 'PDF' ? 'disabled-image' : ''
-                }`}
-              />
-            </YalsFlex>
-          </YalsButton>
+            {isMobile && (
+              <div className='book'>
+                <YalsTooltip content='Share on whatsapp'>
+                  <a
+                    href={`whatsapp://send?text=${encodeURIComponent(
+                      chapterPDFUrl?.url
+                    )}`}
+                    data-action='share/whatsapp/share'
+                    className='whatsapp-share'
+                  >
+                    <IconWhatsapp width={25} height={25} fillColor='green' />
+                  </a>
+                </YalsTooltip>
+              </div>
+            )}
+          </div>
         )}
 
-        <Suspense fallback={<ContentLoader />}>
-          {viewMode === 'HTML' ? (
-            children
-          ) : (
-            <PDFBookViewer url={chapterPDFUrl?.url} />
-          )}
-        </Suspense>
+        <Suspense fallback={<ContentLoader />}>{children}</Suspense>
 
         {deviceType === DeviceType.Mobile && customMenuContent && (
           <>{customMenuContent}</>

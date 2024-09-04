@@ -14,4 +14,5 @@ export interface ILanguageProp {
   theme: string;
   demoComponent?: ReactNode;
   demoLink?: IMenuItem;
+  keyPoints: ReactNode | string;
 }

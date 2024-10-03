@@ -32,6 +32,15 @@ const SocialIcons = () => {
 
   return (
     <div className='social-info'>
+      <a href='/#/profile/sunil-kumar' target='_blank'>
+        <img
+          style={{ width: '30px', marginTop: '5px' }}
+          src='assets/sunil.png'
+          className='footer-dev-img rounded-circle'
+          alt='Sunil Kumar'
+        />
+      </a>
+
       <YalsButton
         noHighlight
         className='icon-support-us'

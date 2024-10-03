@@ -7,6 +7,7 @@ export interface IProfileConfigType {
   EMPLOYMENTS: Array<any>;
   TOOLS: Array<IToolType>;
   INFO: Array<IInfoType>;
+  BOOKS_PUBLISHED: Array<IPublishedBooksType>;
 }
 
 export interface IProjectConfigType {
@@ -24,6 +25,17 @@ export interface IQualificationType {
   name: string;
   certifiedBy: string;
   icon?: string;
+}
+
+export interface IBookPublisherType {
+  provider: 'kindle' | 'notion';
+  url: string;
+}
+export interface IPublishedBooksType {
+  title: string;
+  description: string;
+  pdfUrl: string;
+  publishers: Array<IBookPublisherType>;
 }
 
 export interface ISkillType {

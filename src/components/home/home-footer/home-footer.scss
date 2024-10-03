@@ -24,8 +24,13 @@
       height: 25px;
       display: inline-block;
       float: right;
-      width: 170px;
+      width: 190px;
       margin-top: -6px;
+
+      img,
+      svg {
+        transition: transform 150ms ease-in-out 0s;
+      }
     }
 
     .icon-fb {
@@ -52,13 +57,22 @@
       }
     }
 
+    .social-info {
+      a {
+        &:hover {
+          img {
+            fill: $darkThemeBgAlt;
+            transform: scale(1.2) rotate(10deg);
+          }
+        }
+      }
+    }
     .#{$appPrefix}-btn {
       &:hover,
       &:focus {
         svg {
           fill: $darkThemeBgAlt;
-          height: 25px;
-          width: 25px;
+          transform: scale(1.1) rotate(2deg);
         }
       }
     }
@@ -108,10 +122,10 @@
     .#{$appPrefix}-btn {
       &:hover,
       &:focus {
+        img,
         svg {
           fill: $darkThemeColor;
-          height: 25px;
-          width: 25px;
+          transform: scale(1.1) rotate(10deg);
         }
       }
       svg {

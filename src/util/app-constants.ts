@@ -33,6 +33,7 @@ export const APP_INFO = {
 
 export const BOOKS = {
   REACT: {
+    TITLE: 'React Js Core Concepts',
     DESC: 'This React Js Core Concepts handbook contains the core concepts of ReactJs along with React-Router. The book does not try to cover every concept of React & React Router, instead it focuses on the minimum amount of knowledge required to work as an individual contributor.',
     REACT_NOTION_PRESS: {
       url: 'https://notionpress.com/read/react-js-core-concepts',
@@ -56,6 +57,7 @@ export const BOOKS = {
     }
   },
   JAVASCRIPT: {
+    TITLE: 'JavaScript Core Concepts',
     DESC: 'This JavaScript Core Concepts handbook contains the core concepts of JavaScript. The book does not try to cover every concept of JavaScript/ECMAScript, instead it focuses on the minimum amount of knowledge required to work as an individual contributor.',
     AMAZON_KINDLE: {
       IN: {

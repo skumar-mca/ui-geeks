@@ -145,9 +145,9 @@ const TopicBooks = ({ title, showDescription = false }: ITopicBookProps) => {
                   <a
                     href={`whatsapp://send?text=${encodeURIComponent(pdfUrl)}`}
                     data-action='share/whatsapp/share'
-                    className='whatsapp-share'
+                    className='whatsapp-share book-cover'
                   >
-                    <IconWhatsapp width={40} height={40} fillColor='green' />
+                    <IconWhatsapp width={30} height={30} fillColor='green' />
                   </a>
                 </YalsTooltip>
               </div>

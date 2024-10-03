@@ -56,6 +56,15 @@ body {
   justify-content: center !important;
 }
 
+.flex-gap-10 {
+  gap: 10px;
+}
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .explore-btn {
   background-color: #282872;
   color: white;
@@ -228,7 +237,7 @@ body {
 }
 
 .text-sm {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: $lightGrayAlt;
   font-style: italic;
 }
@@ -340,4 +349,71 @@ body {
   .vertical-line {
     background-color: rgb(205, 205, 205);
   }
+}
+
+.grid-box {
+  .grid-list {
+    display: grid;
+    grid-template-columns: $profile-colTemplate;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    &.publihsed-books {
+      grid-template-columns: $publishedBooks-colTemplate;
+    }
+  }
+
+  .grid-list-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: $profile-lightGrayBgColor;
+    padding: 15px;
+    box-shadow: 5px 5px 5px $profile-boxShadow;
+    border: 1px solid $profile-borderGray;
+
+    &:hover {
+      background-color: $profile-hoverBgColor;
+    }
+
+    .item-name {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .item-desc {
+      font-size: 0.8rem;
+      color: #3f4142;
+    }
+  }
+}
+
+.flex-col-100-height {
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.theme-dark {
+  .grid-list-item {
+    background-color: $profile-drkThemeBgAlt !important;
+    box-shadow: 5px 5px 5px var(--drk-theme-bg);
+    border: 1px solid $profile-drkThemeBgAlt;
+
+    &:hover {
+      background-color: $profile-drkThemeHover !important;
+    }
+
+    .item-desc {
+      color: $white;
+    }
+  }
+}
+
+.no-link-btn {
+  text-decoration: none;
 }

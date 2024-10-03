@@ -1,25 +1,20 @@
 import classNames from 'classnames';
-import React, { memo, useState } from 'react';
-import useDeviceType from '../../custom-hooks/use-device-type';
-import { AppPrefix, DeviceType } from '../../util/app-constants';
-import Heading from '../shared/heading/heading';
-import { I } from '../shared/util/util';
-import YALSBox from '../shared/yals-box/yals-box';
-import YalsButton from '../shared/yals-button/yals-button';
-import {
-  YALSButtonVariantTypes,
-  YALSSizeTypes
-} from '../shared/yals-button/yals-button.types';
+import React, { memo, useContext, useState } from 'react';
+import { AppPrefix, THEME_CONSTANT } from '../../util/app-constants';
+import { AppContext } from '../../util/app-context';
+import OpenNewIcon from '../profile/components/icons/open-new-icon';
 import YalsFlex from '../shared/yals-flex/yals-flex';
-import { FlexJustifyContentTypes } from '../shared/yals-flex/yals-flex.types';
-import YalsImage from '../shared/yals-image/yals-image';
-import YalsModal from '../shared/yals-modal/yals-modal';
+import {
+  FlexAlignItemsTypes,
+  FlexJustifyContentTypes
+} from '../shared/yals-flex/yals-flex.types';
 import ExtensionList from './vs-extensions.json';
 import './vscode-extension.scss';
 import { IVSCodeExtensionType } from './vscode-extension.types';
 
 const VSCodeExtesnsionComponent = () => {
-  const deviceType = useDeviceType();
+  const appContext = useContext(AppContext);
+
   const extCls = classNames({
     [`${AppPrefix}-vscode-extention`]: true,
     'mt-4': true
@@ -27,105 +22,59 @@ const VSCodeExtesnsionComponent = () => {
 
   const [extensionList] = useState(ExtensionList);
 
-  const [selectedExtension, setselectedExtension] =
-    useState<IVSCodeExtensionType | null>(null);
-
-  const [showModal, setShowModal] = useState(false);
-  const showDemo = (ext: IVSCodeExtensionType) => {
-    setselectedExtension(() => ext);
-    setShowModal(() => true);
-  };
-
-  const closeSearchModal = () => {
-    setShowModal(() => false);
-    setselectedExtension(() => null);
-  };
-
   return (
-    <>
-      <div className={extCls}>
-        <Heading as='h1'>
-          Visual Studio Code Extensions
-          <YalsButton
-            variant={YALSButtonVariantTypes.Link}
-            target='_blank'
-            href='https://marketplace.visualstudio.com/search?term=ui-geeks&target=VSCode&category=All%20categories&sortBy=Relevance'
-            size='sm'
-          >
-            View in Marketplace
-          </YalsButton>
-        </Heading>
-        <div className='ext-content'>
-          <YalsFlex
-            justifyContent={FlexJustifyContentTypes.FlexStart}
-            className='ext-box'
-          >
+    <div className={extCls}>
+      <div className='custom-list grid-box'>
+        <div className='custom-list-wrapper'>
+          <div className='header-title'>Visual Studio Code Extensions</div>
+          <div className='heading-separator'></div>
+          <div className='grid-list publihsed-books'>
             {extensionList.map((ext: IVSCodeExtensionType) => {
               return (
-                <YALSBox key={ext.extensionName}>
-                  <div className='ext-image'>
-                    <div className='img-box'>
-                      <img
-                        width='80px'
-                        height='80px'
-                        src={ext.icon}
-                        alt={ext.displayName}
-                      />
-                    </div>
-
-                    <div className='ext-detail'>
-                      <a
-                        target='_blank'
-                        className='ext-name'
-                        href={`https://marketplace.visualstudio.com/items?itemName=skumarmca2010.${ext.extensionName}`}
-                      >
-                        <b>
-                          {ext.displayName} (v{ext.version})
-                        </b>
-                      </a>
-
-                      <br />
-                      <div className='text-secondary'>{ext.extensionName}</div>
-                      <div className='mb-2'>
-                        <I>{ext.shortDescription}</I>
+                <a href={ext.url} className='no-link-btn'>
+                  <div
+                    className='grid-list-item publihsed-books'
+                    key={ext.extensionName}
+                  >
+                    <YalsFlex
+                      justifyContent={FlexJustifyContentTypes.FlexStart}
+                      alignItems={FlexAlignItemsTypes.Center}
+                      gap='20px'
+                    >
+                      <div className='img-box toggle-img'>
+                        <img
+                          width='50px'
+                          height='50px'
+                          src={ext.icon}
+                          alt={ext.displayName}
+                        />
                       </div>
+
                       <div>
-                        <YalsButton
-                          variant={YALSButtonVariantTypes.Info}
-                          outline={true}
-                          size={YALSSizeTypes.Small}
-                          onClick={showDemo.bind(this, ext)}
-                        >
-                          Demo
-                        </YalsButton>
+                        <div className='item-name mb-0'>
+                          {ext.displayName}{' '}
+                          <span className='text-sm me-2'>(v{ext.version})</span>
+                          <OpenNewIcon
+                            fillColor={
+                              appContext.theme === THEME_CONSTANT.DARK_THEME
+                                ? 'white'
+                                : 'black'
+                            }
+                          />
+                        </div>
+                        <div className='item-desc flex-grow-1'>
+                          {ext.shortDescription}
+                        </div>
                       </div>
-                    </div>
+                    </YalsFlex>
                   </div>
-                </YALSBox>
+                </a>
               );
             })}
-          </YalsFlex>
+          </div>
         </div>
       </div>
-
-      {showModal && selectedExtension && (
-        <YalsModal
-          modalHeader={selectedExtension.displayName}
-          show={true}
-          onHide={closeSearchModal}
-          fullScreen={deviceType === DeviceType.Mobile}
-          size={YALSSizeTypes.Large}
-          modalContent={
-            <YalsImage
-              imagePath={selectedExtension.demoURL}
-              alt={selectedExtension.displayName}
-              imageTitle={`Demo of ${selectedExtension.displayName}`}
-              width='100%'
-            />
-          }
-        ></YalsModal>
-      )}
-    </>
+    </div>
   );
 };
 

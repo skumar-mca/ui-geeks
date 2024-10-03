@@ -1,5 +1,7 @@
 import React, { memo } from 'react';
+import VscodeExtension from '../../../vscode-extensions/vscode-extension';
 import EmploymentHistory from '../employment-history';
+import BooksPublished from '../published-books';
 import RecentProjects from '../recent-projects';
 import SkillList from '../skills';
 import './left-section.scss';
@@ -41,6 +43,14 @@ const LeftSection = () => {
 
       <div className='content-wrapper'>
         <RecentProjects />
+      </div>
+
+      <div className='content-wrapper'>
+        <BooksPublished />
+      </div>
+
+      <div className='content-wrapper'>
+        <VscodeExtension />
       </div>
     </div>
   );

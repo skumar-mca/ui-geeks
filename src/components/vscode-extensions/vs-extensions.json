@@ -5,18 +5,20 @@
     "displayName": "NPM Dependency Report",
     "shortDescription": "Generate Visual NPM Package Dependency Report.",
     "version": "1.0.1",
-    "icon": "https://skumarmca2010.gallerycdn.vsassets.io/extensions/skumarmca2010/npm-dependencies-ui-geeks/1.0.0/1683306986931/Microsoft.VisualStudio.Services.Icons.Small",
+    "icon": "https://skumarmca2010.gallerycdn.vsassets.io/extensions/skumarmca2010/npm-dependencies-ui-geeks/1.0.4/1727983133465/Microsoft.VisualStudio.Services.Icons.Default",
     "categories": ["Visualization"],
-    "demoURL": "https://github.com/skumar-mca/ui-geeks-ext-package-dep/raw/HEAD/images/readme/demo.gif"
+    "demoURL": "https://github.com/skumar-mca/ui-geeks-ext-package-dep/raw/HEAD/images/readme/demo.gif",
+    "url": "https://marketplace.visualstudio.com/items?itemName=skumarmca2010.npm-dependencies-ui-geeks"
   },
   {
     "extensionId": "232e506e-6fdd-40c7-bc1b-bf30c9e38a56",
     "extensionName": "npm-audit-ui-geeks",
     "displayName": "NPM Audit Report",
-    "shortDescription": "Generate Visual NPM Package Audit Report.",
+    "shortDescription": "Audit dependencies for vulnerabilities & outdated packages. Generate & download report.",
     "version": "1.0.1",
-    "icon": "https://skumarmca2010.gallerycdn.vsassets.io/extensions/skumarmca2010/npm-audit-ui-geeks/1.0.0/1683306961513/Microsoft.VisualStudio.Services.Icons.Small",
+    "icon": "https://skumarmca2010.gallerycdn.vsassets.io/extensions/skumarmca2010/npm-audit-ui-geeks/1.0.1/1683909102470/Microsoft.VisualStudio.Services.Icons.Default",
     "categories": ["Visualization"],
-    "demoURL": "https://github.com/skumar-mca/ui-geeks-ext-npm-audit/raw/HEAD/images/readme/demo.gif"
+    "demoURL": "https://github.com/skumar-mca/ui-geeks-ext-npm-audit/raw/HEAD/images/readme/demo.gif",
+    "url": "https://marketplace.visualstudio.com/items?itemName=skumarmca2010.npm-audit-ui-geeks"
   }
 ]

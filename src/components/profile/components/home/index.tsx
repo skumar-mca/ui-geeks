@@ -25,6 +25,7 @@ const Home = () => {
         <div className='col-lg-4 col-md-12'>
           {/* <CertificationsList /> */}
           <QualificationList />
+
           <ToolsUsed />
           <PersonalInfo />
         </div>

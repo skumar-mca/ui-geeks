@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useDeviceType from '../../../custom-hooks/use-device-type';
-import { AppPrefix, DeviceType } from '../../../util/app-constants';
+import { AppPrefix } from '../../../util/app-constants';
 import BookmarkIcon from '../../icons/bookmark-icon';
 import TopicBooks from '../../shared/topic-books/topic-books';
 import { NewLine } from '../../shared/util/util';
@@ -41,18 +41,6 @@ const LanguageComponent = (props: ILanguageProp) => {
   const handleRedirect = () => {
     navigate(homePagePath);
   };
-
-  const handleRedirectToDemo = () => {
-    if (demoLink) {
-      navigate(demoLink.url);
-    }
-  };
-
-  const showDemo =
-    demoComponent &&
-    [DeviceType.Desktop, DeviceType.LargeDesktop].includes(deviceType);
-
-  const isMobile = [DeviceType.Mobile, DeviceType.Tablet].includes(deviceType);
 
   return (
     <div className={introHeader}>

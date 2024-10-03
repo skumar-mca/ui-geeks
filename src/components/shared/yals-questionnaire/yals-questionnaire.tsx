@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React, { memo, useEffect, useState } from 'react';
+import { sendAnalyticsEvent } from '../../../util/analytics';
 import { AppPrefix } from '../../../util/app-constants';
 import ChevronLeft from '../../icons/chevron-left';
 import ChevronRight from '../../icons/chevron-right';
@@ -95,6 +96,11 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex((prev: number) => prev - 1);
       resetIncorrectAttempt();
+      sendAnalyticsEvent(
+        'QUESTIONNAIRE',
+        'PREV',
+        questions[currentQuestionIndex - 1].id
+      );
     }
   };
 
@@ -102,6 +108,11 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev: number) => prev + 1);
       resetIncorrectAttempt();
+      sendAnalyticsEvent(
+        'QUESTIONNAIRE',
+        'NEXT',
+        questions[currentQuestionIndex + 1].id
+      );
     }
   };
 
@@ -132,6 +143,7 @@ const YALSQuestionaire = (props: IQuestionnaireProps) => {
     }
 
     handleSubmitresponse(ques.id, isCorrectAnswer ? 1 : 2);
+    sendAnalyticsEvent('QUESTIONNAIRE', 'SUBMIT', ques.id);
   };
 
   const showCorrectAnswer = () => {

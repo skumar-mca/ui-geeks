@@ -14,7 +14,7 @@ export const BookProviderLink = ({ url, price, type }: IBookProviderType) => {
     <div className='flex'>
       <a href={url} target='_blank' className='book-type-box'>
         <div className='book-provider'>
-          <img className={`logo logo-${type}`} src={icon} />
+          <img className={`toggle-img logo logo-${type}`} src={icon} />
         </div>
       </a>
     </div>

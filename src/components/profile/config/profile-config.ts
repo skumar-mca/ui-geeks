@@ -1,5 +1,5 @@
 import { IProfileConfigType } from '../../../types/profile-config.types';
-import { SOCIAL_URL } from '../../../util/app-constants';
+import { BOOK_LINKS, BOOKS, SOCIAL_URL } from '../../../util/app-constants';
 import { ImagePaths } from '../../../util/image-path-constants';
 
 export const responsibilities = [
@@ -460,6 +460,34 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       id: 7,
       name: 'US VISA',
       description: 'B1/B2'
+    }
+  ],
+  BOOKS_PUBLISHED: [
+    {
+      title: BOOKS.REACT.TITLE,
+      description: BOOKS.REACT.DESC,
+      pdfUrl: BOOK_LINKS.REACT.COMPLETE_BOOK_URL,
+      publishers: [
+        {
+          provider: 'notion',
+          url: BOOKS.REACT.REACT_NOTION_PRESS.url
+        },
+        {
+          provider: 'kindle',
+          url: BOOKS.REACT.AMAZON_PAPERBACK.US.url
+        }
+      ]
+    },
+    {
+      title: BOOKS.JAVASCRIPT.TITLE,
+      description: BOOKS.JAVASCRIPT.DESC,
+      pdfUrl: BOOK_LINKS.JAVASCRIPT.COMPLETE_BOOK_URL,
+      publishers: [
+        {
+          provider: 'kindle',
+          url: BOOKS.JAVASCRIPT.AMAZON_PAPERBACK.US.url
+        }
+      ]
     }
   ]
 };

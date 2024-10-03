@@ -13,7 +13,6 @@ import IconPdf from '../icons/icon-pdf';
 import HomeIntro from './home-intro/home-intro';
 import './home.scss';
 import LanguageComponent from './language-component/language-component';
-import UpcomingTopicsComponent from './upcoming-topics/upcoming-topics';
 
 const JSContentList = [
   {
@@ -159,7 +158,7 @@ const Home = () => {
           keyPoints={ReactKeyPoints}
         />
 
-        <UpcomingTopicsComponent />
+        {/* <UpcomingTopicsComponent /> */}
 
         {/* <LanguageComponent
           title='Angular'

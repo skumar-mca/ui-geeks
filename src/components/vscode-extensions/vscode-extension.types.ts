@@ -7,4 +7,5 @@ export interface IVSCodeExtensionType {
   icon: string;
   categories: Array<string>;
   demoURL: string;
+  url: string;
 }
